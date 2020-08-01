@@ -31,7 +31,59 @@ body {
     body #home-container #login-methods {
       display: flex;
       justify-content: space-between;
-      height: 236px; }
+      height: auto; }
+      body #home-container #login-methods #signup-form {
+        width: 50%;
+        text-align: left; }
+        body #home-container #login-methods #signup-form form {
+          position: relative;
+          top: -30px; }
+        body #home-container #login-methods #signup-form h5 {
+          position: relative;
+          top: -20px; }
+        body #home-container #login-methods #signup-form input {
+          height: 25px;
+          width: 290px;
+          outline: none;
+          border: 0;
+          box-shadow: inset 0 1px 1px rgba(71, 70, 70, 0.3);
+          background-color: #fafafa;
+          display: block; }
+        body #home-container #login-methods #signup-form input[type='submit'] {
+          background-color: #3e78ad;
+          width: 70px;
+          color: white;
+          border-radius: 3px;
+          height: 30px;
+          position: absolute;
+          right: 25px; }
+        body #home-container #login-methods #signup-form #shift {
+          position: absolute;
+          top: 0px;
+          right: 30px; }
+        body #home-container #login-methods #signup-form .small {
+          width: 120px; }
+        body #home-container #login-methods #signup-form label {
+          color: #666;
+          font-weight: bold; }
+        body #home-container #login-methods #signup-form span {
+          color: #949494;
+          font-size: 0.9rem;
+          position: relative;
+          display: block; }
+          body #home-container #login-methods #signup-form span a {
+            text-decoration: none;
+            color: #2b6dad; }
+          body #home-container #login-methods #signup-form span a:hover {
+            text-decoration: underline; }
+        body #home-container #login-methods #signup-form a {
+          text-decoration: none;
+          color: #2b6dad;
+          position: absolute;
+          right: 100px;
+          top: 185px; }
+        body #home-container #login-methods #signup-form a:hover {
+          text-decoration: underline; }
       body #home-container #login-methods #social-auth {
         text-align: left;
         width: 50%;

@@ -5,6 +5,12 @@ const ExpressLayout=require('express-ejs-layouts');
 const sassMiddlware=require('node-sass-middleware');
 
 
+
+// For recieving the data in the body key of req
+app.use(express.urlencoded());
+
+
+
 // Middleware for sass
 app.use(sassMiddlware({
     src:'./assets/scss',
