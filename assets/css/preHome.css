@@ -1,0 +1,125 @@
+body {
+  background-image: url("https://qsf.fs.quoracdn.net/-4-images.home.illo_1920.png-26-e9e6fbe02d908942.png");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  body #home-container {
+    text-align: center;
+    border: 1px solid black;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    padding-top: 25px;
+    border-radius: 0.1cm;
+    width: 720px;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box; }
+    body #home-container img {
+      position: relative;
+      top: -20px;
+      width: 224px; }
+    body #home-container p {
+      font-size: 19px;
+      font-weight: 400;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #949494;
+      position: relative;
+      top: -50px; }
+    body #home-container #login-methods {
+      display: flex;
+      justify-content: space-between;
+      height: 236px; }
+      body #home-container #login-methods #social-auth {
+        text-align: left;
+        width: 50%;
+        padding-right: 30px;
+        box-sizing: border-box; }
+        body #home-container #login-methods #social-auth .TosDisclaimer {
+          color: #949494;
+          font-size: 13px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+          body #home-container #login-methods #social-auth .TosDisclaimer a {
+            color: #2b6dad;
+            text-decoration: none; }
+          body #home-container #login-methods #social-auth .TosDisclaimer a:hover {
+            text-decoration: underline; }
+        body #home-container #login-methods #social-auth .methods {
+          height: 40px;
+          position: relative;
+          margin-bottom: 10px; }
+          body #home-container #login-methods #social-auth .methods img {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            top: 10px;
+            left: 20px;
+            z-index: 100; }
+          body #home-container #login-methods #social-auth .methods a {
+            position: absolute;
+            left: 0;
+            padding: 8px 16px;
+            width: 270px;
+            border-radius: 3px;
+            background-color: #df4930;
+            text-decoration: none;
+            transition: opacity 100ms ease-in; }
+            body #home-container #login-methods #social-auth .methods a span {
+              position: relative;
+              left: 40px;
+              color: #FFFFFF;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              font-weight: 500;
+              font-size: 1.2rem; }
+          body #home-container #login-methods #social-auth .methods a:hover {
+            opacity: 0.8; }
+        body #home-container #login-methods #social-auth #facebook a {
+          background-color: #507cc0; }
+      body #home-container #login-methods #local-auth {
+        text-align: left;
+        width: 50%;
+        border-left: 1px solid #c4bcbc;
+        padding-left: 30px;
+        box-sizing: border-box;
+        position: relative; }
+        body #home-container #login-methods #local-auth #login {
+          position: relative;
+          top: -20px; }
+        body #home-container #login-methods #local-auth #login-form {
+          position: relative;
+          top: -33px; }
+          body #home-container #login-methods #local-auth #login-form input {
+            width: 100%;
+            height: 37px;
+            background-color: #EEE;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            border: none;
+            margin-bottom: 25px;
+            outline: none;
+            font-size: 1.0rem;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 1px #888888; }
+          body #home-container #login-methods #local-auth #login-form input[type="submit"] {
+            width: auto;
+            background-color: #3e78ad;
+            position: absolute;
+            top: 110px;
+            right: 0;
+            font-weight: 500;
+            box-shadow: inset 0 1px 1px #3e78ad;
+            color: #EEE; }
+          body #home-container #login-methods #local-auth #login-form a {
+            color: #949494;
+            font-size: 0.9rem;
+            text-decoration: none;
+            position: relative;
+            top: -20px; }
+    body #home-container #author {
+      position: relative;
+      top: 10px;
+      font-size: 0.9rem;
+      border-top: 1px solid #c4bcbc;
+      border-bottom: 1px solid #c4bcbc; }
