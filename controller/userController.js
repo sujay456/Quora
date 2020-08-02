@@ -48,9 +48,15 @@ module.exports.signup=async function(req,res){
         else
         {
             await User.create({ name:req.body.name+' '+req.body.lastname,email:req.body.email,password:req.body.password });
-
+            console.log('User created');
             // This redirect will be changed
-            return res.redirect('back');
+            return res.status(200).json({
+                message:'user created'
+            });
+
+            // return  res.render('preHomePage');
+            
+            
 
         }
     
