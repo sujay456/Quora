@@ -1,6 +1,45 @@
 
 // ***********************************To do************************
 // 1.diabling the login button and the sign up button 
+
+
+
+// Function to add red border to the input if email exists 
+var CheckingEmail=function()
+{
+    let emailInput=$('#email');
+
+    // console.log(emailInput);
+    
+    emailInput.blur(function(e)
+    {
+        let email=e.target.value;
+        // console.log(email); 
+        $.ajax({
+            type:'post',
+            url:'/user/checkemail',
+            data:emailInput.serialize(),
+            success:function(data){
+                // console.log(data);
+                if(data.user)
+                {
+                    emailInput.addClass('red');
+                }
+                else{
+                    emailInput.removeClass('red');
+                }
+            },
+            error:function(err)
+            {
+                console.log('Error',err);
+            }
+        });
+    });
+
+}
+
+
+
 var ShowSignup=function()
 {
     // console.log($('#signUp'));
@@ -12,13 +51,14 @@ var ShowSignup=function()
     
     $('#signUp').click(function(e)
     {
+
         e.preventDefault();
         socialAuth.hide();
         let SignUpForm=$(` 
         <div id="signup-form">
             <h5>Sign up</h5>
 
-            <form action="" method="post">
+            <form action="/user/signup" method="post">
                 <label for="name">First Name</label>
                 <input class="small" id="name" type="text" name="name" required>
 
@@ -45,6 +85,7 @@ var ShowSignup=function()
         `);
         SignUpContainer.prepend(SignUpForm);
         // console.log($('#socialauth'));
+        CheckingEmail();
         $('#socialauth').click(function(e)
         {
             e.preventDefault();
@@ -57,6 +98,7 @@ var ShowSignup=function()
     
 
 }
+
 
 
 

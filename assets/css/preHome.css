@@ -41,6 +41,8 @@ body {
         body #home-container #login-methods #signup-form h5 {
           position: relative;
           top: -20px; }
+        body #home-container #login-methods #signup-form .red {
+          border: 1px solid red; }
         body #home-container #login-methods #signup-form input {
           height: 25px;
           width: 290px;
@@ -48,7 +50,8 @@ body {
           border: 0;
           box-shadow: inset 0 1px 1px rgba(71, 70, 70, 0.3);
           background-color: #fafafa;
-          display: block; }
+          display: block;
+          border-radius: 3px; }
         body #home-container #login-methods #signup-form input[type='submit'] {
           background-color: #3e78ad;
           width: 70px;

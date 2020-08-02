@@ -4,4 +4,10 @@ const PreController=require('../controller/preLoginController');
 
 router.get('/',PreController.home);
 
+
+// All the other routes
+
+router.use('/user',require('./user'));
+
+
 module.exports=router;

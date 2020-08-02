@@ -3,7 +3,8 @@ const app=express();
 const port=8000;
 const ExpressLayout=require('express-ejs-layouts');
 const sassMiddlware=require('node-sass-middleware');
-
+// including mongoose in this file
+const db=require('./config/mongoose');
 
 
 // For recieving the data in the body key of req
