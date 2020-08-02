@@ -149,5 +149,39 @@ var ShowSignup=function()
 
 }
 
+var emailLoginCheck=function()
+{
+    let emailInput=$('#login-form input[type="email"]');
+    console.log(emailInput);
+
+    emailInput.blur(function(e){
+        // console.log('blur');
+        $.ajax({
+            type:'post',
+            url:'/user/checkemail',
+            data:emailInput.serialize(),
+            success:function(data){
+                // console.log(data);
+                if(!data.user)
+                {
+                    $('#warning').removeClass('hide');
+                }
+                else
+                {
+                    $('#warning').addClass('hide');
+                }
+                
+            },
+            error:function(err)
+            {
+                console.log('Error',err);
+            }
+        });
+    });
+}
+
+
+
 // Function calls
 ShowSignup();
+emailLoginCheck();

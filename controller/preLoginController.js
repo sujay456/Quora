@@ -1,5 +1,14 @@
 module.exports.home=function(req,res)
 {
-    // return res.send('This is your Home page');
-    return res.render('preHomePage',{ layout:false });
+    
+    if(req.user)
+    {
+        return res.render('postLoginHome');
+    }
+    else{
+        return res.render('preHomePage',{ layout:false });
+    }
+
+    // return res.render('preHomePage',{ layout:false });
+
 }

@@ -69,3 +69,16 @@ module.exports.signup=async function(req,res){
 
 
 }
+
+
+module.exports.Home=function(req,res)
+{
+    // we have a middleware for checking Authentication 
+    return res.render('postLoginHome');
+}
+
+
+module.exports.createSession=function(req,res)
+{
+    return res.redirect('/user/home');
+}

@@ -57,13 +57,16 @@
             <div id="local-auth">
                 <h5 id="login">Login</h5>
 
-                <form id="login-form" action="" method="POST">
-                    <input type="email" required placeholder="Email" >
-                    <input type="password" required placeholder="Password" >
+                <form id="login-form" action="/user/create-session" method="POST">
+                    <input type="email" required  name="email" placeholder="Email" >
+                    <input type="password"  name="password" required placeholder="Password" >
                     <!-- Forgot password link -->
                     <a href="">Forgot Password?</a>
                     <input type="submit" value="Login">
                 </form>
+                <div id="warning" class="hide">
+                    Please Confirm Your Email Address Again
+                </div>
             </div>
 
 

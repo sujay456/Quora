@@ -3,10 +3,14 @@ const app=express();
 const port=8000;
 const ExpressLayout=require('express-ejs-layouts');
 const sassMiddlware=require('node-sass-middleware');
+// requiring passport
+const cookieParser = require('cookie-parser');
+const session=require('express-session');         //we import this so that session cookie get created // because passport donot automatically create cookie ,express-cookie does
+const passport=require('passport');
+const passportLocal=require('./config/passport-local');
 // including mongoose in this file
 const db=require('./config/mongoose');
-
-
+const mongoStore=require('connect-mongo')(session);
 // For recieving the data in the body key of req
 app.use(express.urlencoded());
 
@@ -27,13 +31,33 @@ app.use(sassMiddlware({
 app.use(express.static('./assets'));
 
 
-
-
 // Using the middleware to use Ejs -Layouts
 app.use(ExpressLayout);
 app.set('layout','layouts');
 app.set('view engine','ejs');
 app.set('views','./views');
+
+
+// Middleware for creating cookie from passport
+app.use(cookieParser());
+app.use(session({
+    name:'Quora',
+    secret:'blahsomething',  //this is our encryption key
+    saveUninitialized:false,
+    resave:false,
+    cookie:{
+        maxAge:(1000*60*100)
+    },
+    store:new mongoStore({
+        mongooseConnection:db,
+        autoRemove:'disabled'
+    })
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(passport.setAuth);
 
 
 

@@ -13,7 +13,7 @@ body {
     transition: top 0.5s ease-in-out; }
     body #signup-noty p {
       color: wheat;
-      font-weight: 300; }
+      font-weight: 600; }
   body .hide {
     top: -100px; }
   body .show {
@@ -164,6 +164,15 @@ body {
         padding-left: 30px;
         box-sizing: border-box;
         position: relative; }
+        body #home-container #login-methods #local-auth .hide {
+          display: none; }
+        body #home-container #login-methods #local-auth #warning {
+          color: red;
+          border: 1px solid red;
+          height: auto;
+          box-sizing: border-box;
+          padding: 5px;
+          border-radius: 3px; }
         body #home-container #login-methods #local-auth #login {
           position: relative;
           top: -20px; }

@@ -241,6 +241,19 @@ body{
                 padding-left:30px ;
                 box-sizing: border-box;
                 position: relative;
+                .hide{
+                    display: none;
+                }
+
+                #warning{
+                    
+                    color: red;
+                    border: 1px solid red;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 5px;
+                    border-radius: 3px;
+                }
                 #login{
                     position: relative;
                     top: -20px;

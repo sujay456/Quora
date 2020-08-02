@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const { use } = require('../routes');
+
 
 const userSchema=new mongoose.Schema({
     name:{
