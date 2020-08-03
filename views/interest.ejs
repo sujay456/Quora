@@ -3,7 +3,7 @@
 
 
     
-<div id="interest">
+<div id="interest" >
 
     <div id="interest-header">
         <h2>What are your interests?</h2>
@@ -26,6 +26,30 @@
     <div id="continue-button">
         <form action="/interest/save" method="post">
             <button id="button" type="submit" disabled >Follow 4 more topics to continue</button>
+        </form>
+    </div>
+
+</div>
+
+<div id="language" class="hide">
+    <div id="language-header-container">
+        <h2>One last step</h2>
+    </div>
+
+    <div id="languages-container" >
+        <p>What other languages you know?</p>
+
+        <% let languages=['Arabic','Arabic','Danish','Dutch','English','Finnish','French','German','Gujrati','Hebrew','Hindi','Italian'] %>
+        <% for(let l of languages){ %>
+            <div class="language-block">
+                <input type="checkbox" name="<%=l%>" id="">  
+                <span><%=l%></span>
+            </div>
+        <%}%>
+    </div>
+    <div id="continue-button">
+        <form action="/interest/save" method="post">
+            <button id="button" type="submit">Done</button>
         </form>
     </div>
 

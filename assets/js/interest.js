@@ -58,6 +58,12 @@ var SubmitInterest=function()
             success:function(data)
             {
                 console.log(data);
+                $('#interest').addClass('moveleft');
+                setTimeout(function()
+                {
+                    $('#interest').remove();
+                },100)
+                $('#language').removeClass('hide');
             },
             error:function(err)
             {

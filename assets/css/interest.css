@@ -1,4 +1,10 @@
-#interest {
+body .moveleft {
+  transform: translateX(-10000px); }
+
+body .hide {
+  display: none; }
+
+body #interest {
   width: 50%;
   position: absolute;
   left: 25%;
@@ -6,8 +12,10 @@
   margin-top: 40px;
   height: auto;
   border-radius: 5px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
-  #interest #interest-header {
+  opacity: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 100ms ease-in-out; }
+  body #interest #interest-header {
     border: 1px solid #dee0e1;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -15,9 +23,9 @@
     width: 100%;
     height: auto;
     background-color: #f7f7f8; }
-    #interest #interest-header h2 {
+    body #interest #interest-header h2 {
       margin-left: 20px; }
-  #interest #interest-container {
+  body #interest #interest-container {
     border: 1px solid #dee0e1;
     position: absolute;
     top: 72px;
@@ -29,7 +37,7 @@
     justify-content: space-between;
     height: 500px;
     overflow-y: scroll; }
-    #interest #interest-container .style-block {
+    body #interest #interest-container .style-block {
       width: 120px;
       height: 120px;
       position: relative;
@@ -38,63 +46,61 @@
       box-sizing: border-box;
       cursor: pointer;
       transition: transform 0.1s ease-in-out; }
-      #interest #interest-container .style-block span {
+      body #interest #interest-container .style-block span {
         position: absolute;
         bottom: 0;
         left: 5px;
         color: whitesmoke;
         font-weight: 700; }
-      #interest #interest-container .style-block .checked {
+      body #interest #interest-container .style-block .checked {
         position: absolute;
         right: 0; }
-      #interest #interest-container .style-block .hide {
-        display: none; }
-    #interest #interest-container .scaledown {
+    body #interest #interest-container .scaledown {
       transform: scale(0.9); }
-    #interest #interest-container .style-block:hover {
+    body #interest #interest-container .style-block:hover {
       transform: scale(0.9); }
-    #interest #interest-container #interest-Technology {
+    body #interest #interest-container #interest-Technology {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2177-200-JiR07D1TQSfeQzRvWXomVaY4Poj2f8Yb.jpeg"); }
-    #interest #interest-container #interest-Movies {
+    body #interest #interest-container #interest-Movies {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-843-200-W7FzODceTO2aQmp8D7E4rKZ8YgSv21eR.jpeg"); }
-    #interest #interest-container #interest-Health {
+    body #interest #interest-container #interest-Health {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1140-200-24q3tiv4WhPssc5TGwf0mvCM5aiqGVXW.jpeg"); }
-    #interest #interest-container #interest-Food {
+    body #interest #interest-container #interest-Food {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1026-200-ohvgqriqzmtjrnillbxqoyfstjxhmlcu.jpeg"); }
-    #interest #interest-container #interest-Science {
+    body #interest #interest-container #interest-Science {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-931-200-c8WCPwZ9qPsh5zLGQ5wHh1ddxtc9Cch7.jpeg"); }
-    #interest #interest-container #interest-Music {
+    body #interest #interest-container #interest-Music {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-801-200-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg"); }
-    #interest #interest-container #interest-Books {
+    body #interest #interest-container #interest-Books {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1056-200-hPoilc51jNiGKb8dbh4plI8jOw6MJ7pG.jpeg"); }
-    #interest #interest-container #interest-Buisness {
+    body #interest #interest-container #interest-Buisness {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-858-200-VnZbEVtOIGkEHXlnYId9slumV59IPgkA.jpeg"); }
-    #interest #interest-container #interest-Psycology {
+    body #interest #interest-container #interest-Psycology {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1913-200-B8JrwaVauFzsaTSqXDqoWLCXzQb2mTE9.jpeg"); }
-    #interest #interest-container #interest-History {
+    body #interest #interest-container #interest-History {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-930-200-cbbsbwijdhpyzlpipejvqpiijhhoaday.jpeg"); }
-    #interest #interest-container #interest-Cooking {
+    body #interest #interest-container #interest-Cooking {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-877-200-e7jKHEQr0HExAIA9rlsyHlV6HJyRruEo.jpeg"); }
-    #interest #interest-container #interest-Sports {
+    body #interest #interest-container #interest-Sports {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-795-200-fujtazxcynewvtxarymxenpcldxwczqq.jpeg"); }
-    #interest #interest-container #interest-Design {
+    body #interest #interest-container #interest-Design {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-897-200-hrukwkbxcneoyfjhaeregbarmrmwxmdx.jpeg"); }
-    #interest #interest-container #interest-Writing {
+    body #interest #interest-container #interest-Writing {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2062-200-cuGKoaTVa5xcTTICGaLWKWmk8i9Bqhrp.jpeg");
       opacity: 0.8; }
-    #interest #interest-container #interest-Economics {
+    body #interest #interest-container #interest-Economics {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1575-200-A6ModxJzIbs4YcwW010Fkp6FNJOUxcbC.jpeg");
       opacity: 0.8; }
-    #interest #interest-container #interest-Mathematics {
+    body #interest #interest-container #interest-Mathematics {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-951-200-N3P1sk6vsq72as9qqwA30zUMvxgBPWJ1.jpeg");
       opacity: 0.8; }
-    #interest #interest-container #interest-Politics {
+    body #interest #interest-container #interest-Politics {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1497-200-GNNZHw8iGYKcBBdqFGxoNvw85bgzRI0Z.jpeg");
       opacity: 0.8; }
-    #interest #interest-container #interest-Journalism {
+    body #interest #interest-container #interest-Journalism {
       background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2184-200-mx1kRZSC3QrxOfVLbN7QSX094Qyfi88P.jpeg");
       opacity: 0.8; }
-  #interest #continue-button {
+  body #interest #continue-button {
     position: relative;
     top: 550px;
     background-color: #f7f7f8;
@@ -102,7 +108,7 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border: 1px solid #dee0e1; }
-    #interest #continue-button button {
+    body #interest #continue-button button {
       cursor: pointer;
       position: absolute;
       right: 10px;
@@ -115,58 +121,115 @@
       background-color: #2969b3;
       color: white;
       font-weight: 600; }
-    #interest #continue-button button:disabled {
+    body #interest #continue-button button:disabled {
       opacity: 0.6;
       cursor: no-drop; }
 
+body #language {
+  width: 50%;
+  position: relative;
+  left: 25%;
+  height: auto;
+  margin-top: 40px;
+  border: 1px solid #dee0e1;
+  border-radius: 15px;
+  opacity: 1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 100ms ease-in-out; }
+  body #language #language-header-container {
+    border: 1px solid #dee0e1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: #f7f7f8; }
+    body #language #language-header-container h2 {
+      margin-left: 20px; }
+  body #language #languages-container {
+    position: relative;
+    top: 70px;
+    overflow-y: auto;
+    height: 300px;
+    background-color: white; }
+    body #language #languages-container p {
+      margin-left: 20px;
+      font-size: 1.2rem; }
+    body #language #languages-container .language-block {
+      margin-left: 20px;
+      margin-bottom: 10px; }
+      body #language #languages-container .language-block span {
+        font-size: 1.2rem; }
+  body #language #continue-button {
+    position: relative;
+    top: 70px;
+    background-color: #f7f7f8;
+    height: 70px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #dee0e1; }
+    body #language #continue-button button {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 15px;
+      padding: 10px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      border: 1px solid lightseagreen;
+      outline: 0;
+      background-color: #2969b3;
+      color: white;
+      font-weight: 600; }
+
 @media screen and (max-width: 650px) {
-  #interest {
+  body #interest {
     width: 55%;
     left: 20%; }
-    #interest #interest-header h2 {
+    body #interest #interest-header h2 {
       margin-left: 10px; }
-    #interest #continue-button button {
+    body #interest #continue-button button {
       font-size: 1.0rem;
       font-weight: 500; } }
 
 @media screen and (max-width: 550px) {
-  #interest {
+  body #interest {
     width: 65%;
     left: 15%; }
-    #interest #interest-header h2 {
+    body #interest #interest-header h2 {
       font-size: 1.0rem;
       margin-left: 5px; }
-    #interest #interest-container {
+    body #interest #interest-container {
       top: 50px; }
-      #interest #interest-container .style-block {
+      body #interest #interest-container .style-block {
         width: 100px;
         height: 100px; }
-    #interest #continue-button button {
+    body #interest #continue-button button {
       font-size: 1.0rem;
       font-weight: 450; } }
 
 @media screen and (max-width: 470px) {
-  #interest {
+  body #interest {
     width: 70%;
     left: 10%; }
-    #interest #interest-header h2 {
+    body #interest #interest-header h2 {
       font-size: 0.9rem;
       margin-left: 5px; }
-    #interest #interest-container {
+    body #interest #interest-container {
       top: 43px; }
-    #interest #continue-button button {
+    body #interest #continue-button button {
       font-size: 0.9rem;
       font-weight: 450; } }
 
 @media screen and (max-width: 380px) {
-  #interest {
+  body #interest {
     width: 90%;
     left: 5%; }
-    #interest #interest-header h2 {
+    body #interest #interest-header h2 {
       font-size: 0.9rem;
       margin-left: 5px; }
-    #interest #interest-container {
+    body #interest #interest-container {
       top: 43px; }
-    #interest #continue-button button {
+    body #interest #continue-button button {
       font-size: 0.9rem;
       font-weight: 450; } }
