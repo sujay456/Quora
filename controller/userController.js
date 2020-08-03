@@ -77,8 +77,21 @@ module.exports.Home=function(req,res)
     return res.render('postLoginHome');
 }
 
+module.exports.interest=function(req,res)
+{
+    return res.render('interest');
+}
+
 
 module.exports.createSession=function(req,res)
 {
-    return res.redirect('/user/home');
+    console.log(req.user);
+    if(req.user.interests.length==0)
+    {    
+        return res.redirect('/user/interest');
+    }
+    else
+    {
+        return res.redirect('/user/home');
+    }
 }

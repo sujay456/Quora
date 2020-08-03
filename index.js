@@ -33,7 +33,11 @@ app.use(express.static('./assets'));
 
 // Using the middleware to use Ejs -Layouts
 app.use(ExpressLayout);
+
 app.set('layout','layouts');
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
 app.set('view engine','ejs');
 app.set('views','./views');
 

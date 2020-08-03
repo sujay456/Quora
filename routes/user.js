@@ -10,5 +10,6 @@ router.post('/checkemail',userController.checkEmail);
 router.post('/create-session',passport.authenticate('local',{failureRedirect:'/'}),userController.createSession);
 
 router.get('/home',passport.CheckAuth,userController.Home);
+router.get('/interest',userController.interest);
 
 module.exports=router;
