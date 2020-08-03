@@ -13,6 +13,7 @@
     border-top-right-radius: 15px;
     position: absolute;
     width: 100%;
+    height: auto;
     background-color: #f7f7f8; }
     #interest #interest-header h2 {
       margin-left: 20px; }
@@ -48,6 +49,8 @@
         right: 0; }
       #interest #interest-container .style-block .hide {
         display: none; }
+    #interest #interest-container .scaledown {
+      transform: scale(0.9); }
     #interest #interest-container .style-block:hover {
       transform: scale(0.9); }
     #interest #interest-container #interest-Technology {
@@ -115,3 +118,55 @@
     #interest #continue-button button:disabled {
       opacity: 0.6;
       cursor: no-drop; }
+
+@media screen and (max-width: 650px) {
+  #interest {
+    width: 55%;
+    left: 20%; }
+    #interest #interest-header h2 {
+      margin-left: 10px; }
+    #interest #continue-button button {
+      font-size: 1.0rem;
+      font-weight: 500; } }
+
+@media screen and (max-width: 550px) {
+  #interest {
+    width: 65%;
+    left: 15%; }
+    #interest #interest-header h2 {
+      font-size: 1.0rem;
+      margin-left: 5px; }
+    #interest #interest-container {
+      top: 50px; }
+      #interest #interest-container .style-block {
+        width: 100px;
+        height: 100px; }
+    #interest #continue-button button {
+      font-size: 1.0rem;
+      font-weight: 450; } }
+
+@media screen and (max-width: 470px) {
+  #interest {
+    width: 70%;
+    left: 10%; }
+    #interest #interest-header h2 {
+      font-size: 0.9rem;
+      margin-left: 5px; }
+    #interest #interest-container {
+      top: 43px; }
+    #interest #continue-button button {
+      font-size: 0.9rem;
+      font-weight: 450; } }
+
+@media screen and (max-width: 380px) {
+  #interest {
+    width: 90%;
+    left: 5%; }
+    #interest #interest-header h2 {
+      font-size: 0.9rem;
+      margin-left: 5px; }
+    #interest #interest-container {
+      top: 43px; }
+    #interest #continue-button button {
+      font-size: 0.9rem;
+      font-weight: 450; } }

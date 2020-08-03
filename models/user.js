@@ -17,7 +17,7 @@ const userSchema=new mongoose.Schema({
     },
     interests:[
         {
-            type:String,
+            type:String
         }
     ]
 },{

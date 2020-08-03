@@ -18,6 +18,7 @@
         border-top-right-radius: 15px;
         position: absolute;
         width: 100%;
+        height: auto;
         background-color: #f7f7f8;
         h2
         {
@@ -60,6 +61,8 @@
                 color: whitesmoke;
                 font-weight: 700;
             }
+
+            // checked
             .checked{
                 position: absolute;
                 right: 0;
@@ -69,6 +72,12 @@
             }
 
         }
+        // permanenet down scaling
+        .scaledown
+        {
+            transform: scale(0.9);
+        }
+
         .style-block:hover{
             transform: scale(0.9);
         }
@@ -166,6 +175,7 @@
         border-bottom-right-radius: 15px;
         border: 1px solid #dee0e1 ;
 
+        
         button{
             cursor: pointer;
             position: absolute;
@@ -185,5 +195,139 @@
             opacity: 0.6;
             cursor: no-drop;
         }
+    }
+
+
+}
+
+// ----------------------Responsive designs------------------------
+// -----------------------1--------------------
+@media screen and (max-width:650px)
+{
+    #interest{
+        width: 55%;
+        left: 20%;
+
+
+        #interest-header
+        {
+
+            h2
+            {
+                margin-left: 10px;
+            }
+        }
+
+        #continue-button
+        {
+            button{
+                font-size: 1.0rem;
+                font-weight: 500;
+            }
+        }
+
+
+    }
+}
+// ----------------------------2---------------------
+@media screen and (max-width:550px)
+{
+    #interest{
+        width: 65%;
+        left: 15%;
+
+
+        #interest-header
+        {
+
+            h2
+            {
+                font-size: 1.0rem;
+                margin-left: 5px;
+            }
+        }
+        #interest-container
+        {
+            top:50px;
+            .style-block
+            {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        #continue-button
+        {
+            button{
+                font-size: 1.0rem;
+                font-weight: 450;
+            }
+        }
+
+
+    }
+}
+// ------------------------------3--------------------------
+@media screen and (max-width:470px)
+{
+    #interest{
+        width: 70%;
+        left: 10%;
+
+
+        #interest-header
+        {
+
+            h2
+            {
+                font-size: 0.9rem;
+                margin-left: 5px;
+            }
+        }
+        #interest-container
+        {
+            top:43px;
+        }
+        #continue-button
+        {
+            button{
+                font-size: 0.9rem;
+                font-weight: 450;
+            }
+        }
+
+
+    }
+}
+// ---------------------------4-----------------------
+@media screen and (max-width:380px)
+{
+    #interest{
+        width: 90%;
+        left: 5%;
+
+
+        #interest-header
+        {
+
+            h2
+            {
+                font-size: 0.9rem;
+                margin-left: 5px;
+            }
+        }
+        #interest-container
+        {
+            top:43px;
+        }
+        #continue-button
+        {
+            button{
+                font-size: 0.9rem;
+                font-weight: 450;
+            }
+        }
+
+
     }
 }

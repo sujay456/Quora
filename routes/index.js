@@ -10,6 +10,7 @@ router.get('/',PreController.home);
 // All the other routes
 
 router.use('/user',require('./user'));
+router.use('/interest',require('./interest'));
 
 
 module.exports=router;

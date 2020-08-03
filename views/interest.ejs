@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="/css/interest.css">
 
+
+
+    
 <div id="interest">
 
     <div id="interest-header">
@@ -10,9 +13,9 @@
     <div id="interest-container">
         <% for(let i of interest){ %>
 
-            <div id="interest-<%=i%>" class="style-block" >
+            <div id="interest-<%=i%>" class="style-block" onclick="checkbox();" >
                 <div class="checked hide">
-                    <img src="/images/checked.png" alt="" width="20px">
+                    <img src="/images/checked.png" alt="" width="25px">
                 </div>
                 <span><%=i%></span>
             </div>
@@ -21,7 +24,13 @@
     </div>
 
     <div id="continue-button">
-        <button type="button" disabled >Follow 4 more topics to continue</button>
+        <form action="/interest/save" method="post">
+            <button id="button" type="submit" disabled >Follow 4 more topics to continue</button>
+        </form>
     </div>
 
 </div>
+    
+
+
+<script src="/js/interest.js"></script>
