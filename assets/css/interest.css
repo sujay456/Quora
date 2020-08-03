@@ -1,235 +1,229 @@
-body .moveleft {
-  transform: translateX(-10000px); }
-
-body .hide {
-  display: none; }
-
-body #interest {
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  height: auto;
-  margin-top: 40px;
-  height: auto;
-  border-radius: 5px;
-  opacity: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  transition: all 100ms ease-in-out; }
-  body #interest #interest-header {
-    border: 1px solid #dee0e1;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    position: absolute;
-    width: 100%;
-    height: auto;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  body .moveleft {
+    transform: translateX(-10000px); }
+  body .hide {
+    display: none; }
+  body .border {
+    border: 1px solid #dee0e1; }
+  body .backgroundColor {
     background-color: #f7f7f8; }
-    body #interest #interest-header h2 {
-      margin-left: 20px; }
-  body #interest #interest-container {
-    border: 1px solid #dee0e1;
+  body #interest {
+    width: 50%;
     position: absolute;
-    top: 72px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    box-sizing: border-box;
-    justify-content: space-between;
-    height: 500px;
-    overflow-y: scroll; }
-    body #interest #interest-container .style-block {
-      width: 120px;
-      height: 120px;
-      position: relative;
-      background-size: contain;
-      margin: 5px;
+    left: 25%;
+    height: auto;
+    margin-top: 40px;
+    height: auto;
+    border-radius: 5px;
+    opacity: 1;
+    transition: all 100ms ease-in-out; }
+    body #interest #interest-header {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: absolute;
+      width: 100%;
+      height: auto; }
+      body #interest #interest-header h2 {
+        margin-left: 20px; }
+    body #interest #interest-container {
+      position: absolute;
+      top: 72px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
       box-sizing: border-box;
-      cursor: pointer;
-      transition: transform 0.1s ease-in-out; }
-      body #interest #interest-container .style-block span {
-        position: absolute;
-        bottom: 0;
-        left: 5px;
-        color: whitesmoke;
-        font-weight: 700; }
-      body #interest #interest-container .style-block .checked {
-        position: absolute;
-        right: 0; }
-    body #interest #interest-container .scaledown {
-      transform: scale(0.9); }
-    body #interest #interest-container .style-block:hover {
-      transform: scale(0.9); }
-    body #interest #interest-container #interest-Technology {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2177-200-JiR07D1TQSfeQzRvWXomVaY4Poj2f8Yb.jpeg"); }
-    body #interest #interest-container #interest-Movies {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-843-200-W7FzODceTO2aQmp8D7E4rKZ8YgSv21eR.jpeg"); }
-    body #interest #interest-container #interest-Health {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1140-200-24q3tiv4WhPssc5TGwf0mvCM5aiqGVXW.jpeg"); }
-    body #interest #interest-container #interest-Food {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1026-200-ohvgqriqzmtjrnillbxqoyfstjxhmlcu.jpeg"); }
-    body #interest #interest-container #interest-Science {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-931-200-c8WCPwZ9qPsh5zLGQ5wHh1ddxtc9Cch7.jpeg"); }
-    body #interest #interest-container #interest-Music {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-801-200-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg"); }
-    body #interest #interest-container #interest-Books {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1056-200-hPoilc51jNiGKb8dbh4plI8jOw6MJ7pG.jpeg"); }
-    body #interest #interest-container #interest-Buisness {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-858-200-VnZbEVtOIGkEHXlnYId9slumV59IPgkA.jpeg"); }
-    body #interest #interest-container #interest-Psycology {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1913-200-B8JrwaVauFzsaTSqXDqoWLCXzQb2mTE9.jpeg"); }
-    body #interest #interest-container #interest-History {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-930-200-cbbsbwijdhpyzlpipejvqpiijhhoaday.jpeg"); }
-    body #interest #interest-container #interest-Cooking {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-877-200-e7jKHEQr0HExAIA9rlsyHlV6HJyRruEo.jpeg"); }
-    body #interest #interest-container #interest-Sports {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-795-200-fujtazxcynewvtxarymxenpcldxwczqq.jpeg"); }
-    body #interest #interest-container #interest-Design {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-897-200-hrukwkbxcneoyfjhaeregbarmrmwxmdx.jpeg"); }
-    body #interest #interest-container #interest-Writing {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2062-200-cuGKoaTVa5xcTTICGaLWKWmk8i9Bqhrp.jpeg");
-      opacity: 0.8; }
-    body #interest #interest-container #interest-Economics {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1575-200-A6ModxJzIbs4YcwW010Fkp6FNJOUxcbC.jpeg");
-      opacity: 0.8; }
-    body #interest #interest-container #interest-Mathematics {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-951-200-N3P1sk6vsq72as9qqwA30zUMvxgBPWJ1.jpeg");
-      opacity: 0.8; }
-    body #interest #interest-container #interest-Politics {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1497-200-GNNZHw8iGYKcBBdqFGxoNvw85bgzRI0Z.jpeg");
-      opacity: 0.8; }
-    body #interest #interest-container #interest-Journalism {
-      background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2184-200-mx1kRZSC3QrxOfVLbN7QSX094Qyfi88P.jpeg");
-      opacity: 0.8; }
-  body #interest #continue-button {
-    position: relative;
-    top: 550px;
-    background-color: #f7f7f8;
-    height: 70px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 1px solid #dee0e1; }
-    body #interest #continue-button button {
-      cursor: pointer;
-      position: absolute;
-      right: 10px;
-      top: 15px;
-      padding: 10px;
-      font-size: 1.2rem;
-      border-radius: 25px;
-      border: 1px solid lightseagreen;
-      outline: 0;
-      background-color: #2969b3;
-      color: white;
-      font-weight: 600; }
-    body #interest #continue-button button:disabled {
-      opacity: 0.6;
-      cursor: no-drop; }
-
-body #language {
-  width: 50%;
-  position: relative;
-  left: 25%;
-  height: auto;
-  margin-top: 40px;
-  border: 1px solid #dee0e1;
-  border-radius: 15px;
-  opacity: 1;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  transition: all 100ms ease-in-out; }
-  body #language #language-header-container {
-    border: 1px solid #dee0e1;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    position: absolute;
-    width: 100%;
-    height: auto;
-    background-color: #f7f7f8; }
-    body #language #language-header-container h2 {
-      margin-left: 20px; }
-  body #language #languages-container {
-    position: relative;
-    top: 70px;
-    overflow-y: auto;
-    height: 300px;
-    background-color: white; }
-    body #language #languages-container p {
-      margin-left: 20px;
-      font-size: 1.2rem; }
-    body #language #languages-container .language-block {
-      margin-left: 20px;
-      margin-bottom: 10px; }
-      body #language #languages-container .language-block span {
-        font-size: 1.2rem; }
-  body #language #continue-button {
-    position: relative;
-    top: 70px;
-    background-color: #f7f7f8;
-    height: 70px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 1px solid #dee0e1; }
-    body #language #continue-button button {
-      cursor: pointer;
-      position: absolute;
-      right: 10px;
-      top: 15px;
-      padding: 10px;
-      font-size: 1.2rem;
-      border-radius: 25px;
-      border: 1px solid lightseagreen;
-      outline: 0;
-      background-color: #2969b3;
-      color: white;
-      font-weight: 600; }
-
-@media screen and (max-width: 650px) {
-  body #interest {
-    width: 55%;
-    left: 20%; }
-    body #interest #interest-header h2 {
-      margin-left: 10px; }
-    body #interest #continue-button button {
-      font-size: 1.0rem;
-      font-weight: 500; } }
-
-@media screen and (max-width: 550px) {
-  body #interest {
-    width: 65%;
-    left: 15%; }
-    body #interest #interest-header h2 {
-      font-size: 1.0rem;
-      margin-left: 5px; }
-    body #interest #interest-container {
-      top: 50px; }
+      justify-content: space-between;
+      height: 500px;
+      overflow-y: scroll; }
       body #interest #interest-container .style-block {
-        width: 100px;
-        height: 100px; }
-    body #interest #continue-button button {
-      font-size: 1.0rem;
-      font-weight: 450; } }
-
-@media screen and (max-width: 470px) {
-  body #interest {
-    width: 70%;
-    left: 10%; }
-    body #interest #interest-header h2 {
-      font-size: 0.9rem;
-      margin-left: 5px; }
-    body #interest #interest-container {
-      top: 43px; }
-    body #interest #continue-button button {
-      font-size: 0.9rem;
-      font-weight: 450; } }
-
-@media screen and (max-width: 380px) {
-  body #interest {
-    width: 90%;
-    left: 5%; }
-    body #interest #interest-header h2 {
-      font-size: 0.9rem;
-      margin-left: 5px; }
-    body #interest #interest-container {
-      top: 43px; }
-    body #interest #continue-button button {
-      font-size: 0.9rem;
-      font-weight: 450; } }
+        width: 120px;
+        height: 120px;
+        position: relative;
+        background-size: contain;
+        margin: 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: transform 0.1s ease-in-out; }
+        body #interest #interest-container .style-block span {
+          position: absolute;
+          bottom: 0;
+          left: 5px;
+          color: whitesmoke;
+          font-weight: 700; }
+        body #interest #interest-container .style-block .checked {
+          position: absolute;
+          right: 0; }
+      body #interest #interest-container .scaledown {
+        transform: scale(0.9); }
+      body #interest #interest-container .style-block:hover {
+        transform: scale(0.9); }
+      body #interest #interest-container #interest-Technology {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2177-200-JiR07D1TQSfeQzRvWXomVaY4Poj2f8Yb.jpeg"); }
+      body #interest #interest-container #interest-Movies {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-843-200-W7FzODceTO2aQmp8D7E4rKZ8YgSv21eR.jpeg"); }
+      body #interest #interest-container #interest-Health {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1140-200-24q3tiv4WhPssc5TGwf0mvCM5aiqGVXW.jpeg"); }
+      body #interest #interest-container #interest-Food {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1026-200-ohvgqriqzmtjrnillbxqoyfstjxhmlcu.jpeg"); }
+      body #interest #interest-container #interest-Science {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-931-200-c8WCPwZ9qPsh5zLGQ5wHh1ddxtc9Cch7.jpeg"); }
+      body #interest #interest-container #interest-Music {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-801-200-Sf8h894FXbQZQit0TeqDrrqS6xw6dwCQ.jpeg"); }
+      body #interest #interest-container #interest-Books {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1056-200-hPoilc51jNiGKb8dbh4plI8jOw6MJ7pG.jpeg"); }
+      body #interest #interest-container #interest-Buisness {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-858-200-VnZbEVtOIGkEHXlnYId9slumV59IPgkA.jpeg"); }
+      body #interest #interest-container #interest-Psycology {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1913-200-B8JrwaVauFzsaTSqXDqoWLCXzQb2mTE9.jpeg"); }
+      body #interest #interest-container #interest-History {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-930-200-cbbsbwijdhpyzlpipejvqpiijhhoaday.jpeg"); }
+      body #interest #interest-container #interest-Cooking {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-877-200-e7jKHEQr0HExAIA9rlsyHlV6HJyRruEo.jpeg"); }
+      body #interest #interest-container #interest-Sports {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-795-200-fujtazxcynewvtxarymxenpcldxwczqq.jpeg"); }
+      body #interest #interest-container #interest-Design {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-897-200-hrukwkbxcneoyfjhaeregbarmrmwxmdx.jpeg"); }
+      body #interest #interest-container #interest-Writing {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2062-200-cuGKoaTVa5xcTTICGaLWKWmk8i9Bqhrp.jpeg");
+        opacity: 0.8; }
+      body #interest #interest-container #interest-Economics {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1575-200-A6ModxJzIbs4YcwW010Fkp6FNJOUxcbC.jpeg");
+        opacity: 0.8; }
+      body #interest #interest-container #interest-Mathematics {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-951-200-N3P1sk6vsq72as9qqwA30zUMvxgBPWJ1.jpeg");
+        opacity: 0.8; }
+      body #interest #interest-container #interest-Politics {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-1497-200-GNNZHw8iGYKcBBdqFGxoNvw85bgzRI0Z.jpeg");
+        opacity: 0.8; }
+      body #interest #interest-container #interest-Journalism {
+        background-image: url("https://qph.fs.quoracdn.net/main-thumb-t-2184-200-mx1kRZSC3QrxOfVLbN7QSX094Qyfi88P.jpeg");
+        opacity: 0.8; }
+    body #interest #continue-button {
+      position: relative;
+      top: 550px;
+      height: 70px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px; }
+      body #interest #continue-button button {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        border: 0;
+        outline: 0;
+        background-color: #2969b3;
+        color: white;
+        font-weight: 600; }
+      body #interest #continue-button button:hover {
+        background-color: #1b5aa1; }
+      body #interest #continue-button button:disabled {
+        opacity: 0.6;
+        cursor: no-drop; }
+  body #language {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    height: auto;
+    margin-top: 40px;
+    border: 1px solid #dee0e1;
+    border-radius: 15px;
+    opacity: 1;
+    transition: all 100ms ease-in-out; }
+    body #language #language-header-container {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: absolute;
+      width: 100%;
+      height: auto; }
+      body #language #language-header-container h2 {
+        margin-left: 20px; }
+    body #language #languages-container {
+      position: relative;
+      top: 70px;
+      overflow-y: auto;
+      height: 300px;
+      background-color: white; }
+      body #language #languages-container p {
+        margin-left: 20px;
+        font-size: 1.2rem; }
+      body #language #languages-container .language-block {
+        margin-left: 20px;
+        margin-bottom: 10px; }
+        body #language #languages-container .language-block span {
+          font-size: 1.2rem; }
+    body #language #continue-button {
+      position: relative;
+      top: 70px;
+      background-color: #f7f7f8;
+      height: 70px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border: 1px solid #dee0e1; }
+      body #language #continue-button button {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        padding: 10px;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        border: 0;
+        outline: 0;
+        background-color: #2969b3;
+        color: white;
+        font-weight: 600; }
+      body #language #continue-button button:hover {
+        background-color: #1c518f; }
+  @media screen and (max-width: 650px) {
+    body #interest {
+      width: 55%;
+      left: 20%; }
+      body #interest #interest-header h2 {
+        margin-left: 10px; }
+      body #interest #continue-button button {
+        font-size: 1.0rem;
+        font-weight: 500; } }
+  @media screen and (max-width: 550px) {
+    body #interest {
+      width: 65%;
+      left: 15%; }
+      body #interest #interest-header h2 {
+        font-size: 1.0rem;
+        margin-left: 5px; }
+      body #interest #interest-container {
+        top: 50px; }
+        body #interest #interest-container .style-block {
+          width: 100px;
+          height: 100px; }
+      body #interest #continue-button button {
+        font-size: 1.0rem;
+        font-weight: 450; } }
+  @media screen and (max-width: 470px) {
+    body #interest {
+      width: 70%;
+      left: 10%; }
+      body #interest #interest-header h2 {
+        font-size: 0.9rem;
+        margin-left: 5px; }
+      body #interest #interest-container {
+        top: 43px; }
+      body #interest #continue-button button {
+        font-size: 0.9rem;
+        font-weight: 450; } }
+  @media screen and (max-width: 380px) {
+    body #interest {
+      width: 90%;
+      left: 5%; }
+      body #interest #interest-header h2 {
+        font-size: 0.9rem;
+        margin-left: 5px; }
+      body #interest #interest-container {
+        top: 43px; }
+      body #interest #continue-button button {
+        font-size: 0.9rem;
+        font-weight: 450; } }

@@ -5,12 +5,12 @@
     
 <div id="interest" >
 
-    <div id="interest-header">
+    <div id="interest-header" class="border backgroundColor" >
         <h2>What are your interests?</h2>
     </div>
 
     <% let interest=['Technology','Movies','Health','Food','Science','Music','Books','Buisness','Psycology','History','Cooking','Sports','Design','Writing','Economics','Mathematics','Politics','Journalism']; %>
-    <div id="interest-container">
+    <div id="interest-container" class="border">
         <% for(let i of interest){ %>
 
             <div id="interest-<%=i%>" class="style-block" onclick="checkbox();" >
@@ -23,7 +23,7 @@
         <%}%>
     </div>
 
-    <div id="continue-button">
+    <div id="continue-button" class="border backgroundColor">
         <form action="/interest/save" method="post">
             <button id="button" type="submit" disabled >Follow 4 more topics to continue</button>
         </form>
@@ -32,7 +32,7 @@
 </div>
 
 <div id="language" class="hide">
-    <div id="language-header-container">
+    <div id="language-header-container" class="border backgroundColor">
         <h2>One last step</h2>
     </div>
 
