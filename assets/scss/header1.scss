@@ -1,0 +1,136 @@
+header
+{
+    
+    #header-container
+    {
+        width: 100%;
+        border-bottom: 1px solid rgb(192, 188, 188);
+        box-shadow: 0 1px 1px rgb(199, 197, 197);
+        display: flex;
+        height: auto;
+        justify-content: space-around;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        #logo
+        {
+            position: relative;
+            right: 100px;
+        }
+        #bar-container
+        {
+
+            display: flex;
+            position: relative;
+            right: 400px;
+            p.style{
+                font-weight: 600;
+
+            }
+            #bar{
+                margin-left: 20px;
+                margin-right: 20px;
+                position: relative;
+                top:20px;
+                width: 600px;
+                height: 15px;
+                // border: 1px solid black;
+                position: relative;
+                border-radius: 10px;
+                background-color: #e6e7e8;
+
+                #moving-bar
+                {
+                    position: absolute;
+                    left: 0;
+                    width: 30%;
+                    height: inherit;
+                    background-color: #2e69ff;
+                    border-radius: 10px;
+                    transition: width 0.5s ease-in-out;
+
+                }
+            }
+        }
+    }
+
+    // -----------------------1------------------------------
+    @media screen and (max-width:1400px) {
+        
+        #header-container
+        {
+            #logo
+            {
+                right: 0px;
+            }
+            #bar-container
+            {
+                right: 200px;
+            }
+        }
+    }
+    // -----------------------2---------------------------------
+    @media screen and (max-width:1200px) {
+        
+        #header-container
+        {
+            #logo
+            {
+                right: 0px;
+            }
+            #bar-container
+            {
+                right: 100px;
+
+                #bar
+                {
+                    width: 400px;
+                }
+            }
+        }
+    }
+    // -----------------------3---------------------------------
+    @media screen and (max-width:1000px) {
+        
+        #header-container
+        {
+            #logo
+            {
+                position: absolute;
+                left: 0px;
+            }
+            #bar-container
+            {
+
+                left: 200px;
+
+                #bar
+                {
+                    width: 300px;
+                }
+            }
+        }
+    }
+     // -----------------------4---------------------------------
+     @media screen and (max-width:800px) {
+        
+        #header-container
+        {
+            #logo
+            {
+                position: absolute;
+                left: 0px;
+            }
+            #bar-container
+            {
+                // left: -100px;
+                // right: 200px;
+                left: 70px;
+                // right: 20px;
+
+                #bar
+                {
+                    width: 110px;
+                }
+            }
+        }
+    }
+}

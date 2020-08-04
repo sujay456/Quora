@@ -1,0 +1,67 @@
+header #header-container {
+  width: 100%;
+  border-bottom: 1px solid #c0bcbc;
+  box-shadow: 0 1px 1px #c7c5c5;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  header #header-container #logo {
+    position: relative;
+    right: 100px; }
+  header #header-container #bar-container {
+    display: flex;
+    position: relative;
+    right: 400px; }
+    header #header-container #bar-container p.style {
+      font-weight: 600; }
+    header #header-container #bar-container #bar {
+      margin-left: 20px;
+      margin-right: 20px;
+      position: relative;
+      top: 20px;
+      width: 600px;
+      height: 15px;
+      position: relative;
+      border-radius: 10px;
+      background-color: #e6e7e8; }
+      header #header-container #bar-container #bar #moving-bar {
+        position: absolute;
+        left: 0;
+        width: 30%;
+        height: inherit;
+        background-color: #2e69ff;
+        border-radius: 10px;
+        transition: width 0.5s ease-in-out; }
+
+@media screen and (max-width: 1400px) {
+  header #header-container #logo {
+    right: 0px; }
+  header #header-container #bar-container {
+    right: 200px; } }
+
+@media screen and (max-width: 1200px) {
+  header #header-container #logo {
+    right: 0px; }
+  header #header-container #bar-container {
+    right: 100px; }
+    header #header-container #bar-container #bar {
+      width: 400px; } }
+
+@media screen and (max-width: 1000px) {
+  header #header-container #logo {
+    position: absolute;
+    left: 0px; }
+  header #header-container #bar-container {
+    left: 200px; }
+    header #header-container #bar-container #bar {
+      width: 300px; } }
+
+@media screen and (max-width: 800px) {
+  header #header-container #logo {
+    position: absolute;
+    left: 0px; }
+  header #header-container #bar-container {
+    left: 70px; }
+    header #header-container #bar-container #bar {
+      width: 110px; } }

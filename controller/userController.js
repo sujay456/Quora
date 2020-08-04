@@ -79,7 +79,7 @@ module.exports.Home=function(req,res)
 
 module.exports.interest=function(req,res)
 {
-    return res.render('interest');
+    return res.render('interest',{layout:'firstLayout'});
 }
 
 

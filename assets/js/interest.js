@@ -58,11 +58,13 @@ var SubmitInterest=function()
             {
                 console.log(data);
                 $('#interest').addClass('moveleft');
+                $('#moving-bar').css('width','60%');
                 setTimeout(function()
                 {
                     $('#interest').remove();
                 },100)
                 $('#language').removeClass('hide');
+
             },
             error:function(err)
             {
@@ -106,7 +108,15 @@ var SubmitLanguage=function()
             {
                 console.log(data);
                 // redirecting
+                $('#moving-bar').css({
+                    'width':'100%',
+                    'backgroundColor':'#0d802a'
+                });
+            
+                setTimeout(function(){
                 window.location.href='/user/home';
+
+                },600);
             }
             ,error:function(err)
             {
