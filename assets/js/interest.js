@@ -2,7 +2,7 @@
     // 'Technology':false,'Movies':false,'Health':false,'Food':false,'Science':false,'Music':false,'Books':false,'Buisness':false,'Psycology':false,'History':false,'Cooking':false,'Sports':false,'Design':false,'Writing':false,'Economics':false,'Mathematics':false,'Politics':false,'Journalism':false
     // An array to store all the interest 
 let interest={};
-
+let language={};
 
 
 
@@ -25,7 +25,6 @@ var checkbox=function()
         delete interest[int];
     }
     let no_of_interest=Object.keys(interest).length;
-    // console.log(no_of_interest);
     let left=4-no_of_interest;
     if(left>0)
     {
@@ -74,8 +73,52 @@ var SubmitInterest=function()
     });
 }
 
+var selectedLang=function()
+{
+    console.log(event.target.value);
+    
+    if(language[event.target.value]==undefined)
+    {
+        language[event.target.value]=true;
+    }
+    else
+    {
+        delete language[event.target.value];
+    }
+    console.log(language);
+
+}
+
+var SubmitLanguage=function()
+{
+    let form =$('#continue-button-lan form');
+
+    form.submit(function(e)
+    {
+        // console.log('prevented');
+        e.preventDefault();
+
+        $.ajax({
+            type:'post',
+            url:'/language/save',
+            data:language,
+            success:function(data)
+            {
+                console.log(data);
+                // redirecting
+                window.location.href='/user/home';
+            }
+            ,error:function(err)
+            {
+                console.log(err.responseText);
+            }
+        });
+    });
+}
+
 
 
 
 // Calling of the functions
 SubmitInterest();
+SubmitLanguage();

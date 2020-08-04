@@ -39,15 +39,15 @@
     <div id="languages-container" >
         <p>What other languages you know?</p>
 
-        <% let languages=['Arabic','Arabic','Danish','Dutch','English','Finnish','French','German','Gujrati','Hebrew','Hindi','Italian'] %>
+        <% let languages=['Arabic','Danish','Dutch','English','Finnish','French','German','Gujrati','Hebrew','Hindi','Italian'] %>
         <% for(let l of languages){ %>
             <div class="language-block">
-                <input type="checkbox" name="<%=l%>" id="">  
+                <input type="checkbox" value="<%=l%>" onclick="selectedLang();" >  
                 <span><%=l%></span>
             </div>
         <%}%>
     </div>
-    <div id="continue-button">
+    <div id="continue-button-lan">
         <form action="/interest/save" method="post">
             <button id="button" type="submit">Done</button>
         </form>

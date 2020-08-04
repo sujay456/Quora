@@ -12,5 +12,7 @@ router.get('/',PreController.home);
 router.use('/user',require('./user'));
 router.use('/interest',require('./interest'));
 
+router.use('/language',require('./language'));
+
 
 module.exports=router;

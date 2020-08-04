@@ -156,7 +156,7 @@ body {
         margin-bottom: 10px; }
         body #language #languages-container .language-block span {
           font-size: 1.2rem; }
-    body #language #continue-button {
+    body #language #continue-button-lan {
       position: relative;
       top: 70px;
       background-color: #f7f7f8;
@@ -164,7 +164,7 @@ body {
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       border: 1px solid #dee0e1; }
-      body #language #continue-button button {
+      body #language #continue-button-lan button {
         cursor: pointer;
         position: absolute;
         right: 10px;
@@ -177,7 +177,7 @@ body {
         background-color: #2969b3;
         color: white;
         font-weight: 600; }
-      body #language #continue-button button:hover {
+      body #language #continue-button-lan button:hover {
         background-color: #1c518f; }
   @media screen and (max-width: 650px) {
     body #interest {
