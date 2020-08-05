@@ -3,7 +3,10 @@ header
     .display
     {
         display: none;
+        
     }
+    
+    
     #header-container
     {
         position: fixed;
@@ -73,24 +76,25 @@ header
                     border-radius: 50%;
                 }
                 // border: 1px solid black;
+                
                 .nav-bar
                 {
                     // border:1px solid black;
-                    border-radius: 2px;
+                    border-radius: 5px;
                     position: absolute;
                     top:70px;
                     margin-top: 5px;
                     width: 262px;
                     height: auto;
-                    // z-index: 100;
+                    z-index: 100;
                     left: -105px;
                     background-color: #fff;
                     padding: 10px;
                     box-sizing: border-box;
                     box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
-
+                    transition: transform 0.8s ease-in-out;
                     
-                    #arrow
+                    .arrow
                     {
                         // z-index: 100;
                         background-color: #fff;
@@ -158,6 +162,7 @@ header
                             span
                             {
                                 color: red;
+
                             }
                         }
                     }
@@ -166,6 +171,69 @@ header
             div.languages
             {
                 padding: 20px 20px;
+                // border: 1px solid black;
+                position: relative;
+                div.lang-nav-container
+                {
+                    top:70px;
+                    left: -80px;
+                    position: absolute;
+                    background-color: #fff;
+                    box-sizing: border-box;
+                    box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
+                    // border: 1px solid black;
+                    width: 230px;
+                    margin-top: 5px;
+                    padding: 10px 5px;
+                    height: auto;
+                    box-sizing: border-box;
+                    .arrow
+                    {
+                        // z-index: 100;
+                        background-color: #fff;
+                        width: 10px;
+                        height: 10px;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 0px;
+                        left: 90px;
+                        z-index: -100;
+
+                    }
+
+                    #title{
+                        padding: 5px;
+                        span
+                        {
+                            color: #282829;
+                            font-weight: 700;
+                            font-size: 1rem;
+                        }
+                        border-bottom: 1px solid #dee0e1;
+                    }
+                    #languages
+                    {
+                        padding: 5px;
+                        border-bottom: 1px solid #dee0e1;
+                    }
+
+                    #lang-settings
+                    {
+                        padding: 5px;
+                        span
+                        {
+                            font-weight: 700;
+                            font-size: 0.9rem;
+                            a{
+                                text-decoration: none;
+                                color: rgb(99, 97, 97);
+                            }
+                        }
+                    }
+                    #lang-settings:hover{
+                        background-color: rgb(230, 227, 227);
+                    }
+                }
             }
             .nav:hover
             {

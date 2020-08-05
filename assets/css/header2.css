@@ -40,18 +40,20 @@ header #header-container {
       header #header-container #navigation div.profile img {
         border-radius: 50%; }
       header #header-container #navigation div.profile .nav-bar {
-        border-radius: 2px;
+        border-radius: 5px;
         position: absolute;
         top: 70px;
         margin-top: 5px;
         width: 262px;
         height: auto;
+        z-index: 100;
         left: -105px;
         background-color: #fff;
         padding: 10px;
         box-sizing: border-box;
-        box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04); }
-        header #header-container #navigation div.profile .nav-bar #arrow {
+        box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
+        transition: transform 0.8s ease-in-out; }
+        header #header-container #navigation div.profile .nav-bar .arrow {
           background-color: #fff;
           width: 10px;
           height: 10px;
@@ -92,7 +94,49 @@ header #header-container {
           header #header-container #navigation div.profile .nav-bar #settings div.logout span {
             color: red; }
     header #header-container #navigation div.languages {
-      padding: 20px 20px; }
+      padding: 20px 20px;
+      position: relative; }
+      header #header-container #navigation div.languages div.lang-nav-container {
+        top: 70px;
+        left: -80px;
+        position: absolute;
+        background-color: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
+        width: 230px;
+        margin-top: 5px;
+        padding: 10px 5px;
+        height: auto;
+        box-sizing: border-box; }
+        header #header-container #navigation div.languages div.lang-nav-container .arrow {
+          background-color: #fff;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 0px;
+          left: 90px;
+          z-index: -100; }
+        header #header-container #navigation div.languages div.lang-nav-container #title {
+          padding: 5px;
+          border-bottom: 1px solid #dee0e1; }
+          header #header-container #navigation div.languages div.lang-nav-container #title span {
+            color: #282829;
+            font-weight: 700;
+            font-size: 1rem; }
+        header #header-container #navigation div.languages div.lang-nav-container #languages {
+          padding: 5px;
+          border-bottom: 1px solid #dee0e1; }
+        header #header-container #navigation div.languages div.lang-nav-container #lang-settings {
+          padding: 5px; }
+          header #header-container #navigation div.languages div.lang-nav-container #lang-settings span {
+            font-weight: 700;
+            font-size: 0.9rem; }
+            header #header-container #navigation div.languages div.lang-nav-container #lang-settings span a {
+              text-decoration: none;
+              color: #636161; }
+        header #header-container #navigation div.languages div.lang-nav-container #lang-settings:hover {
+          background-color: #e6e3e3; }
     header #header-container #navigation .nav:hover {
       background-color: #eeecec; }
     header #header-container #navigation button {

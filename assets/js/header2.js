@@ -46,9 +46,15 @@ $('.profile').click(function(e){
     e.stopPropagation();
 });
 // console.log($('main'));
+$('.languages').click(function(e){
+    $(' .lang-nav-container',this).toggleClass('display');
+    e.stopPropagation();
+
+});
 
 $(document).click(function()
 {
-    $('.nav-bar').addClass('display');
-})
+        $('.nav-bar').addClass('display');
+        $('.lang-nav-container').addClass('display');
+});
 
