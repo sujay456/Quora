@@ -77,7 +77,7 @@ var SubmitInterest=function()
 
 var selectedLang=function()
 {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     
     if(language[event.target.value]==undefined)
     {
@@ -87,7 +87,7 @@ var selectedLang=function()
     {
         delete language[event.target.value];
     }
-    console.log(language);
+    // console.log(language);
 
 }
 

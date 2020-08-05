@@ -29,7 +29,7 @@ app.use(sassMiddlware({
 
 // Middleware for Static Files
 app.use(express.static('./assets'));
-
+app.use('/uploads',express.static('./uploads'));
 
 // Using the middleware to use Ejs -Layouts
 app.use(ExpressLayout);

@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://kit.fontawesome.com/ae87392b1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/layout2.css">
+    <link rel="stylesheet" href="/css/header2.css">
     <title>Quora</title>
     <%- style %>
 </head>
 <body>
     
         <header>
-            Header
+            <%- include('_header2') %>
         </header>
     
-    <%- body %>
+    <main>
+        <%- body %>
+    </main>
+
+    
 
 
+    <script src="/js/header2.js"></script>
     <%- script %>
 </body>
 </html>

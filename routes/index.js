@@ -13,6 +13,8 @@ router.use('/user',require('./user'));
 router.use('/interest',require('./interest'));
 
 router.use('/language',require('./language'));
+router.use('/answers',require('./answers'));
+router.use('/notification',require('./notification'));
 
 
 module.exports=router;

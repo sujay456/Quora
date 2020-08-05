@@ -1,0 +1,108 @@
+header .display {
+  display: none; }
+
+header #header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 2px 1px grey; }
+  header #header-container #logo {
+    position: relative;
+    left: 20%; }
+  header #header-container #navigation {
+    position: relative;
+    left: 22%;
+    display: flex;
+    align-items: center; }
+    header #header-container #navigation .redBorder {
+      border-bottom: 3px solid #860b0b;
+      color: #860b0b; }
+    header #header-container #navigation .redFont {
+      color: #860b0b; }
+    header #header-container #navigation form {
+      height: 100%; }
+    header #header-container #navigation div {
+      height: 100%;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      color: #636466;
+      cursor: pointer; }
+      header #header-container #navigation div span {
+        text-decoration: none;
+        font-weight: 600;
+        color: #636466;
+        font-size: 1.2rem; }
+    header #header-container #navigation div.profile {
+      position: relative;
+      padding: 14px 5px; }
+      header #header-container #navigation div.profile img {
+        border-radius: 50%; }
+      header #header-container #navigation div.profile .nav-bar {
+        border-radius: 2px;
+        position: absolute;
+        top: 70px;
+        margin-top: 5px;
+        width: 262px;
+        height: auto;
+        left: -105px;
+        background-color: #fff;
+        padding: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04); }
+        header #header-container #navigation div.profile .nav-bar #arrow {
+          background-color: #fff;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 0px;
+          left: 110px; }
+        header #header-container #navigation div.profile .nav-bar #personal {
+          padding: 5px;
+          border-bottom: 1px solid #dee0e1; }
+          header #header-container #navigation div.profile .nav-bar #personal img {
+            display: block; }
+          header #header-container #navigation div.profile .nav-bar #personal p {
+            display: inline-block;
+            font-weight: 700;
+            color: #282829; }
+          header #header-container #navigation div.profile .nav-bar #personal span {
+            position: relative;
+            left: 120px;
+            font-weight: 700; }
+        header #header-container #navigation div.profile .nav-bar .nav-user-content {
+          padding: 0;
+          border-bottom: 1px solid #dee0e1; }
+          header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items {
+            padding: 10px 5px; }
+            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items span {
+              color: #282829;
+              font-size: 1.0rem; }
+          header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items:hover {
+            background-color: #e5e2e2; }
+        header #header-container #navigation div.profile .nav-bar #settings {
+          padding: 0px; }
+          header #header-container #navigation div.profile .nav-bar #settings div {
+            padding: 5px; }
+            header #header-container #navigation div.profile .nav-bar #settings div span {
+              font-size: 0.9rem;
+              color: #b6b6b6; }
+          header #header-container #navigation div.profile .nav-bar #settings div.logout span {
+            color: red; }
+    header #header-container #navigation div.languages {
+      padding: 20px 20px; }
+    header #header-container #navigation .nav:hover {
+      background-color: #eeecec; }
+    header #header-container #navigation button {
+      color: white;
+      background-color: #b92b27;
+      border: 0;
+      font-weight: 500;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      padding: 10px;
+      margin-left: 10px; }
+    header #header-container #navigation button:hover {
+      background-color: #9b221e; }

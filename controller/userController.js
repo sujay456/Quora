@@ -79,7 +79,14 @@ module.exports.Home=function(req,res)
 
 module.exports.interest=function(req,res)
 {
-    return res.render('interest',{layout:'firstLayout'});
+    if(req.user.interests.length>0)
+    {
+        return res.redirect('back');
+    }
+    else
+    {
+        return res.render('interest',{layout:'firstLayout'});
+    }
 }
 
 

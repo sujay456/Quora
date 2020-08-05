@@ -1,0 +1,191 @@
+header
+{
+    .display
+    {
+        display: none;
+    }
+    #header-container
+    {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        // border: 2px solid black;
+        background-color: white;
+        display: flex;
+        box-shadow: 0 2px 1px grey;
+
+        #logo
+        {
+            position: relative;
+            left: 20%;
+            // border: 1px solid red;
+        }
+        #navigation{
+            // border: 1px solid black;
+            position: relative;
+            left: 22%;
+            display: flex;
+            align-items: center;
+            
+            .redBorder
+            {
+                border-bottom: 3px solid rgb(134, 11, 11);
+                color: rgb(134, 11, 11);
+
+            }
+            .redFont
+            {
+                color: rgb(134, 11, 11);
+            }
+            form{
+                height: 100%;
+            }
+            div
+            {
+                // border: 1px solid red;
+                height: 100%;
+                padding: 15px 20px;
+                box-sizing: border-box;
+                // color: #636466;
+                // color: red;
+                color: #636466;
+
+                cursor: pointer;
+                
+                span
+                {
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: #636466;
+                    
+                    font-size: 1.2rem;
+                }
+
+                
+                
+            }
+            div.profile
+            {
+                position: relative;
+                padding: 14px 5px;
+                // border: 1px solid black;
+                img{
+                    border-radius: 50%;
+                }
+                // border: 1px solid black;
+                .nav-bar
+                {
+                    // border:1px solid black;
+                    border-radius: 2px;
+                    position: absolute;
+                    top:70px;
+                    margin-top: 5px;
+                    width: 262px;
+                    height: auto;
+                    // z-index: 100;
+                    left: -105px;
+                    background-color: #fff;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
+
+                    
+                    #arrow
+                    {
+                        // z-index: 100;
+                        background-color: #fff;
+                        width: 10px;
+                        height: 10px;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 0px;
+                        left: 110px;
+                    }
+                    #personal
+                    {
+                        padding: 5px;
+                        border-bottom: 1px solid #dee0e1;
+                        img{
+                            display: block;
+                        }
+                        p
+                        {
+                            display: inline-block;
+                            font-weight: 700;
+                            color: #282829;
+                        }
+                        span
+                        {
+                            position: relative;
+                            left: 120px;
+                            font-weight: 700;
+                        }
+                    }
+                    .nav-user-content
+                    {
+                        padding: 0;
+                        border-bottom: 1px solid #dee0e1;
+                        .nav-items
+                        {
+                            // border-bottom: 1px solid #dee0e1;
+                            // cursor: pointer;
+                            padding: 10px 5px;
+                            span{
+                                color: #282829;
+                                font-size: 1.0rem;
+                            }
+                        }
+                        .nav-items:hover
+                        {
+                            background-color: rgb(229, 226, 226);
+                        }
+                    }
+                    #settings
+                    {
+                        padding: 0px;
+                        div
+                        {
+                            padding: 5px;
+                            span
+                            {
+                                font-size: 0.9rem;
+                                color: rgb(182, 182, 182);
+                            }
+
+                        }
+                        div.logout
+                        {
+                            span
+                            {
+                                color: red;
+                            }
+                        }
+                    }
+                }
+            }
+            div.languages
+            {
+                padding: 20px 20px;
+            }
+            .nav:hover
+            {
+                background-color: rgb(238, 236, 236);
+            }
+            button
+                {
+                    color: white;
+                    background-color: #b92b27;
+                    border: 0;
+                    font-weight: 500;
+                    border-radius: 20px;
+                    font-size: 0.8rem;
+                    padding: 10px;
+                    margin-left: 10px;
+                }
+                button:hover
+                {
+                    background-color: #9b221e;
+                }
+        }
+    }
+}

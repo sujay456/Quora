@@ -1,0 +1,89 @@
+<div id="header-container">
+    <div id="logo">
+        <a href="/">
+            <img src="/images/logo.png" alt="logo" width="90px" >
+        </a>
+    </div>
+
+    <div id="navigation">
+        <form action="/" method="get">
+            <div id="home-tab" class="nav">
+                <i class="fas fa-home fa-lg"></i>
+                <span>Home</span>
+            </div>
+        </form>
+
+        <form action="/answers" method="get">
+            <div id="answer-tab" class="nav">
+                <i class="fas fa-pencil-alt fa-lg"></i>
+                <span>Answer</span>
+            </div>
+        </form>
+
+        <form action="/notification" method="get">
+            <div id="notification" class="nav">
+                <i class="fas fa-bell fa-lg"></i>
+                <span>Notification</span>
+    
+            </div>
+        </form>
+
+        <div class="profile nav">
+            <span>
+                <img src="/uploads/user/avatar/Default.jpg" alt="" width="35px" >
+            </span>
+
+            <div class="nav-bar display">
+                <div id="arrow"></div>
+                <!-- ------------------1------------------- -->
+                <div id="personal">
+                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px" >
+                    <p><%= user.name %>  </p>
+                    <span>  >  </span>
+                </div>
+
+                <div class="nav-user-content">
+                        <!-- -----------------------------2------------------>
+                    <div id="messages" class="nav-items"> 
+                        <span>Messages</span>
+                    </div>
+                    <!-- --------------------------------3-------------------- -->
+                    <div id="stats" class="nav-items"> 
+                        <span>Stats</span>
+                    </div>
+
+                    <!-- --------------------------------4-------------------- -->
+                    <div id="content" class="nav-items"> 
+                        <span>Your Content</span>
+                    </div>
+                </div>
+
+                <div id="settings">
+                    <div id="setting">
+                        <span>Settings</span>
+                    </div>
+
+                    <div id="language-setting">
+                        <span>Language</span>
+                    </div>
+                    
+                    <div class="logout">
+                        <span>Log out</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="languages nav" >
+            <i class="fas fa-globe fa-lg"></i>
+        </div>
+
+        <!-- <div id="add-question">
+            <a href="" id="button">Add Questions</a>
+        </div> -->
+        <button type="button">Add Question</button>
+
+
+    </div>
+</div>
