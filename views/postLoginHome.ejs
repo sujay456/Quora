@@ -1,2 +1,48 @@
-<h1>Hello <%= user.name %> </h1>
+<link rel="stylesheet" href="/css/postHome.css">
+
+<div id="home-container" >
+    <div id="feed-container">
+        
+        <div id="feed-header">
+            <i class="fas fa-rss"></i>
+            <span>Feed</span>
+        </div>
+
+        <div id="feed-interest">
+            <%for(let i of user.interests){  %>
+                <div class="interest-container-feed">
+                    <span><%=i%></span>
+                </div>
+            <% } %>
+        </div>
+
+    </div>
+
+
+    <div id="main-questions-container">
+
+        <div id="add-question-container">
+
+            <div id="user-container">
+                <img src="/uploads/user/avatar/Default.jpg" alt="" width="35px">
+                <span><%= user.name %></span>
+            </div>  
+
+            <div id="content">
+                <span>What is Your question ?</span>
+            </div>
+
+        </div>
+
+        <div id="questions-answers">
+            <!-- Will do later when model is created -->
+        </div>
+
+    </div>
+
+    <div id="todo-container">
+
+    </div>
+
+</div>
 

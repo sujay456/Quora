@@ -1,0 +1,126 @@
+#home-container
+{
+    width: 1500px;
+    border: 1px solid black;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    padding: 50px 110px;
+    box-sizing: border-box;
+    
+
+    // feed container
+    #feed-container
+    {
+        width: 180px;
+        height: auto;   //to be auto
+        // border: 1px solid black;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 70px;
+        // position: relative;
+        vertical-align: top;
+        padding: 0px;
+        border-bottom: 1px solid rgb(139, 137, 137) ;
+        // margin-bottom: 100px;
+
+        #feed-header
+        {
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            // border: 1px solid black;
+            color: #b92b27;
+            margin-bottom: 3px;
+
+            background-color:#f5bebb ;
+            span{
+
+                font-weight: 600;
+                
+            }
+        }
+        #feed-interest
+        {
+            .interest-container-feed
+            {
+                // border: 1px solid black;
+                border-radius: 3px;
+                padding: 5px;
+                margin-bottom: 3px;
+                span{
+                    font-size: 0.9rem;
+                    color: #636466;
+                }
+            }
+
+            .interest-container-feed:hover{
+                background-color: rgb(201, 198, 198);
+            }
+        }
+        
+    }
+
+
+    //main-container
+    #main-questions-container
+    {
+        width: 700px;
+        height: 300px;
+        // border: 1px solid black;
+        display: inline-block;
+        margin-right: 50px;
+        // position: relative;
+        // left: 300px;
+        vertical-align: top;
+
+
+        #add-question-container
+        {
+            width: 100%;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 4px;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            #user-container
+            {
+                img
+                {
+                    border-radius: 50%;
+                    vertical-align: text-bottom;
+                }
+                span{
+                    color: #939598;
+
+                }
+                
+                margin-bottom:5px ;
+            }
+
+            #content
+            {
+                span{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: #939598;
+                }
+            }
+
+        }
+
+
+    }
+
+    // To do container
+    #todo-container{
+        // position: relative;
+        // right: 100px;
+        display: inline-block;
+        width: 150px;
+        height: 300px;
+        border: 1px solid black;
+    }
+
+}

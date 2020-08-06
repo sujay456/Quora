@@ -45,15 +45,18 @@
                 <div class="nav-user-content">
                         <!-- -----------------------------2------------------>
                     <div id="messages" class="nav-items"> 
+                        <i class="far fa-comment-dots"></i>
                         <span>Messages</span>
                     </div>
                     <!-- --------------------------------3-------------------- -->
                     <div id="stats" class="nav-items"> 
+                        <i class="fas fa-hryvnia"></i>
                         <span>Stats</span>
                     </div>
 
                     <!-- --------------------------------4-------------------- -->
                     <div id="content" class="nav-items"> 
+                        <i class="fas fa-book"></i>
                         <span>Your Content</span>
                     </div>
                 </div>
@@ -88,6 +91,11 @@
                 <div id="languages">
 
                     <!-- to do for the languages -->
+                    <% for(let l of user.languages){ %>
+                        <div id="lang-<%=l%>" class="lang-style">
+                            <span><%=l%></span>
+                        </div>
+                    <% } %>
                 </div>
 
                 <div id="lang-settings">

@@ -43,11 +43,15 @@ $('#navigation form').click(function(e)
 $('.profile').click(function(e){
 
     $(' .nav-bar',this).toggleClass('display');
+    $('.lang-nav-container').addClass('display');
+
     e.stopPropagation();
 });
 // console.log($('main'));
 $('.languages').click(function(e){
     $(' .lang-nav-container',this).toggleClass('display');
+    $('.nav-bar').addClass('display');
+
     e.stopPropagation();
 
 });

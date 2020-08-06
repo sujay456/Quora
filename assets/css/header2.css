@@ -10,10 +10,10 @@ header #header-container {
   box-shadow: 0 2px 1px grey; }
   header #header-container #logo {
     position: relative;
-    left: 20%; }
+    left: 25%; }
   header #header-container #navigation {
     position: relative;
-    left: 22%;
+    left: 27%;
     display: flex;
     align-items: center; }
     header #header-container #navigation .redBorder {
@@ -54,6 +54,7 @@ header #header-container {
         box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
         transition: transform 0.8s ease-in-out; }
         header #header-container #navigation div.profile .nav-bar .arrow {
+          z-index: 100;
           background-color: #fff;
           width: 10px;
           height: 10px;
@@ -79,6 +80,8 @@ header #header-container {
           border-bottom: 1px solid #dee0e1; }
           header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items {
             padding: 10px 5px; }
+            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items i {
+              margin-right: 10px; }
             header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items span {
               color: #282829;
               font-size: 1.0rem; }
@@ -115,8 +118,7 @@ header #header-container {
           transform: rotate(45deg);
           position: absolute;
           top: 0px;
-          left: 90px;
-          z-index: -100; }
+          left: 90px; }
         header #header-container #navigation div.languages div.lang-nav-container #title {
           padding: 5px;
           border-bottom: 1px solid #dee0e1; }
@@ -127,6 +129,11 @@ header #header-container {
         header #header-container #navigation div.languages div.lang-nav-container #languages {
           padding: 5px;
           border-bottom: 1px solid #dee0e1; }
+          header #header-container #navigation div.languages div.lang-nav-container #languages .lang-style {
+            padding: 5px; }
+            header #header-container #navigation div.languages div.lang-nav-container #languages .lang-style span {
+              font-size: 1.0rem;
+              color: #282829; }
         header #header-container #navigation div.languages div.lang-nav-container #lang-settings {
           padding: 5px; }
           header #header-container #navigation div.languages div.lang-nav-container #lang-settings span {
@@ -147,6 +154,7 @@ header #header-container {
       border-radius: 20px;
       font-size: 0.8rem;
       padding: 10px;
-      margin-left: 10px; }
+      margin-left: 10px;
+      outline: none; }
     header #header-container #navigation button:hover {
       background-color: #9b221e; }

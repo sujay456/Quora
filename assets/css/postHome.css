@@ -1,0 +1,65 @@
+#home-container {
+  width: 1500px;
+  border: 1px solid black;
+  height: auto;
+  position: absolute;
+  left: 5%;
+  padding: 50px 110px;
+  box-sizing: border-box; }
+  #home-container #feed-container {
+    width: 180px;
+    height: auto;
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 70px;
+    vertical-align: top;
+    padding: 0px;
+    border-bottom: 1px solid #8b8989; }
+    #home-container #feed-container #feed-header {
+      padding: 5px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      color: #b92b27;
+      margin-bottom: 3px;
+      background-color: #f5bebb; }
+      #home-container #feed-container #feed-header span {
+        font-weight: 600; }
+    #home-container #feed-container #feed-interest .interest-container-feed {
+      border-radius: 3px;
+      padding: 5px;
+      margin-bottom: 3px; }
+      #home-container #feed-container #feed-interest .interest-container-feed span {
+        font-size: 0.9rem;
+        color: #636466; }
+    #home-container #feed-container #feed-interest .interest-container-feed:hover {
+      background-color: #c9c6c6; }
+  #home-container #main-questions-container {
+    width: 700px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 50px;
+    vertical-align: top; }
+    #home-container #main-questions-container #add-question-container {
+      width: 100%;
+      cursor: pointer;
+      background-color: white;
+      border-radius: 4px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      margin-bottom: 10px; }
+      #home-container #main-questions-container #add-question-container #user-container {
+        margin-bottom: 5px; }
+        #home-container #main-questions-container #add-question-container #user-container img {
+          border-radius: 50%;
+          vertical-align: text-bottom; }
+        #home-container #main-questions-container #add-question-container #user-container span {
+          color: #939598; }
+      #home-container #main-questions-container #add-question-container #content span {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #939598; }
+  #home-container #todo-container {
+    display: inline-block;
+    width: 150px;
+    height: 300px;
+    border: 1px solid black; }
