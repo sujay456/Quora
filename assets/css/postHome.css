@@ -4,7 +4,7 @@
   height: auto;
   position: absolute;
   left: 5%;
-  padding: 50px 110px;
+  padding: 25px 110px;
   box-sizing: border-box; }
   #home-container #feed-container {
     width: 180px;
@@ -35,10 +35,13 @@
       background-color: #c9c6c6; }
   #home-container #main-questions-container {
     width: 700px;
-    height: 300px;
+    height: auto;
     display: inline-block;
     margin-right: 50px;
+    position: relative;
     vertical-align: top; }
+    #home-container #main-questions-container .display {
+      display: none; }
     #home-container #main-questions-container #add-question-container {
       width: 100%;
       cursor: pointer;
@@ -58,6 +61,90 @@
         font-size: 1.2rem;
         font-weight: 700;
         color: #939598; }
+    #home-container #main-questions-container #question-form {
+      position: absolute;
+      width: 616px;
+      height: 450px;
+      background-color: white;
+      border: 1px solid #dee0e1;
+      top: 20px;
+      border-radius: 15px; }
+      #home-container #main-questions-container #question-form #header {
+        background-color: #f7f7f8;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid #dee0e1;
+        height: 60px; }
+        #home-container #main-questions-container #question-form #header span {
+          font-weight: 700;
+          color: #b92b27; }
+      #home-container #main-questions-container #question-form #tip-container {
+        background-color: #c7d4f3;
+        width: 90%;
+        margin: 20px 30px;
+        border-radius: 3px; }
+        #home-container #main-questions-container #question-form #tip-container #content-container #header-tips {
+          color: #2e69ff;
+          font-weight: 600;
+          position: relative;
+          left: 25px; }
+        #home-container #main-questions-container #question-form #tip-container #content-container ul li {
+          color: #2e69ff; }
+      #home-container #main-questions-container #question-form #form-question {
+        margin: 15px 20px; }
+        #home-container #main-questions-container #question-form #form-question input {
+          width: 90%;
+          border: none;
+          outline: none;
+          height: 50px;
+          font-size: 1.2rem;
+          color: black;
+          border-bottom: 1px solid #dddddd;
+          transition: border 0.1s ease-in; }
+        #home-container #main-questions-container #question-form #form-question input:hover {
+          border-color: #205fff; }
+        #home-container #main-questions-container #question-form #form-question input::placeholder {
+          color: #939598;
+          font-size: 1.2rem; }
+      #home-container #main-questions-container #question-form #footer-form {
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        background-color: #f7f7f8;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #dee0e1; }
+        #home-container #main-questions-container #question-form #footer-form #add {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          background-color: #2e69ff;
+          border-radius: 20px;
+          height: 35px;
+          border: none;
+          outline: none;
+          color: white;
+          font-weight: 600;
+          padding: 10px; }
+        #home-container #main-questions-container #question-form #footer-form #cancel {
+          position: absolute;
+          right: 130px;
+          top: 15px;
+          border-radius: 20px;
+          height: 35px;
+          border: none;
+          outline: none;
+          color: #5e5e5e;
+          font-weight: 500; }
+        #home-container #main-questions-container #question-form #footer-form #cancel:hover {
+          background-color: #c5c5c5; }
+        #home-container #main-questions-container #question-form #footer-form #add:hover {
+          background-color: #1f5fff; }
   #home-container #todo-container {
     display: inline-block;
     width: 150px;
