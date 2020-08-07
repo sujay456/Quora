@@ -70,7 +70,7 @@ $('.lang-nav-container').click(function(e){
 
 $(document).click(function()
 {
-    console.log('document Clicked');
+    // console.log('document Clicked');
         $('.nav-bar').addClass('display');
         $('.lang-nav-container').addClass('display');
 });
