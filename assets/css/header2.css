@@ -1,6 +1,9 @@
 header .display {
   display: none; }
 
+header .transparent-Black {
+  opacity: 0.5; }
+
 header #header-container {
   position: fixed;
   top: 0;

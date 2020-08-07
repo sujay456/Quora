@@ -74,6 +74,7 @@ module.exports.signup=async function(req,res){
 module.exports.Home=function(req,res)
 {
     // we have a middleware for checking Authentication 
+    console.log('Home');
     return res.render('postLoginHome');
 }
 
@@ -81,6 +82,7 @@ module.exports.interest=function(req,res)
 {
     if(req.user.interests.length>0)
     {
+        // console.log('back');
         return res.redirect('back');
     }
     else
@@ -99,6 +101,7 @@ module.exports.createSession=function(req,res)
     }
     else
     {
+        console.log('it reached here');
         return res.redirect('/user/home');
     }
 }

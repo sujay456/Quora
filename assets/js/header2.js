@@ -42,11 +42,15 @@ $('#navigation form').click(function(e)
 // For the nav bar to appear
 $('.profile').click(function(e){
 
+    console.log('hello');
+    console.log(e.target);
     $(' .nav-bar',this).toggleClass('display');
     $('.lang-nav-container').addClass('display');
 
     e.stopPropagation();
 });
+
+
 // console.log($('main'));
 $('.languages').click(function(e){
     $(' .lang-nav-container',this).toggleClass('display');
@@ -56,8 +60,17 @@ $('.languages').click(function(e){
 
 });
 
+$('.nav-bar').click(function(e)
+{
+    e.stopPropagation();
+});
+$('.lang-nav-container').click(function(e){
+    e.stopPropagation();
+})
+
 $(document).click(function()
 {
+    console.log('document Clicked');
         $('.nav-bar').addClass('display');
         $('.lang-nav-container').addClass('display');
 });

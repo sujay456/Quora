@@ -28,8 +28,8 @@ passport.use(new LocalStrategy({
 // serializer
 // Here we are telling passport to use user's id to make the cookie
 passport.serializeUser(function(user,done){
-    // console.log('Serialize');
-    done(null,user.id);
+    console.log('Serialize');
+   return done(null,user.id);
 
 });
 
@@ -43,7 +43,7 @@ passport.deserializeUser(function(id,done){
             console.log('Error',err);
             return done(err) ;
         }
-        // console.log('deserialize');
+        console.log('deserialize');
         return done(null,user);
     });
 });
@@ -52,8 +52,10 @@ passport.CheckAuth=function(req,res,next)
 {
     if(req.isAuthenticated())
     {
+        console.log('Authenticated');
         return  next();
     }
+    console.log('not authenticated');
     return res.render('preHomePage',{layout:false});
 }
 

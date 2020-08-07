@@ -1,3 +1,5 @@
+
+
 #home-container
 {
     width: 1500px;
@@ -7,7 +9,7 @@
     left: 5%;
     padding: 25px 110px;
     box-sizing: border-box;
-   
+    
     // feed container
     #feed-container
     {
@@ -115,138 +117,6 @@
 
         }
         
-        #question-form
-        {
-            position: absolute;
-            width: 616px;
-            height: 450px;
-            // // 
-            background-color: white;
-            border: 1px solid #dee0e1;
-            top:20px;
-            border-radius: 15px;
-            // display: none;
-            
-            #header
-            {
-                background-color: #f7f7f8;
-                padding: 15px 10px;
-                box-sizing: border-box;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
-                border-bottom: 1px solid #dee0e1;
-
-                height: 60px;
-                span{
-                    font-weight: 700;
-                    color: #b92b27;
-                }
-            }
-
-            #tip-container{
-
-                background-color: #c7d4f3;
-                width: 90%;
-                margin:20px 30px ;
-                border-radius: 3px;
-                
-                #content-container
-                {
-                    #header-tips
-                    {
-                        color: #2e69ff;
-                        font-weight: 600;
-                        position: relative;
-                        left: 25px;
-                    }
-
-                    ul{
-                        li{
-                        color: #2e69ff;
-
-                        }
-                    }
-                }
-
-
-            }
-
-            #form-question
-            {
-                margin: 15px 20px;
-                input{
-                    width: 90%;
-                    border:none;
-                    outline: none;
-                    height: 50px;
-                    font-size: 1.2rem;
-                    color: black;
-                    border-bottom:1px solid rgb(221, 221, 221) ;
-                    transition: border 0.1s ease-in;
-                }
-                input:hover
-                {
-                    border-color: #205fff;
-                }
-                input::placeholder{
-                    color: #939598;
-                    font-size: 1.2rem;
-                    
-                }
-            }
-            #footer-form
-            {
-                position: absolute;
-                bottom: 0;
-                height: 60px;
-                width: 100%;
-                background-color: #f7f7f8;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
-                box-sizing: border-box;
-                padding: 10px;
-                border: 1px solid #dee0e1;
-                // overflow: hidden;
-
-                #add
-                {
-                    position: absolute;
-                    right: 10px;
-                    top:15px;
-                    background-color: #2e69ff;
-                    border-radius: 20px;
-                    height: 35px;
-                    border: none;
-                    outline: none;
-                    color: white;
-                    font-weight: 600;
-                    padding: 10px;
-                    
-                }
-
-                #cancel{
-                    position: absolute;
-                    right: 130px;
-                    top:15px;
-                    border-radius: 20px;
-                    height: 35px;
-                    border: none;
-                    outline: none;
-                    color: rgb(94, 94, 94);   
-                    font-weight: 500;
-                }
-                #cancel:hover{
-                    background-color: rgb(197, 197, 197);
-                }
-
-                #add:hover{
-                    background-color: #1f5fff;
-                }
-            }
-            
-        }
-
-
     }
 
     // To do container

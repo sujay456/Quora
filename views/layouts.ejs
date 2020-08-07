@@ -11,7 +11,7 @@
     <title>Quora</title>
     <%- style %>
 </head>
-<body>
+<body class="original">
     
         <header>
             <%- include('_header2') %>
@@ -20,11 +20,15 @@
     <main>
         <%- body %>
     </main>
+    <%- include('_question_form')%>
+
+    
+    <!-- This is the question form which will appear if the add question is clicked -->
 
    
     
 
-
+    <script src="/js/questionForm.js"></script>
     <script src="/js/header2.js"></script>
     <%- script %>
 </body>
