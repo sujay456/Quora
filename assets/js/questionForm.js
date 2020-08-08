@@ -64,6 +64,8 @@ $('#question-form').click(function(e){
 $(document).click(function(e){
     // console.log('document clicked');
     $('#question-form').addClass('display');
+   
+
     $('main').removeClass('maintransparent-Black');
     $('#header-container').removeClass('Headertransparent-Black');
 

@@ -15,6 +15,20 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    questions:[
+        {
+            // this is the list of question that this user has asked
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Question'
+        }
+    ],
+    answers:[
+        {
+            // this is the list of answers that this user has written
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Answer'
+        }
+    ],
     interests:[
         {
             type:String

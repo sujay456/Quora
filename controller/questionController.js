@@ -1,25 +1,38 @@
 const Question=require('../models/question');
+const User =require('../models/user');
 
 module.exports.CreateQuestion=async function(req,res)
 {
     try {
         console.log(req.body);
     
-        let question=await Question.create({question:req.body.question,user:req.user.id});
-        
-        let keywords=question.question.split(' ');
-
-        for(let keyword of keywords)
+        let user=await User.findById(req.user.id);
+        if(user)
         {
-            question.keywords.push(keyword);
+            let question=await Question.create({question:req.body.question,user:req.user.id});
+            
+            let keywords=question.question.split(' ');
+
+            for(let keyword of keywords)
+            {
+                question.keywords.push(keyword);
+            }
+            console.log(question);
+
+            question.save();
+            console.log(user);
+            user.questions.push(question);
+            user.save();
+            return res.status(200).json({
+                message:'Ok'
+            });
         }
-        console.log(question);
-
-        question.save();
-
-        return res.status(200).json({
-            message:'Ok'
-        });
+        else
+        {
+            return res.status(403,{
+                message:'Not Authorised'
+            });
+        }
 
     } catch (error) {
         console.log(error);

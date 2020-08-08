@@ -49,6 +49,10 @@
     #question-form #form-question input::placeholder {
       color: #939598;
       font-size: 1.2rem; }
+  #question-form #suggestions {
+    width: 100%;
+    height: 110px;
+    overflow-y: auto; }
   #question-form #footer-form {
     position: absolute;
     bottom: 0;

@@ -1,4 +1,5 @@
 const User=require('../models/user');
+const Question=require('../models/question');
 
 // Checking the email
 module.exports.checkEmail=function(req,res)
@@ -71,11 +72,19 @@ module.exports.signup=async function(req,res){
 }
 
 
-module.exports.Home=function(req,res)
+module.exports.Home= async function(req,res)
 {
     // we have a middleware for checking Authentication 
-    console.log('Home');
-    return res.render('postLoginHome');
+    // console.log('Home');
+    try {
+        let questions=await Question.find({}).populate('user');
+        console.log(questions);
+        return res.render('postLoginHome',{
+            questions:questions
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 module.exports.interest=function(req,res)

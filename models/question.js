@@ -4,17 +4,22 @@ const QuestionSchema=new mongoose.Schema({
 
     question:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     user:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
     },
+    answersOnQuestion:[
+        {
+            // This is the list of answers which is there on a particular question
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Answer'
+        }
+    ],
     keywords:[
         {
-            type:String,
-            unique:true
+            type:String
         }
     ]
 
