@@ -20,9 +20,9 @@
     </div>
 
     <!-- 1st div  -->
-    <div id="main-questions-container" onclick="displayForm();">
+    <div id="main-questions-container" >
 
-        <div id="add-question-container">
+        <div id="add-question-container" onclick="displayForm();">
 
             <div id="user-container">
                 <img src="/uploads/user/avatar/Default.jpg" alt="" width="35px">
@@ -33,25 +33,71 @@
                 <span>What is Your question ?</span>
             </div>
 
-            
-
         </div>
         
         
 
         <div id="questions-answers">
-            <!-- Will do later when model is created -->
            
-                <!-- now there will be a check whether the question is answered or not  -->
-
-                    <!-- if the question is answered  then-->
-                    <!-- code -->
-
-                    <!-- else if the question is answered then show the answers according to the upvotes -->
-                    <% for(let q of locals.questions) {%>
-                        <p><%=q.question%></p>
-                    <%}%>
+            <div id="questions-for-you">
                 
+                <div id="header">
+                    <i class="far fa-lightbulb fa-lg"></i>
+                    <span>Question for You</span>
+                </div>
+
+                <% for(let q of locals.questions) {%>
+                    <% if(q.answersOnQuestion.length <=1) {%>
+                        <div class="not-answered">
+                            <div class="header">Question added</div>
+                            
+                            <div class="Question">
+                                <h3 ><%=q.question%></h3>
+                            </div>
+                            
+
+                            <div class="description">
+                                <span>No answers yet</span>
+                            </div>
+                            <div class="buttons">
+                                <!-- some button to answer or follow this question -->
+                                <button>
+                                    <i class="fas fa-feather-alt fa-lg"></i> 
+                                    <span>
+                                        Answer
+                                    </span>
+                                </button>
+                                <button>
+                                    <i class="fas fa-rss fa-lg"></i>
+                                    <span>Folllow</span>
+                                </button>
+
+                                <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
+                                <!-- Options regarding question -->
+                            </div>
+                            
+                            <div class="options-for-question animate__animated animate__pulse animate__faster display">
+                                
+                                <div class="style">
+                                    <span>Answer Anonymously</span>
+                                </div>
+                                
+                                <div class="style">
+                                    <span>Downvote Question</span>
+                                </div>
+                                
+                                <div class="style">
+                                    <span>Report</span>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    
+                <%} }%>
+
+            </div>
+        
           
         </div>
 
