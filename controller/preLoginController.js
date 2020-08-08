@@ -3,7 +3,7 @@ module.exports.home=function(req,res)
     
     if(req.user)
     {
-        return res.render('postLoginHome');
+        return res.redirect('/user/home');
     }
     else{
         return res.render('preHomePage',{ layout:false });

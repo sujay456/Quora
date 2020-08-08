@@ -32,6 +32,8 @@
         color: #636466; }
     #home-container #feed-container #feed-interest .interest-container-feed:hover {
       background-color: #c9c6c6; }
+  #home-container .background-white {
+    background-color: white; }
   #home-container #main-questions-container {
     width: 700px;
     height: auto;
@@ -44,7 +46,6 @@
     #home-container #main-questions-container #add-question-container {
       width: 100%;
       cursor: pointer;
-      background-color: white;
       border: 1px solid #c2c2c2;
       border-radius: 4px;
       padding: 10px 15px;
@@ -79,20 +80,20 @@
         font-size: 0.9rem; }
     #home-container #main-questions-container #questions-answers #questions-for-you {
       border: 1px solid #c2c2c2;
-      border-radius: 3px; }
+      border-radius: 3px;
+      margin-bottom: 5px; }
       #home-container #main-questions-container #questions-answers #questions-for-you #header {
         height: 40px;
         padding: 5px 10px;
         box-sizing: border-box;
-        background-color: white; }
+        border-bottom: 1px solid #c2c2c2; }
         #home-container #main-questions-container #questions-answers #questions-for-you #header i {
           color: #860b0b; }
         #home-container #main-questions-container #questions-answers #questions-for-you #header span {
           color: #939598;
           font-size: 0.9rem; }
       #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered {
-        border: 1px solid #c2c2c2;
-        background-color: white;
+        border-bottom: 1px solid #c2c2c2;
         border-radius: 3px;
         padding: 5px 10px;
         box-sizing: border-box;
@@ -134,7 +135,6 @@
           width: 197.3px;
           border: 1px solid #d4d4d4;
           border-right: none;
-          background-color: white;
           border-radius: 3px;
           box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04); }
           #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.options-for-question .style {

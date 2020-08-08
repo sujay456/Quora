@@ -62,7 +62,10 @@
         
     }
 
-
+    .background-white
+    {
+        background-color: white;
+    }
     //main-container
     #main-questions-container
     {
@@ -71,8 +74,7 @@
         // border: 1px solid black;
         display: inline-block;
         margin-right: 50px;
-        // position: relative;
-        // left: 300px;
+        
         position: relative;
         vertical-align: top;
 
@@ -85,7 +87,7 @@
         {
             width: 100%;
             cursor: pointer;
-            background-color: white;
+            // background-color: white;
             border: 1px solid rgb(194, 194, 194);
 
             border-radius: 4px;
@@ -154,12 +156,16 @@
             {
                 border: 1px solid rgb(194, 194, 194);
                 border-radius: 3px;
+                margin-bottom: 5px;
+                // background-color: white;
                 #header
                 {
                     height: 40px;
                     padding: 5px 10px;
                     box-sizing: border-box;
-                    background-color: white;
+                    // background-color: white;
+                    border-bottom: 1px solid rgb(194, 194, 194);
+
                     
                     i{
                         color: #860b0b;
@@ -171,8 +177,8 @@
                 }
                 div.not-answered
                 {
-                    border: 1px solid rgb(194, 194, 194);
-                    background-color: white;
+                    border-bottom: 1px solid rgb(194, 194, 194);
+                    // background-color: white;
                     border-radius: 3px;
                     padding: 5px 10px;
                     box-sizing: border-box;
@@ -231,7 +237,7 @@
                         width: 197.3px;
                         border: 1px solid rgb(212, 212, 212);
                         border-right: none;
-                        background-color: white;
+                        // background-color: white;
                         border-radius: 3px;
                         box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04);
                         
