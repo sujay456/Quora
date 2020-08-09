@@ -63,7 +63,7 @@
                             </div>
                             <div class="buttons">
                                 <!-- some button to answer or follow this question -->
-                                <button>
+                                <button onclick="showAnswerTab();" class="answer">
                                     <i class="fas fa-feather-alt fa-lg"></i> 
                                     <span>
                                         Answer
@@ -76,6 +76,69 @@
 
                                 <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
                                 <!-- Options regarding question -->
+                            </div>
+
+                            <div class="textarea-for-answering display">
+                                <div class="personal-details background-grey">
+                                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
+                                    <div>
+                                        <p><%=user.name %></p>
+                                        <a href="">Edit Credentials</a>
+                                    </div>
+                                </div>
+
+                                <div class="controls background-white">
+
+                                    <div class="outer-control">
+
+                                        <!-- ------------1--------------------- -->
+                                        <div class="_1 control-style">
+                                            <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
+                                            <input type="text" placeholder="Enter URL">
+                                            <button onclick="show2nav();">Add</button>
+                                        </div>
+
+
+                                        <!-- -------------2----------------- -->
+                                        <div class="_2 control-style">
+                                            <div class="primary_controls"> 
+                                                <div class="text-control" onclick="blue();">
+                                                    <i class="fas fa-bold fa-lg"></i>
+                                                    <input type="hidden" value="bold" >
+                                                </div>
+                                                <div class="text-control" onclick="blue();">
+                                                    <i class="fas fa-italic fa-lg"></i>
+                                                    <input type="hidden" value="italic">
+                                                </div>
+                                            </div>
+
+                                            <div class="secondary_controls">
+                                                <div class="other-control">
+                                                    <i class="fas fa-images fa-lg"></i>
+                                                    <input type="hidden" value="image">
+                                                </div>
+
+                                                <div class="other-control" onclick="show1nav();">
+                                                    <i class="fas fa-link fa-lg"></i>
+                                                    <input type="hidden" value="link">
+                                                </div>
+
+                                                
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="input">
+                                    <textarea name="answer" id="" cols="70" rows="7" placeholder="Write your answer"></textarea>
+                                </div>
+
+                                <div class='footer background-grey'>
+                                    <button>Submit</button>
+                                </div>
+
                             </div>
                             
                             <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
