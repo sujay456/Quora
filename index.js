@@ -55,6 +55,9 @@ app.use(session({
     store:new mongoStore({
         mongooseConnection:db,
         autoRemove:'disabled'
+    },function(err)
+    {
+        console.log(err);
     })
 }));
 

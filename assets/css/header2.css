@@ -98,8 +98,9 @@ header #header-container {
             header #header-container #navigation div.profile .nav-bar #settings div span {
               font-size: 0.9rem;
               color: #b6b6b6; }
-          header #header-container #navigation div.profile .nav-bar #settings div.logout span {
-            color: red; }
+          header #header-container #navigation div.profile .nav-bar #settings div.logout a {
+            color: red;
+            text-decoration: none; }
     header #header-container #navigation div.languages {
       padding: 20px 20px;
       position: relative; }

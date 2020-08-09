@@ -64,14 +64,21 @@
                             <div class="buttons">
                                 <!-- some button to answer or follow this question -->
                                 <button onclick="showAnswerTab();" class="answer">
-                                    <i class="fas fa-feather-alt fa-lg"></i> 
-                                    <span>
+                                    <i class="fas fa-feather-alt fa-lg blue"></i> 
+                                    <span class="grey">
                                         Answer
                                     </span>
                                 </button>
-                                <button>
-                                    <i class="fas fa-rss fa-lg"></i>
-                                    <span>Folllow</span>
+                                <button class="follow" onclick="follow();">
+                                    <i class="fas fa-rss fa-lg grey"></i>
+                                    <span class="grey">Folllow .</span>
+                                    <div class="number_of_follow">
+                                        <div class="outer-cage initial">
+                                            <div class="grey">0</div>
+                                            <div class="grey">1</div>
+                                        </div>
+
+                                    </div>
                                 </button>
 
                                 <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>

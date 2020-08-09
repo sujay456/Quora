@@ -123,3 +123,30 @@ function showAnswerTab()
     $(' .textarea-for-answering',$(parents[parents.length-1])).toggleClass('display');
     
 }
+
+// follow
+
+function follow(){
+    // console.log('hello',event.target);
+    let parents=$(event.target).parentsUntil('div.not-answered');
+  
+    let button=$(parents[parents.length-1]);
+
+    // console.log($(' .follow',button));
+    let follow=$(' .follow',button)[0];
+    // console.log(follow);
+    $(' i',$(follow)).toggleClass('blue grey');
+    $(' span',$(follow)).toggleClass('blue grey');
+
+    $(' .outer-cage',$(follow)).toggleClass('upanddown initial');
+    setTimeout(function(){    
+        $(' i',$(follow)).css('transform','scale(1)');
+    },100);
+    $(' i',$(follow)).css('transform','scale(1.2)');
+    
+    
+    
+    //Now there will be a ajax call to store the number of follow to a question 
+
+
+}

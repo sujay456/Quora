@@ -196,21 +196,63 @@
                     {
                         position: relative;
                         bottom: 5px;
+                        .blue
+                        {
+                            color: #195faa;
+                        }
+                        .grey
+                        {
+                            color: #636466;
+                        }
+
                         button{
                             background: transparent;
                             outline:'none';
                             border: none;
                             padding: 10px;
                             margin-right: 10px;
-                            border-radius: 20px;
+                            border-radius: 25px;
                             box-sizing: border-box;
                             outline: none;
-                            i{
-                                color: #195faa;
-                            }
+                        
                             span{
                                 font-size: 1.1rem;
-                                color: #636466;
+                                // color: #636466;
+                            }
+                            .upanddown
+                            {
+                                top:-20px;
+                            }
+                            .initial
+                            {
+                                top:0px;
+                            }
+                            i{
+                                transform: scale(1);
+                                transition: transform 0.1s ease-in-out;
+                            }
+                            .number_of_follow
+                            {
+                                position: relative;
+                                top:1px;
+                                // border: 1px solid black;
+                                width: 15px;
+                                height: 17px;
+                                display: inline-block;
+                                overflow: hidden;
+                                .outer-cage
+                                {
+                                    position: absolute;
+                                    
+                                    transition: top 0.3s ease-in-out;
+                                    div
+                                    {
+                                        font-size: 1.1rem;
+                                        
+                                        // position: absolute;
+                                        // border: 1px solid black;
+                                    }
+                                }
                             }
                         
                         }

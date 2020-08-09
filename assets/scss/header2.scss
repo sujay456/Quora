@@ -167,10 +167,10 @@ header
                         }
                         div.logout
                         {
-                            span
+                            a
                             {
                                 color: red;
-
+                                text-decoration: none;
                             }
                         }
                     }

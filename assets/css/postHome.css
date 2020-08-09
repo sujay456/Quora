@@ -104,20 +104,40 @@
         #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons {
           position: relative;
           bottom: 5px; }
+          #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons .blue {
+            color: #195faa; }
+          #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons .grey {
+            color: #636466; }
           #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button {
             background: transparent;
             outline: 'none';
             border: none;
             padding: 10px;
             margin-right: 10px;
-            border-radius: 20px;
+            border-radius: 25px;
             box-sizing: border-box;
             outline: none; }
-            #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button i {
-              color: #195faa; }
             #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button span {
-              font-size: 1.1rem;
-              color: #636466; }
+              font-size: 1.1rem; }
+            #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button .upanddown {
+              top: -20px; }
+            #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button .initial {
+              top: 0px; }
+            #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button i {
+              transform: scale(1);
+              transition: transform 0.1s ease-in-out; }
+            #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button .number_of_follow {
+              position: relative;
+              top: 1px;
+              width: 15px;
+              height: 17px;
+              display: inline-block;
+              overflow: hidden; }
+              #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button .number_of_follow .outer-cage {
+                position: absolute;
+                transition: top 0.3s ease-in-out; }
+                #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button .number_of_follow .outer-cage div {
+                  font-size: 1.1rem; }
           #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons button:hover {
             background-color: #dbdbdb; }
           #home-container #main-questions-container #questions-answers #questions-for-you div.not-answered div.buttons #more {

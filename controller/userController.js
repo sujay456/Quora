@@ -114,3 +114,13 @@ module.exports.createSession=function(req,res)
         return res.redirect('/user/home');
     }
 }
+
+module.exports.signout=function(req,res)
+{
+
+    // This is req.logout function will remove the req.user and will remove session if any
+    req.logout();
+
+
+    return res.redirect('/');
+}
