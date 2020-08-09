@@ -375,13 +375,24 @@
                             width: 100%;
                             border-bottom: 1px solid rgb(207, 207, 207);
 
-                            textarea{
-                                resize: none;
+                            .bold
+                            {
+                                font-weight: bold;
+                            }
+                            .italic
+                            {
+                                font-style: italic;
+                            }
+                            
+                            div{
+                                
                                 border: none;
                                 outline: none;
-                                font-size: 1.2rem;
+                                font-size: 1.1rem;
                                 padding: 10px ;
                                 box-sizing: border-box;
+                                height: 150px;
+                                overflow-y: auto;
                             }
                         }
                         .footer

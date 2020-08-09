@@ -94,7 +94,7 @@
                                         <!-- ------------1--------------------- -->
                                         <div class="_1 control-style">
                                             <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
-                                            <input type="text" placeholder="Enter URL">
+                                            <input type="text" placeholder="Enter URL" onfocus="this.value=''">
                                             <button onclick="show2nav();">Add</button>
                                         </div>
 
@@ -132,7 +132,9 @@
                                 </div>
 
                                 <div class="input">
-                                    <textarea name="answer" id="" cols="70" rows="7" placeholder="Write your answer"></textarea>
+                                    <div contenteditable="true" onchange="classify();">
+                                        
+                                    </div>
                                 </div>
 
                                 <div class='footer background-grey'>
