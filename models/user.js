@@ -38,6 +38,12 @@ const userSchema=new mongoose.Schema({
         {
             type:String
         }
+    ],
+    follow:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Follow'
+        }
     ]
 },{
     timestamps:true

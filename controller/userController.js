@@ -1,5 +1,6 @@
 const User=require('../models/user');
 const Question=require('../models/question');
+const Follow=require('../models/follow');
 
 // Checking the email
 module.exports.checkEmail=function(req,res)
@@ -78,9 +79,19 @@ module.exports.Home= async function(req,res)
     // console.log('Home');
     try {
         let questions=await Question.find({}).populate('user');
-        console.log(questions);
+        // console.log(questions);
+
+        // Here i will find all the follows which are done by this spcefic user which req.user.id
+
+        // and then i willl send all the follows of this user as locals
+        
+        let followsOfUser=await Follow.find({user:req.user.id});
+
+        console.log(followsOfUser);
+
         return res.render('postLoginHome',{
-            questions:questions
+            questions:questions,
+            follow:followsOfUser
         });
     } catch (error) {
         console.log(error);

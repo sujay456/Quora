@@ -21,6 +21,12 @@ const QuestionSchema=new mongoose.Schema({
         {
             type:String
         }
+    ],
+    follow:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Follow'
+        }
     ]
 
 },{

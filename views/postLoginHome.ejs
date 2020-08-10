@@ -49,7 +49,10 @@
                 </div>
 
                 <% for(let q of locals.questions) {%>
-                    <% if(q.answersOnQuestion.length <=1) {%>
+                    <% if(q.answersOnQuestion.length <=1 && q.user.id!=locals.user.id) {%>
+
+                        <!-- here there will be a for loop for follows  -->
+                        <!-- { -->
                         <div class="not-answered background-white">
                             <div class="header">Question added</div>
                             
@@ -69,16 +72,43 @@
                                         Answer
                                     </span>
                                 </button>
-                                <button class="follow" onclick="follow();">
-                                    <i class="fas fa-rss fa-lg grey"></i>
-                                    <span class="grey">Folllow .</span>
-                                    <div class="number_of_follow">
-                                        <div class="outer-cage initial">
-                                            <div class="grey">0</div>
-                                            <div class="grey">1</div>
+                                <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
+                                    <% let followed=false %>
+                                    <% for(let f of follow){ %>
+                                        <% if(f.question==q.id){ %>
+                                            <% followed=true; break; %>
+                                        <%}%>    
+                                    <%}%>
+                                    
+                                    <% if(!followed){ %>
+                                        
+                                        <i class="fas fa-rss fa-lg grey"></i>
+                                        <span class="grey">
+                                            Folllow .
+                                        </span>
+                                        <div class="number_of_follow">
+                                            <div class="outer-cage initial">
+                                                <div class="grey"><%=q.follow.length%></div>
+                                                <div class="grey"><%=q.follow.length+1%></div>
+                                            </div>
+
+                                        </div>
+                                    <%}else{ %>
+                                        
+                                        <i class="fas fa-rss fa-lg blue"></i>
+                                        <span class="blue">
+                                            Folllow .
+                                        </span>
+                                        <div class="number_of_follow">
+                                            <div class="outer-cage upanddown">
+                                                <div class="grey"><%=q.follow.length-1%></div>
+                                                <div class="grey"><%=q.follow.length%></div>
+                                            </div>
+
                                         </div>
 
-                                    </div>
+                                    <% }%>
+
                                 </button>
 
                                 <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>

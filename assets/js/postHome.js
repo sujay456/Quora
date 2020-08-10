@@ -134,7 +134,9 @@ function follow(){
 
     // console.log($(' .follow',button));
     let follow=$(' .follow',button)[0];
-    // console.log(follow);
+    console.log(follow);
+    let link=$(follow).attr('link');
+    console.log(link);
     $(' i',$(follow)).toggleClass('blue grey');
     $(' span',$(follow)).toggleClass('blue grey');
 
@@ -148,5 +150,17 @@ function follow(){
     
     //Now there will be a ajax call to store the number of follow to a question 
 
+    $.ajax({
+        type:'get',
+        url:link,
+        success:function(data)
+        {
+            console.log(data);
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
 
+    });
 }
