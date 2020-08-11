@@ -1,5 +1,7 @@
 const Question=require('../models/question');
 const User =require('../models/user');
+const Follow=require('../models/follow');
+
 
 module.exports.CreateQuestion=async function(req,res)
 {
@@ -39,5 +41,37 @@ module.exports.CreateQuestion=async function(req,res)
         return res.json(500,{
             message:'Internal Server Error'
         })
+    }
+}
+
+module.exports.display= async function(req,res)
+{
+    try {
+        let question=await Question.findById(req.query.id).populate('answersOnQuestion');
+        
+        if(question)
+        {
+            // console.log(question.answersOnQuestion);
+            let userAnswer={};
+            for(let answer of question.answersOnQuestion)
+            {   
+                // console.log(answer);
+                if(answer.user==req.user.id)
+                {
+                    userAnswer=answer;
+                }
+            }
+            console.log(userAnswer);
+            let followsOfUser=await Follow.find({user:req.user.id});
+
+            return res.render('question',{
+                question:question,
+                follow:followsOfUser,
+                userAnswer:userAnswer
+            });
+        }
+
+    } catch (error) {
+        console.log('Error in displaying the question page');
     }
 }

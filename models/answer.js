@@ -17,6 +17,9 @@ const AnswerSchema=new mongoose.Schema({
         ref:'Question'
     }
 
+},
+{
+    timestamps:true
 });
 
 const Answer=mongoose.model('Answer',AnswerSchema);

@@ -7,8 +7,7 @@ body {
     position: relative;
     top: 72px;
     width: 100%;
-    height: auto;
-    z-index: -50; }
+    height: auto; }
 
 .transparent-Black {
   background-color: rgba(36, 36, 36, 0.9); }

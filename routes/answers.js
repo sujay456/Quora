@@ -5,5 +5,5 @@ const passport=require('passport');
 
 router.get('/', passport.CheckAuth,AnswerController.answer);
 
-
+router.post('/create', passport.CheckAuth,AnswerController.create);
 module.exports=router

@@ -1,0 +1,125 @@
+<link rel="stylesheet" href="/css/question.css">
+
+<div id="main-container" class="background-white">
+
+
+    <div id="question-container" class="background-white">
+        <div id="question">
+            <h2><%=question.question%></h2>
+        </div>
+
+        <div class="buttons">
+            <!-- some button to answer or follow this question -->
+            <button onclick="showAnswerTab();" class="answer">
+                <i class="fas fa-feather-alt fa-lg blue"></i> 
+                <span class="grey">
+                    Answer
+                </span>
+            </button>
+            <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=question.id%>">
+                <% let followed=false %>
+                <% for(let f of follow){ %>
+                    <% if(f.question==question.id){ %>
+                        <% followed=true; break; %>
+                    <%}%>    
+                <%}%>
+                
+                <% if(!followed){ %>
+                    
+                    <i class="fas fa-rss fa-lg grey"></i>
+                    <span class="grey">
+                        Folllow .
+                    </span>
+                    <div class="number_of_follow">
+                        <div class="outer-cage initial">
+                            <div class="grey"><%=question.follow.length%></div>
+                            <div class="grey"><%=question.follow.length+1%></div>
+                        </div>
+
+                    </div>
+                <%}else{ %>
+                    
+                    <i class="fas fa-rss fa-lg blue"></i>
+                    <span class="blue">
+                        Folllow .
+                    </span>
+                    <div class="number_of_follow">
+                        <div class="outer-cage upanddown">
+                            <div class="grey"><%=question.follow.length-1%></div>
+                            <div class="grey"><%=question.follow.length%></div>
+                        </div>
+
+                    </div>
+
+                <% }%>
+
+            </button>
+
+            <button class="downvote">
+                <i class="far fa-thumbs-down fa-lg grey"></i>
+            </button>
+            <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
+
+        </div>
+        
+        <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
+                                
+            <div class="style">
+                <span>Answer Anonymously</span>
+            </div>
+            
+            <div class="style">
+                <span>Downvote Question</span>
+            </div>
+            
+            <div class="style">
+                <span>Report</span>
+            </div>
+            
+
+        </div>
+        
+        <div id="user-anwser">
+            <!-- if the user has not answered it give him a option --> 
+            <% if((question.answersOnQuestion.length>0) && (userAnswer)){ %> 
+            
+                <div id="user_details">
+                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                    <span><%=user.name%></span>
+                    
+                </div>
+
+                <div id="answer">
+                    <p>
+                        <%=userAnswer.answer%>
+                    </p>
+                </div>
+                <div class="controls">
+                        
+                </div>
+                <div id="comment-container-user">
+                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
+                    <input type="text" placeholder="Add a comment">
+                </div>
+                
+
+             <%}else{%>
+
+                
+                <span>Want to answer this question ok</span>
+
+            <%}%> 
+            
+            <!-- if the user has answered it then show the user his answer first -->
+        </div>
+
+    </div>    
+
+    <div id="related-question-container">
+
+    </div>
+
+</div>
+
+
+<script src="/js/question.js"></script>

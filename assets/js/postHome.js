@@ -164,3 +164,58 @@ function follow(){
 
     });
 }
+
+
+//for submitting the answer
+
+function submit(){
+    console.log(event.target);
+
+    let parents=$(event.target).parentsUntil('.not-answered');
+    console.log(parents);
+
+    let inputForm=$(' .input',$(parents[parents.length-1]));
+    
+    // console.log($(' .textArea',inputForm));
+    let answer=$(' .textArea',inputForm)[0];
+
+    if(answer.innerText=='')
+    {
+        // console.log('true',answer.innerText);
+        // there should be a pop-up that the answer is empty
+
+        console.log($('.pop-up span'));
+        $('.pop-up span')[0].innerText="Answer can not be blank";
+        $('.pop-up').addClass('top');
+        setTimeout(function(){
+        $('.pop-up').removeClass('top');
+        },2000);
+    }
+    else
+    {
+        console.log(answer.textContent);
+        console.log($(event.target).attr('link'));
+
+        let questionId=$(event.target).attr('id');
+
+        $.ajax({
+            type:'post',
+            url:$(event.target).attr('link'),
+            data:{answer:answer.innerText},
+            success:function(data)
+            {
+                console.log(data);
+                window.location.href=`/question/display?id=${questionId}`
+            },
+            error:function(err)
+            {
+                console.log(err);
+                $('.pop-up span')[0].innerText=err.responseJSON.message;
+                $('.pop-up').addClass('top');
+                setTimeout(function(){
+                $('.pop-up').removeClass('top');
+                },2000);                
+            }
+        });
+    }
+}
