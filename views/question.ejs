@@ -81,11 +81,11 @@
         
         <div id="user-anwser">
             <!-- if the user has not answered it give him a option --> 
-            <% if((question.answersOnQuestion.length>0) && (userAnswer)){ %> 
-            
+            <% if((question.answersOnQuestion.length>0) && (userBool)){ %> 
+                
                 <div id="user_details">
                     <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
-                    <span><%=user.name%></span>
+                    <span class="bold"><%=user.name%></span>
                     
                 </div>
 
@@ -95,28 +95,96 @@
                     </p>
                 </div>
                 <div class="controls">
-                        
+                    <i class="far fa-thumbs-up fa-lg grey first"></i>
+                    <i class="far fa-comment fa-lg grey first"></i>
+                    <span>
+                        <i class="far fa-thumbs-down fa-lg grey second"></i>
+                        <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsA();"></i>
+                    </span>
+                </div>
+                <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
+                                
+                    <div class="style">
+                        <span>Delete Answer</span>
+                    </div>
+                    
+                    <div class="style">
+                        <span>Edit Answer</span>
+                    </div>
+        
                 </div>
                 <div id="comment-container-user">
                     <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
                     <input type="text" placeholder="Add a comment">
+                    <button>Add Comment</button>
                 </div>
                 
 
              <%}else{%>
 
-                
-                <span>Want to answer this question ok</span>
+
+                <!-- <span>Want to answer this question ok</span> -->
+                <div class="asking_to_answer_container">
+                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
+                    <!-- <% let first_name=user.name.split(' ')%> -->
+                    <h4><%=user.name%>,can you answer this question?</h4>
+                    <p class="grey">People are searching for an answer to this question</p>
+                    <button onclick="showAnswerTab();" class="answer">
+                        <i class="fas fa-feather-alt fa-lg blue"></i> 
+                        <span class="grey">
+                            Answer
+                        </span>
+                    </button>
+                </div>
 
             <%}%> 
             
             <!-- if the user has answered it then show the user his answer first -->
         </div>
 
+        <div id="other-user-answer">
+            <!-- here if any other answer other than logged in user is there i will print those  -->
+           <%if(question.answersOnQuestion.length>=1) { %>
+            <h4><%=question.answersOnQuestion.length%> Answers</h4>
+            <% for(let a of question.answersOnQuestion){ %>
+                <% if(a.user.id!=user.id){ %>
+                    <div class="answers_another_user">
+                        <div class="another_user_info">
+                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
+                            <span class="bold"><%=a.user.name%></span>
+                        </div> 
+                        <div class="another_user_answer">
+                        
+                        <p><%= a.answer%></p>
+                        </div>
+                        
+                        <div class="controls">
+                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                            <i class="far fa-comment fa-lg grey first"></i>
+                            <span>
+                                <i class="far fa-thumbs-down fa-lg grey second"></i>
+                                <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsA();"></i>
+                            </span>
+                        </div>
+                    </div>
+                <%}%>
+            <%}%>
+            <% }else {%>
+            <!-- if not there will be no answers yet -->
+                <div id="no_answers_container">
+                    <i class="fas fa-pen fa-2x blue"></i> 
+                    <h3>No more Answers yet</h3>
+                </div>
+
+            <%}%>
+        </div>
+
     </div>    
 
     <div id="related-question-container">
-
+        <div>
+            <h3>Related Question</h3>
+        </div>
     </div>
 
 </div>

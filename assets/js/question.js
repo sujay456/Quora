@@ -46,8 +46,18 @@ function showOptions(){
     event.stopPropagation();
 
 }
+function showOptionsA()
+{
+    console.log('hi');
+    $('.options-for-answer').toggleClass('display');
+    event.stopPropagation();
+
+}
 
 $(document).click(function(){
    // console.log('clicked');
    $('.options-for-question').addClass('display');
+   $('.options-for-answer').addClass('display');
+
 });
+

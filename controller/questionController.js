@@ -47,27 +47,36 @@ module.exports.CreateQuestion=async function(req,res)
 module.exports.display= async function(req,res)
 {
     try {
-        let question=await Question.findById(req.query.id).populate('answersOnQuestion');
+        let question=await Question.findById(req.query.id)
+        .populate({
+            path:'answersOnQuestion',
+            populate:{
+                path:'user'
+            }
+        });
         
         if(question)
         {
-            // console.log(question.answersOnQuestion);
+            console.log(question);
             let userAnswer={};
+            let userBool=false;
             for(let answer of question.answersOnQuestion)
             {   
                 // console.log(answer);
-                if(answer.user==req.user.id)
+                if(answer.user.id==req.user.id)
                 {
                     userAnswer=answer;
+                    userBool=true;
                 }
             }
-            console.log(userAnswer);
+            console.log(userAnswer,userBool);
             let followsOfUser=await Follow.find({user:req.user.id});
 
             return res.render('question',{
                 question:question,
                 follow:followsOfUser,
-                userAnswer:userAnswer
+                userAnswer:userAnswer,
+                userBool:userBool
             });
         }
 
