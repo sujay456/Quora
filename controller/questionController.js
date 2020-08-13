@@ -55,6 +55,7 @@ module.exports.display= async function(req,res)
             }
         });
         
+        let questionALL=await Question.find({});
         if(question)
         {
             console.log(question);
@@ -76,7 +77,8 @@ module.exports.display= async function(req,res)
                 question:question,
                 follow:followsOfUser,
                 userAnswer:userAnswer,
-                userBool:userBool
+                userBool:userBool,
+                questionALL:questionALL
             });
         }
 
