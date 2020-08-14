@@ -50,7 +50,7 @@
                 font-weight: 600;
                 color: #636466;
                 
-                font-size: 1.2rem;
+                font-size: 0.9rem;
             }
 
             
@@ -69,6 +69,25 @@
     #footer-container
     {
         display: block;
+    }
+
+}
+@media screen and (max-width:500px){
+
+    #footer-container
+    {
+        display: block;
+
+        #navigation
+        {
+            div
+            {
+
+                span{
+                    display: none;
+                }
+            }
+        }
     }
 
 }

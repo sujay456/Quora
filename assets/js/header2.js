@@ -1,6 +1,8 @@
 // console.log('Hello');
 
 
+
+
 var activeOne;
 var path=window.location.pathname;    
 if(path=='/user/home' || path=='/')
@@ -73,5 +75,32 @@ $(document).click(function()
     // console.log('document Clicked');
         $('.nav-bar').addClass('display');
         $('.lang-nav-container').addClass('display');
+        $('#test').removeClass('moveX');
+        $('#test').addClass('initialX');
+     
+
 });
 
+function show()
+{
+    console.log('hi');
+    $('#test').toggleClass('moveX');
+    $('#test').toggleClass('initialX');
+    event.stopPropagation();
+}
+
+
+// just a small bug regarding the test div
+window.addEventListener('resize',function()
+{
+    // console.log(window.innerWidth);
+
+    if(window.innerWidth>1000)
+    {
+        $('#test').addClass('display');
+    }
+    else
+    {
+        $('#test').removeClass('display');
+    }
+});

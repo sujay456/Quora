@@ -32,10 +32,16 @@
         text-decoration: none;
         font-weight: 600;
         color: #636466;
-        font-size: 1.2rem; }
+        font-size: 0.9rem; }
     #footer-container #navigation div:hover {
       background-color: #eeecec; }
 
 @media screen and (max-width: 1000px) {
   #footer-container {
     display: block; } }
+
+@media screen and (max-width: 500px) {
+  #footer-container {
+    display: block; }
+    #footer-container #navigation div span {
+      display: none; } }

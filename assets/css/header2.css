@@ -4,12 +4,31 @@ header .display {
 header .Headertransparent-Black {
   opacity: 0.2; }
 
-header #test {
+header #hamburger-icon {
   display: none;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 102; }
+
+header #test {
+  width: 45%;
+  min-width: 200px;
+  max-width: 400px;
   height: 100vh;
-  position: absolute;
-  background-color: brown;
-  z-index: 101; }
+  position: fixed;
+  background-color: white;
+  z-index: 101;
+  border: 1px solid black;
+  padding: 20px;
+  box-shadow: 0 2px 4px black;
+  transition: transform 0.4s ease-in-out; }
+
+header .initialX {
+  transform: translateX(-100%); }
+
+header .moveX {
+  left: 0%; }
 
 header #header-container {
   position: fixed;
@@ -190,9 +209,13 @@ header #header-container {
         font-size: 1.0rem; } }
 
 @media screen and (max-width: 1000px) {
-  header #test {
-    width: 45%; }
+  header #hamburger-icon {
+    display: block; }
   header #header-container #logo {
     left: 45%; }
   header #header-container #navigation {
     display: none; } }
+
+@media screen and (max-width: 500px) {
+  header #header-container #logo {
+    left: 35%; } }
