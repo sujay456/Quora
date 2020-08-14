@@ -5,15 +5,15 @@ var activeOne;
 var path=window.location.pathname;    
 if(path=='/user/home' || path=='/')
 {
-    activeOne='#home-tab';
+    activeOne='.home-tab';
 }
 else if(path=='/answers')
 {
-    activeOne='#answer-tab';
+    activeOne='.answer-tab';
 }
 else if(path=='/notification')
 {
-    activeOne='#notification';
+    activeOne='.notification';
 }
 
 

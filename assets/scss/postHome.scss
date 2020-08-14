@@ -26,7 +26,7 @@
 #home-container
 {
     width: 1500px;
-    // border: 1px solid black;
+    border: 1px solid black;
     height: auto;
     position: absolute;
     left: 5%;
@@ -38,7 +38,7 @@
     {
         width: 180px;
         height: auto;   //to be auto
-        // border: 1px solid black;
+        border: 1px solid black;
         display: inline-block;
         margin-right: 20px;
         margin-left: 70px;
@@ -99,7 +99,7 @@
     {
         width: 700px;
         height: auto;
-        // border: 1px solid black;
+        border: 1px solid black;
         display: inline-block;
         margin-right: 50px;
         
@@ -378,6 +378,8 @@
                                         font-size: 1.1rem;
                                     }
                                     button{
+                                        position: absolute;
+                                        right: 20px;
                                         background-color: #f7f7f8;
                                         color: #939598;
                                         outline: none;
@@ -418,8 +420,8 @@
                                     .secondary_controls
                                     {
                                         display: inline-block;
-                                        position: relative;
-                                        left: 460px;
+                                        position: absolute;
+                                        right: 20px;
                                         .other-control
                                         {
                                             display: inline-block;
@@ -540,4 +542,79 @@
         border: 1px solid black;
     }
 
+}
+
+@media screen and (max-width:1350px){
+    #home-container
+    {
+        left: 0%;
+        // width: 100%;
+        padding:25px 50px;
+        // #feed-container
+        // {
+        //     // margin-left: 0px;
+        // }
+    }
+
+}
+// ------------------------2--------------------
+@media screen and (max-width:1250px){
+    #home-container
+    {
+        left: 0%;
+        width: 100%;
+        padding:25px 0px;
+        #feed-container
+        {
+            margin-left: 2%;
+        }
+        // #main-questions-container
+        // {
+        //     // margin-right: 10px;
+        //     // margin-left: 50px;
+        // }
+        #todo-container
+        {
+            display: none;
+        }
+    }
+
+}
+
+// ----------------------------3-----------------------
+
+@media screen and (max-width:1000px){
+    #home-container
+    {
+        left: 0%;
+        width: 100%;
+        padding:25px 0px;
+        // text-align: center;
+        #feed-container
+        {
+            // display: none;
+            width: 100%;
+            margin-left: 0;
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            #feed-interest
+            {
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 10px;
+            }
+        }
+        #main-questions-container
+        {
+            display: block;
+
+            width: 100%;
+        }
+        #todo-container
+        {
+            display: none;
+        }
+    }    
 }

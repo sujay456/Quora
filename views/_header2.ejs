@@ -1,32 +1,16 @@
+<div id="test">
+    hello
+</div>
 <div id="header-container" class="original-header">
     <div id="logo">
         <a href="/">
             <img src="/images/logo.png" alt="logo" width="90px" >
         </a>
     </div>
-
-    <div id="navigation">
-        <form action="/" method="get">
-            <div id="home-tab" class="nav">
-                <i class="fas fa-home fa-lg"></i>
-                <span>Home</span>
-            </div>
-        </form>
-
-        <form action="/answers" method="get">
-            <div id="answer-tab" class="nav">
-                <i class="fas fa-pencil-alt fa-lg"></i>
-                <span>Answer</span>
-            </div>
-        </form>
-
-        <form action="/notification" method="get">
-            <div id="notification" class="nav">
-                <i class="fas fa-bell fa-lg"></i>
-                <span>Notification</span>
     
-            </div>
-        </form>
+    <div id="navigation">
+        
+        <%- include('_navigation')%>
 
         <div class="profile nav">
             <span>
