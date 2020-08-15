@@ -13,10 +13,10 @@
 function displayForm()
 {
     $('#question-form').removeClass('display');
-    $('body').removeClass('original');
-    $('body').addClass('transparent-Black');
-    $('main').addClass('maintransparent-Black');
-    $('#header-container').addClass('Headertransparent-Black');
+    $('#black').removeClass('display');
+    $('#black').css('opacity','0.8');
+    
+   
     
     event.stopPropagation();
 }
@@ -65,13 +65,13 @@ $(document).click(function(e){
     // console.log('document clicked');
     $('#question-form').addClass('display');
    
-
-    $('main').removeClass('maintransparent-Black');
-    $('#header-container').removeClass('Headertransparent-Black');
+    $('#black').css('opacity','0');
+    $('#black').addClass('display');
+    
 
     e.stopPropagation();
     $('body').addClass('original');
-    $('body').removeClass('transparent-Black');  
+    
 
 });
 

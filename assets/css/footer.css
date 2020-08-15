@@ -9,7 +9,6 @@
   z-index: 100;
   box-shadow: 0 -2px 1px grey; }
   #footer-container #navigation {
-    border: 1px solid black;
     position: relative;
     display: flex;
     align-items: center;

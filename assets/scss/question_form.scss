@@ -15,7 +15,7 @@
     left: 28%;
     border-radius: 15px;
     // display: none;
-    
+    z-index: 103;
     
     #header
     {
@@ -140,5 +140,44 @@
             background-color: #1f5fff;
         }
     }
+    
+}
+
+@media screen and (max-width:1250px)
+{
+    #question-form
+    {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width:1000px)
+{
+    #question-form
+    {
+        left: 15%;
+    }
+}
+@media screen and (max-width:700px)
+{
+    #question-form
+    {
+        // left: 14%;
+        left: 1%;
+        width: 98%;
+        height: 75%;
+        bottom: 100px;
+        #tip-container{
+            margin:10px 10px;
+        }
+        #form-question
+        {
+            margin:10px 10px;
+            input{
+                font-size: 1.0rem;
+            }
+        }
+    }
+
     
 }

@@ -7,7 +7,7 @@ const passport=require('passport');
 
 router.post('/signup',userController.signup);
 router.post('/checkemail',userController.checkEmail);
-router.post('/create-session',passport.authenticate('local',{failureRedirect:'/'}),userController.createSession);
+router.post('/create-session',passport.authenticate('local',{failureRedirect:'/'},),userController.createSession);
 
 router.get('/home',passport.CheckAuth,userController.Home);
 router.get('/interest',passport.CheckAuth,userController.interest);
