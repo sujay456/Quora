@@ -115,8 +115,8 @@
                 </div>
                 <div class="comment-container-user">
                     <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
-                    <input type="text" placeholder="Add a comment">
-                    <button>Add Comment</button>
+                    <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment">
+                    <button onclick="commentSubmit()">Add Comment</button>
                 </div>
                 
 
@@ -231,8 +231,8 @@
                         </div>
                         <div class="comment-container-user">
                             <img src="/uploads/user/avatar/Default.jpg" alt="" width="40px">
-                            <input type="text" placeholder="Add a comment">
-                            <button>Add Comment</button>
+                            <input  type="text" placeholder="Add a comment" >
+                            <button onclick="commentSubmit()">Add Comment</button>
                         </div>
                     </div>
                 <%}%>

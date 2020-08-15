@@ -15,7 +15,13 @@ const AnswerSchema=new mongoose.Schema({
         // this will store on which question is this answer is being written 
         type:mongoose.Schema.Types.ObjectId,
         ref:'Question'
-    }
+    },
+    comments:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Comment'
+        }
+    ]
 
 },
 {

@@ -156,6 +156,7 @@ function blue()
 
 }
 
+// For submitting answer
 function submit(){
     console.log(event.target);
 
@@ -206,4 +207,35 @@ function submit(){
             }
         });
     }
+}
+
+// for submitting the comment
+
+function commentSubmit(){
+    // console.log(event.target);
+
+    let parents=$(event.target).parentsUntil('#user-anwser');
+    // console.log(parents);
+    
+    let comment=$(' input',$(parents[parents.length-1]))[0].value;
+    // console.log(comment);
+    let id_answer=$(' input',$(parents[parents.length-1])).attr('id');
+    // console.log(id_answer);
+
+    $.ajax({
+        type:'post',
+        url:`/comment/create?id=${id_answer}`,
+        data:{comment:comment},
+        success:function(data)
+        {
+            console.log(data);
+            $(' input',$(parents[parents.length-1]))[0].value='';
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+
+
 }

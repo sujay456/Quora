@@ -16,5 +16,6 @@ router.use('/language',require('./language'));
 router.use('/answers',require('./answers'));
 router.use('/notification',require('./notification'));
 router.use('/follow',require('./follow'));
+router.use('/comment',require('./comment'));
 
 module.exports=router;

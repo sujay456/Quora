@@ -33,6 +33,7 @@
         background-color: rgb(235, 235, 235);
         padding: 5px;
         border-radius: 5px;
+        position: relative;
         img{
             border-radius: 50%;
             vertical-align: top;
@@ -41,7 +42,7 @@
         input{
             position: relative;
             top: 8px;
-            width: 530px;
+            width: 70%;
             height: 35px;
             border-radius: 20px;
             border: none;
@@ -51,9 +52,9 @@
             font-size: 1.1rem;
         }
         button{
-            position: relative;
-            top:8px;
-            left: 28px;
+            position: absolute;
+            top:10px;
+            right: 10px;
             background-color: rgb(53, 138, 207);
             color: white;
             border: none;
