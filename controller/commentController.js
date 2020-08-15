@@ -23,7 +23,12 @@ module.exports.CreateComment=async  function(req,res)
                 user.save();
                 answer.save();
 
+                comment=await comment.populate('user').execPopulate();
+
                 return res.json(200,{
+                    data:{
+                        comment:comment
+                    },
                     message:'Comment posted succesfully'
                 });
             }

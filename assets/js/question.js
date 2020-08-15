@@ -58,7 +58,7 @@ $(document).click(function(){
    // console.log('clicked');
    $('.options-for-question').addClass('display');
    $('.options-for-answer').addClass('display');
-
+    $('.options-for-comment').addClass('display');
 });
 function showAnswerTab()
 {
@@ -209,13 +209,91 @@ function submit(){
     }
 }
 
+
+function toggleCommentSection()
+{
+    let parents=$(event.target).parentsUntil('#question-container');
+
+    console.log(parents);
+
+    $(' .comments-container',$(parents[parents.length-1])).toggleClass('display');
+}
+
+function showOptionsComment()
+{
+    console.log('Hello');
+    let parents=$(event.target).parentsUntil('.comments-container');
+
+    console.log(parents);
+
+    $(' .options-for-comment',$(parents[parents.length-1])).toggleClass('display');
+    event.stopPropagation();
+}
+function commentDomUser(comment,showTime)
+{
+
+    return $(`
+            <div class="comment animate__animated animate__fadeIn">
+
+                <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                <span class="bold">${comment.user.name}</span>
+                <small>${showTime}</small>
+                <p>${comment.comment}</p>
+
+                
+                <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
+                    <div class="style">
+                        <span>Delete Comment</span>
+                    </div>
+                    
+                    <div class="style">
+                        <span>Edit Comment</span>
+                    </div>
+                </div>
+                
+    
+            </div>
+`);
+}
+
+function calcTime(c)
+{
+    let showTime;
+    let currentDate=new Date();
+    let date=new Date(c.createdAt);
+    if(currentDate.getFullYear()-date.getFullYear() !=0)
+    { 
+        showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' 
+    }
+    else if(currentDate.getMonth() -date.getMonth() !=0)
+    { 
+        showTime=currentDate.getMonth() -date.getMonth() +' month ago'; 
+    }
+    else if( currentDate.getDate()-date.getDate()!=0)
+    { 
+        showTime=currentDate.getDate()-date.getDate()+' day ago' ;
+    }
+    else if(currentDate.getHours()-date.getHours()!=0)
+    { 
+        showTime=currentDate.getHours()-date.getHours()+' hour ago';
+    }
+    else
+    { 
+        showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago'; 
+    }
+
+    return showTime;
+}
 // for submitting the comment
 
 function commentSubmit(){
     // console.log(event.target);
 
     let parents=$(event.target).parentsUntil('#user-anwser');
-    // console.log(parents);
+    console.log(parents);
+
+    // return;
     
     let comment=$(' input',$(parents[parents.length-1]))[0].value;
     // console.log(comment);
@@ -230,6 +308,12 @@ function commentSubmit(){
         {
             console.log(data);
             $(' input',$(parents[parents.length-1]))[0].value='';
+            console.log(data.data.comment);
+            let showTimes=calcTime(data.data.comment);
+            let commentDoms= commentDomUser(data.data.comment,showTimes);
+
+            $(' .comments-container',$(parents[parents.length-1])).prepend(commentDoms);
+
         },
         error:function(err)
         {
@@ -237,5 +321,5 @@ function commentSubmit(){
         }
     });
 
-
 }
+

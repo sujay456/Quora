@@ -51,7 +51,10 @@ module.exports.display= async function(req,res)
         .populate({
             path:'answersOnQuestion',
             populate:{
-                path:'user'
+                path:'user comments',
+                populate:{
+                    path:'user'
+                }
             }
         });
         

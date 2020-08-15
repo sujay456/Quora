@@ -96,7 +96,7 @@
                 </div>
                 <div class="controls">
                     <i class="far fa-thumbs-up fa-lg grey first"></i>
-                    <i class="far fa-comment fa-lg grey first"></i>
+                    <i class="far fa-comment fa-lg grey first" onclick="toggleCommentSection();"></i>
                     <span>
                         <i class="far fa-thumbs-down fa-lg grey second"></i>
                         <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsA();"></i>
@@ -113,11 +113,44 @@
                     </div>
         
                 </div>
-                <div class="comment-container-user">
-                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
-                    <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment">
-                    <button onclick="commentSubmit()">Add Comment</button>
-                </div>
+                <div class="comment-section">
+                    <div class="comment-container-user">
+                        <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
+                        <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment">
+                        <button onclick="commentSubmit()">Add Comment</button>
+                    </div>
+                    <div class="comments-container display">
+                        <% for(let c of userAnswer.comments){ %>
+                            <% let showTime; %>
+                            <% let currentDate=new Date();let date=new Date(c.createdAt); %>
+                            <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
+                                    
+                            <% if(c.user.id==user.id ){ %>
+                            
+                                <div class="comment">
+                                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                    <span class="bold"><%=c.user.name%></span>
+                                    <small><%=showTime%></small>
+                                    <p><%=c.comment %></p>
+
+                                        <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                                        <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
+                                            <div class="style">
+                                                <span>Delete Comment</span>
+                                            </div>
+                                            
+                                            <div class="style">
+                                                <span>Edit Comment</span>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+
+                            <%}%>
+                        
+                        <%}%>
+                    </div>
+                </div>  
                 
 
              <%}else{%>
