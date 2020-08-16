@@ -240,7 +240,8 @@ function commentDomUser(comment,showTime)
                 <small>${showTime}</small>
                 <p>${comment.comment}</p>
 
-                
+                <i class="far fa-thumbs-up fa-lg grey first"></i>
+                <i class="far fa-thumbs-down fa-lg grey second"></i>
                 <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                 <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                     <div class="style">
@@ -287,16 +288,29 @@ function calcTime(c)
 }
 // for submitting the comment
 
-function commentSubmit(){
+function commentSubmitUser(){
     // console.log(event.target);
 
-    let parents=$(event.target).parentsUntil('#user-anwser');
+    let parents=$(event.target).parentsUntil('#user-anwser' );
     console.log(parents);
+
 
     // return;
     
     let comment=$(' input',$(parents[parents.length-1]))[0].value;
     // console.log(comment);
+    if(comment=='')
+    {
+        $('.pop-up span')[0].innerText="Comment can not be blank";
+        $('.pop-up').addClass('top');
+        setTimeout(function(){
+        $('.pop-up').removeClass('top');
+        },2000);
+
+        return;
+    }
+    $(' .comments-container',$(parents[parents.length-1])).removeClass('display');
+
     let id_answer=$(' input',$(parents[parents.length-1])).attr('id');
     // console.log(id_answer);
 
@@ -320,6 +334,57 @@ function commentSubmit(){
             console.log(err.responseText);
         }
     });
+
+}
+
+function commentSubmitOther()
+{
+    let parents=$(event.target).parentsUntil('.answers_another_user');
+
+    console.log(parents);
+
+    let comment=$(' input',$(parents[parents.length-1]))[0].value;
+    console.log(comment);
+
+    // return;
+    if(comment=='')
+    {
+        $('.pop-up span')[0].innerText="Comment can not be blank";
+        $('.pop-up').addClass('top');
+        setTimeout(function(){
+        $('.pop-up').removeClass('top');
+        },2000);
+
+        return;
+    }
+    $(' .comments-container',$(parents[parents.length-1])).removeClass('display');
+
+
+    let id_answer=$(' input',$(parents[parents.length-1])).attr('id');
+
+    console.log(id_answer);
+
+    $.ajax({
+        type:'post',
+        url:`/comment/create?id=${id_answer}`,
+        data:{comment:comment},
+        success:function(data)
+        {
+            console.log(data);
+            $(' input',$(parents[parents.length-1]))[0].value='';
+            console.log(data.data.comment);
+            let showTimes=calcTime(data.data.comment);
+            let commentDoms= commentDomUser(data.data.comment,showTimes);
+
+            $(' .comments-container',$(parents[parents.length-1])).prepend(commentDoms);
+
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+
 
 }
 

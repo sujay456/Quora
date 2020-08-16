@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="/css/question.css">
+<div class="pop-up">
+    <span>
+        
+    </span>
+</div>
 
 <div id="main-container" class="background-white">
 
@@ -117,7 +122,7 @@
                     <div class="comment-container-user">
                         <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
                         <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment">
-                        <button onclick="commentSubmit()">Add Comment</button>
+                        <button onclick="commentSubmitUser()">Add Comment</button>
                     </div>
                     <div class="comments-container display">
                         <% for(let c of userAnswer.comments){ %>
@@ -132,7 +137,8 @@
                                     <span class="bold"><%=c.user.name%></span>
                                     <small><%=showTime%></small>
                                     <p><%=c.comment %></p>
-
+                                    <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                    <i class="far fa-thumbs-down fa-lg grey second"></i>
                                         <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                                         <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                                             <div class="style">
@@ -146,6 +152,15 @@
                                     
                                 </div>
 
+                            <%}else{%>
+                                <div class="comment">
+                                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                    <span class="bold"><%=c.user.name%></span>
+                                    <small><%=showTime%></small>
+                                    <p><%=c.comment %></p>
+                                    <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                    <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+                                </div>
                             <%}%>
                         
                         <%}%>
@@ -249,7 +264,7 @@
                     <div class="answers_another_user">
                         <div class="another_user_info">
                             <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
-                            <span class="bold"><%=a.user.name%></span>
+                            <span class="bold" ><%=a.user.name%></span>
                         </div> 
                         <div class="another_user_answer">
                         
@@ -258,14 +273,56 @@
                         
                         <div class="controls">
                             <i class="far fa-thumbs-up fa-lg grey first"></i>
-                            <i class="far fa-comment fa-lg grey first"></i>
+                            <i onclick="toggleCommentSection();" class="far fa-comment fa-lg grey first"></i>
                             
                             <i class="far fa-thumbs-down fa-lg grey second"></i>
                         </div>
-                        <div class="comment-container-user">
-                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="40px">
-                            <input  type="text" placeholder="Add a comment" >
-                            <button onclick="commentSubmit()">Add Comment</button>
+                        <div class="comments-section">
+                            <div class="comment-container-other">
+                                <img src="/uploads/user/avatar/Default.jpg" alt="" width="40px">
+                                <input  type="text" placeholder="Add a comment" id="<%=a.id%>" >
+                                <button onclick="commentSubmitOther()">Add Comment</button>
+                            </div>
+
+                            <div class="comments-container display">
+                                <%for(let c of a.comments){ %>
+                                    <% let showTime; %>
+                                    <% let currentDate=new Date();let date=new Date(c.createdAt); %>
+                                    <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
+
+                                    <% if(user.id!=c.user.id){ %>
+                                        <div class="comment">
+                                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                            <span class="bold"><%=c.user.name%></span>
+                                            <small><%=showTime%></small>
+                                            <p><%=c.comment %></p> 
+                                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                            <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+
+                                        </div>
+                                    <%}else{ %>
+                                        <div class="comment">
+                                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                            <span class="bold"><%=c.user.name%></span>
+                                            <small><%=showTime%></small>
+                                            <p><%=c.comment %></p>
+                                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                            <i class="far fa-thumbs-down fa-lg grey second"></i>
+                                            <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                                            <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
+                                                <div class="style">
+                                                    <span >Delete Comment</span>
+                                                </div>
+                                                <div class="style">
+                                                    <span  >Edit Comment</span>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    <%}%>
+
+                                <%}%>
+                            </div>
                         </div>
                     </div>
                 <%}%>

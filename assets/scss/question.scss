@@ -6,6 +6,29 @@
     font-weight: 700;
 }
 
+.pop-up
+{
+    width: 100%;
+    background-color: rgb(201, 201, 201);
+    text-align: center;
+    position: fixed;    
+    z-index: 50;
+    height: 50px;
+    top:-200px;
+    transition: top 0.4s ease-in-out;
+    span
+    {
+        color: white;
+        font-weight: 600;
+        position: relative;
+        top:10px;
+    }
+}
+
+.top{
+    top:65px;
+}
+
 #main-container
 {
     // border: 1px solid black;
@@ -28,41 +51,7 @@
     {
         color: #636466;
     }
-    .comment-container-user
-    {
-        background-color: rgb(235, 235, 235);
-        padding: 5px;
-        border-radius: 5px;
-        position: relative;
-        img{
-            border-radius: 50%;
-            vertical-align: top;
-        }
-        
-        input{
-            position: relative;
-            top: 8px;
-            width: 70%;
-            height: 35px;
-            border-radius: 20px;
-            border: none;
-            outline: none;
-            padding: 5px 10px;
-            box-sizing: border-box;
-            font-size: 1.1rem;
-        }
-        button{
-            position: absolute;
-            top:10px;
-            right: 10px;
-            background-color: rgb(53, 138, 207);
-            color: white;
-            border: none;
-            outline: none;
-            border-radius: 20px;
-            padding: 10px;
-        }
-    }
+    
     #question-container
     {
         // border: 1px solid black;
@@ -227,7 +216,7 @@
                         margin-left: 15px;
                     }
                 }
-
+                
                 .first:hover
                 {
                     transform: scale(1.2) rotate(-30deg);
@@ -236,6 +225,7 @@
                 {
                     transform: rotate(30deg) scale(1.2);
                 }
+                
                 .more
                 {
                     border-radius: 10px;
@@ -280,11 +270,45 @@
             {
                 border:1px solid rgb(224, 224, 224);
                 border-radius: 5px;
-
+                .comment-container-user
+                {
+                    background-color: rgb(235, 235, 235);
+                    padding: 5px;
+                    border-radius: 5px;
+                    position: relative;
+                    img{
+                        border-radius: 50%;
+                        vertical-align: top;
+                    }
+                    
+                    input{
+                        position: relative;
+                        top: 8px;
+                        width: 70%;
+                        height: 35px;
+                        border-radius: 20px;
+                        border: none;
+                        outline: none;
+                        padding: 5px 10px;
+                        box-sizing: border-box;
+                        font-size: 1.1rem;
+                    }
+                    button{
+                        position: absolute;
+                        top:13px;
+                        right: 5px;
+                        background-color: rgb(53, 138, 207);
+                        color: white;
+                        border: none;
+                        outline: none;
+                        border-radius: 20px;
+                        padding: 10px;
+                    }
+                }
                 .comments-container{
-
-                    height: 400px;
-                    overflow-y: auto;
+                    height: auto;
+                    // max-height: 400px;
+                    // overflow-y: auto;
 
                     .comment{
                         // border:1px solid black;
@@ -292,8 +316,37 @@
                         border-bottom: 1px solid rgb(218, 218, 218);
                         position: relative;
                         padding:10px 15px;
+                        // margin-bottom: 10px;
                         img{
                             vertical-align: middle;
+                        }
+                        i{
+                            transition: transform 0.2s ease-in-out;
+                        }
+                        .first
+                        {
+                            margin-left: 15px;
+                        }
+                        
+                        .second{
+                            position: absolute;
+                            right: 60px;
+                            // bottom: 80px;
+                            top: 115px;
+                            
+                        }
+                        .extraleft
+                        {
+                            position: absolute;
+                            right: 20px;
+                        }
+                        .first:hover
+                        {
+                            transform: scale(1.2) rotate(-30deg);
+                        }
+                        .second:hover
+                        {
+                            transform: rotate(30deg) scale(1.2);
                         }
                         .options-for-comment
                         {
@@ -327,7 +380,7 @@
                             padding:5px;
                             position: absolute;
                             right: 10px;
-                            top: 80px;
+                            top: 105px;
                             border-radius: 15px;
                         }
                         .more:hover
@@ -568,14 +621,10 @@
                 position: relative;
                 // border: 1px solid black;
                 img{
-                    vertical-align: top;
+                    vertical-align: middle;
                     border-radius: 50%;
                 }
-                span{
-                    position: relative;
-                    top:10px;
-                    font-weight: 700;
-                }
+                
                 // border-bottom: 1px solid rgb(196, 196, 196);
                 .controls
                 {
@@ -591,8 +640,9 @@
                     
                     .second{
                         position: absolute;
-                        right: 10px;
-                        bottom: 70px;
+                        right: 20px;
+                        // bottom: 80px;
+                        top: 115px;
                         
                     }
 
@@ -614,24 +664,131 @@
                         background-color: rgb(219, 219, 219);
                     }
                 }
-                .comment-container-user
+                .comments-section
                 {
                     background-color: rgb(211, 211, 211);
-                    input{
-                        
-                        top: 3px;
-                        
-                    }
-                    button{
+                    box-sizing: border-box;
+                    margin-top: 4px;
+                    border-radius: 5px;
+                    border:1px solid rgb(202, 202, 202);
+                    .comment-container-other
+                    {
                         position: relative;
-                        top:3px;
-                        left: 10px;
-                        background-color: rgb(53, 138, 207);
-                        color: white;
-                        border: none;
-                        outline: none;
-                        border-radius: 20px;
                         padding: 10px;
+
+                        input{
+                            position: relative;
+                            width: 75%;
+                            top: 5px;
+                            border-radius: 20px;
+                            border:none;
+                            outline: none;
+                            padding: 10px;
+                            height: 35px;
+                            box-sizing: border-box;
+                            font-size: 1.1rem;
+                        }
+                        button{
+                            position: absolute;
+                            top:14px;
+                            right:  5px;
+                            background-color: rgb(21, 112, 187);
+                            color: white;
+                            border: none;
+                            outline: none;
+                            border-radius: 20px;
+                            padding: 10px;
+                        }
+                    }
+                    .comments-container
+                    {   
+                        background-color:white ;
+                        padding: 10px;
+                        // overflow-y: auto;
+                        height: auto;
+                        // max-height: 400px;
+                        .comment
+                        {
+                            border-bottom: 1px solid rgb(218, 218, 218);
+                            position: relative;
+                            padding:10px 15px;
+                            img
+                            {
+                                vertical-align: middle;
+                            }
+                            small{
+                                position: relative;
+                                // top:10px;
+                            }
+                            i{
+                                transition: transform 0.2s ease-in-out;
+                            }
+                            .first
+                            {
+                                margin-left: 15px;
+                            }
+                            
+                            .second{
+                                position: absolute;
+                                right: 60px;
+                                // bottom: 80px;
+                                top: 115px;
+                                
+                            }
+                            .extraleft
+                            {
+                                right: 20px;
+                            }
+                            .first:hover
+                            {
+                                transform: scale(1.2) rotate(-30deg);
+                            }
+                            .second:hover
+                            {
+                                transform: rotate(30deg) scale(1.2);
+                            }
+                            .options-for-comment
+                            {
+                                position: absolute;
+                                right:50px;
+                                top:80px;
+                                z-index: 20;
+                                width: 197.3px;
+                                border: 1px solid rgb(212, 212, 212);
+                                border-right: none;
+                                // background-color: white;
+                                border-radius: 3px;
+                                box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04);
+                                .style
+                                {
+                                    padding: 5px 10px;
+                                    border-right: 1px solid rgb(212, 212, 212);
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                    // height: 40px;
+                                    #delete{
+                                        color: #282829;
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                                .style:hover{
+                                background-color: rgb(236, 234, 234);
+
+                                }
+                            }
+                            .more{
+                                padding:5px;
+                                position: absolute;
+                                right: 10px;
+                                top: 105px;
+                                border-radius: 15px;
+                            }
+                            .more:hover
+                            {
+                                background-color: rgb(187, 187, 187);
+                            }
+                        }
+
                     }
                 }
             }
