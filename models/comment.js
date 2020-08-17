@@ -15,7 +15,19 @@ const CommentSchema=new mongoose.Schema({
     {
         type:mongoose.Schema.Types.ObjectId,
         ref:'Answer'
-    }
+    },
+    like:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        }
+    ],
+    dislike:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        }
+    ]
 },
 {
     timestamps:true

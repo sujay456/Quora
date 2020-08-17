@@ -40,7 +40,6 @@
                             <div class="grey"><%=question.follow.length%></div>
                             <div class="grey"><%=question.follow.length+1%></div>
                         </div>
-
                     </div>
                 <%}else{ %>
                     
@@ -53,16 +52,13 @@
                             <div class="grey"><%=question.follow.length-1%></div>
                             <div class="grey"><%=question.follow.length%></div>
                         </div>
-
                     </div>
 
                 <% }%>
 
             </button>
 
-            <button class="downvote">
-                <i class="far fa-thumbs-down fa-lg grey"></i>
-            </button>
+            
             <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
 
         </div>
@@ -99,8 +95,31 @@
                         <%=userAnswer.answer%>
                     </p>
                 </div>
-                <div class="controls">
-                    <i class="far fa-thumbs-up fa-lg grey first"></i>
+                <div class="controls" >
+                    <button class="upvote" onclick="upvoteAnswer();" idAnswer="<%=userAnswer.id%>">
+                        <% let likes=false %>
+                        <% for(let l of like){ %>
+                            <% if(l.likedon==userAnswer.id){ likes=true } %>
+                        <%}%>
+
+                        <% if(!likes){ %>
+                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                            <div class="number_of_like">
+                                <div class="outer-cage initial">
+                                    <div class="grey"><%=userAnswer.like.length%></div>
+                                    <div class="grey"><%=userAnswer.like.length+1%></div>
+                                </div>
+                            </div>
+                        <%} else{%>
+                            <i class="far fa-thumbs-up fa-lg blue first"></i>
+                            <div class="number_of_like">
+                                <div class="outer-cage upanddown">
+                                    <div class="grey"><%=userAnswer.like.length-1%></div>
+                                    <div class="grey"><%=userAnswer.like.length%></div>
+                                </div>
+                            </div>
+                        <%}%>
+                    </button>
                     <i class="far fa-comment fa-lg grey first" onclick="toggleCommentSection();"></i>
                     <span>
                         <i class="far fa-thumbs-down fa-lg grey second"></i>
@@ -121,7 +140,9 @@
                 <div class="comment-section">
                     <div class="comment-container-user">
                         <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
-                        <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment">
+                        
+                        <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment"  >
+                        
                         <button onclick="commentSubmitUser()">Add Comment</button>
                     </div>
                     <div class="comments-container display">

@@ -21,6 +21,18 @@ const AnswerSchema=new mongoose.Schema({
             type:mongoose.Schema.Types.ObjectId,
             ref:'Comment'
         }
+    ],
+    like:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        }
+    ],
+    dislike:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'User'
+        }
     ]
 
 },

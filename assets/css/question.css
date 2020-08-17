@@ -36,6 +36,29 @@
     color: #195faa; }
   #main-container .grey {
     color: #636466; }
+  #main-container .upvote {
+    border: none;
+    background-color: inherit;
+    outline: none; }
+    #main-container .upvote .number_of_like {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      position: relative;
+      top: 10px;
+      overflow: hidden; }
+      #main-container .upvote .number_of_like .outer-cage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: top 0.3s ease-in-out; }
+        #main-container .upvote .number_of_like .outer-cage div {
+          width: 100%;
+          height: 100%; }
+      #main-container .upvote .number_of_like .initial {
+        top: 0px; }
+      #main-container .upvote .number_of_like .upanddown {
+        top: -20px; }
   #main-container #question-container {
     width: 65%;
     position: relative;

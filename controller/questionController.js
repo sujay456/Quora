@@ -1,6 +1,7 @@
 const Question=require('../models/question');
 const User =require('../models/user');
 const Follow=require('../models/follow');
+const Like = require('../models/like');
 
 
 module.exports.CreateQuestion=async function(req,res)
@@ -75,13 +76,14 @@ module.exports.display= async function(req,res)
             }
             console.log(userAnswer,userBool);
             let followsOfUser=await Follow.find({user:req.user.id});
-
+            let like=await Like.find({user:req.user.id});
             return res.render('question',{
                 question:question,
                 follow:followsOfUser,
                 userAnswer:userAnswer,
                 userBool:userBool,
-                questionALL:questionALL
+                questionALL:questionALL,
+                like:like
             });
         }
 

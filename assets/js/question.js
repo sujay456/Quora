@@ -287,7 +287,6 @@ function calcTime(c)
     return showTime;
 }
 // for submitting the comment
-
 function commentSubmitUser(){
     // console.log(event.target);
 
@@ -388,3 +387,31 @@ function commentSubmitOther()
 
 }
 
+
+function upvoteAnswer()
+{
+    console.log(event.target);
+
+    let parents=$(event.target).parentsUntil('.controls');
+
+    console.log(parents);
+    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey');
+    $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
+
+    let id =$(parents[parents.length-1]).attr('idAnswer');
+    // console.log(id);/
+
+    $.ajax({
+        type:'post',
+        url:`/like/create?id=${id}`,
+        data:{type:'Answer'},
+        success:function(data)
+        {
+            console.log(data);
+        },
+        error:function(err)
+        {
+            console.lof(err.responseText);
+        }
+    });
+}
