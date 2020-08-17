@@ -327,7 +327,7 @@
 
         <div id="other-user-answer">
             <!-- here if any other answer other than logged in user is there i will print those  -->
-           <%if(question.answersOnQuestion.length>1) { %>
+           <%if(question.answersOnQuestion.length>=1) { %>
             <h4><%=question.answersOnQuestion.length%> total Answers</h4>
             <% for(let a of question.answersOnQuestion){ %>
                 <% if(a.user.id!=user.id){ %>
@@ -342,7 +342,30 @@
                         </div>
                         
                         <div class="controls">
-                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                            <button class="upvote" onclick="upvoteAnswer();" idAnswer="<%=a.id%>">
+                                <% let likes=false %>
+                                <% for(let l of like){ %>
+                                    <% if(l.likedon==a.id){ likes=true } %>
+                                <%}%>
+        
+                                <% if(!likes){ %>
+                                    <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                    <div class="number_of_like">
+                                        <div class="outer-cage initial">
+                                            <div class="grey"><%=a.like.length%></div>
+                                            <div class="grey"><%=a.like.length+1%></div>
+                                        </div>
+                                    </div>
+                                <%} else{%>
+                                    <i class="far fa-thumbs-up fa-lg blue first"></i>
+                                    <div class="number_of_like">
+                                        <div class="outer-cage upanddown">
+                                            <div class="grey"><%=a.like.length-1%></div>
+                                            <div class="grey"><%=a.like.length%></div>
+                                        </div>
+                                    </div>
+                                <%}%>
+                            </button>
                             <i onclick="toggleCommentSection();" class="far fa-comment fa-lg grey first"></i>
                             
                             <i class="far fa-thumbs-down fa-lg grey second"></i>
@@ -366,8 +389,33 @@
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
                                             <p><%=c.comment %></p> 
-                                            <i class="far fa-thumbs-up fa-lg grey first"></i>
-                                            <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+                                            <div class="controls">
+                                                <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
+                                                    <% let likes=false %>
+                                                    <% for(let l of like){ %>
+                                                        <% if(l.likedon==c.id){ likes=true } %>
+                                                    <%}%>
+        
+                                                    <% if(!likes) {%>
+                                                        <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                                        <div class="number_of_like">
+                                                            <div class="outer-cage initial">
+                                                                <div class="grey"><%=c.like.length%></div>
+                                                                <div class="grey"><%=c.like.length+1%></div>
+                                                            </div>
+                                                        </div>
+                                                    <%}else{%>
+                                                        <i class="far fa-thumbs-up fa-lg blue first"></i>
+                                                        <div class="number_of_like">
+                                                            <div class="outer-cage upanddown">
+                                                                <div class="grey"><%=c.like.length-1%></div>
+                                                                <div class="grey"><%=c.like.length%></div>
+                                                            </div>
+                                                        </div>
+                                                    <%}%>
+                                                </button>
+                                                <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+                                            </div>
 
                                         </div>
                                     <%}else{ %>
@@ -376,9 +424,35 @@
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
                                             <p><%=c.comment %></p>
-                                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                            <div class="controls">
+                                                <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
+                                                    <% let likes=false %>
+                                                    <% for(let l of like){ %>
+                                                        <% if(l.likedon==c.id){ likes=true } %>
+                                                    <%}%>
+        
+                                                    <% if(!likes) {%>
+                                                        <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                                        <div class="number_of_like">
+                                                            <div class="outer-cage initial">
+                                                                <div class="grey"><%=c.like.length%></div>
+                                                                <div class="grey"><%=c.like.length+1%></div>
+                                                            </div>
+                                                        </div>
+                                                    <%}else{%>
+                                                        <i class="far fa-thumbs-up fa-lg blue first"></i>
+                                                        <div class="number_of_like">
+                                                            <div class="outer-cage upanddown">
+                                                                <div class="grey"><%=c.like.length-1%></div>
+                                                                <div class="grey"><%=c.like.length%></div>
+                                                            </div>
+                                                        </div>
+                                                    <%}%>
+                                                </button>
+                                                <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                                                
+                                            </div>
                                             <!-- <i class="far fa-thumbs-down fa-lg grey second"></i> -->
-                                            <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                                             <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                                                 <div class="style">
                                                     <span >Delete Comment</span>

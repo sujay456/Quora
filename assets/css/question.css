@@ -32,6 +32,8 @@
   border-radius: 3px;
   border: 1px solid #cecece;
   height: auto; }
+  #main-container button {
+    cursor: pointer; }
   #main-container .blue {
     color: #195faa; }
   #main-container .grey {
