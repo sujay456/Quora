@@ -240,8 +240,17 @@ function commentDomUser(comment,showTime)
                 <small>${showTime}</small>
                 <p>${comment.comment}</p>
 
-                <i class="far fa-thumbs-up fa-lg grey first"></i>
-                <i class="far fa-thumbs-down fa-lg grey second"></i>
+                <div class="controls">
+                    <button class="upvote" onclick="upvoteComment();" idComment="${comment._id}">
+                            <i class="far fa-thumbs-up fa-lg grey first"></i>
+                            <div class="number_of_like">
+                                <div class="outer-cage initial">
+                                    <div class="grey">${comment.like.length}</div>
+                                    <div class="grey">${comment.like.length+1}</div>
+                                </div>
+                            </div>
+                    </button>
+                </div>
                 <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                 <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                     <div class="style">
@@ -405,6 +414,33 @@ function upvoteAnswer()
         type:'post',
         url:`/like/create?id=${id}`,
         data:{type:'Answer'},
+        success:function(data)
+        {
+            console.log(data);
+        },
+        error:function(err)
+        {
+            console.lof(err.responseText);
+        }
+    });
+}
+
+function upvoteComment()
+{
+    let parents=$(event.target).parentsUntil('.controls');
+
+    console.log(parents);
+
+    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey');
+    $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
+
+    let id =$(parents[parents.length-1]).attr('idComment');
+    console.log(id);
+
+    $.ajax({
+        type:'post',
+        url:`/like/create?id=${id}`,
+        data:{type:'Comment'},
         success:function(data)
         {
             console.log(data);

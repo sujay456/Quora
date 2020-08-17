@@ -83,7 +83,8 @@ module.exports.display= async function(req,res)
                 userAnswer:userAnswer,
                 userBool:userBool,
                 questionALL:questionALL,
-                like:like
+                like:like,
+                extractStyles:true
             });
         }
 

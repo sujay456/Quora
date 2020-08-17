@@ -34,7 +34,8 @@ app.use('/uploads',express.static('./uploads'));
 // Using the middleware to use Ejs -Layouts
 app.use(ExpressLayout);
 
-app.set('layout','layouts');
+
+
 app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
 

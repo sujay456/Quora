@@ -91,7 +91,8 @@ module.exports.Home= async function(req,res)
 
         return res.render('postLoginHome',{
             questions:questions,
-            follow:followsOfUser
+            follow:followsOfUser,
+            extractStyles:true
         });
     } catch (error) {
         console.log(error);

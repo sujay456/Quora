@@ -158,9 +158,33 @@
                                     <span class="bold"><%=c.user.name%></span>
                                     <small><%=showTime%></small>
                                     <p><%=c.comment %></p>
-                                    <i class="far fa-thumbs-up fa-lg grey first"></i>
-                                    <i class="far fa-thumbs-down fa-lg grey second"></i>
+                                    <div class="controls">
+                                        <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
+                                            <% let likes=false %>
+                                            <% for(let l of like){ %>
+                                                <% if(l.likedon==c.id){ likes=true } %>
+                                            <%}%>
+
+                                            <% if(!likes) {%>
+                                                <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                                <div class="number_of_like">
+                                                    <div class="outer-cage initial">
+                                                        <div class="grey"><%=c.like.length%></div>
+                                                        <div class="grey"><%=c.like.length+1%></div>
+                                                    </div>
+                                                </div>
+                                            <%}else{%>
+                                                <i class="far fa-thumbs-up fa-lg blue first"></i>
+                                                <div class="number_of_like">
+                                                    <div class="outer-cage upanddown">
+                                                        <div class="grey"><%=c.like.length-1%></div>
+                                                        <div class="grey"><%=c.like.length%></div>
+                                                    </div>
+                                                </div>
+                                            <%}%>
+                                        </button>
                                         <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                                    </div>
                                         <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                                             <div class="style">
                                                 <span>Delete Comment</span>
@@ -179,8 +203,33 @@
                                     <span class="bold"><%=c.user.name%></span>
                                     <small><%=showTime%></small>
                                     <p><%=c.comment %></p>
-                                    <i class="far fa-thumbs-up fa-lg grey first"></i>
-                                    <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+                                    <div class="controls" >
+                                        <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
+                                            <% let likes=false %>
+                                            <% for(let l of like){ %>
+                                                <% if(l.likedon==c.id){ likes=true } %>
+                                            <%}%>
+
+                                            <% if(!likes) {%>
+                                                <i class="far fa-thumbs-up fa-lg grey first"></i>
+                                                <div class="number_of_like">
+                                                    <div class="outer-cage initial">
+                                                        <div class="grey"><%=c.like.length%></div>
+                                                        <div class="grey"><%=c.like.length+1%></div>
+                                                    </div>
+                                                </div>
+                                            <%}else{%>
+                                                <i class="far fa-thumbs-up fa-lg blue first"></i>
+                                                <div class="number_of_like">
+                                                    <div class="outer-cage upanddown">
+                                                        <div class="grey"><%=c.like.length-1%></div>
+                                                        <div class="grey"><%=c.like.length%></div>
+                                                    </div>
+                                                </div>
+                                            <%}%>
+                                        </button>
+                                        <i class="far fa-thumbs-down fa-lg grey second extraleft"></i>
+                                    </div>
                                 </div>
                             <%}%>
                         
@@ -328,7 +377,7 @@
                                             <small><%=showTime%></small>
                                             <p><%=c.comment %></p>
                                             <i class="far fa-thumbs-up fa-lg grey first"></i>
-                                            <i class="far fa-thumbs-down fa-lg grey second"></i>
+                                            <!-- <i class="far fa-thumbs-down fa-lg grey second"></i> -->
                                             <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                                             <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                                                 <div class="style">
