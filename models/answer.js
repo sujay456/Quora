@@ -25,13 +25,13 @@ const AnswerSchema=new mongoose.Schema({
     like:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:'User'
+            ref:'Like'
         }
     ],
     dislike:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:'User'
+            ref:'Dislike'
         }
     ]
 

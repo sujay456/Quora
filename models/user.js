@@ -56,6 +56,13 @@ const userSchema=new mongoose.Schema({
             type:mongoose.Schema.Types.ObjectId,
             ref:'Like'
         }
+    ],
+    dislike:
+    [
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Dislike'
+        }
     ]
 },{
     timestamps:true

@@ -2,6 +2,7 @@ const Question=require('../models/question');
 const User =require('../models/user');
 const Follow=require('../models/follow');
 const Like = require('../models/like');
+const Dislike = require('../models/dislike');
 
 
 module.exports.CreateQuestion=async function(req,res)
@@ -77,6 +78,9 @@ module.exports.display= async function(req,res)
             console.log(userAnswer,userBool);
             let followsOfUser=await Follow.find({user:req.user.id});
             let like=await Like.find({user:req.user.id});
+            let dislike=await Dislike.find({user:req.user.id});
+
+            console.log(dislike);
             return res.render('question',{
                 question:question,
                 follow:followsOfUser,
@@ -84,6 +88,7 @@ module.exports.display= async function(req,res)
                 userBool:userBool,
                 questionALL:questionALL,
                 like:like,
+                dislike:dislike,
                 extractStyles:true
             });
         }

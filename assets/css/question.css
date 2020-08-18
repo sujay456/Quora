@@ -38,6 +38,8 @@
     color: #195faa; }
   #main-container .grey {
     color: #636466; }
+  #main-container .red {
+    color: #e02929; }
   #main-container .upvote {
     border: none;
     background-color: inherit;
@@ -227,7 +229,7 @@
           #main-container #question-container #user-anwser .comment-section .comments-container .comment {
             border-bottom: 1px solid #dadada;
             position: relative;
-            padding: 10px 15px; }
+            padding: 10px 20px; }
             #main-container #question-container #user-anwser .comment-section .comments-container .comment img {
               vertical-align: middle; }
             #main-container #question-container #user-anwser .comment-section .comments-container .comment i {

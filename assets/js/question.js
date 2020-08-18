@@ -399,12 +399,17 @@ function commentSubmitOther()
 
 function upvoteAnswer()
 {
-    console.log(event.target);
+    // console.log('sujay ki jai',event.target);
 
     let parents=$(event.target).parentsUntil('.controls');
-
+    // event.stopPropagation();
     console.log(parents);
-    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey');
+    let parentLike=$(event.target).parentsUntil('.answer');
+
+    console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
+
+    let dislikeButton=$(' .dislike i',$(parentLike[parentLike.length-1]));
+    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
 
     let id =$(parents[parents.length-1]).attr('idAnswer');
@@ -417,21 +422,33 @@ function upvoteAnswer()
         success:function(data)
         {
             console.log(data);
+            if(data.removedDislike)
+            {
+                dislikeButton.trigger('click');
+            }
         },
         error:function(err)
         {
-            console.lof(err.responseText);
+            console.log(err.responseText);
         }
     });
 }
 
 function upvoteComment()
 {
+    console.log('hi',event.target);
+
     let parents=$(event.target).parentsUntil('.controls');
 
     console.log(parents);
+    
+    let parentLike=$(event.target).parentsUntil('.comment');
 
-    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey');
+    console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
+
+    let dislikeButton=$(' .dislike i',$(parentLike[parentLike.length-1]));
+
+    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
 
     let id =$(parents[parents.length-1]).attr('idComment');
@@ -443,11 +460,92 @@ function upvoteComment()
         data:{type:'Comment'},
         success:function(data)
         {
+            if(data.removedDislike)
+            {
+                dislikeButton.trigger('click');
+            }
             console.log(data);
         },
         error:function(err)
         {
-            console.lof(err.responseText);
+            console.log(err.responseText);
         }
     });
+}
+
+// for downvoting the question
+function downvoteAnswer()
+{
+    console.log(event.target);
+   
+    let parents=$(event.target).parentsUntil('span');
+
+    console.log(parents);
+
+    let parentLike=$(event.target).parentsUntil('.answer');
+
+    console.log($(' .like i',$(parentLike[parentLike.length-1])));
+
+    let likeButton=$(' .like i',$(parentLike[parentLike.length-1]));
+    $(' .down,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
+
+    let id =$(parents[parents.length-1]).attr('idAnswer');
+
+    console.log(id);
+
+    $.ajax({
+        type:'post',
+        url:`/dislike/toggle?id=${id}`,
+        data:{type:'Answer'},
+        success:function(data)
+        {
+            if(data.removedLike)
+            {
+                $(likeButton).trigger('click');
+            }
+            console.log(data);
+            
+        },
+        error:function(err)
+        {
+            console.log('Error');
+        }
+    })
+}
+
+function downvoteComment()
+{
+    let parents=$(event.target).parentsUntil('.controls');
+
+    let parentLike=$(event.target).parentsUntil('.comment');
+
+
+    console.log(parents);
+    console.log($(' .like i',$(parentLike[parentLike.length-1])));
+
+    let likeButton=$(' .like i',$(parentLike[parentLike.length-1]));
+    $(' i,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
+
+    let id =$(parents[parents.length-1]).attr('idComment');
+    console.log(id);
+
+    $.ajax({
+        type:'post',
+        url:`/dislike/toggle?id=${id}`,
+        data:{type:'Comment'},
+        success:function(data)
+        {
+            console.log(data);
+            if(data.removedLike)
+            {
+                console.log('hi',likeButton);
+                likeButton.trigger('click');
+            }
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+
 }
