@@ -32,7 +32,15 @@ module.exports.ToggleDislike=async function(req,res)
         {
             if(likeAlreadyExist)
             {
+                let id=likeAlreadyExist._id;
+                on.like.pull(id);
+                
+
+                user.like.pull(id);
+
                 removedLike=true;
+
+                likeAlreadyExist.remove();
             }
             let dislike=await Dislike.create({ user:req.user.id,dislikedon:req.query.id,onModel:req.body.type});
 

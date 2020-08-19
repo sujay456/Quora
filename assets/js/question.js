@@ -1,5 +1,7 @@
 // const e = require("express");
 
+
+
 function follow(){
     // console.log('hello',event.target);
     let parents=$(event.target).parentsUntil('div.not-answered');
@@ -209,6 +211,12 @@ function submit(){
     }
 }
 
+function toggleCommentSectionO()
+{
+    let parents=$(event.target).parentsUntil('#other-user-answer');
+    $(' .comments-container',$(parents[parents.length-1])).toggleClass('display');
+
+}
 
 function toggleCommentSection()
 {
@@ -396,24 +404,39 @@ function commentSubmitOther()
 
 }
 
+function dislikeComment(button)
+{
+    $(' i,div',button).toggleClass('grey red animate__bounceIn');
+
+
+}
+function dislikeAnswer(button)
+{
+    $(' .down,div',button).toggleClass('grey red animate__bounceIn');
+}
+
+function like(button)
+{
+    $(' i,div',button).toggleClass('blue grey animate__bounceIn');
+    $(' .outer-cage',button).toggleClass('upanddown initial');
+}
 
 function upvoteAnswer()
 {
-    // console.log('sujay ki jai',event.target);
-
+    console.log(event.target);
     let parents=$(event.target).parentsUntil('.controls');
     // event.stopPropagation();
-    console.log(parents);
+    console.log('event target',parents);
     let parentLike=$(event.target).parentsUntil('.answer');
 
-    console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
+    console.log('buttons',$(' .dislike i',$(parentLike[parentLike.length-1])));
 
-    let dislikeButton=$(' .dislike i',$(parentLike[parentLike.length-1]));
+    let dislikeButton=$(' .dislike',$(parentLike[parentLike.length-1]));
     $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
 
     let id =$(parents[parents.length-1]).attr('idAnswer');
-    // console.log(id);/
+    console.log(id);
 
     $.ajax({
         type:'post',
@@ -424,15 +447,16 @@ function upvoteAnswer()
             console.log(data);
             if(data.removedDislike)
             {
-                dislikeButton.trigger('click');
+                dislikeAnswer(dislikeButton);
             }
-        },
-        error:function(err)
+        },error:function(err)
         {
             console.log(err.responseText);
         }
     });
 }
+
+
 
 function upvoteComment()
 {
@@ -446,7 +470,7 @@ function upvoteComment()
 
     console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
 
-    let dislikeButton=$(' .dislike i',$(parentLike[parentLike.length-1]));
+    let dislikeButton=$(' .dislike',$(parentLike[parentLike.length-1]));
 
     $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
@@ -462,7 +486,9 @@ function upvoteComment()
         {
             if(data.removedDislike)
             {
-                dislikeButton.trigger('click');
+                // dislikeButton.trigger('click');
+                dislikeComment(dislikeButton);
+
             }
             console.log(data);
         },
@@ -486,7 +512,7 @@ function downvoteAnswer()
 
     console.log($(' .like i',$(parentLike[parentLike.length-1])));
 
-    let likeButton=$(' .like i',$(parentLike[parentLike.length-1]));
+    let likeButton=$(' .like',$(parentLike[parentLike.length-1]));
     $(' .down,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
 
     let id =$(parents[parents.length-1]).attr('idAnswer');
@@ -499,11 +525,15 @@ function downvoteAnswer()
         data:{type:'Answer'},
         success:function(data)
         {
+            console.log(data);
+
             if(data.removedLike)
             {
-                $(likeButton).trigger('click');
+                console.log('hi');
+                // likeButton.trigger('click');
+                like(likeButton);
+
             }
-            console.log(data);
             
         },
         error:function(err)
@@ -523,7 +553,7 @@ function downvoteComment()
     console.log(parents);
     console.log($(' .like i',$(parentLike[parentLike.length-1])));
 
-    let likeButton=$(' .like i',$(parentLike[parentLike.length-1]));
+    let likeButton=$(' .like',$(parentLike[parentLike.length-1]));
     $(' i,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
 
     let id =$(parents[parents.length-1]).attr('idComment');
@@ -539,7 +569,8 @@ function downvoteComment()
             if(data.removedLike)
             {
                 console.log('hi',likeButton);
-                likeButton.trigger('click');
+                // likeButton.trigger('click');
+                like(likeButton);
             }
         },
         error:function(err)

@@ -96,7 +96,7 @@
                     </p>
                 </div>
                 <div class="controls" >
-                    <button class="upvote like" onclick="upvoteAnswer();" idAnswer="<%=userAnswer.id%>">
+                    <button class="upvote like"  onclick="upvoteAnswer();" idAnswer="<%=userAnswer.id%>">
                         <% let likes=false %>
                         <% for(let l of like){ %>
                             <% if(l.likedon==userAnswer.id){ likes=true } %>
@@ -390,7 +390,7 @@
                                     </div>
                                 <%}%>
                             </button>
-                            <i onclick="toggleCommentSection();" class="far fa-comment fa-lg grey first"></i>
+                            <i onclick="toggleCommentSectionO();" class="far fa-comment fa-lg grey first"></i>
                             
                             <span>
                                 <button class="upvote dislike" onclick="downvoteAnswer();" idAnswer="<%=a.id%>">
