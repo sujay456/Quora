@@ -1,6 +1,9 @@
 const User=require('../models/user');
 const Question=require('../models/question');
 const Answer=require('../models/answer');
+const Like=require('../models/like');
+const Dislike=require('../models/dislike');
+const Comment=require('../models/comment');
 
 module.exports.create=async function(req,res)
 {
@@ -54,4 +57,52 @@ module.exports.create=async function(req,res)
 module.exports.answer=function(req,res)
 {
     return res.render('answers');
+}
+
+module.exports.delete=async function(req,res)
+{
+    try {
+        
+        let user=await User.findById(req.user.id);
+
+        let answer=await Answer.findById(req.query.a_id);
+
+        if(answer)
+        {
+            if(answer.user==req.user.id)
+            {
+
+                user.answers.pull(answer.id);
+                await Like.deleteMany({likedon:answer.id});
+                await Dislike.deleteMany({dislikedon:answer.id});
+
+                await Comment.deleteMany({answer:answer.id});
+
+                
+
+                answer.remove();
+
+                return res.status(200).json({
+                    message:"Answer Deleted"
+                });
+
+            }
+            else
+            {
+                return res.status(401).json({
+                    message:'You are not Authorized to delete this answer'
+                });
+            }
+        }
+        else
+        {
+            return res.status(404).json({
+                message:'Answer not found'
+            });
+        }
+
+
+    } catch (error) {
+        console.log(error);
+    }
 }

@@ -43,6 +43,17 @@
     border: 1px solid rgb(206, 206, 206);
     // height: 300px;
     height: auto;
+    .deleted-answer-message
+    {
+        margin-top: 10px;
+        border: 1px solid rgb(221, 57, 36);
+        border-radius: 10px;
+        padding: 10px;
+        span{
+            color: rgb(117, 117, 117);
+            font-weight: 600;
+        }
+    }
     button{
         cursor: pointer;
     }
@@ -97,6 +108,7 @@
                 top: -20px;
             }
         }
+        
     }
     #question-container
     {
@@ -214,6 +226,7 @@
                 border-right: 1px solid rgb(212, 212, 212);
                 box-sizing: border-box;
                 width: 100%;
+                cursor: pointer;
                 // height: 40px;
                 span{
                     color: #282829;
@@ -232,6 +245,7 @@
             padding: 10px;
             box-sizing: border-box;
             position: relative;
+            
             #user_details
             {
                 img{
@@ -301,6 +315,7 @@
                     border-right: 1px solid rgb(212, 212, 212);
                     box-sizing: border-box;
                     width: 100%;
+                    cursor: pointer;
                     // height: 40px;
                     span{
                         color: #282829;
@@ -355,7 +370,7 @@
                     height: auto;
                     // max-height: 400px;
                     // overflow-y: auto;
-
+                    transition: height 0.2s ease-in-out;
                     .comment{
                         // border:1px solid black;
                         // display: none;
@@ -363,6 +378,7 @@
                         position: relative;
                         padding:10px 20px;
                         // margin-bottom: 10px;
+                        
                         img{
                             vertical-align: middle;
                         }
@@ -412,6 +428,8 @@
                                 border-right: 1px solid rgb(212, 212, 212);
                                 box-sizing: border-box;
                                 width: 100%;
+                                cursor: pointer;
+
                                 // height: 40px;
                                 span{
                                     color: #282829;
@@ -811,6 +829,8 @@
                                     border-right: 1px solid rgb(212, 212, 212);
                                     box-sizing: border-box;
                                     width: 100%;
+                                    cursor: pointer;
+
                                     // height: 40px;
                                     #delete{
                                         color: #282829;

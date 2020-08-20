@@ -32,6 +32,14 @@
   border-radius: 3px;
   border: 1px solid #cecece;
   height: auto; }
+  #main-container .deleted-answer-message {
+    margin-top: 10px;
+    border: 1px solid #dd3924;
+    border-radius: 10px;
+    padding: 10px; }
+    #main-container .deleted-answer-message span {
+      color: #757575;
+      font-weight: 600; }
   #main-container button {
     cursor: pointer; }
   #main-container .blue {
@@ -133,7 +141,8 @@
         padding: 5px 10px;
         border-right: 1px solid #d4d4d4;
         box-sizing: border-box;
-        width: 100%; }
+        width: 100%;
+        cursor: pointer; }
         #main-container #question-container div.options-for-question .style span {
           color: #282829;
           font-size: 0.9rem; }
@@ -186,7 +195,8 @@
           padding: 5px 10px;
           border-right: 1px solid #d4d4d4;
           box-sizing: border-box;
-          width: 100%; }
+          width: 100%;
+          cursor: pointer; }
           #main-container #question-container #user-anwser .options-for-answer .style span {
             color: #282829;
             font-size: 0.9rem; }
@@ -225,7 +235,8 @@
             border-radius: 20px;
             padding: 10px; }
         #main-container #question-container #user-anwser .comment-section .comments-container {
-          height: auto; }
+          height: auto;
+          transition: height 0.2s ease-in-out; }
           #main-container #question-container #user-anwser .comment-section .comments-container .comment {
             border-bottom: 1px solid #dadada;
             position: relative;
@@ -261,7 +272,8 @@
                 padding: 5px 10px;
                 border-right: 1px solid #d4d4d4;
                 box-sizing: border-box;
-                width: 100%; }
+                width: 100%;
+                cursor: pointer; }
                 #main-container #question-container #user-anwser .comment-section .comments-container .comment .options-for-comment .style span {
                   color: #282829;
                   font-size: 0.9rem; }
@@ -509,7 +521,8 @@
                   padding: 5px 10px;
                   border-right: 1px solid #d4d4d4;
                   box-sizing: border-box;
-                  width: 100%; }
+                  width: 100%;
+                  cursor: pointer; }
                   #main-container #question-container #other-user-answer .answers_another_user .comments-section .comments-container .comment .options-for-comment .style #delete {
                     color: #282829;
                     font-size: 0.9rem; }

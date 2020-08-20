@@ -1,6 +1,7 @@
 const User=require('../models/user');
 const Answer=require('../models/answer');
 const Comment=require('../models/comment');
+const { use } = require('passport');
 
 module.exports.CreateComment=async  function(req,res)
 {
@@ -50,5 +51,61 @@ module.exports.CreateComment=async  function(req,res)
 
     } catch (error) {
         console.log('Error in creating the comment',error);
+    }
+}
+
+module.exports.delete=async function(req,res)
+{
+    // i will be having the id of the comment and the answer via the query
+
+    try {
+        
+        let user=await User.findById(req.user.id);
+        let answer=await Answer.findById(req.query.a_id);
+
+        if(answer)
+        {
+            let comment=await Comment.findById(req.query.c_id);
+
+            if(comment)
+            {
+                if(comment.user==req.user.id)
+                {
+                    user.comments.pull(comment.id);
+                    answer.comments.pull(comment.id);
+
+                    comment.remove();
+
+                    user.save();
+                    answer.save();
+
+                    return res.status(200).json({
+                        message:'Comment Deleted'
+                    });
+                }
+                else
+                {
+                    return res.status(403).json({
+                        message:'You are not authorized to delete this comment'
+                    });
+                }
+            }
+            else
+            {
+                return res.status(404).json({
+                    message:'Comment not found'
+                });
+            }
+        }
+        else
+        {
+            return res.status(404).json({
+                message:'Answer not found'
+            });
+        }
+        
+
+    } catch (error) {
+        console.log(error);
     }
 }

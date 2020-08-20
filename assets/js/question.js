@@ -87,10 +87,10 @@ function show2nav()
     
     
     let parents=$(event.target).parentsUntil('div.controls');
-    console.log(parents);
+    // console.log(parents);
 
     let link=$(' input',$(parents[0]))[0].value;
-    console.log(link);
+    // console.log(link);
 
     // For appending the link to the text area
 
@@ -111,7 +111,7 @@ function show2nav()
 function blue()
 {
         let parentFar=$(event.target).parentsUntil('.not-answered');
-        console.log(parentFar);
+        // console.log(parentFar);
         let input= $(' .input div',parentFar[parentFar.length-1]);
     if($(event.target).children().length==0)
     {
@@ -160,10 +160,10 @@ function blue()
 
 // For submitting answer
 function submit(){
-    console.log(event.target);
+    // console.log(event.target);
 
     let parents=$(event.target).parentsUntil('.not-answered');
-    console.log(parents);
+    // console.log(parents);
 
     let inputForm=$(' .input',$(parents[parents.length-1]));
     
@@ -184,8 +184,8 @@ function submit(){
     }
     else
     {
-        console.log(answer.textContent);
-        console.log($(event.target).attr('link'));
+        // console.log(answer.textContent);
+        // console.log($(event.target).attr('link'));
 
         let questionId=$(event.target).attr('id');
 
@@ -222,7 +222,7 @@ function toggleCommentSection()
 {
     let parents=$(event.target).parentsUntil('#question-container');
 
-    console.log(parents);
+    // console.log(parents);
 
     $(' .comments-container',$(parents[parents.length-1])).toggleClass('display');
 }
@@ -232,7 +232,7 @@ function showOptionsComment()
     console.log('Hello');
     let parents=$(event.target).parentsUntil('.comments-container');
 
-    console.log(parents);
+    // console.log(parents);
 
     $(' .options-for-comment',$(parents[parents.length-1])).toggleClass('display');
     event.stopPropagation();
@@ -241,7 +241,7 @@ function commentDomUser(comment,showTime)
 {
 
     return $(`
-            <div class="comment animate__animated animate__fadeIn">
+            <div class="comment animate__animated animate__fadeIn" id="comment-${comment._id}">
 
                 <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
                 <span class="bold">${comment.user.name}</span>
@@ -261,8 +261,8 @@ function commentDomUser(comment,showTime)
                 </div>
                 <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                 <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
-                    <div class="style">
-                        <span>Delete Comment</span>
+                    <div class="style" onclick="DeleteComment();" a_id="${comment.answer}" c_id="${comment._id}">
+                        <span a_id="${comment.answer}" c_id="${comment._id}">Delete Comment</span>
                     </div>
                     
                     <div class="style">
@@ -338,7 +338,7 @@ function commentSubmitUser(){
         {
             console.log(data);
             $(' input',$(parents[parents.length-1]))[0].value='';
-            console.log(data.data.comment);
+            // console.log(data.data.comment);
             let showTimes=calcTime(data.data.comment);
             let commentDoms= commentDomUser(data.data.comment,showTimes);
 
@@ -357,10 +357,10 @@ function commentSubmitOther()
 {
     let parents=$(event.target).parentsUntil('.answers_another_user');
 
-    console.log(parents);
+    // console.log(parents);
 
     let comment=$(' input',$(parents[parents.length-1]))[0].value;
-    console.log(comment);
+    // console.log(comment);
 
     // return;
     if(comment=='')
@@ -378,7 +378,7 @@ function commentSubmitOther()
 
     let id_answer=$(' input',$(parents[parents.length-1])).attr('id');
 
-    console.log(id_answer);
+    // console.log(id_answer);
 
     $.ajax({
         type:'post',
@@ -423,20 +423,20 @@ function like(button)
 
 function upvoteAnswer()
 {
-    console.log(event.target);
+    // console.log(event.target);
     let parents=$(event.target).parentsUntil('.controls');
     // event.stopPropagation();
-    console.log('event target',parents);
+    // console.log('event target',parents);
     let parentLike=$(event.target).parentsUntil('.answer');
 
-    console.log('buttons',$(' .dislike i',$(parentLike[parentLike.length-1])));
+    // console.log('buttons',$(' .dislike i',$(parentLike[parentLike.length-1])));
 
     let dislikeButton=$(' .dislike',$(parentLike[parentLike.length-1]));
     $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
 
     let id =$(parents[parents.length-1]).attr('idAnswer');
-    console.log(id);
+    // console.log(id);
 
     $.ajax({
         type:'post',
@@ -460,15 +460,15 @@ function upvoteAnswer()
 
 function upvoteComment()
 {
-    console.log('hi',event.target);
+    // console.log('hi',event.target);
 
     let parents=$(event.target).parentsUntil('.controls');
 
-    console.log(parents);
+    // console.log(parents);
     
     let parentLike=$(event.target).parentsUntil('.comment');
 
-    console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
+    // console.log($(' .dislike i',$(parentLike[parentLike.length-1])));
 
     let dislikeButton=$(' .dislike',$(parentLike[parentLike.length-1]));
 
@@ -476,7 +476,7 @@ function upvoteComment()
     $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
 
     let id =$(parents[parents.length-1]).attr('idComment');
-    console.log(id);
+    // console.log(id);
 
     $.ajax({
         type:'post',
@@ -502,22 +502,22 @@ function upvoteComment()
 // for downvoting the question
 function downvoteAnswer()
 {
-    console.log(event.target);
+    // console.log(event.target);
    
     let parents=$(event.target).parentsUntil('span');
 
-    console.log(parents);
+    // console.log(parents);
 
     let parentLike=$(event.target).parentsUntil('.answer');
 
-    console.log($(' .like i',$(parentLike[parentLike.length-1])));
+    // console.log($(' .like i',$(parentLike[parentLike.length-1])));
 
     let likeButton=$(' .like',$(parentLike[parentLike.length-1]));
     $(' .down,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
 
     let id =$(parents[parents.length-1]).attr('idAnswer');
 
-    console.log(id);
+    // console.log(id);
 
     $.ajax({
         type:'post',
@@ -529,7 +529,7 @@ function downvoteAnswer()
 
             if(data.removedLike)
             {
-                console.log('hi');
+                // console.log('hi');
                 // likeButton.trigger('click');
                 like(likeButton);
 
@@ -550,14 +550,14 @@ function downvoteComment()
     let parentLike=$(event.target).parentsUntil('.comment');
 
 
-    console.log(parents);
-    console.log($(' .like i',$(parentLike[parentLike.length-1])));
+    // console.log(parents);
+    // console.log($(' .like i',$(parentLike[parentLike.length-1])));
 
     let likeButton=$(' .like',$(parentLike[parentLike.length-1]));
     $(' i,div',$(parents[parents.length-1])).toggleClass('grey red animate__bounceIn');
 
     let id =$(parents[parents.length-1]).attr('idComment');
-    console.log(id);
+    // console.log(id);
 
     $.ajax({
         type:'post',
@@ -568,7 +568,7 @@ function downvoteComment()
             console.log(data);
             if(data.removedLike)
             {
-                console.log('hi',likeButton);
+                // console.log('hi',likeButton);
                 // likeButton.trigger('click');
                 like(likeButton);
             }
@@ -579,4 +579,68 @@ function downvoteComment()
         }
     });
 
+}
+
+// Are you sure you wish to delete this answer? This action can be undone.
+
+// Are you sure you want to delete this comment?
+
+function DeleteComment()
+{
+    let CommentDomParent=$(event.target).parentsUntil('.comments-container');
+
+    // let CommentDom=$(' .comment',$(CommentDomParent[CommentDomParent-1]));
+    
+    console.log(CommentDomParent);
+
+
+    let a_id=$(event.target).attr('a_id');
+    let c_id=$(event.target).attr('c_id');
+
+    console.log(a_id,c_id);
+    // return;
+    $.ajax({
+        type:'get',
+        url:`/comment/delete?a_id=${a_id}&c_id=${c_id}`,
+        success:function(data)
+        {
+            console.log(data);
+            $(`#comment-${c_id}`).addClass('animate__animated animate__zoomOut');
+            setTimeout(function(){
+                $(`#comment-${c_id}`).remove();
+            },600);
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+
+
+}
+
+function deleteAnswer()
+{
+    let a_id=$(event.target).attr('a_id');
+    
+    console.log(a_id);
+
+    $.ajax({
+        type:'get',
+        url:`/answers/delete?a_id=${a_id}`,
+        success:function(data)
+        {
+            console.log(data);
+            $('#user-anwser').addClass('animate__animated animate__fadeOut');
+            setTimeout(function(){
+                $('#user-anwser').remove();
+                $('.deleted-answer-message').removeClass('display');
+            },600);
+           
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }    
+    });
 }
