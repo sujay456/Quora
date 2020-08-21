@@ -6,6 +6,8 @@ const passport=require('passport');
 
 router.post('/create',passport.CheckAuth,CommentController.CreateComment);
 
+router.post('/update',CommentController.UpdateComment);
+
 router.get('/delete',passport.CheckAuth,CommentController.delete);
 
 module.exports=router;

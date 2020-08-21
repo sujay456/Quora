@@ -1,5 +1,8 @@
 // const e = require("express");
 
+// const { UpdateComment } = require("../../controller/commentController");
+
+
 
 
 function follow(){
@@ -252,8 +255,14 @@ function commentDomUser(comment,showTime)
                 <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
                 <span class="bold">${comment.user.name}</span>
                 <small>${showTime}</small>
-                <p>${comment.comment}</p>
-
+                <p class="content">${comment.comment}</p>
+                <div class="update-container display">
+                    <input type="text" value="${comment.comment}" name="updatedComment" required>
+                    <div class="button">
+                        <button onclick="hideUpdateContainer();" class="cancel">Cancel</button>
+                        <button class="update" onclick="EditComment();" c_id=${comment._id} >Update</button>
+                    </div>
+                </div>
                 <div class="controls">
                     <button class="upvote" onclick="upvoteComment();" idComment="${comment._id}">
                             <i class="far fa-thumbs-up fa-lg grey first"></i>
@@ -271,7 +280,7 @@ function commentDomUser(comment,showTime)
                         <span a_id="${comment.answer}" c_id="${comment._id}">Delete Comment</span>
                     </div>
                     
-                    <div class="style">
+                    <div class="style" onclick="hideUpdateContainer()">
                         <span>Edit Comment</span>
                     </div>
                 </div>
@@ -669,3 +678,43 @@ function EditAnswer()
     console.log($('.Editable-Answer .textarea-for-answering .footer button').attr('edit'));
 
 }
+function hideUpdateContainer()
+{
+    let parent=$(event.target).parentsUntil('.comments-container');
+
+    $(' .content',$(parent[parent.length-1])).toggleClass('display');
+    $(' .update-container',$(parent[parent.length-1])).toggleClass('display');
+
+}
+function EditComment()
+{
+   
+
+    let parent=$(event.target).parentsUntil('.comments-container');
+
+    let updateComment=$(' .update-container input',parent[parent.length-1])[0].value;
+    console.log(updateComment);
+
+    let id=$(event.target).attr('c_id');
+
+    console.log(id);
+    // return;
+    $.ajax({
+        type:'post',
+        url:`/comment/update?id=${id}`,
+        data:{editedComment:updateComment},
+        success:function(data)
+        {
+            $(' .content',$(parent[parent.length-1])).removeClass('display');
+            $(' .content',$(parent[parent.length-1]))[0].innerText=updateComment;
+            $(' .update-container',$(parent[parent.length-1])).addClass('display');
+            console.log(data);
+
+        },
+        error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+}
+

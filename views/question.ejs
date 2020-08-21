@@ -170,7 +170,16 @@
                                         <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
                                         <span class="bold"><%=c.user.name%></span>
                                         <small><%=showTime%></small>
-                                        <p><%=c.comment %></p>
+                                        <p class="content" ><%=c.comment %></p>
+                                        
+                                        <div class="update-container display">
+                                            <input type="text" value="<%=c.comment%>" name="updatedComment" required>
+                                            <div class="button">
+                                                <button onclick="hideUpdateContainer();" class="cancel">Cancel</button>
+                                                <button class="update" onclick="EditComment();" c_id="<%=c.id%>" >Update</button>
+                                            </div>
+                                        </div>
+
                                         <div class="controls">
                                             <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
                                                 <% let likes=false %>
@@ -203,7 +212,7 @@
                                                 <span  a_id="<%=userAnswer.id%>" c_id="<%=c.id%>">Delete Comment</span>
                                             </div>
                                             
-                                            <div class="style">
+                                            <div class="style" onclick="hideUpdateContainer();">
                                                 <span>Edit Comment</span>
                                             </div>
                                         </div>
@@ -369,7 +378,9 @@
                                             <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
-                                            <p><%=c.comment %></p> 
+
+                                            <p ><%=c.comment %></p> 
+                                            
                                             <div class="controls" >
                                                 <button class="upvote like" onclick="upvoteComment();" idComment="<%=c.id%>">
                                                     <% let likes=false %>
@@ -415,7 +426,14 @@
                                             <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
-                                            <p><%=c.comment %></p>
+                                            <p class="content"><%=c.comment %></p>
+                                            <div class="update-container display">
+                                                <input type="text" value="<%=c.comment%>" name="updatedComment" required>
+                                                <div class="button">
+                                                    <button onclick="hideUpdateContainer();" class="cancel">Cancel</button>
+                                                    <button class="update" onclick="EditComment();" c_id="<%=c.id%>" >Update</button>
+                                                </div>
+                                            </div>
                                             <div class="controls">
                                                 <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
                                                     <% let likes=false %>
@@ -449,7 +467,7 @@
                                                 <div class="style" onclick="DeleteComment();" a_id="<%=a.id%>" c_id="<%=c.id%>">
                                                     <span a_id="<%=a.id%>" c_id="<%=c.id%>">Delete Comment</span>
                                                 </div>
-                                                <div class="style">
+                                                <div class="style" onclick="hideUpdateContainer()">
                                                     <span  >Edit Comment</span>
                                                 </div>
                                             </div>

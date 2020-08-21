@@ -34,7 +34,7 @@
   height: auto; }
   #main-container .deleted-answer-message {
     margin-top: 10px;
-    border: 1px solid #dd3924;
+    border: 1px solid #2b64ce;
     border-radius: 10px;
     padding: 10px; }
     #main-container .deleted-answer-message span {
@@ -71,6 +71,32 @@
         top: 0px; }
       #main-container .upvote .number_of_like .upanddown {
         top: -20px; }
+  #main-container .update-container {
+    position: relative; }
+    #main-container .update-container input {
+      width: 80%;
+      height: 35px;
+      border-radius: 15px;
+      border: 1px solid #cfcfcf;
+      outline: none;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 0.9rem;
+      margin-bottom: 10px; }
+    #main-container .update-container .button button {
+      background: transparent;
+      outline: 'none';
+      border: none;
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 25px;
+      box-sizing: border-box;
+      outline: none; }
+    #main-container .update-container .button .update {
+      background: #1149c4;
+      color: white; }
+    #main-container .update-container .button .cancel:hover {
+      background-color: #dbdbdb; }
   #main-container #question-container {
     width: 65%;
     position: relative;
