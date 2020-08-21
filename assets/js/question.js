@@ -162,6 +162,10 @@ function blue()
 function submit(){
     // console.log(event.target);
 
+    let editable=false;
+
+    editable=$(event.target).attr('edit');
+    // console.log(editable);
     let parents=$(event.target).parentsUntil('.not-answered');
     // console.log(parents);
 
@@ -170,6 +174,8 @@ function submit(){
     // console.log($(' .textArea',inputForm));
     let answer=$(' .textArea',inputForm)[0];
 
+    console.log(answer.innerText);
+    // return;
     if(answer.innerText=='')
     {
         // console.log('true',answer.innerText);
@@ -192,7 +198,7 @@ function submit(){
         $.ajax({
             type:'post',
             url:$(event.target).attr('link'),
-            data:{answer:answer.innerText},
+            data:{answer:answer.innerText,editable:editable},
             success:function(data)
             {
                 console.log(data);
@@ -643,4 +649,23 @@ function deleteAnswer()
             console.log(err.responseText);
         }    
     });
+}
+
+function EditAnswer()
+{
+    let parents=$(event.target).parentsUntil('#user-anwser');
+
+    // console.log(parents);
+
+    $(parents[parents.length-1]).addClass('display');
+
+    $('.Editable-Answer .textarea-for-answering').removeClass('display');
+
+    // console.log();
+    const answer=$(event.target).attr('answer');
+
+    $('.Editable-Answer .textarea-for-answering .textArea').append(answer);
+    $('.Editable-Answer .textarea-for-answering .footer button').attr('edit','true');
+    console.log($('.Editable-Answer .textarea-for-answering .footer button').attr('edit'));
+
 }

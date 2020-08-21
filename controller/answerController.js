@@ -20,10 +20,23 @@ module.exports.create=async function(req,res)
 
             if(AnswerDone)
             {
-                console.log('You can not answer a question twice');
-                return res.status(403).json({
-                    message:'You have already given your answer'
-                });
+                if(req.body.editable=='true')
+                {
+                    AnswerDone.answer=req.body.answer;
+
+                    AnswerDone.save();
+
+                    return res.status(200).json({
+                        message:'Answer edited succesfully'
+                    });
+                }
+                else
+                {
+                    console.log('You can not answer a question twice');
+                    return res.status(403).json({
+                        message:'You have already given your answer'
+                    });
+                }
             }
             else
             {
