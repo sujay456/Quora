@@ -15,12 +15,21 @@
 
         <div class="buttons">
             <!-- some button to answer or follow this question -->
-            <button onclick="showAnswerTab();" class="answer">
-                <i class="fas fa-feather-alt fa-lg blue"></i> 
-                <span class="grey">
-                    Answer
-                </span>
-            </button>
+            <%if(!userBool){%>
+                <button onclick="showAnswerTab();" class="answer">
+                    <i class="fas fa-feather-alt fa-lg blue"></i> 
+                    <span class="grey">
+                        Answer
+                    </span>
+                </button>
+                <%}else{%>
+                    <button onclick="showAnswerTab();" disabled style="cursor: not-allowed;" class="answer">
+                        <i class="fas fa-feather-alt fa-lg blue"></i> 
+                        <span class="grey">
+                            Answer
+                        </span>
+                    </button>
+                <%}%>
             <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=question.id%>">
                 <% let followed=false %>
                 <% for(let f of follow){ %>

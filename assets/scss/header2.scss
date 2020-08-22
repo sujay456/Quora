@@ -16,6 +16,7 @@ header
         left: 20px;
         top:20px;
         z-index: 102;
+        cursor: pointer;
     }
     
     #test
@@ -28,6 +29,7 @@ header
         max-width: 400px;
         height: 100vh;
         position: fixed;
+        top: 0;
         background-color: white;
         z-index: 101;
         border:1px solid black;

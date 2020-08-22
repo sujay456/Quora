@@ -260,6 +260,8 @@
             outline: none;
             border-radius: 20px;
             padding: 10px; }
+          #main-container #question-container #user-anwser .comment-section .comment-container-user button:hover {
+            background-color: #1348bb; }
         #main-container #question-container #user-anwser .comment-section .comments-container {
           height: auto;
           transition: height 0.2s ease-in-out; }
@@ -371,6 +373,8 @@
               border: 0;
               font-size: 1.1rem; }
             #main-container #question-container #user-anwser .textarea-for-answering div.controls .outer-control ._1 button {
+              position: absolute;
+              right: 20px;
               background-color: #f7f7f8;
               color: #939598;
               outline: none;
@@ -395,8 +399,8 @@
                 border-color: #0066ff; }
             #main-container #question-container #user-anwser .textarea-for-answering div.controls .outer-control ._2 .secondary_controls {
               display: inline-block;
-              position: relative;
-              left: 510px; }
+              position: absolute;
+              right: 20px; }
               #main-container #question-container #user-anwser .textarea-for-answering div.controls .outer-control ._2 .secondary_controls .other-control {
                 display: inline-block;
                 width: 30px;
@@ -467,7 +471,7 @@
           #main-container #question-container #other-user-answer .answers_another_user .controls .second {
             position: absolute;
             right: 20px;
-            top: 115px; }
+            bottom: 85px; }
           #main-container #question-container #other-user-answer .answers_another_user .controls .first:hover {
             transform: scale(1.2) rotate(-30deg); }
           #main-container #question-container #other-user-answer .answers_another_user .controls .second:hover {
@@ -488,7 +492,7 @@
             padding: 10px; }
             #main-container #question-container #other-user-answer .answers_another_user .comments-section .comment-container-other input {
               position: relative;
-              width: 75%;
+              width: 70%;
               top: 5px;
               border-radius: 20px;
               border: none;
@@ -501,12 +505,14 @@
               position: absolute;
               top: 14px;
               right: 5px;
-              background-color: #1570bb;
+              background-color: #3383dd;
               color: white;
               border: none;
               outline: none;
               border-radius: 20px;
               padding: 10px; }
+            #main-container #question-container #other-user-answer .answers_another_user .comments-section .comment-container-other button:hover {
+              background-color: #1348bb; }
           #main-container #question-container #other-user-answer .answers_another_user .comments-section .comments-container {
             background-color: white;
             padding: 10px;
@@ -579,3 +585,36 @@
           text-decoration: none; }
         #main-container #related-question-container #outer-div .questions a:hover {
           text-decoration: underline; }
+
+@media screen and (max-width: 1350px) {
+  #main-container #question-container {
+    width: 75%; }
+  #main-container #related-question-container {
+    width: 20%; } }
+
+@media screen and (max-width: 1250px) {
+  #main-container #question-container {
+    display: block;
+    width: 100%; }
+  #main-container #related-question-container {
+    display: block;
+    width: 100%; } }
+
+@media screen and (max-width: 1000px) {
+  #main-container {
+    left: 0%;
+    width: 100%; } }
+
+@media screen and (max-width: 700px) {
+  #main-container #question-container #user-anwser .comment-section .comment-container-user input {
+    width: 50%; }
+  #main-container #question-container #other-user-answer .answers_another_user .comments-section .comment-container-other input {
+    width: 50%; } }
+
+@media screen and (max-width: 400px) {
+  #main-container #question-container #user-anwser .comment-section .comment-container-user input {
+    font-size: 0.8rem;
+    width: 40%; }
+  #main-container #question-container #other-user-answer .answers_another_user .comments-section .comment-container-other input {
+    font-size: 0.8rem;
+    width: 40%; } }
