@@ -132,7 +132,7 @@
                         
                         <i class="far fa-comment fa-lg grey first" onclick="toggleCommentSection();"></i>
 
-                        <span>
+                        <span class="span">
                             <button class="upvote dislike" onclick="downvoteAnswer();" idAnswer="<%=userAnswer.id%>">
                                 <% let dislikes=false %>
                                 <% for(let d of dislike){ %>
@@ -147,18 +147,20 @@
                             </button>
                             <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsA();"></i>
                         </span>
-                    </div>
-                    <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
+                        <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
                                     
-                        <div class="style" onclick="deleteAnswer();" a_id="<%=userAnswer.id%>">
-                            <span a_id="<%=userAnswer.id%>">Delete Answer</span>
+                            <div class="style" onclick="deleteAnswer();" a_id="<%=userAnswer.id%>">
+                                <span  a_id="<%=userAnswer.id%>">Delete Answer</span>
+                            </div>
+                            
+                            <div class="style" onclick="EditAnswer();" answer="<%=userAnswer.answer%>">
+                                <span  answer="<%=userAnswer.answer%>">Edit Answer</span>
+                            </div>
+                
                         </div>
                         
-                        <div class="style" onclick="EditAnswer();" answer="<%=userAnswer.answer%>">
-                            <span answer="<%=userAnswer.answer%>">Edit Answer</span>
-                        </div>
-            
                     </div>
+                    
                     <div class="comment-section">
                         <div class="comment-container-user">
                             <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">

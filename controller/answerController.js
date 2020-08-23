@@ -4,6 +4,7 @@ const Answer=require('../models/answer');
 const Like=require('../models/like');
 const Dislike=require('../models/dislike');
 const Comment=require('../models/comment');
+const { use } = require('passport');
 
 module.exports.create=async function(req,res)
 {
@@ -80,19 +81,23 @@ module.exports.delete=async function(req,res)
 
         let answer=await Answer.findById(req.query.a_id);
 
+        let question=await Question.findById(answer.question);
+
         if(answer)
         {
             if(answer.user==req.user.id)
             {
 
                 user.answers.pull(answer.id);
+                question.answersOnQuestion.pull(answer.id);
                 await Like.deleteMany({likedon:answer.id});
                 await Dislike.deleteMany({dislikedon:answer.id});
 
                 await Comment.deleteMany({answer:answer.id});
 
                 
-
+                question.save();
+                user.save();
                 answer.remove();
 
                 return res.status(200).json({

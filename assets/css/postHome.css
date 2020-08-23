@@ -1,8 +1,8 @@
 .pop-up {
   width: 100%;
-  background-color: #c9c9c9;
   text-align: center;
   position: fixed;
+  background-color: #c9c9c9;
   z-index: 50;
   height: 50px;
   top: -200px;
@@ -12,6 +12,12 @@
     font-weight: 600;
     position: relative;
     top: 10px; }
+
+.grey-popup {
+  background-color: #c9c9c9; }
+
+.green-popup {
+  background-color: #5fbe5f; }
 
 .top {
   top: 65px; }

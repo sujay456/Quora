@@ -55,6 +55,15 @@ body {
         body #interest #interest-container .style-block .checked {
           position: absolute;
           right: 0; }
+      body #interest #interest-container .style-block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5; }
       body #interest #interest-container .scaledown {
         transform: scale(0.9); }
       body #interest #interest-container .style-block:hover {

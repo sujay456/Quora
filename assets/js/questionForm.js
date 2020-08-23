@@ -42,7 +42,11 @@ $('#question-form').click(function(e){
                 data:{question:question},
                 success:function(data){
                     $('#form-question form')[0].reset();
-                    
+                    $('.pop-up span')[0].innerText="Answer Posted";
+                    $('.pop-up').addClass('top green-popup');
+                    setTimeout(function(){
+                    $('.pop-up').removeClass('top');
+                    },2000);
                 },
                 error:function(err)
                 {
