@@ -78,7 +78,13 @@ module.exports.Home= async function(req,res)
     // we have a middleware for checking Authentication 
     // console.log('Home');
     try {
-        let questions=await Question.find({}).populate('user');
+        let questions=await Question.find({})
+        .populate({
+            path:'user answersOnQuestion',
+            populate:{
+                path:'user'
+            }
+        });
         // console.log(questions);
 
         // Here i will find all the follows which are done by this spcefic user which req.user.id

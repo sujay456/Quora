@@ -45,174 +45,237 @@
            
 
             <!-- In this div there will be questions which you can answer -->
-            <div id="questions-for-you" class="background-white">
+            <div id="questions-for-you" class="background-white container-style">
                 
-                <div id="header">
+                <div id="header-desc" class="header-description">
                     <i class="far fa-lightbulb fa-lg"></i>
                     <span>Question for You</span>
                 </div>
 
                 <% for(let q of locals.questions) {%>
-                    <% if(q.answersOnQuestion.length <=2 && q.user.id!=locals.user.id) {%>
+                    <% if(q.answersOnQuestion.length <=2 && q.user.id!=locals.user.id ) {%>
 
                         <!-- here there will be a for loop for follows  -->
                         <!-- { -->
-                        <div class="not-answered background-white">
-                            <div class="header">Question added</div>
+                            <div class="not-answered background-white">
+                                <div class="header">Question added</div>
+                                
+                                <div class="Question">
+                                    <a href="/question/display?id=<%=q.id%>" target="_blank"> 
+                                        <h3 ><%=q.question%></h3>
+                                    </a>
+                                </div>
+                                
                             
-                            <div class="Question">
-                                <a href="/question/display?id=<%=q.id%>" target="_blank"> 
-                                    <h3 ><%=q.question%></h3>
-                                </a>
-                            </div>
-                            
-
-                            <div class="description">
-                                <% if(!q.answersOnQuestion.length){ %>
-                                    <span>No answers yet</span>
-                                <%}else {%>
-                                    <span><%=q.answersOnQuestion.length%> answers</span>
-                                <%}%>
-
-                            </div>
-                            <div class="buttons">
-                                <!-- some button to answer or follow this question -->
-                                <button onclick="showAnswerTab();" class="answer">
-                                    <i class="fas fa-feather-alt fa-lg blue"></i> 
-                                    <span class="grey">
-                                        Answer
-                                    </span>
-                                </button>
-                                <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
-                                    <% let followed=false %>
-                                    <% for(let f of follow){ %>
-                                        <% if(f.question==q.id){ %>
-                                            <% followed=true; break; %>
-                                        <%}%>    
+                                <div class="description">
+                                    <% if(!q.answersOnQuestion.length){ %>
+                                        <span>No answers yet</span>
+                                    <%}else {%>
+                                        <span><%=q.answersOnQuestion.length%> answers</span>
                                     <%}%>
-                                    
-                                    <% if(!followed){ %>
-                                        
-                                        <i class="fas fa-rss fa-lg grey"></i>
-                                        <span class="grey">
-                                            Folllow .
-                                        </span>
-                                        <div class="number_of_follow">
-                                            <div class="outer-cage initial">
-                                                <div class="grey"><%=q.follow.length%></div>
-                                                <div class="grey"><%=q.follow.length+1%></div>
-                                            </div>
-
-                                        </div>
-                                    <%}else{ %>
-                                        
-                                        <i class="fas fa-rss fa-lg blue"></i>
-                                        <span class="blue">
-                                            Folllow .
-                                        </span>
-                                        <div class="number_of_follow">
-                                            <div class="outer-cage upanddown">
-                                                <div class="grey"><%=q.follow.length-1%></div>
-                                                <div class="grey"><%=q.follow.length%></div>
-                                            </div>
-
-                                        </div>
-
-                                    <% }%>
-
-                                </button>
-
-                                <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
-                                <!-- Options regarding question -->
-                            </div>
-
-                            <div class="textarea-for-answering display">
-                                <div class="personal-details background-grey">
-                                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
-                                    <div>
-                                        <p><%=user.name %></p>
-                                        <a href="">Edit Credentials</a>
-                                    </div>
-                                </div>
-
-                                <div class="controls background-white">
-
-                                    <div class="outer-control">
-
-                                        <!-- ------------1--------------------- -->
-                                        <div class="_1 control-style">
-                                            <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
-                                            <input type="text" placeholder="Enter URL" onfocus="this.value=''">
-                                            <button onclick="show2nav();">Add</button>
-                                        </div>
-
-
-                                        <!-- -------------2----------------- -->
-                                        <div class="_2 control-style">
-                                            <div class="primary_controls"> 
-                                                <div class="text-control" onclick="blue();">
-                                                    <i class="fas fa-bold fa-lg"></i>
-                                                    <input type="hidden" value="bold" >
-                                                </div>
-                                                <div class="text-control" onclick="blue();">
-                                                    <i class="fas fa-italic fa-lg"></i>
-                                                    <input type="hidden" value="italic">
-                                                </div>
-                                            </div>
-
-                                            <div class="secondary_controls">
-                                                <div class="other-control">
-                                                    <i class="fas fa-images fa-lg"></i>
-                                                    <input type="hidden" value="image">
-                                                </div>
-
-                                                <div class="other-control" onclick="show1nav();">
-                                                    <i class="fas fa-link fa-lg"></i>
-                                                    <input type="hidden" value="link">
-                                                </div>
-
-                                                
-                                            </div>
-                                        </div>
-    
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="input">
-                                    <div class="textArea" contenteditable="true">
-                                        
-                                    </div>
-                                </div>
-
-                                <div class='footer background-grey'>
-                                    <button link='/answers/create?id=<%=q.id%>' id='<%=q.id%>' class="submit-answer" onclick="submit();">Submit</button>
-                                </div>
-
-                            </div>
                             
-                            <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
-                                
-                                <div class="style">
-                                    <span>Answer Anonymously</span>
+                                </div>
+                                <div class="buttons">
+                                    <!-- some button to answer or follow this question -->
+                                    <button onclick="showAnswerTab();" class="answer">
+                                        <i class="fas fa-feather-alt fa-lg blue"></i> 
+                                        <span class="grey">
+                                            Answer
+                                        </span>
+                                    </button>
+                                    <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
+                                        <% let followed=false %>
+                                        <% for(let f of follow){ %>
+                                            <% if(f.question==q.id){ %>
+                                                <% followed=true; break; %>
+                                            <%}%>    
+                                        <%}%>
+                                        
+                                        <% if(!followed){ %>
+                                            
+                                            <i class="fas fa-rss fa-lg grey"></i>
+                                            <span class="grey">
+                                                Folllow .
+                                            </span>
+                                            <div class="number_of_follow">
+                                                <div class="outer-cage initial">
+                                                    <div class="grey"><%=q.follow.length%></div>
+                                                    <div class="grey"><%=q.follow.length+1%></div>
+                                                </div>
+                            
+                                            </div>
+                                        <%}else{ %>
+                                            
+                                            <i class="fas fa-rss fa-lg blue"></i>
+                                            <span class="blue">
+                                                Folllow .
+                                            </span>
+                                            <div class="number_of_follow">
+                                                <div class="outer-cage upanddown">
+                                                    <div class="grey"><%=q.follow.length-1%></div>
+                                                    <div class="grey"><%=q.follow.length%></div>
+                                                </div>
+                            
+                                            </div>
+                            
+                                        <% }%>
+                            
+                                    </button>
+                            
+                                    <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
+                                    <!-- Options regarding question -->
+                                </div>
+                            
+                                <div class="textarea-for-answering display">
+                                    <div class="personal-details background-grey">
+                                        <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
+                                        <div>
+                                            <p><%=user.name %></p>
+                                            <a href="">Edit Credentials</a>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="controls background-white">
+                            
+                                        <div class="outer-control">
+                            
+                                            <!-- ------------1--------------------- -->
+                                            <div class="_1 control-style">
+                                                <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
+                                                <input type="text" placeholder="Enter URL" onfocus="this.value=''">
+                                                <button onclick="show2nav();">Add</button>
+                                            </div>
+                            
+                            
+                                            <!-- -------------2----------------- -->
+                                            <div class="_2 control-style">
+                                                <div class="primary_controls"> 
+                                                    <div class="text-control" onclick="blue();">
+                                                        <i class="fas fa-bold fa-lg"></i>
+                                                        <input type="hidden" value="bold" >
+                                                    </div>
+                                                    <div class="text-control" onclick="blue();">
+                                                        <i class="fas fa-italic fa-lg"></i>
+                                                        <input type="hidden" value="italic">
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="secondary_controls">
+                                                    <div class="other-control">
+                                                        <i class="fas fa-images fa-lg"></i>
+                                                        <input type="hidden" value="image">
+                                                    </div>
+                            
+                                                    <div class="other-control" onclick="show1nav();">
+                                                        <i class="fas fa-link fa-lg"></i>
+                                                        <input type="hidden" value="link">
+                                                    </div>
+                            
+                                                    
+                                                </div>
+                                            </div>
+                            
+                                        </div>
+                                        
+                                    </div>
+                            
+                                    <div class="input">
+                                        <div class="textArea" contenteditable="true">
+                                            
+                                        </div>
+                                    </div>
+                            
+                                    <div class='footer background-grey'>
+                                        <button link='/answers/create?id=<%=q.id%>' id='<%=q.id%>' class="submit-answer" onclick="submit();">Submit</button>
+                                    </div>
+                            
                                 </div>
                                 
-                                <div class="style">
-                                    <span>Downvote Question</span>
+                                <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
+                                    
+                                    <div class="style">
+                                        <span>Answer Anonymously</span>
+                                    </div>
+                                    
+                                    <div class="style">
+                                        <span>Downvote Question</span>
+                                    </div>
+                                    
+                                    <div class="style">
+                                        <span>Report</span>
+                                    </div>
+                                    
+                            
                                 </div>
-                                
-                                <div class="style">
-                                    <span>Report</span>
-                                </div>
-                                
-
                             </div>
-                        </div>
                     
                 <%} }%>
 
             </div>
-        
+            
+            <!-- Section for Question which are already answered -->
+
+            <div class="AnswersToQuestions-container  background-white">
+                
+                <%for(let q of questions) {%>
+
+                    <% if(q.answersOnQuestion.length >=1 && q.user.id!=locals.user.id) {%>
+                        <%let BestAnswer=q.answersOnQuestion[0] %>
+                        <% for(let a of q.answersOnQuestion){ %>
+                            <% if(a.answer.length >= BestAnswer.answer.length ){  BestAnswer=a;   } %>
+                        <%}%>
+                        <!-- For calculating when this answer is posted  -->
+                        <% let showTime; %>
+                        <% let currentDate=new Date();let date=new Date(BestAnswer.createdAt); %>
+                        <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
+                                  
+                        <div class="questionAnswers container-style">
+                            <div  class="header-description padding">
+                                <i class="far fa-clipboard fa-lg"></i>
+                                <span class="grey">Answer</span>
+                            </div>
+
+                            <div class="userInfo_container padding">
+                                <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                <div class="name">
+                                    <span class="ownerName"><%=BestAnswer.user.name%></span>
+                                    <small class="createdAt grey"><%=showTime%></small>
+                                </div>
+                            </div>
+
+                            <div class="question-container padding">
+                                <p class="question">
+                                    <%=q.question%>
+                                </p>
+                            </div>
+
+                            <div class="answer-container padding">
+                                <p class="answer"><%=BestAnswer.answer%></p>
+                            </div>
+                            
+                            <div class="controls">
+                                <button class="button like">
+                                    <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
+                                </button>
+                                <button class="button comment">
+                                    <i  class="far fa-comment fa-lg grey first"></i>
+                                </button>
+
+                                <button class="button more">
+                                    <i class="fas fa-ellipsis-h fa-lg more"  ></i>
+                                </button>                                
+                            </div>
+                            
+
+                        </div>
+                        
+                    <%}%>
+
+                <%}%>
+
+
+            </div>
+
           
         </div>
 
