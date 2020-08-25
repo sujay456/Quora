@@ -244,9 +244,11 @@
                             </div>
 
                             <div class="question-container padding">
-                                <p class="question">
-                                    <%=q.question%>
-                                </p>
+                                <a href="/question/display?id=<%=q.id%>" target="_blank">
+                                    <p class="question">
+                                        <%=q.question%>
+                                    </p>
+                                </a>
                             </div>
 
                             <div class="answer-container padding">
@@ -254,17 +256,42 @@
                             </div>
                             
                             <div class="controls">
-                                <button class="button like">
-                                    <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
+                                <button class="button like" onclick="upvoteAnswer();" idAnswer="<%=BestAnswer.id%>">
+                                    <% let likes=false %>
+                                    <% for(let l of like){ %>
+                                        <% if(l.likedon==BestAnswer.id){ likes=true } %>
+                                    <%}%>
+                                    <% if(!likes){ %>
+                                        <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
+                                        <div class="number_of_like">
+                                            <div class="outer-cage initial">
+                                                <div class="grey"><%=BestAnswer.like.length%></div>
+                                                <div class="grey"><%=BestAnswer.like.length+1%></div>
+                                            </div>
+                                        </div>
+                                    <%} else{%>
+                                        <i class="far fa-thumbs-up fa-lg blue first animate__animated "></i>
+                                        <div class="number_of_like">
+                                            <div class="outer-cage upanddown">
+                                                <div class="grey"><%=BestAnswer.like.length-1%></div>
+                                                <div class="grey"><%=BestAnswer.like.length%></div>
+                                            </div>
+                                        </div>
+                                    <%}%>
+
+                                    
                                 </button>
-                                <button class="button comment">
-                                    <i  class="far fa-comment fa-lg grey first"></i>
+                                
+                                <button type="submit" class="button comment" onclick="questionPage();" questionID="<%=q.id%>" >
+                                    <i  questionID="<%=q.id%>" class="far fa-comment fa-lg grey first" > </i>
                                 </button>
+                            
 
                                 <button class="button more">
                                     <i class="fas fa-ellipsis-h fa-lg more"  ></i>
                                 </button>                                
                             </div>
+                           
                             
 
                         </div>

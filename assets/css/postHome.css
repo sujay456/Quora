@@ -337,6 +337,9 @@
             text-decoration: underline; }
         #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .question-container {
           position: relative; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .question-container a {
+            color: black;
+            text-decoration: none; }
           #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .question-container .question {
             font-weight: 700;
             font-size: 1.1rem;
@@ -350,6 +353,9 @@
           overflow: hidden; }
           #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .answer-container .answer {
             margin: 5px;
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+            color: #333;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
         #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls {
           position: relative; }
@@ -358,16 +364,48 @@
             outline: none;
             border: none;
             padding: 10px;
+            cursor: pointer;
             border-radius: 20px; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .blue {
+            color: #195faa; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .grey {
+            color: #636466; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .first {
+            transition: all 0.3s ease; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .first:hover {
+            transform: rotate(-35deg); }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .comment:hover {
+            background: #d1d1d1; }
           #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .more {
             position: absolute;
             right: 10px;
             bottom: 5px; }
-          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .button:hover {
-            background: #c2c2c2; }
           #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .more:hover {
             cursor: pointer;
             background: none; }
+          #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like {
+            border: none;
+            background-color: inherit;
+            outline: none; }
+            #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like .number_of_like {
+              display: inline-block;
+              height: 20px;
+              width: 20px;
+              position: relative;
+              top: 10px;
+              overflow: hidden; }
+              #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like .number_of_like .outer-cage {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: top 0.3s ease-in-out; }
+                #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like .number_of_like .outer-cage div {
+                  width: 100%;
+                  height: 100%; }
+              #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like .number_of_like .initial {
+                top: 0px; }
+              #home-container #main-questions-container #questions-answers .AnswersToQuestions-container .questionAnswers .controls .like .number_of_like .upanddown {
+                top: -20px; }
   #home-container #todo-container {
     display: inline-block;
     width: 150px;

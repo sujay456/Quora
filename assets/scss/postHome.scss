@@ -591,6 +591,11 @@
                     {
                         position: relative;
                         // top: -20px;
+                        a
+                        {
+                            color: black;
+                            text-decoration: none;
+                        }
                         .question{
                             font-weight: 700;
                             font-size: 1.1rem;
@@ -611,6 +616,9 @@
                         overflow: hidden;
                         .answer{
                             margin: 5px;
+                            font-size: 1.1rem;
+                            line-height: 1.7rem;
+                            color: #333;
                             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                         }
                     }
@@ -624,21 +632,79 @@
                             // border:1px solid rgb(202, 202, 202);
                             border: none;
                             padding: 10px;
-
+                            cursor: pointer;
                             border-radius: 20px;
+                        }
+                        .blue
+                        {
+                            color: #195faa;
+                        }
+                        .grey
+                        {
+                            color: #636466;
+                        }
+                        .first
+                        {
+                            transition: all 0.3s ease;    
+                        }
+                        .first:hover
+                        {
+                            transform: rotate(-35deg);
+                        }
+                        .comment:hover
+                        {
+                            background: rgb(209, 209, 209);
                         }
                         .more{
                             position: absolute;
                             right: 10px;
                             bottom: 5px;
                         }
-                        .button:hover{
-                            background: rgb(194, 194, 194);
-                        }
+                        
                         .more:hover
                         {
                             cursor: pointer;
                             background: none;
+                        }
+                        .like
+                        {
+                            border: none;
+                            background-color: inherit;
+                            outline: none;
+
+                            .number_of_like
+                            {
+                                display: inline-block;
+                                // border: 1px solid black;
+                                height: 20px;
+                                width: 20px;
+                                position: relative;
+                                top:10px;
+                                overflow: hidden;
+                                .outer-cage
+                                {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    // top: -20px;
+                                    // top: 0px;
+                                    transition: top 0.3s ease-in-out;
+                                    div
+                                    {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                .initial
+                                {
+                                    top:0px;   
+                                }
+                                .upanddown
+                                {
+                                    top: -20px;
+                                }
+                            }
+                            
                         }
                         
                     }

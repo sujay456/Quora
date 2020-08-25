@@ -1,6 +1,7 @@
 const User=require('../models/user');
 const Question=require('../models/question');
 const Follow=require('../models/follow');
+const Like=require('../models/like');
 
 // Checking the email
 module.exports.checkEmail=function(req,res)
@@ -94,10 +95,13 @@ module.exports.Home= async function(req,res)
         let followsOfUser=await Follow.find({user:req.user.id});
 
         console.log(followsOfUser);
+        let like=await Like.find({user:req.user.id});
+
 
         return res.render('postLoginHome',{
             questions:questions,
             follow:followsOfUser,
+            like:like,    
             extractStyles:true
         });
     } catch (error) {

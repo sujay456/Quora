@@ -219,3 +219,46 @@ function submit(){
         });
     }
 }
+
+// for liking the answer
+
+function upvoteAnswer()
+{
+    // console.log(event.target);
+    let parents=$(event.target).parentsUntil('.controls');
+    // event.stopPropagation();
+    // console.log('event target',parents);
+    let parentLike=$(event.target).parentsUntil('.answer');
+
+    // console.log('buttons',$(' .dislike i',$(parentLike[parentLike.length-1])));
+
+    let dislikeButton=$(' .dislike',$(parentLike[parentLike.length-1]));
+    $(' i,div',$(parents[parents.length-1])).toggleClass('blue grey animate__bounceIn');
+    $(' .outer-cage',$(parents[parents.length-1])).toggleClass('upanddown initial');
+
+    let id =$(parents[parents.length-1]).attr('idAnswer');
+    // console.log(id);
+
+    $.ajax({
+        type:'post',
+        url:`/like/create?id=${id}`,
+        data:{type:'Answer'},
+        success:function(data)
+        {
+            console.log(data);
+            if(data.removedDislike)
+            {
+                dislikeAnswer(dislikeButton);
+            }
+        },error:function(err)
+        {
+            console.log(err.responseText);
+        }
+    });
+}
+
+function questionPage()
+{
+    let q_id=$(event.target).attr('questionID');
+    window.location.href=`/question/display?id=${q_id}`
+}

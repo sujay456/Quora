@@ -273,8 +273,9 @@ function commentDomUser(comment,showTime)
                                 </div>
                             </div>
                     </button>
+                    <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
                 </div>
-                <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
+                
                 <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
                     <div class="style" onclick="DeleteComment();" a_id="${comment.answer}" c_id="${comment._id}">
                         <span a_id="${comment.answer}" c_id="${comment._id}">Delete Comment</span>

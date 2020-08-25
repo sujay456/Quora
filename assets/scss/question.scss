@@ -297,6 +297,18 @@
                     top:10px;
                 }
             }
+            #answer
+            {
+                p
+                {
+                    margin: 5px;
+                    font-size: 1.1rem;
+                    line-height: 1.7rem;
+                    color: #333;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                
+                }
+            }
             .controls
             {
                 padding-bottom: 10px;
@@ -329,8 +341,9 @@
                 
                 .more
                 {
+                    
                     border-radius: 10px;
-                   padding: 5px;
+                    padding: 5px;
                 }
                 .more:hover
                 {
@@ -435,33 +448,49 @@
                         img{
                             vertical-align: middle;
                         }
-                        i{
-                            transition: transform 0.2s ease-in-out;
-                        }
-                        .first
-                        {
-                            margin-left: 15px;
-                        }
                         
-                        .second{
-                            position: absolute;
-                            right: 60px;
-                            // bottom: 80px;
-                            top: 115px;
+                        .controls
+                        {
+                            position: relative;
+                            i{
+                                transition: transform 0.2s ease-in-out;
+                            }
+                            .first
+                            {
+                                margin-left: 15px;
+                            }
                             
-                        }
-                        .extraleft
-                        {
-                            position: absolute;
-                            right: 20px;
-                        }
-                        .first:hover
-                        {
-                            transform: scale(1.2) rotate(-30deg);
-                        }
-                        .second:hover
-                        {
-                            transform: rotate(30deg) scale(1.2);
+                            .second{
+                                position: absolute;
+                                right: 60px;
+                                // bottom: 80px;
+                                top: 115px;
+                                
+                            }
+                            .extraleft
+                            {
+                                position: absolute;
+                                right: 20px;
+                            }
+                            .first:hover
+                            {
+                                transform: scale(1.2) rotate(-30deg);
+                            }
+                            .second:hover
+                            {
+                                transform: rotate(30deg) scale(1.2);
+                            }
+                            .more{
+                                padding:5px;
+                                position: absolute;
+                                right: 0px;
+                                top: 0px;
+                                border-radius: 15px;
+                            }
+                            .more:hover
+                            {
+                                background-color: rgb(187, 187, 187);
+                            }
                         }
                         .options-for-comment
                         {
@@ -493,17 +522,7 @@
                                 background-color: rgb(236, 234, 234);
                             }
                         }
-                        .more{
-                            padding:5px;
-                            position: absolute;
-                            right: 10px;
-                            top: 105px;
-                            border-radius: 15px;
-                        }
-                        .more:hover
-                        {
-                            background-color: rgb(187, 187, 187);
-                        }
+                        
                         
                     }
                 }
@@ -743,7 +762,18 @@
                     vertical-align: middle;
                     border-radius: 50%;
                 }
-                
+                .another_user_answer
+                {
+                    .answer
+                    {
+                        margin: 5px;
+                        font-size: 1.1rem;
+                        line-height: 1.7rem;
+                        color: #333;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    
+                    }
+                }
                 // border-bottom: 1px solid rgb(196, 196, 196);
                 .controls
                 {
