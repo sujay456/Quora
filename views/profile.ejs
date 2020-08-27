@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="main-container">
+
+    <div class="profile-container">
+        <!-- here u can see ur profile and change credentials -->
+        <div class="Avatar">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="file"  name="avatar">
+
+                <img src="/uploads/user/avatar/Default.jpg" alt="" width="150px">
+
+                
+                <svg class="edit" width="24px" height="24px" viewBox="0 0 24 24"><g stroke="none" fill="none" fill-rule="evenodd" transform="translate(11.500000, 12.500000) rotate(-315.000000) translate(-11.500000, -12.500000) translate(9.500000, 2.500000)"><path d="M2,0 L2,0 C3.1045695,-2.02906125e-16 4,0.8954305 4,2 L4,16 L2.00256278,20 L9.48676901e-20,16 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="pen_body" class="icon_svg-stroke" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><polygon id="pen_tip" class="icon_svg-fill_as_stroke" fill="#666" transform="translate(2.000000, 18.750000) scale(1, -1) translate(-2.000000, -18.750000) " points="2 17.5 3.25 20 0.75 20"></polygon></g></svg>
+
+            </form>
+        </div>
+
+        <div class="user-info">
+            <h2 class="name">
+                <%=user.name%>
+                <small class="name-edit" >Edit</small>
+            </h2>
+           <small class="profile-cred">Add Profile Credentials</small>
+        </div>
+
+        <div class="user-desc">
+            <small id="desc" class="grey" style="display: block;">Write a description about yourself</small>
+            <small class="grey">2 Followers </small>
+        </div>
+
+    </div>
+
+    <div class="credentials-container">
+        <!-- credentials -->
+    </div>
+
+</div>
+
+

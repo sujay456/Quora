@@ -1,0 +1,70 @@
+.main-container {
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  left: 15%;
+  padding: 1rem;
+  box-sizing: border-box; }
+  .main-container .grey {
+    color: #a0a0a0; }
+  .main-container .profile-container {
+    width: 70%;
+    display: inline-block;
+    vertical-align: top; }
+    .main-container .profile-container .Avatar {
+      display: inline-block;
+      vertical-align: middle; }
+      .main-container .profile-container .Avatar input[type="file"] {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1; }
+      .main-container .profile-container .Avatar img {
+        border-radius: 50%; }
+      .main-container .profile-container .Avatar .edit {
+        transform: scale(0);
+        position: absolute;
+        top: 80px;
+        left: 75px;
+        padding: 5px;
+        background: #2c6be0;
+        border-radius: 80%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out; }
+      .main-container .profile-container .Avatar input:hover ~ .edit {
+        background: #0c50cf;
+        transform: scale(1); }
+    .main-container .profile-container .user-info {
+      display: inline-block; }
+      .main-container .profile-container .user-info .name {
+        margin: 0;
+        display: inline-block; }
+        .main-container .profile-container .user-info .name .name-edit {
+          visibility: hidden;
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: #a7a7a7;
+          cursor: pointer; }
+      .main-container .profile-container .user-info .name:hover .name-edit {
+        visibility: visible;
+        text-decoration: underline; }
+      .main-container .profile-container .user-info .profile-cred {
+        display: block;
+        color: #a0a0a0;
+        cursor: pointer;
+        margin-top: 5px; }
+      .main-container .profile-container .user-info .profile-cred:hover {
+        text-decoration: underline; }
+    .main-container .profile-container .user-desc {
+      padding-bottom: 5px;
+      border-bottom: 2px solid #a1a1a1; }
+      .main-container .profile-container .user-desc #desc:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+  .main-container .credentials-container {
+    width: 25%;
+    border: 1px solid black;
+    display: inline-block; }

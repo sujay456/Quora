@@ -1,0 +1,130 @@
+
+ 
+.main-container
+{
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    left: 15%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    .grey
+    {
+        color: rgb(160, 160, 160);
+    }
+    .profile-container
+    {
+        width: 70%;
+        // border: 1px solid black;
+        display: inline-block;
+        vertical-align: top;
+
+        .Avatar
+        {
+            // border: 1px solid red;
+            display: inline-block;
+            vertical-align: middle;
+            input[type="file"]
+            {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                // border: 1px solid black;
+                opacity: 0;
+                cursor: pointer;
+                z-index: 1;
+            }
+            // edit button on hover
+            img
+            {
+                border-radius: 50%;
+            }
+            .edit
+            {
+                transform: scale(0);
+                position: absolute;
+                top: 80px;
+                left: 75px;
+                // z-index: 1;
+                // border: 1px solid black;
+                padding: 5px;
+                background: rgb(44, 107, 224);
+                border-radius: 80%;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+            }
+            
+            input:hover ~ .edit{
+                
+                background: rgb(12, 80, 207);
+                transform: scale(1);
+
+            }
+            
+            
+            
+        }
+
+        .user-info
+        {
+            display: inline-block;
+
+            .name
+            {
+                margin: 0;
+                display: inline-block;
+                .name-edit
+                {
+                    visibility: hidden;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: rgb(167, 167, 167);
+                    cursor: pointer;
+                }
+            }
+            .name:hover
+            {
+                .name-edit
+                {
+                    visibility: visible;
+                    text-decoration: underline;
+                }
+            }
+            .profile-cred
+            {
+                display: block;
+                color: rgb(160, 160, 160);
+                cursor: pointer;
+                margin-top: 5px;
+            }
+            .profile-cred:hover
+            {
+                text-decoration: underline;
+            }
+            
+        }
+        .user-desc
+        {
+            padding-bottom: 5px;
+            border-bottom: 2px solid rgb(161, 161, 161);
+            #desc:hover
+            {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .credentials-container
+    {
+        width: 25%;
+        border: 1px solid black;
+        display: inline-block;
+
+
+    }
+}

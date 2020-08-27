@@ -262,3 +262,8 @@ function questionPage()
     let q_id=$(event.target).attr('questionID');
     window.location.href=`/question/display?id=${q_id}`
 }
+
+/*
+
+
+*/

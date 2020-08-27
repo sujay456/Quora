@@ -19,5 +19,6 @@ router.use('/follow',require('./follow'));
 router.use('/comment',require('./comment'));
 router.use('/like',require('./like'));
 router.use('/dislike',require('./dislike'));
+router.use('/profile',require('./profile'));
 
 module.exports=router;
