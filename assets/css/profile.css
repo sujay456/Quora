@@ -7,7 +7,7 @@
   padding: 1rem;
   box-sizing: border-box; }
   .main-container .grey {
-    color: #a0a0a0; }
+    color: gray; }
   .main-container .profile-container {
     width: 70%;
     display: inline-block;
@@ -64,6 +64,25 @@
       .main-container .profile-container .user-desc #desc:hover {
         text-decoration: underline;
         cursor: pointer; }
+    .main-container .profile-container .nav-barcontainer {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid #b9b9b9; }
+      .main-container .profile-container .nav-barcontainer .greyNav {
+        color: grey; }
+      .main-container .profile-container .nav-barcontainer .redNav {
+        color: #b92b27; }
+      .main-container .profile-container .nav-barcontainer .Border {
+        border-bottom: 2px solid #b92b27; }
+      .main-container .profile-container .nav-barcontainer .nav-items {
+        cursor: pointer;
+        flex: 1;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 20px 0px; }
   .main-container .credentials-container {
     width: 25%;
     border: 1px solid black;

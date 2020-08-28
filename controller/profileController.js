@@ -13,3 +13,8 @@ module.exports.profile=async function(req,res)
         console.log("Error",error);
     }
 }
+
+module.exports.question=function(req,res)
+{
+    return res.redirect('/');
+}
