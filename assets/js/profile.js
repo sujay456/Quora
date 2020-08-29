@@ -42,6 +42,23 @@ $('.nav-items').click(function(event)
     })
 });
 
+function fileSubmit(){
+    console.log('File added');
+    // console.log(event.target.value);
+    $('#black').removeClass('display');
+    $('#black').css('opacity','0.8');
+
+    $('.avatar-preview').removeClass('display');
+    var output = document.getElementById('output');
+
+    output.src = URL.createObjectURL(event.target.files[0]);
+    console.log(output.src);
+    output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+    }
+}
+
+
 function showOptionsA()
 {
     console.log('hi');

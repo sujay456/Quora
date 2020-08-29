@@ -20,7 +20,84 @@
         // border: 1px solid black;
         display: inline-block;
         vertical-align: top;
+        .avatar-preview
+        {
+            position: fixed;
 
+            z-index: 103;
+            // border-radius: 50%;
+            // overflow: hidden;
+            width: 700px;            
+            height: 500px;
+            background: #fff;
+            left: 25%;
+            border-radius: 20px;
+            // border: 1px solid violet;
+            text-align: center;
+            border: 1px solid grey;
+            
+            .avatar-header
+            {
+                padding: 10px;
+                box-sizing: border-box;
+                color: #195faa;
+                border-bottom: 1px solid rgb(194, 194, 194);
+                width: 100%;
+            }
+
+            img
+            {
+                padding: 0px;
+                margin-top: 20px;
+                // border-radius: 10px;
+                // border: 1px solid rgb(243, 56, 9);
+                clip-path: circle(130px);
+            }
+            .avatar-footer
+            {
+                border-top: 1px solid rgb(194, 194, 194);
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 50px;
+                button
+                {
+                    border: none;
+                    outline: none;
+                    background: inherit;                    
+                    padding: 10px;
+                    box-sizing: border-box;
+                    font-weight: 600;
+                    border-radius: 20px;
+                }
+                .cancel
+                {
+                    color: #fff;
+                    background: rgb(194, 194, 194);
+                    position: absolute;
+                    right: 150px;
+                    top: 10px;
+                }
+                .cancel:hover
+                {
+                    background: grey;
+                }
+                .submit
+                {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    color: #fff;
+
+                    background: #195faa;
+                }
+                .submit:hover
+                {
+                    background: #0a488a;
+                }
+            }
+        }
+        
         .Avatar
         {
             // border: 1px solid red;

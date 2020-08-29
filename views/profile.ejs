@@ -3,10 +3,22 @@
 <div class="main-container">
 
     <div class="profile-container">
+        <!-- this div is for the preview of the image uploaded -->
+        <div class="avatar-preview display">
+            <div class="avatar-header">
+                <h3>Preview</h3>
+            </div>
+            <img id="output" alt=""  width="500px">
+
+            <div class="avatar-footer">
+                <button class="cancel">Cancel</button>
+                <button class="submit">Set As Profile Pic</button>
+            </div>
+        </div>
         <!-- here u can see ur profile and change credentials -->
         <div class="Avatar">
             <form action="" method="post" enctype="multipart/form-data">
-                <input type="file"  name="avatar">
+                <input type="file" id="avatar" name="avatar" onchange="fileSubmit();">
 
                 <img src="/uploads/user/avatar/Default.jpg" alt="" width="150px">
 
