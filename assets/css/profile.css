@@ -83,6 +83,149 @@
         font-size: 1.1rem;
         font-weight: 600;
         padding: 20px 0px; }
+    .main-container .profile-container .Answer-container {
+      margin-top: 10px; }
+      .main-container .profile-container .Answer-container header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #bebebe; }
+      .main-container .profile-container .Answer-container .answer {
+        border-bottom: 1px solid #bebebe;
+        padding-bottom: 10px;
+        position: relative; }
+        .main-container .profile-container .Answer-container .answer .user-info img {
+          border-radius: 50%; }
+        .main-container .profile-container .Answer-container .answer .user-info img, .main-container .profile-container .Answer-container .answer .user-info p {
+          display: inline-block;
+          vertical-align: middle; }
+        .main-container .profile-container .Answer-container .answer .user-info p {
+          font-weight: 700; }
+        .main-container .profile-container .Answer-container .answer .question-answer .question {
+          font-weight: 700;
+          cursor: pointer;
+          font-size: 1.1rem; }
+        .main-container .profile-container .Answer-container .answer .question-answer .question:hover {
+          text-decoration: underline; }
+        .main-container .profile-container .Answer-container .answer .question-answer .answerToQuestion {
+          color: #333;
+          line-height: 1.8; }
+        .main-container .profile-container .Answer-container .answer .more {
+          background: none;
+          border: none;
+          outline: none;
+          padding: 5px;
+          border-radius: 15px;
+          position: absolute;
+          right: 10px;
+          bottom: 5px; }
+        .main-container .profile-container .Answer-container .answer .more:hover {
+          background: #afafaf; }
+        .main-container .profile-container .Answer-container .answer .options-for-answer {
+          position: absolute;
+          right: 50px;
+          bottom: 0px;
+          height: 60px;
+          z-index: 20;
+          width: 197.3px;
+          border: 1px solid #d4d4d4;
+          border-right: none;
+          background-color: white;
+          border-radius: 3px;
+          box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04); }
+          .main-container .profile-container .Answer-container .answer .options-for-answer .style {
+            text-align: start;
+            padding: 5px 10px;
+            border-right: 1px solid #d4d4d4;
+            box-sizing: border-box;
+            cursor: pointer;
+            height: 30px; }
+            .main-container .profile-container .Answer-container .answer .options-for-answer .style span {
+              color: #282829;
+              font-size: 0.9rem; }
+          .main-container .profile-container .Answer-container .answer .options-for-answer .style:hover {
+            background-color: #eceaea; }
+    .main-container .profile-container .Question-container {
+      margin-top: 10px; }
+      .main-container .profile-container .Question-container header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #bebebe; }
+      .main-container .profile-container .Question-container .question .Question {
+        position: relative;
+        bottom: 15px;
+        cursor: pointer; }
+        .main-container .profile-container .Question-container .question .Question a {
+          color: black;
+          text-decoration: none; }
+      .main-container .profile-container .Question-container .question .Question:hover {
+        text-decoration: underline; }
+      .main-container .profile-container .Question-container .question .description {
+        position: relative;
+        bottom: 20px; }
+        .main-container .profile-container .Question-container .question .description span {
+          color: #939598;
+          font-weight: 700;
+          font-size: 0.9rem; }
+      .main-container .profile-container .Question-container .question div.buttons {
+        position: relative;
+        bottom: 5px; }
+        .main-container .profile-container .Question-container .question div.buttons .blue {
+          color: #195faa; }
+        .main-container .profile-container .Question-container .question div.buttons .grey {
+          color: #636466; }
+        .main-container .profile-container .Question-container .question div.buttons button {
+          background: transparent;
+          outline: 'none';
+          border: none;
+          padding: 10px;
+          margin-right: 10px;
+          border-radius: 25px;
+          box-sizing: border-box;
+          outline: none; }
+          .main-container .profile-container .Question-container .question div.buttons button span {
+            font-size: 1.1rem; }
+          .main-container .profile-container .Question-container .question div.buttons button .upanddown {
+            top: -20px; }
+          .main-container .profile-container .Question-container .question div.buttons button .initial {
+            top: 0px; }
+          .main-container .profile-container .Question-container .question div.buttons button i {
+            transform: scale(1);
+            transition: transform 0.1s ease-in-out; }
+          .main-container .profile-container .Question-container .question div.buttons button .number_of_follow {
+            position: relative;
+            top: 1px;
+            width: 15px;
+            height: 17px;
+            display: inline-block;
+            overflow: hidden; }
+            .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage {
+              position: absolute;
+              transition: top 0.3s ease-in-out; }
+              .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage div {
+                font-size: 1.1rem; }
+        .main-container .profile-container .Question-container .question div.buttons button:hover {
+          background-color: #dbdbdb; }
+        .main-container .profile-container .Question-container .question div.buttons #more {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          padding: 5px;
+          border-radius: 15px; }
+        .main-container .profile-container .Question-container .question div.buttons #more:hover {
+          background-color: #dbdbdb; }
+    .main-container .profile-container .Follower-container {
+      margin-top: 10px; }
+      .main-container .profile-container .Follower-container header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #bebebe; }
+    .main-container .profile-container .Following-container {
+      margin-top: 10px; }
+      .main-container .profile-container .Following-container header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #bebebe; }
   .main-container .credentials-container {
     width: 25%;
     border: 1px solid black;

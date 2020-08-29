@@ -32,7 +32,7 @@
         <!-- nav bar -->
 
         <div class="nav-barcontainer">
-            <div class="nav-items Answer greyNav" link="/">
+            <div class="nav-items Answer greyNav" link="">
                 Answers
             </div>
             <div class="nav-items Question greyNav" link='/Question'>
@@ -46,6 +46,121 @@
             </div>
         </div>
 
+        <div class="Answer-container tabs">
+            <header>
+                <%= answers.length %> Answers
+            </header>
+            <% for(let a of answers){%>
+                <div class="answer" id="answer-<%=a.id%>">
+                    <div class="user-info">
+                        <img src="../uploads//user//avatar//Default.jpg" alt="" width="35px">
+                        <p><%=user.name%></p>
+                    </div>
+
+                    <div class="question-answer">
+                        <p class="question"><%=a.question.question%></p>
+                        <p class="answerToQuestion"><%=a.answer%></p>
+                    </div>
+                    <button class="more" onclick="showOptionsA();">
+                        <i class="fas fa-ellipsis-h fa-lg"></i>
+                    </button>
+                    <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
+                                    
+                        <div class="style" onclick="deleteAnswer();" a_id="<%=a.id%>">
+                            <span  a_id="<%=a.id%>">Delete Answer</span>
+                        </div>
+                        
+                        <div class="style" onclick="EditAnswer();" answer="<%=a.answer%>">
+                            <span  answer="<%=a.answer%>">Edit Answer</span>
+                        </div>
+            
+                    </div>
+                </div>
+            <%}%>
+        </div>
+
+        <div class="Question-container tabs">
+            <header>
+                <%=questions.length%> Questions
+            </header>
+            <% for(let q of questions){ %>
+                <div class="question" id="question-<%=q.id%>">
+
+                    <div class="Question">
+                        <a href="/question/display?id=<%=q.id%>" target="_blank"> 
+                            <h3 ><%=q.question%></h3>
+                        </a>
+                    </div>
+                    
+                
+                    <div class="description">
+                        <% if(!q.answersOnQuestion.length){ %>
+                            <span>No answers yet</span>
+                        <%}else {%>
+                            <span><%=q.answersOnQuestion.length%> answers</span>
+                        <%}%>
+                
+                    </div>
+                    <div class="buttons">
+                        <!-- some button to answer or follow this question -->
+                        
+                        <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
+                            <% let followed=false %>
+                            <% for(let f of follow){ %>
+                                <% if(f.question==q.id){ %>
+                                    <% followed=true; break; %>
+                                <%}%>    
+                            <%}%>
+                            
+                            <% if(!followed){ %>
+                                
+                                <i class="fas fa-rss fa-lg grey"></i>
+                                <span class="grey">
+                                    Folllow .
+                                </span>
+                                <div class="number_of_follow">
+                                    <div class="outer-cage initial">
+                                        <div class="grey"><%=q.follow.length%></div>
+                                        <div class="grey"><%=q.follow.length+1%></div>
+                                    </div>
+                
+                                </div>
+                            <%}else{ %>
+                                
+                                <i class="fas fa-rss fa-lg blue"></i>
+                                <span class="blue">
+                                    Folllow .
+                                </span>
+                                <div class="number_of_follow">
+                                    <div class="outer-cage upanddown">
+                                        <div class="grey"><%=q.follow.length-1%></div>
+                                        <div class="grey"><%=q.follow.length%></div>
+                                    </div>
+                
+                                </div>
+                
+                            <% }%>
+                
+                        </button>
+                
+                        <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
+                        <!-- Options regarding question to delete or edit it , will do later -->
+                    </div>
+                </div>
+            <%}%>
+        </div>
+
+        <div class="Follower-container tabs">
+            <header>
+                Follower
+            </header>
+        </div>
+
+        <div class="Following-container tabs">
+            <header>
+                Following
+            </header>
+        </div>
 
     </div>
 
