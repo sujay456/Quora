@@ -56,8 +56,16 @@ function fileSubmit(){
     output.onload = function() {
         URL.revokeObjectURL(output.src) // free memory
     }
-}
 
+}
+function removePreview()
+{
+    $('.avatar-preview').addClass('display');
+}
+function submitAvatar()
+{
+    $('#avatarForm').trigger('submit');
+}
 
 function showOptionsA()
 {
@@ -115,6 +123,8 @@ $(document).click(function(){
     // console.log('clicked');
     // $('.options-for-question').addClass('display');
     $('.options-for-answer').addClass('display');
+    $('.avatar-preview').addClass('display');
+
     //  $('.options-for-comment').addClass('display');
  });
 
