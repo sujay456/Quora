@@ -23,14 +23,14 @@
 
         <div class="profile nav">
             <span>
-                <img src="/uploads/user/avatar/Default.jpg" alt="" width="35px" >
+                <img src="<%=user.avatar%>" alt="" height="40px" >
             </span>
             
             <div class="nav-bar display animate__animated animate__backInDown animate__faster ">
                 <div class="arrow"></div>
                 <!-- ------------------1------------------- -->
-                <div id="personal">
-                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px" >
+                <div id="personal" onclick="profilepage();">
+                    <img src="<%=user.avatar%>" alt="" height="55px" >
                     <p><%= user.name %>  </p>
                     <span>  >  </span>
                 </div>

@@ -68,9 +68,10 @@ header #header-container {
         font-size: 1.2rem; }
     header #header-container #navigation div.profile {
       position: relative;
-      padding: 14px 5px; }
+      padding: 12px 5px 7px 5px; }
       header #header-container #navigation div.profile img {
-        border-radius: 50%; }
+        clip-path: circle(20px);
+        box-sizing: border-box; }
       header #header-container #navigation div.profile .nav-bar {
         border-radius: 5px;
         position: absolute;
@@ -98,7 +99,10 @@ header #header-container {
           padding: 5px;
           border-bottom: 1px solid #dee0e1; }
           header #header-container #navigation div.profile .nav-bar #personal img {
-            display: block; }
+            display: block;
+            clip-path: circle(26px);
+            position: relative;
+            right: 10px; }
           header #header-container #navigation div.profile .nav-bar #personal p {
             display: inline-block;
             font-weight: 700;

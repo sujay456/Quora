@@ -89,7 +89,12 @@ function show()
     event.stopPropagation();
 }
 
+function profilepage()
+{
+    console.log('Hi profile clicked');
 
+    window.location.href="/profile";
+}
 // just a small bug regarding the test div
 window.addEventListener('resize',function()
 {

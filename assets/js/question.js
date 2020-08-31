@@ -252,7 +252,7 @@ function commentDomUser(comment,showTime)
     return $(`
             <div class="comment animate__animated animate__fadeIn" id="comment-${comment._id}">
 
-                <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                <img src="${comment.user.avatar}" alt="" height="40px">
                 <span class="bold">${comment.user.name}</span>
                 <small>${showTime}</small>
                 <p class="content">${comment.comment}</p>

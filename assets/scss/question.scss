@@ -289,7 +289,8 @@
             #user_details
             {
                 img{
-                    border-radius: 50%;
+                    // border-radius: 50%;
+                    clip-path: circle(20px);
                     vertical-align: top;
                 }
                 span{
@@ -398,7 +399,9 @@
                     border-radius: 5px;
                     position: relative;
                     img{
-                        border-radius: 50%;
+                        // border-radius: 50%;
+                    clip-path: circle(20px);
+                        
                         vertical-align: top;
                     }
                     
@@ -447,6 +450,8 @@
                         
                         img{
                             vertical-align: middle;
+                    clip-path: circle(20px);
+
                         }
                         
                         .controls
@@ -541,6 +546,9 @@
                     outline: none;
                     border-radius: 25px;
                 }
+                img{
+                    clip-path: circle(25px);
+                }
                 button:hover{
                     background-color: rgb(219, 219, 219);
                 }
@@ -557,7 +565,9 @@
                     border-bottom: 1px solid rgb(158, 158, 158);
                     
                     img{
-                        border-radius: 50%;
+                        // border-radius: 50%;
+                    clip-path: circle(20px);
+
                         cursor: pointer;
                     }
                     div
@@ -760,7 +770,9 @@
                 // border: 1px solid black;
                 img{
                     vertical-align: middle;
-                    border-radius: 50%;
+                    // border-radius: 50%;
+                    clip-path: circle(20px);
+
                 }
                 .another_user_answer
                 {
@@ -874,6 +886,8 @@
                             img
                             {
                                 vertical-align: middle;
+                                clip-path: circle(20px);
+
                             }
                             small{
                                 position: relative;

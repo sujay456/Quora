@@ -58,9 +58,15 @@ module.exports.avatar=async function(req,res)
                     let avatarExist=fs.existsSync(path.join(__dirname,'..',user.avatar));
                     if(avatarExist)
                     {
-                        fs.unlinkSync(path.join(__dirname,'..',user.avatar));
-                        user.avatar=User.avatarPath+'/'+req.file.filename;
-
+                        if(user.avatar=="/uploads/user/avatar/Default.jpg")
+                        {
+                            user.avatar=User.avatarPath+'/'+req.file.filename;
+                        }
+                        else
+                        {
+                            fs.unlinkSync(path.join(__dirname,'..',user.avatar));
+                            user.avatar=User.avatarPath+'/'+req.file.filename;
+                        }
                     }
                     else
                     {   

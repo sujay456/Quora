@@ -73,12 +73,12 @@
         cursor: pointer;
         z-index: 1; }
       .main-container .profile-container .Avatar img {
-        border-radius: 50%; }
+        clip-path: circle(60px at 50% 50%); }
       .main-container .profile-container .Avatar .edit {
         transform: scale(0);
         position: absolute;
         top: 80px;
-        left: 75px;
+        left: 80px;
         padding: 5px;
         background: #2c6be0;
         border-radius: 80%;
@@ -144,21 +144,34 @@
         padding-bottom: 10px;
         position: relative; }
         .main-container .profile-container .Answer-container .answer .user-info img {
-          border-radius: 50%; }
+          clip-path: circle(20px); }
         .main-container .profile-container .Answer-container .answer .user-info img, .main-container .profile-container .Answer-container .answer .user-info p {
           display: inline-block;
           vertical-align: middle; }
         .main-container .profile-container .Answer-container .answer .user-info p {
           font-weight: 700; }
+        .main-container .profile-container .Answer-container .answer .question-answer a {
+          text-decoration: none; }
         .main-container .profile-container .Answer-container .answer .question-answer .question {
           font-weight: 700;
           cursor: pointer;
-          font-size: 1.1rem; }
+          font-size: 1.1rem;
+          color: black; }
         .main-container .profile-container .Answer-container .answer .question-answer .question:hover {
           text-decoration: underline; }
         .main-container .profile-container .Answer-container .answer .question-answer .answerToQuestion {
           color: #333;
-          line-height: 1.8; }
+          line-height: 1.8;
+          max-height: 70px;
+          overflow: hidden;
+          box-shadow: inset -2px 0 3px 3px #e7e7e7;
+          cursor: pointer;
+          position: relative; }
+        .main-container .profile-container .Answer-container .answer .question-answer #read_more {
+          position: absolute;
+          bottom: 10px;
+          right: 0;
+          text-decoration: underline; }
         .main-container .profile-container .Answer-container .answer .more {
           background: none;
           border: none;
@@ -278,5 +291,21 @@
         border-bottom: 1px solid #bebebe; }
   .main-container .credentials-container {
     width: 25%;
-    border: 1px solid black;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 20px; }
+    .main-container .credentials-container .header {
+      border-bottom: 1px solid #c5c5c5; }
+    .main-container .credentials-container .tab {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 2.0; }
+      .main-container .credentials-container .tab i {
+        margin-right: 10px; }
+    .main-container .credentials-container .spaces {
+      border: 1px solid #bbbbbb;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }

@@ -181,7 +181,7 @@
       box-sizing: border-box;
       position: relative; }
       #main-container #question-container #user-anwser #user_details img {
-        border-radius: 50%;
+        clip-path: circle(20px);
         vertical-align: top; }
       #main-container #question-container #user-anwser #user_details span {
         position: relative;
@@ -246,7 +246,7 @@
           border-radius: 5px;
           position: relative; }
           #main-container #question-container #user-anwser .comment-section .comment-container-user img {
-            border-radius: 50%;
+            clip-path: circle(20px);
             vertical-align: top; }
           #main-container #question-container #user-anwser .comment-section .comment-container-user input {
             position: relative;
@@ -279,7 +279,8 @@
             position: relative;
             padding: 10px 20px; }
             #main-container #question-container #user-anwser .comment-section .comments-container .comment img {
-              vertical-align: middle; }
+              vertical-align: middle;
+              clip-path: circle(20px); }
             #main-container #question-container #user-anwser .comment-section .comments-container .comment .controls {
               position: relative; }
               #main-container #question-container #user-anwser .comment-section .comments-container .comment .controls i {
@@ -336,6 +337,8 @@
           box-sizing: border-box;
           outline: none;
           border-radius: 25px; }
+        #main-container #question-container #user-anwser .asking_to_answer_container img {
+          clip-path: circle(25px); }
         #main-container #question-container #user-anwser .asking_to_answer_container button:hover {
           background-color: #dbdbdb; }
       #main-container #question-container #user-anwser .textarea-for-answering {
@@ -347,7 +350,7 @@
         #main-container #question-container #user-anwser .textarea-for-answering div.personal-details {
           border-bottom: 1px solid #9e9e9e; }
           #main-container #question-container #user-anwser .textarea-for-answering div.personal-details img {
-            border-radius: 50%;
+            clip-path: circle(20px);
             cursor: pointer; }
           #main-container #question-container #user-anwser .textarea-for-answering div.personal-details div {
             display: inline-block; }
@@ -471,7 +474,7 @@
         position: relative; }
         #main-container #question-container #other-user-answer .answers_another_user img {
           vertical-align: middle;
-          border-radius: 50%; }
+          clip-path: circle(20px); }
         #main-container #question-container #other-user-answer .answers_another_user .another_user_answer .answer {
           margin: 5px;
           font-size: 1.1rem;
@@ -540,7 +543,8 @@
               position: relative;
               padding: 10px 15px; }
               #main-container #question-container #other-user-answer .answers_another_user .comments-section .comments-container .comment img {
-                vertical-align: middle; }
+                vertical-align: middle;
+                clip-path: circle(20px); }
               #main-container #question-container #other-user-answer .answers_another_user .comments-section .comments-container .comment small {
                 position: relative; }
               #main-container #question-container #other-user-answer .answers_another_user .comments-section .comments-container .comment i {

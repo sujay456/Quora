@@ -141,8 +141,11 @@
             {
                 img
                 {
-                    border-radius: 50%;
+                    // border-radius: 50%;
+                    clip-path: circle(15px);
                     vertical-align: text-bottom;
+                    // position: relative;
+                    // right: 8px;
                 }
                 span{
                     color: #939598;
@@ -334,7 +337,8 @@
                             border-bottom: 1px solid rgb(158, 158, 158);
                             
                             img{
-                                border-radius: 50%;
+                                // border-radius: 50%;
+                                clip-path: circle(20px);
                                 cursor: pointer;
                             }
                             div
@@ -568,6 +572,7 @@
                         // padding: 10px;
 
                         img{
+                            clip-path: circle(20px);
                             vertical-align: middle;
 
                         }

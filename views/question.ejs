@@ -94,7 +94,7 @@
             <% if((question.answersOnQuestion.length>0) && (userBool)){ %> 
                 <div>
                     <div id="user_details">
-                        <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                        <img src="<%=user.avatar%>" alt="" height="40px">
                         <span class="bold"><%=user.name%></span>
                         
                     </div>
@@ -163,7 +163,7 @@
                     
                     <div class="comment-section">
                         <div class="comment-container-user">
-                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
+                            <img src="<%=user.avatar%>" alt="" height="45px">
                             
                             <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment"  >
                             
@@ -178,7 +178,7 @@
                                 <% if(c.user.id==user.id ){ %>
                                 
                                     <div class="comment" id="comment-<%=c.id%>">
-                                        <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                        <img src="<%=c.user.avatar%>" alt="" height="40px">
                                         <span class="bold"><%=c.user.name%></span>
                                         <small><%=showTime%></small>
                                         <p class="content" ><%=c.comment %></p>
@@ -232,7 +232,7 @@
 
                                 <%}else{%>
                                     <div class="comment" id="comment-<%=c.id%>">
-                                        <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                        <img src="<%=c.user.avatar%>" alt="" height="40px">
                                         <span class="bold"><%=c.user.name%></span>
                                         <small><%=showTime%></small>
                                         <p><%=c.comment %></p>
@@ -290,7 +290,7 @@
 
                 <!-- <span>Want to answer this question ok</span> -->
                 <div class="asking_to_answer_container">
-                    <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
+                    <img src="<%=user.avatar%>" alt="" height="50px">
                     <!-- <% let first_name=user.name.split(' ')%> -->
                     <h4><%=user.name%>,can you answer this question?</h4>
                     <p class="grey">People are searching for an answer to this question</p>
@@ -321,7 +321,7 @@
                 <% if(a.user.id!=user.id){ %>
                     <div class="answers_another_user answer">
                         <div class="another_user_info">
-                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="50px">
+                            <img src="<%=a.user.avatar%>" alt="" height="45px">
                             <span class="bold" ><%=a.user.name%></span>
                         </div> 
                         <div class="another_user_answer">
@@ -373,7 +373,7 @@
                         </div>
                         <div class="comments-section">
                             <div class="comment-container-other">
-                                <img src="/uploads/user/avatar/Default.jpg" alt="" width="40px">
+                                <img src="<%=user.avatar%>" alt="" height="35px">
                                 <input  type="text" placeholder="Add a comment" id="<%=a.id%>" >
                                 <button onclick="commentSubmitOther()">Add Comment</button>
                             </div>
@@ -386,7 +386,7 @@
 
                                     <% if(user.id!=c.user.id){ %>
                                         <div class="comment" id="comment-<%=c.id%>">
-                                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                            <img src="<%=c.user.avatar%>" alt="" height="40px">
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
 
@@ -434,7 +434,7 @@
                                         </div>
                                     <%}else{ %>
                                         <div class="comment" id="comment-<%=c.id%>">
-                                            <img src="/uploads/user/avatar/Default.jpg" alt="" width="45px">
+                                            <img src="<%=c.user.avatar%>" alt="" height="40px">
                                             <span class="bold"><%=c.user.name%></span>
                                             <small><%=showTime%></small>
                                             <p class="content"><%=c.comment %></p>

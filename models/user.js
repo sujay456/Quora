@@ -66,7 +66,8 @@ const userSchema=new mongoose.Schema({
         }
     ],
     avatar:{
-        type:String
+        type:String,
+        default:'/uploads/user/avatar/Default.jpg'
     }
 },{
     timestamps:true
