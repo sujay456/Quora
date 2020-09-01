@@ -1,535 +1,459 @@
+@import "utility";
 
- 
-.main-container
-{
+.main-container {
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  left: 15%;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .grey {
+    color: rgb(128, 128, 128);
+  }
+  .profile-container {
     width: 70%;
-    height: 100%;
-    background: #fff;
-    position: relative;
-    left: 15%;
-    padding: 1rem;
-    box-sizing: border-box;
+    // border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    .avatar-preview {
+      position: fixed;
 
-    .grey
-    {
-        color: rgb(128, 128, 128);
-    }
-    .profile-container
-    {
-        width: 70%;
-        // border: 1px solid black;
-        display: inline-block;
-        vertical-align: top;
-        .avatar-preview
-        {
-            position: fixed;
+      z-index: 103;
+      // border-radius: 50%;
+      // overflow: hidden;
+      width: 700px;
+      height: 500px;
+      background: #fff;
+      left: 25%;
+      border-radius: 20px;
+      // border: 1px solid violet;
+      text-align: center;
+      border: 1px solid grey;
 
-            z-index: 103;
-            // border-radius: 50%;
-            // overflow: hidden;
-            width: 700px;            
-            height: 500px;
-            background: #fff;
-            left: 25%;
-            border-radius: 20px;
-            // border: 1px solid violet;
-            text-align: center;
-            border: 1px solid grey;
-            
-            .avatar-header
-            {
-                padding: 10px;
-                box-sizing: border-box;
-                color: #195faa;
-                border-bottom: 1px solid rgb(194, 194, 194);
-                width: 100%;
-            }
+      .avatar-header {
+        padding: 10px;
+        box-sizing: border-box;
+        color: #195faa;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        width: 100%;
+      }
 
-            img
-            {
-                padding: 0px;
-                margin-top: 20px;
-                // border-radius: 10px;
-                // border: 1px solid rgb(243, 56, 9);
-                clip-path: circle(130px);
-            }
-            .avatar-footer
-            {
-                border-top: 1px solid rgb(194, 194, 194);
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                height: 50px;
-                button
-                {
-                    border: none;
-                    outline: none;
-                    background: inherit;                    
-                    padding: 10px;
-                    box-sizing: border-box;
-                    font-weight: 600;
-                    border-radius: 20px;
-                }
-                .cancel
-                {
-                    color: #fff;
-                    background: rgb(194, 194, 194);
-                    position: absolute;
-                    right: 150px;
-                    top: 10px;
-                }
-                .cancel:hover
-                {
-                    background: grey;
-                }
-                .submit
-                {
-                    position: absolute;
-                    right: 10px;
-                    top: 10px;
-                    color: #fff;
-
-                    background: #195faa;
-                }
-                .submit:hover
-                {
-                    background: #0a488a;
-                }
-            }
+      img {
+        padding: 0px;
+        margin-top: 20px;
+        // border-radius: 10px;
+        // border: 1px solid rgb(243, 56, 9);
+        clip-path: circle(130px);
+      }
+      .avatar-footer {
+        border-top: 1px solid rgb(194, 194, 194);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 50px;
+        button {
+          border: none;
+          outline: none;
+          background: inherit;
+          padding: 10px;
+          box-sizing: border-box;
+          font-weight: 600;
+          border-radius: 20px;
         }
-        
-        .Avatar
-        {
-            // border: 1px solid red;
+        .cancel {
+          color: #fff;
+          background: rgb(194, 194, 194);
+          position: absolute;
+          right: 150px;
+          top: 10px;
+        }
+        .cancel:hover {
+          background: grey;
+        }
+        .submit {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: #fff;
+
+          background: #195faa;
+        }
+        .submit:hover {
+          background: #0a488a;
+        }
+      }
+    }
+
+    .Avatar {
+      // border: 1px solid red;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      input[type="file"] {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        // border: 1px solid black;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+      }
+      // edit button on hover
+
+      img {
+        // border-radius: 50%;
+        clip-path: circle(60px at 50% 50%);
+        // border-radius: 1px solid black;
+        // position: relative;
+        overflow: hidden;
+      }
+      .edit {
+        transform: scale(0);
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        // z-index: 1;
+        // border: 1px solid black;
+        padding: 5px;
+        background: rgb(44, 107, 224);
+        border-radius: 80%;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      input:hover ~ .edit {
+        background: rgb(12, 80, 207);
+        transform: scale(1);
+      }
+    }
+
+    .user-info {
+      display: inline-block;
+
+      .name {
+        margin: 0;
+        display: inline-block;
+        .name-edit {
+          visibility: hidden;
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: rgb(167, 167, 167);
+          cursor: pointer;
+        }
+      }
+      .name:hover {
+        .name-edit {
+          visibility: visible;
+          text-decoration: underline;
+        }
+      }
+      .profile-cred {
+        display: block;
+        color: rgb(160, 160, 160);
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      .profile-cred:hover {
+        text-decoration: underline;
+      }
+    }
+    .user-desc {
+      padding-bottom: 5px;
+      border-bottom: 2px solid rgb(161, 161, 161);
+      #desc:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .nav-barcontainer {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(185, 185, 185);
+      .greyNav {
+        color: grey;
+      }
+      .redNav {
+        color: #b92b27;
+      }
+      .Border {
+        border-bottom: 2px solid #b92b27;
+      }
+      .nav-items {
+        cursor: pointer;
+        flex: 1;
+        // border: 1px solid black;
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 20px 0px;
+      }
+    }
+    .Answer-container {
+      margin-top: 10px;
+      header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+      }
+      .answer {
+        border-bottom: 1px solid rgb(190, 190, 190);
+        padding-bottom: 10px;
+        position: relative;
+        .user-info {
+          img {
+            // border-radius: 50%;
+            clip-path: circle(20px);
+          }
+          img,
+          p {
             display: inline-block;
             vertical-align: middle;
-            input[type="file"]
-            {
-                position: absolute;
-                width: 150px;
-                height: 150px;
-                // border: 1px solid black;
-                opacity: 0;
-                cursor: pointer;
-                z-index: 1;
-            }
-            // edit button on hover
-            img
-            {
-                // border-radius: 50%;
-                clip-path: circle(60px at 50% 50% );
-                // border-radius: 1px solid black;
-            }
-            .edit
-            {
-                transform: scale(0);
-                position: absolute;
-                top: 80px;
-                left: 80px;
-                // z-index: 1;
-                // border: 1px solid black;
-                padding: 5px;
-                background: rgb(44, 107, 224);
-                border-radius: 80%;
-                cursor: pointer;
-                transition: all 0.2s ease-in-out;
+          }
 
-            }
-            
-            input:hover ~ .edit{
-                
-                background: rgb(12, 80, 207);
-                transform: scale(1);
-
-            }
-            
-            
-            
+          p {
+            font-weight: 700;
+          }
         }
 
-        .user-info
-        {
-            display: inline-block;
-
-            .name
-            {
-                margin: 0;
-                display: inline-block;
-                .name-edit
-                {
-                    visibility: hidden;
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    color: rgb(167, 167, 167);
-                    cursor: pointer;
-                }
-            }
-            .name:hover
-            {
-                .name-edit
-                {
-                    visibility: visible;
-                    text-decoration: underline;
-                }
-            }
-            .profile-cred
-            {
-                display: block;
-                color: rgb(160, 160, 160);
-                cursor: pointer;
-                margin-top: 5px;
-            }
-            .profile-cred:hover
-            {
-                text-decoration: underline;
-            }
-            
-        }
-        .user-desc
-        {
-            padding-bottom: 5px;
-            border-bottom: 2px solid rgb(161, 161, 161);
-            #desc:hover
-            {
-                text-decoration: underline;
-                cursor: pointer;
-            }
-        }
-
-        .nav-barcontainer
-        {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            border-bottom: 1px solid rgb(185, 185, 185);
-            .greyNav
-            {
-                color: grey;
-            }
-            .redNav
-            {
-                color: #b92b27;
-            }
-            .Border
-            {
-                border-bottom: 2px solid #b92b27;
-            }
-            .nav-items
-            {
-                cursor: pointer;
-                flex: 1;
-                // border: 1px solid black;
-                text-align: center;
-                font-size: 1.1rem;
-                font-weight: 600;
-                padding:20px 0px;
-
-            }
-        }
-        .Answer-container
-        {
-            margin-top: 10px;
-            header
-            {
-                text-align: center;
-                padding-bottom: 15px;
-                border-bottom: 1px solid rgb(190, 190, 190);
-            }
-            .answer
-            {
-                border-bottom: 1px solid rgb(190, 190, 190);
-                padding-bottom: 10px;
-                position: relative;
-                .user-info
-                {
-                    img{
-                        // border-radius: 50%;
-                        clip-path: circle(20px);
-                    }
-                    img,p{
-                        display: inline-block;
-                        vertical-align: middle;
-                    }
-
-                    p{
-                        font-weight: 700;
-                    }
-
-
-                }
-
-                .question-answer
-                {
-                    a{
-                        text-decoration: none;
-                    }
-                    .question
-                    {
-                        font-weight: 700;
-                        cursor: pointer;
-                        font-size:1.1rem ;
-                        color: black;
-                    }
-                    .question:hover
-                    {
-                        text-decoration: underline;
-                    }
-                    .answerToQuestion
-                    {
-                        color: #333;
-                        line-height: 1.8;
-                        max-height: 70px;
-                        overflow: hidden;
-                        box-shadow: inset -2px 0 3px 3px rgb(231, 231, 231);
-                        cursor: pointer;
-                        position: relative;
-                    }
-                    
-                    #read_more
-                    {
-                        position: absolute;
-                        bottom: 10px;
-                        right: 0;
-                        text-decoration: underline;
-                    }
-                }
-                .more
-                {
-                    background: none;
-                    border: none;
-                    outline: none;
-                    padding: 5px;
-                    border-radius: 15px;
-                    position: absolute;
-                    right: 10px;
-                    bottom: 5px;
-                }
-                .more:hover
-                {
-                    background: rgb(175, 175, 175);
-                }
-                .options-for-answer
-                {
-                    position: absolute;
-                    right: 50px;
-                    bottom: 0px;
-                    // bottom:5px;
-                    // height: auto;
-                    height: 60px;
-                    // top:0px;
-                    z-index: 20;
-                    width: 197.3px;
-                    border: 1px solid rgb(212, 212, 212);
-                    border-right: none;
-                    background-color: white;
-                    border-radius: 3px;
-                    box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04);
-                    .style
-                    {
-                        text-align: start;
-                        padding: 5px 10px;
-                        border-right: 1px solid rgb(212, 212, 212);
-                        box-sizing: border-box;
-                        // width: 100%;
-                        cursor: pointer;
-                        height: 30px;
-                        span{
-                            
-                            color: #282829;
-                            font-size: 0.9rem;
-                        }
-                    }
-                    .style:hover{
-                        background-color: rgb(236, 234, 234);
-                    }
-
-                }
-            }
-            
-        }
-
-        .Question-container
-        {
-            margin-top: 10px;
-            header
-            {
-                text-align: center;
-                padding-bottom: 15px;
-                border-bottom: 1px solid rgb(190, 190, 190);
-            }
-            .question
-            {
-                .Question
-                {
-                    // border: 1px solid black;
-                    position: relative;
-                    bottom: 15px;
-                    cursor: pointer;
-                    // width: 200px;
-
-                    a{
-                        color: black;
-                        text-decoration: none;
-                    }
-                }
-                .Question:hover{
-                    text-decoration: underline;
-                }
-                .description
-                {
-                    position: relative;
-                    bottom: 20px;
-                    span{
-                        color: #939598;
-                        font-weight: 700;
-                        font-size: 0.9rem;
-                    }
-                }
-                div.buttons
-                {
-                    position: relative;
-                    bottom: 5px;
-                    .blue
-                    {
-                        color: #195faa;
-                    }
-                    .grey
-                    {
-                        color: #636466;
-                    }
-
-                    button{
-                        background: transparent;
-                        outline:'none';
-                        border: none;
-                        padding: 10px;
-                        margin-right: 10px;
-                        border-radius: 25px;
-                        box-sizing: border-box;
-                        outline: none;
-                    
-                        span{
-                            font-size: 1.1rem;
-                            // color: #636466;
-                        }
-                        .upanddown
-                        {
-                            top:-20px;
-                        }
-                        
-                        .initial
-                        {
-                            top:0px;   
-                        }
-                        i{
-                            transform: scale(1);
-                            transition: transform 0.1s ease-in-out;
-                        }
-                        .number_of_follow
-                        {
-                            position: relative;
-                            top:1px;
-                            // border: 1px solid black;
-                            width: 15px;
-                            height: 17px;
-                            display: inline-block;
-                            overflow: hidden;
-                            .outer-cage
-                            {
-                                position: absolute;
-                                
-                                transition: top 0.3s ease-in-out;
-                                div
-                                {
-                                    font-size: 1.1rem;
-                                    
-                                    // position: absolute;
-                                    // border: 1px solid black;
-                                }
-                            }
-                            
-                        }
-                    
-                    }
-                    button:hover{
-                        background-color: rgb(219, 219, 219);
-                    }
-
-                    #more{
-                        position: absolute;
-                        top:10px;
-                        right: 10px;
-                        cursor: pointer;
-                        padding: 5px;
-                        border-radius: 15px;
-                    }
-                    #more:hover
-                    {
-                        background-color: rgb(219, 219, 219);
-                    }
-                }
-            }
-        }
-
-        .Follower-container
-        {
-            margin-top: 10px;
-            header
-            {
-                text-align: center;
-                padding-bottom: 15px;
-                border-bottom: 1px solid rgb(190, 190, 190);
-            }
-        }
-
-        .Following-container
-        {
-            margin-top: 10px;
-            header
-            {
-                text-align: center;
-                padding-bottom: 15px;
-                border-bottom: 1px solid rgb(190, 190, 190);
-            }
-        }
-        
-
-    }
-
-
-    .credentials-container
-    {
-        width: 25%;
-        // border: 1px solid black;
-        display: inline-block;
-        margin-left: 20px;
-        .header
-        {
-            border-bottom: 1px solid rgb(197, 197, 197);
-        }
-        .tab
-        {
-            margin-top: 10px;
-            font-size: 0.9rem;
+        .question-answer {
+          a {
+            text-decoration: none;
+          }
+          .question {
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: black;
+          }
+          .question:hover {
+            text-decoration: underline;
+          }
+          .answerToQuestion {
             color: #333;
-            line-height: 2.0;
-            i{
-              margin-right: 10px;  
+            line-height: 1.8;
+            max-height: 70px;
+            overflow: hidden;
+            // box-shadow: inset -2px 0 3px 3px rgb(231, 231, 231);
+            cursor: pointer;
+            position: relative;
+          }
+
+          #read_more {
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            text-decoration: underline;
+          }
+        }
+        .more {
+          background: none;
+          border: none;
+          outline: none;
+          padding: 5px;
+          border-radius: 15px;
+          position: absolute;
+          right: 10px;
+          bottom: 5px;
+        }
+        .more:hover {
+          background: rgb(175, 175, 175);
+        }
+        .options-for-answer {
+          position: absolute;
+          right: 50px;
+          bottom: 0px;
+          // bottom:5px;
+          // height: auto;
+          height: 60px;
+          // top:0px;
+          z-index: 20;
+          width: 197.3px;
+          border: 1px solid rgb(212, 212, 212);
+          border-right: none;
+          background-color: white;
+          border-radius: 3px;
+          box-shadow: 0 3px 6px rgba(10, 10, 10, 0.04);
+          .style {
+            text-align: start;
+            padding: 5px 10px;
+            border-right: 1px solid rgb(212, 212, 212);
+            box-sizing: border-box;
+            // width: 100%;
+            cursor: pointer;
+            height: 30px;
+            span {
+              color: #282829;
+              font-size: 0.9rem;
             }
+          }
+          .style:hover {
+            background-color: rgb(236, 234, 234);
+          }
         }
-
-        .spaces
-        {
-            border: 1px solid rgb(187, 187, 187);
-            height: 100px;
-            display: flex;
-            // text-align: center;
-            justify-content: center;
-            // vertical-align: middle;
-            align-items: center;
-            flex-direction: column;
-        }
-
+      }
+      .textarea-for-answering {
+        @extend %text-area;
+      }
     }
+
+    .Question-container {
+      margin-top: 10px;
+      header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+      }
+      .question {
+        .Question {
+          // border: 1px solid black;
+          position: relative;
+          bottom: 15px;
+          cursor: pointer;
+          // width: 200px;
+
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+        .Question:hover {
+          text-decoration: underline;
+        }
+        .description {
+          position: relative;
+          bottom: 20px;
+          span {
+            color: #939598;
+            font-weight: 700;
+            font-size: 0.9rem;
+          }
+        }
+        div.buttons {
+          position: relative;
+          bottom: 5px;
+          .blue {
+            color: #195faa;
+          }
+          .grey {
+            color: #636466;
+          }
+
+          button {
+            background: transparent;
+            outline: "none";
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none;
+
+            span {
+              font-size: 1.1rem;
+              // color: #636466;
+            }
+            .upanddown {
+              top: -20px;
+            }
+
+            .initial {
+              top: 0px;
+            }
+            i {
+              transform: scale(1);
+              transition: transform 0.1s ease-in-out;
+            }
+            .number_of_follow {
+              position: relative;
+              top: 1px;
+              // border: 1px solid black;
+              width: 15px;
+              height: 17px;
+              display: inline-block;
+              overflow: hidden;
+              .outer-cage {
+                position: absolute;
+
+                transition: top 0.3s ease-in-out;
+                div {
+                  font-size: 1.1rem;
+
+                  // position: absolute;
+                  // border: 1px solid black;
+                }
+              }
+            }
+          }
+          button:hover {
+            background-color: rgb(219, 219, 219);
+          }
+
+          #more {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 15px;
+          }
+          #more:hover {
+            background-color: rgb(219, 219, 219);
+          }
+        }
+      }
+    }
+
+    .Follower-container {
+      margin-top: 10px;
+      header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+      }
+    }
+
+    .Following-container {
+      margin-top: 10px;
+      header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+      }
+    }
+  }
+
+  .credentials-container {
+    width: 25%;
+    // border: 1px solid black;
+    display: inline-block;
+    margin-left: 20px;
+    .header {
+      border-bottom: 1px solid rgb(197, 197, 197);
+    }
+    .tab {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 2;
+      i {
+        margin-right: 10px;
+      }
+    }
+
+    .spaces {
+      border: 1px solid rgb(187, 187, 187);
+      height: 100px;
+      display: flex;
+      // text-align: center;
+      justify-content: center;
+      // vertical-align: middle;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
 }

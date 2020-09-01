@@ -1,64 +1,62 @@
 <div class="textarea-for-answering display">
-    <div class="personal-details background-grey">
-        <img src="/uploads/user/avatar/Default.jpg" alt="" width="55px">
-        <div>
-            <p><%=user.name %></p>
-            <a href="">Edit Credentials</a>
+  <div class="personal-details background-grey">
+    <img src="<%=user.avatar%>" alt="" height="50px" />
+    <div>
+      <p><%=user.name %></p>
+      <a href="">Edit Credentials</a>
+    </div>
+  </div>
+
+  <div class="controls background-white">
+    <div class="outer-control">
+      <!-- ------------1--------------------- -->
+      <div class="_1 control-style">
+        <i class="fas fa-link" style="color: rgb(0, 102, 255)"></i>
+        <input type="text" placeholder="Enter URL" onfocus="this.value=''" />
+        <button onclick="show2nav();">Add</button>
+      </div>
+
+      <!-- -------------2----------------- -->
+      <div class="_2 control-style">
+        <div class="primary_controls">
+          <div class="text-control" onclick="blue();">
+            <i class="fas fa-bold fa-lg"></i>
+            <input type="hidden" value="bold" />
+          </div>
+          <div class="text-control" onclick="blue();">
+            <i class="fas fa-italic fa-lg"></i>
+            <input type="hidden" value="italic" />
+          </div>
         </div>
-    </div>
 
-    <div class="controls background-white">
+        <div class="secondary_controls">
+          <div class="other-control">
+            <i class="fas fa-images fa-lg"></i>
+            <input type="hidden" value="image" />
+          </div>
 
-        <div class="outer-control">
-
-            <!-- ------------1--------------------- -->
-            <div class="_1 control-style">
-                <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
-                <input type="text" placeholder="Enter URL" onfocus="this.value=''">
-                <button onclick="show2nav();">Add</button>
-            </div>
-
-
-            <!-- -------------2----------------- -->
-            <div class="_2 control-style">
-                <div class="primary_controls"> 
-                    <div class="text-control" onclick="blue();">
-                        <i class="fas fa-bold fa-lg"></i>
-                        <input type="hidden" value="bold" >
-                    </div>
-                    <div class="text-control" onclick="blue();">
-                        <i class="fas fa-italic fa-lg"></i>
-                        <input type="hidden" value="italic">
-                    </div>
-                </div>
-
-                <div class="secondary_controls">
-                    <div class="other-control">
-                        <i class="fas fa-images fa-lg"></i>
-                        <input type="hidden" value="image">
-                    </div>
-
-                    <div class="other-control" onclick="show1nav();">
-                        <i class="fas fa-link fa-lg"></i>
-                        <input type="hidden" value="link">
-                    </div>
-
-                    
-                </div>
-            </div>
-
+          <div class="other-control" onclick="show1nav();">
+            <i class="fas fa-link fa-lg"></i>
+            <input type="hidden" value="link" />
+          </div>
         </div>
-        
+      </div>
     </div>
+  </div>
 
-    <div class="input">
-        <div class="textArea" contenteditable="true">
-            
-        </div>
-    </div>
+  <div class="input">
+    <div class="textArea" contenteditable="true"></div>
+  </div>
 
-    <div class='footer background-grey'>
-        <button link='/answers/create?id=<%=question.id%>' id='<%=question.id%>' class="submit-answer" onclick="submit();" edit='false' >Submit</button>
-    </div>
-
+  <div class="footer background-grey">
+    <button
+      link="/answers/create?id=<%=question.id%>"
+      id="<%=question.id%>"
+      class="submit-answer"
+      onclick="submit();"
+      edit="false"
+    >
+      Submit
+    </button>
+  </div>
 </div>

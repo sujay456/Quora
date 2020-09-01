@@ -1,3 +1,140 @@
+.main-container .profile-container .Answer-container .textarea-for-answering {
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  height: auto;
+  margin-bottom: 15px;
+  position: relative; }
+  .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details {
+    border-bottom: 1px solid #9e9e9e; }
+    .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details img {
+      clip-path: circle(20px);
+      cursor: pointer; }
+    .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details div {
+      display: inline-block; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details div p:hover {
+        text-decoration: underline;
+        cursor: pointer; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details div a {
+        color: #636466;
+        text-decoration: none; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.personal-details div a:hover {
+        text-decoration: underline; }
+  .main-container .profile-container .Answer-container .textarea-for-answering .active {
+    color: #195faa; }
+  .main-container .profile-container .Answer-container .textarea-for-answering div.controls {
+    position: relative;
+    width: 100%;
+    border: 1px solid #cfcfcf;
+    height: 45px;
+    overflow: hidden; }
+    .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control {
+      position: absolute;
+      width: 100%;
+      top: -43px;
+      transition: top 0.5s ease-in-out; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control .control-style {
+        width: 100%;
+        height: 45px;
+        padding: 10px 15px;
+        box-sizing: border-box; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._1 input {
+        width: 88%;
+        height: 90%;
+        outline: none;
+        border: 0;
+        font-size: 1.1rem; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._1 button {
+        position: absolute;
+        right: 20px;
+        background-color: #f7f7f8;
+        color: #939598;
+        outline: none;
+        border: 0;
+        padding: 5px;
+        border: 1px solid #f7f7f8; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .primary_controls {
+        display: inline-block; }
+        .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .primary_controls div.text-control {
+          width: 30px;
+          border-radius: 3px;
+          height: 25px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: white;
+          display: inline-block;
+          margin-right: 10px;
+          color: grey;
+          padding: 2px 5px;
+          box-sizing: border-box; }
+        .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .primary_controls div:hover {
+          border-color: #0066ff; }
+      .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .secondary_controls {
+        display: inline-block;
+        position: absolute;
+        right: 20px; }
+        .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .secondary_controls .other-control {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 3px;
+          border: 1px solid white;
+          margin-right: 10px;
+          color: grey;
+          padding: 2px 5px;
+          box-sizing: border-box; }
+        .main-container .profile-container .Answer-container .textarea-for-answering div.controls .outer-control ._2 .secondary_controls .other-control:hover {
+          border: 1px solid #0066ff; }
+  .main-container .profile-container .Answer-container .textarea-for-answering .input {
+    width: 100%;
+    border-bottom: 1px solid #cfcfcf; }
+    .main-container .profile-container .Answer-container .textarea-for-answering .input .bold {
+      font-weight: bold; }
+    .main-container .profile-container .Answer-container .textarea-for-answering .input .italic {
+      font-style: italic; }
+    .main-container .profile-container .Answer-container .textarea-for-answering .input div {
+      border: none;
+      outline: none;
+      font-size: 1.1rem;
+      padding: 10px;
+      box-sizing: border-box;
+      height: 150px;
+      overflow-y: auto; }
+  .main-container .profile-container .Answer-container .textarea-for-answering .footer {
+    width: 100%;
+    height: 50px;
+    padding: 10px 10px;
+    box-sizing: border-box; }
+    .main-container .profile-container .Answer-container .textarea-for-answering .footer button {
+      background-color: #2058cf;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 25px;
+      padding: 10px; }
+    .main-container .profile-container .Answer-container .textarea-for-answering .footer button:hover {
+      background-color: #1348bb; }
+
+.pop-up {
+  width: 100%;
+  background-color: #c9c9c9;
+  text-align: center;
+  position: fixed;
+  z-index: 50;
+  height: 50px;
+  top: -200px;
+  transition: top 0.4s ease-in-out; }
+  .pop-up span {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 10px; }
+
+.green {
+  background-color: #0a960a; }
+
+.top {
+  top: 65px; }
+
 .main-container {
   width: 70%;
   height: 100%;
@@ -63,6 +200,7 @@
         .main-container .profile-container .avatar-preview .avatar-footer .submit:hover {
           background: #0a488a; }
     .main-container .profile-container .Avatar {
+      position: relative;
       display: inline-block;
       vertical-align: middle; }
       .main-container .profile-container .Avatar input[type="file"] {
@@ -73,12 +211,13 @@
         cursor: pointer;
         z-index: 1; }
       .main-container .profile-container .Avatar img {
-        clip-path: circle(60px at 50% 50%); }
+        clip-path: circle(60px at 50% 50%);
+        overflow: hidden; }
       .main-container .profile-container .Avatar .edit {
         transform: scale(0);
         position: absolute;
-        top: 80px;
-        left: 80px;
+        top: 70px;
+        left: 70px;
         padding: 5px;
         background: #2c6be0;
         border-radius: 80%;
@@ -145,7 +284,8 @@
         position: relative; }
         .main-container .profile-container .Answer-container .answer .user-info img {
           clip-path: circle(20px); }
-        .main-container .profile-container .Answer-container .answer .user-info img, .main-container .profile-container .Answer-container .answer .user-info p {
+        .main-container .profile-container .Answer-container .answer .user-info img,
+        .main-container .profile-container .Answer-container .answer .user-info p {
           display: inline-block;
           vertical-align: middle; }
         .main-container .profile-container .Answer-container .answer .user-info p {
@@ -164,7 +304,6 @@
           line-height: 1.8;
           max-height: 70px;
           overflow: hidden;
-          box-shadow: inset -2px 0 3px 3px #e7e7e7;
           cursor: pointer;
           position: relative; }
         .main-container .profile-container .Answer-container .answer .question-answer #read_more {
@@ -238,7 +377,7 @@
           color: #636466; }
         .main-container .profile-container .Question-container .question div.buttons button {
           background: transparent;
-          outline: 'none';
+          outline: "none";
           border: none;
           padding: 10px;
           margin-right: 10px;
@@ -299,7 +438,7 @@
       margin-top: 10px;
       font-size: 0.9rem;
       color: #333;
-      line-height: 2.0; }
+      line-height: 2; }
       .main-container .credentials-container .tab i {
         margin-right: 10px; }
     .main-container .credentials-container .spaces {

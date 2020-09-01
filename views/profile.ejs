@@ -1,221 +1,240 @@
-<link rel="stylesheet" href="/css/profile.css">
+<link rel="stylesheet" href="/css/profile.css" />
 
+<div class="pop-up">
+  <span> </span>
+</div>
 <div class="main-container">
+  <div class="profile-container">
+    <!-- this div is for the preview of the image uploaded -->
+    <div class="avatar-preview display">
+      <div class="avatar-header">
+        <h3>Preview</h3>
+      </div>
+      <img id="output" alt="" height="300px" />
 
-    <div class="profile-container">
-        <!-- this div is for the preview of the image uploaded -->
-        <div class="avatar-preview display">
-            <div class="avatar-header">
-                <h3>Preview</h3>
-            </div>
-            <img id="output" alt=""  height="300px">
+      <div class="avatar-footer">
+        <button class="cancel" onclick="removePreview();">Cancel</button>
+        <button class="submit" onclick="submitAvatar();">
+          Set As Profile Pic
+        </button>
+      </div>
+    </div>
+    <!-- here u can see ur profile and change credentials -->
+    <div class="Avatar">
+      <form
+        action="/profile/avatar"
+        method="post"
+        enctype="multipart/form-data"
+        id="avatarForm"
+      >
+        <input type="file" id="avatar" name="avatar" onchange="fileSubmit();" />
 
-            <div class="avatar-footer">
-                <button class="cancel" onclick="removePreview();">Cancel</button>
-                <button class="submit" onclick="submitAvatar();">Set As Profile Pic</button>
-            </div>
-        </div>
-        <!-- here u can see ur profile and change credentials -->
-        <div class="Avatar">
-            <form action="/profile/avatar" method="post" enctype="multipart/form-data" id="avatarForm">
-                <input type="file" id="avatar" name="avatar" onchange="fileSubmit();">
+        <img
+          src="<%=user.avatar%>"
+          alt=""
+          height="120px"
+          alt="Profile-pic"
+          id="profile-pic"
+        />
+        <svg class="edit" width="24px" height="24px" viewBox="0 0 24 24">
+          <g
+            stroke="none"
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(11.500000, 12.500000) rotate(-315.000000) translate(-11.500000, -12.500000) translate(9.500000, 2.500000)"
+          >
+            <path
+              d="M2,0 L2,0 C3.1045695,-2.02906125e-16 4,0.8954305 4,2 L4,16 L2.00256278,20 L9.48676901e-20,16 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z"
+              id="pen_body"
+              class="icon_svg-stroke"
+              stroke="#fff"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <polygon
+              id="pen_tip"
+              class="icon_svg-fill_as_stroke"
+              fill="#666"
+              transform="translate(2.000000, 18.750000) scale(1, -1) translate(-2.000000, -18.750000) "
+              points="2 17.5 3.25 20 0.75 20"
+            ></polygon>
+          </g>
+        </svg>
+      </form>
+    </div>
 
-                <img src="<%=user.avatar%>" alt="" height="120px" alt="Profile-pic">
+    <div class="user-info">
+      <h2 class="name">
+        <%=user.name%>
+        <small class="name-edit">Edit</small>
+      </h2>
+      <small class="profile-cred">Add Profile Credentials</small>
+    </div>
 
-                
-                <svg class="edit" width="24px" height="24px" viewBox="0 0 24 24"><g stroke="none" fill="none" fill-rule="evenodd" transform="translate(11.500000, 12.500000) rotate(-315.000000) translate(-11.500000, -12.500000) translate(9.500000, 2.500000)"><path d="M2,0 L2,0 C3.1045695,-2.02906125e-16 4,0.8954305 4,2 L4,16 L2.00256278,20 L9.48676901e-20,16 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="pen_body" class="icon_svg-stroke" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><polygon id="pen_tip" class="icon_svg-fill_as_stroke" fill="#666" transform="translate(2.000000, 18.750000) scale(1, -1) translate(-2.000000, -18.750000) " points="2 17.5 3.25 20 0.75 20"></polygon></g></svg>
+    <div class="user-desc">
+      <small id="desc" class="grey" style="display: block"
+        >Write a description about yourself</small
+      >
+      <small class="grey">2 Followers </small>
+    </div>
 
-            </form>
-        </div>
+    <!-- nav bar -->
 
+    <div class="nav-barcontainer">
+      <div class="nav-items Answer greyNav" link="">Answers</div>
+      <div class="nav-items Question greyNav" link="/Question">Questions</div>
+      <div class="nav-items Follower greyNav" link="/Follower">Followers</div>
+      <div class="nav-items Following greyNav" link="/Following">Following</div>
+    </div>
+
+    <div class="Answer-container tabs">
+      <header class="number_of_answer"><%= answers.length %> Answers</header>
+      <% for(let a of answers){%>
+      <div class="answer" id="answer-<%=a.id%>">
         <div class="user-info">
-            <h2 class="name">
-                <%=user.name%>
-                <small class="name-edit" >Edit</small>
-            </h2>
-           <small class="profile-cred">Add Profile Credentials</small>
+          <img src="<%=user.avatar%>" alt="" height="45px" />
+          <p><%=user.name%></p>
         </div>
 
-        <div class="user-desc">
-            <small id="desc" class="grey" style="display: block;">Write a description about yourself</small>
-            <small class="grey">2 Followers </small>
+        <div class="question-answer">
+          <a href="/question/display?id=<%=a.question.id%>">
+            <p class="question"><%=a.question.question%></p>
+          </a>
+
+          <a href="/question/display?id=<%=a.question.id%>" class="answerLink">
+            <p class="answerToQuestion"><%=a.answer%></p>
+          </a>
         </div>
+        <button class="more" onclick="showOptionsA();">
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </button>
+        <div
+          class="options-for-answer background-white animate__animated animate__pulse animate__faster display"
+        >
+          <div class="style" onclick="deleteAnswer();" a_id="<%=a.id%>">
+            <span a_id="<%=a.id%>">Delete Answer</span>
+          </div>
 
-        <!-- nav bar -->
-
-        <div class="nav-barcontainer">
-            <div class="nav-items Answer greyNav" link="">
-                Answers
-            </div>
-            <div class="nav-items Question greyNav" link='/Question'>
-                Questions
-            </div>
-            <div class="nav-items Follower greyNav" link="/Follower">
-                Followers
-            </div>
-            <div class="nav-items Following greyNav" link="/Following">
-                Following
-            </div>
+          <div class="style" onclick="EditAnswer();" answer="<%=a.answer%>">
+            <span answer="<%=a.answer%>">Edit Answer</span>
+          </div>
         </div>
-
-        <div class="Answer-container tabs">
-            <header>
-                <%= answers.length %> Answers
-            </header>
-            <% for(let a of answers){%>
-                <div class="answer" id="answer-<%=a.id%>">
-                    <div class="user-info">
-                        <img src="<%=user.avatar%>" alt="" height="45px">
-                        <p><%=user.name%></p>
-                    </div>
-
-                    <div class="question-answer">
-                        <a href="/question/display?id=<%=a.question.id%>">
-                            <p class="question"><%=a.question.question%></p>
-                        </a>
-                        
-                        <a href="/question/display?id=<%=a.question.id%>" id="answerLink">
-                            <p class="answerToQuestion"><%=a.answer%>
-                                <p id="read_more">read more</p>
-                            </p>
-                            
-                        </a>
-                    </div>
-                    <button class="more" onclick="showOptionsA();">
-                        <i class="fas fa-ellipsis-h fa-lg"></i>
-                    </button>
-                    <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
-                                    
-                        <div class="style" onclick="deleteAnswer();" a_id="<%=a.id%>">
-                            <span  a_id="<%=a.id%>">Delete Answer</span>
-                        </div>
-                        
-                        <div class="style" onclick="EditAnswer();" answer="<%=a.answer%>">
-                            <span  answer="<%=a.answer%>">Edit Answer</span>
-                        </div>
-            
-                    </div>
-                </div>
-            <%}%>
+        <div class="Editable-Answer">
+          <%- include('_textarea',{question:a.question} )%>
         </div>
-
-        <div class="Question-container tabs">
-            <header>
-                <%=questions.length%> Questions
-            </header>
-            <% for(let q of questions){ %>
-                <div class="question" id="question-<%=q.id%>">
-
-                    <div class="Question">
-                        <a href="/question/display?id=<%=q.id%>" target="_blank"> 
-                            <h3 ><%=q.question%></h3>
-                        </a>
-                    </div>
-                    
-                
-                    <div class="description">
-                        <% if(!q.answersOnQuestion.length){ %>
-                            <span>No answers yet</span>
-                        <%}else {%>
-                            <span><%=q.answersOnQuestion.length%> answers</span>
-                        <%}%>
-                
-                    </div>
-                    <div class="buttons">
-                        <!-- some button to answer or follow this question -->
-                        
-                        <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
-                            <% let followed=false %>
-                            <% for(let f of follow){ %>
-                                <% if(f.question==q.id){ %>
-                                    <% followed=true; break; %>
-                                <%}%>    
-                            <%}%>
-                            
-                            <% if(!followed){ %>
-                                
-                                <i class="fas fa-rss fa-lg grey"></i>
-                                <span class="grey">
-                                    Folllow .
-                                </span>
-                                <div class="number_of_follow">
-                                    <div class="outer-cage initial">
-                                        <div class="grey"><%=q.follow.length%></div>
-                                        <div class="grey"><%=q.follow.length+1%></div>
-                                    </div>
-                
-                                </div>
-                            <%}else{ %>
-                                
-                                <i class="fas fa-rss fa-lg blue"></i>
-                                <span class="blue">
-                                    Folllow .
-                                </span>
-                                <div class="number_of_follow">
-                                    <div class="outer-cage upanddown">
-                                        <div class="grey"><%=q.follow.length-1%></div>
-                                        <div class="grey"><%=q.follow.length%></div>
-                                    </div>
-                
-                                </div>
-                
-                            <% }%>
-                
-                        </button>
-                
-                        <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
-                        <!-- Options regarding question to delete or edit it , will do later -->
-                    </div>
-                </div>
-            <%}%>
-        </div>
-
-        <div class="Follower-container tabs">
-            <header>
-                Follower
-            </header>
-        </div>
-
-        <div class="Following-container tabs">
-            <header>
-                Following
-            </header>
-        </div>
-
+      </div>
+      <%}%>
     </div>
 
-    <div class="credentials-container">
-        <!-- credentials -->
-        <div class="header">
-            <h3>Credentials & Highlights</h3>
+    <div class="Question-container tabs">
+      <header><%=questions.length%> Questions</header>
+      <% for(let q of questions){ %>
+      <div class="question" id="question-<%=q.id%>">
+        <div class="Question">
+          <a href="/question/display?id=<%=q.id%>" target="_blank">
+            <h3><%=q.question%></h3>
+          </a>
         </div>
 
-        <div class="credentials tab">
-            <div><i class="fas fa-briefcase"></i> Former Jee Aspirant</div>
-            <div> <i class="fas fa-graduation-cap"></i>B.Tech from Computer Engineering, Netaji Subhas Institute of Technology <small style="color:rgb(187, 187, 187)">Expected 2023</small></div>
-            <div> <i class="fas fa-map-marker-alt"></i>Lives in New Delhi</div>
-            <div><i class="far fa-eye"></i> 2K content views <small style="color:rgb(187, 187, 187)">150 this month</small></div>
+        <div class="description">
+          <% if(!q.answersOnQuestion.length){ %>
+          <span>No answers yet</span>
+          <%}else {%>
+          <span><%=q.answersOnQuestion.length%> answers</span>
+          <%}%>
         </div>
+        <div class="buttons">
+          <!-- some button to answer or follow this question -->
 
-        <div class="header">
-            <h3>Spaces</h3>
-        </div>
-        <div class="spaces tab">
-            <i class="fas fa-plus-circle fa-3x" style="color: rgb(0, 110, 255);"></i>
-            <div>Create A Space</div>
-        </div>
+          <button
+            class="follow"
+            onclick="follow();"
+            link="/follow/toggle?id=<%=q.id%>"
+          >
+            <% let followed=false %> <% for(let f of follow){ %> <%
+            if(f.question==q.id){ %> <% followed=true; break; %> <%}%> <%}%> <%
+            if(!followed){ %>
 
-        <div class="header">
-            <h3>Knows About</h3>
+            <i class="fas fa-rss fa-lg grey"></i>
+            <span class="grey"> Folllow . </span>
+            <div class="number_of_follow">
+              <div class="outer-cage initial">
+                <div class="grey"><%=q.follow.length%></div>
+                <div class="grey"><%=q.follow.length+1%></div>
+              </div>
+            </div>
+            <%}else{ %>
+
+            <i class="fas fa-rss fa-lg blue"></i>
+            <span class="blue"> Folllow . </span>
+            <div class="number_of_follow">
+              <div class="outer-cage upanddown">
+                <div class="grey"><%=q.follow.length-1%></div>
+                <div class="grey"><%=q.follow.length%></div>
+              </div>
+            </div>
+
+            <% }%>
+          </button>
+
+          <i
+            id="more"
+            class="fas fa-ellipsis-h fa-lg"
+            onclick="showOptions();"
+          ></i>
+          <!-- Options regarding question to delete or edit it , will do later -->
         </div>
-        <div class="knows tab">
-            <div>Netaji Subhas Institute of Technology</div>
-            <div>New Delhi</div>
-            <div>Computer Engineering</div>
-        </div>
+      </div>
+      <%}%>
     </div>
 
+    <div class="Follower-container tabs">
+      <header>Follower</header>
+    </div>
+
+    <div class="Following-container tabs">
+      <header>Following</header>
+    </div>
+  </div>
+
+  <div class="credentials-container">
+    <!-- credentials -->
+    <div class="header">
+      <h3>Credentials & Highlights</h3>
+    </div>
+
+    <div class="credentials tab">
+      <div><i class="fas fa-briefcase"></i> Former Jee Aspirant</div>
+      <div>
+        <i class="fas fa-graduation-cap"></i>B.Tech from Computer Engineering,
+        Netaji Subhas Institute of Technology
+        <small style="color: rgb(187, 187, 187)">Expected 2023</small>
+      </div>
+      <div><i class="fas fa-map-marker-alt"></i>Lives in New Delhi</div>
+      <div>
+        <i class="far fa-eye"></i> 2K content views
+        <small style="color: rgb(187, 187, 187)">150 this month</small>
+      </div>
+    </div>
+
+    <div class="header">
+      <h3>Spaces</h3>
+    </div>
+    <div class="spaces tab">
+      <i class="fas fa-plus-circle fa-3x" style="color: rgb(0, 110, 255)"></i>
+      <div>Create A Space</div>
+    </div>
+
+    <div class="header">
+      <h3>Knows About</h3>
+    </div>
+    <div class="knows tab">
+      <div>Netaji Subhas Institute of Technology</div>
+      <div>New Delhi</div>
+      <div>Computer Engineering</div>
+    </div>
+  </div>
 </div>
 
 <script src="/js/profile.js"></script>
-
