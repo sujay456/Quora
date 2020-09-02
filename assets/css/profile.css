@@ -168,7 +168,8 @@
       .main-container .profile-container .avatar-preview img {
         padding: 0px;
         margin-top: 20px;
-        clip-path: circle(130px); }
+        clip-path: circle(130px);
+        transition: all 0.5s; }
       .main-container .profile-container .avatar-preview .avatar-footer {
         border-top: 1px solid #c2c2c2;
         position: absolute;
@@ -202,22 +203,25 @@
     .main-container .profile-container .Avatar {
       position: relative;
       display: inline-block;
-      vertical-align: middle; }
+      vertical-align: middle;
+      width: 214px;
+      text-align: center; }
       .main-container .profile-container .Avatar input[type="file"] {
         position: absolute;
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: 100%;
         opacity: 0;
         cursor: pointer;
         z-index: 1; }
       .main-container .profile-container .Avatar img {
-        clip-path: circle(60px at 50% 50%);
+        height: 120px;
+        clip-path: circle(60px);
         overflow: hidden; }
       .main-container .profile-container .Avatar .edit {
         transform: scale(0);
         position: absolute;
-        top: 70px;
-        left: 70px;
+        top: 50px;
+        left: 90px;
         padding: 5px;
         background: #2c6be0;
         border-radius: 80%;
@@ -448,3 +452,50 @@
       justify-content: center;
       align-items: center;
       flex-direction: column; }
+
+@media screen and (max-width: 1000px) {
+  .main-container {
+    width: 100%;
+    left: 0%; }
+    .main-container .profile-container {
+      width: 100%;
+      display: block; }
+      .main-container .profile-container .avatar-preview {
+        left: 15%; }
+    .main-container .credentials-container {
+      width: 100%;
+      margin-left: 10px; } }
+
+@media screen and (max-width: 800px) {
+  .main-container .profile-container {
+    width: 100%;
+    display: block; }
+    .main-container .profile-container .avatar-preview {
+      left: 15%;
+      width: 500px;
+      height: 500px; }
+  .main-container .credentials-container {
+    width: 100%;
+    margin-left: 10px; } }
+
+@media screen and (max-width: 590px) {
+  .main-container .profile-container {
+    width: 100%;
+    display: block; }
+    .main-container .profile-container .avatar-preview {
+      left: 1%;
+      width: 95vw;
+      height: 500px; }
+  .main-container .credentials-container {
+    width: 100%;
+    margin-left: 10px; } }
+
+@media screen and (max-width: 450px) {
+  .main-container .profile-container .Avatar {
+    width: 150px; }
+    .main-container .profile-container .Avatar img {
+      height: 100px;
+      clip-path: circle(50px); }
+    .main-container .profile-container .Avatar .edit {
+      top: 35px;
+      left: 70px; } }
