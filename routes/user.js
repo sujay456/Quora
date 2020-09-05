@@ -28,4 +28,12 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/" }),
   userController.createSession
 );
+
+router.get("/auth/facebook", passport.authenticate("facebook"));
+
+router.get(
+  "/auth/facebook/callback",
+  passport.authenticate("facebook", { failureRedirect: "/" }),
+  userController.createSession
+);
 module.exports = router;

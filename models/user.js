@@ -1,90 +1,97 @@
-const mongoose=require('mongoose');
-const path=require('path');
-const multer = require('multer');
-const AVATAR_PATH=path.join('/uploads/user/avatar');
-const userSchema=new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
+const mongoose = require("mongoose");
+const path = require("path");
+const multer = require("multer");
+const AVATAR_PATH = path.join("/uploads/user/avatar");
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
     },
-    email:{
-        type:String,
-        required:true,
-        unique:true
+    facebookID: {
+      type: String,
     },
-    password:{
-        type:String,
-        required:true
+    email: {
+      type: String,
+      required: true,
+      unique: true,
     },
-    questions:[
-        {
-            // this is the list of question that this user has asked
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Question'
-        }
+    password: {
+      type: String,
+      required: true,
+    },
+    questions: [
+      {
+        // this is the list of question that this user has asked
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Question",
+      },
     ],
-    answers:[
-        {
-            // this is the list of answers that this user has written
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Answer'
-        }
+    answers: [
+      {
+        // this is the list of answers that this user has written
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Answer",
+      },
     ],
-    interests:[
-        {
-            type:String
-        }
+    interests: [
+      {
+        type: String,
+      },
     ],
-    languages:[
-        {
-            type:String
-        }
+    languages: [
+      {
+        type: String,
+      },
     ],
-    follow:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Follow'
-        }
+    follow: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Follow",
+      },
     ],
-    comments:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Comment'
-        }
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+      },
     ],
-    like:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Like'
-        }
+    like: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Like",
+      },
     ],
-    dislike:
-    [
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:'Dislike'
-        }
+    dislike: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Dislike",
+      },
     ],
-    avatar:{
-        type:String,
-        default:'/uploads/user/avatar/Default.jpg'
-    }
-},{
-    timestamps:true
-});
+    avatar: {
+      type: String,
+      default: "/uploads/user/avatar/Default.jpg",
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 let storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname,'..',AVATAR_PATH));
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-    }
+  destination: function (req, file, cb) {
+    cb(null, path.join(__dirname, "..", AVATAR_PATH));
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now());
+  },
 });
 
-userSchema.statics.uploadedAvatar=multer({storage:storage}).single('avatar');
-userSchema.statics.avatarPath=AVATAR_PATH;
+userSchema.statics.uploadedAvatar = multer({ storage: storage }).single(
+  "avatar"
+);
+userSchema.statics.avatarPath = AVATAR_PATH;
 
-const User=mongoose.model('User',userSchema);
+const User = mongoose.model("User", userSchema);
 
-module.exports=User;
+module.exports = User;
