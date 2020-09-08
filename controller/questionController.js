@@ -3,7 +3,10 @@ const User = require("../models/user");
 const Follow = require("../models/follow");
 const Like = require("../models/like");
 const Dislike = require("../models/dislike");
-const questionMailer = require("../mailers/Questionmailer");
+// const questionMailer = require("../mailers/Questionmailer");
+
+const queue = require("../config/kue");
+const EmailWorker = require("../workers/email_worker");
 
 module.exports.CreateQuestion = async function (req, res) {
   try {
@@ -29,7 +32,19 @@ module.exports.CreateQuestion = async function (req, res) {
       user.save();
       console.log(question);
 
-      questionMailer.newQuestion(question);
+      // questionMailer.newQuestion(question);
+      // what create will do is if there is no queue for the this work it will create it
+      // or if there is a queueu then it will append to it
+      let job = queue
+        .create("emails", { question, type: "question" })
+        .save(function (err) {
+          if (err) {
+            console.log("Error in enquing the job");
+            return;
+          }
+          console.log("Job enqueued ", job.id);
+        });
+
       return res.status(200).json({
         message: "Ok",
       });
