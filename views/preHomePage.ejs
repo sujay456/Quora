@@ -14,6 +14,9 @@
   <body>
     <!-- ------------For notifications for signup actions---------------------- -->
     <!-- Error -->
+    <div class="pop-up">
+      <span> </span>
+    </div>
     <div id="signup-noty" class="hide">
       <p>An account with these credentials already exists</p>
     </div>
@@ -73,7 +76,7 @@
               placeholder="Password"
             />
             <!-- Forgot password link -->
-            <a href="">Forgot Password?</a>
+            <a href="" onclick="reset();">Forgot Password?</a>
             <input type="submit" value="Login" />
           </form>
           <div id="warning" class="hide">

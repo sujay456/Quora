@@ -1,32 +1,35 @@
 const nodemailer = require("../config/nodemailer");
 var inLineCss = require("nodemailer-juice");
 
-exports.newQuestion = (question) => {
-  console.log("inside the mailer");
+const resetMail = (reset) => {
+  console.log("in the reset mailer", reset);
+
   nodemailer.transporter.use("compile", inLineCss());
 
   let htmlString = nodemailer.renderedTemplate(
-    { question: question },
-    "/Questions/newQuestion.ejs"
+    { reset: reset },
+    "/resetPass/reset.ejs"
   );
 
   nodemailer.transporter.sendMail(
     {
       from: "codingninjatest@gmail.com",
-      to: question.user.email,
-      subject: " Question  published",
+      to: reset.user.email,
+      subject: "Reset Your Password",
       html: htmlString,
     },
-    (err, info) => {
+    function (err, info) {
       if (err) {
-        console.log("Error in sending the mail");
+        console.log("Error in sending the mail for reser password");
         return;
       }
-
-      // info is the information about the sent  mail
 
       console.log(info);
       return;
     }
   );
+};
+
+module.exports = {
+  resetMail: resetMail,
 };

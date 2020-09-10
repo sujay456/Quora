@@ -1,7 +1,43 @@
+<style>
+  div {
+    text-align: center;
+  }
+  .header {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(255, 60, 0);
+  }
+  h3 {
+    color: rgba(255, 51, 0, 0.986);
+    font-family: cursive;
+  }
+  .content {
+    text-align: left;
+  }
+</style>
 <div>
-  <p>Click the link below to reset your password</p>
+  <div class="header">
+    <h3>QUORA</h3>
+    <p>Reset Your Password</p>
+  </div>
 
-  <p><a href="">Click here</a></p>
+  <div class="content">
+    <p>Hi <%=reset.user.name%>,</p>
+
+    <p>
+      You requested to reset the password for your Quora account with the e-mail
+      address (<%=reset.user.email%>). Please click this link to reset your
+      password.
+    </p>
+    <strong> This link can only be used once ! </strong>
+    <p>
+      <a
+        href="http://localhost:8000/settings/reset-page?accesToken=<%=reset.AccesToken%>"
+        target="_blank"
+        >Click here</a
+      >
+    </p>
+    <p>Thanks, Sujay</p>
+  </div>
 
   <p>Thanks</p>
 </div>

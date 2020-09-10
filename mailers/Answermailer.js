@@ -1,7 +1,9 @@
 const nodemailer = require("../config/nodemailer");
-
+var inLineCss = require("nodemailer-juice");
 const sendToAuthor = (answer) => {
   console.log("Answer mailer");
+
+  nodemailer.transporter.use("compile", inLineCss());
   let htmlString = nodemailer.renderedTemplate(answer, "/Answer/newAnswer.ejs");
 
   nodemailer.transporter.sendMail(

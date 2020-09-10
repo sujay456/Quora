@@ -18,5 +18,6 @@ router.use("/like", require("./like"));
 router.use("/dislike", require("./dislike"));
 router.use("/profile", require("./profile"));
 router.use("/api", require("./api"));
+router.use("/settings", require("./setting"));
 
 module.exports = router;

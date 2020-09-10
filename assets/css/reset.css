@@ -1,0 +1,80 @@
+.pop-up {
+  width: 100%;
+  background-color: #c9c9c9;
+  text-align: center;
+  position: fixed;
+  z-index: 50;
+  height: 50px;
+  top: -200px;
+  transition: top 0.4s ease-in-out; }
+  .pop-up span {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 10px; }
+
+.green {
+  background-color: #0a960a; }
+
+.top {
+  top: 65px; }
+
+body {
+  margin: 0px;
+  background-image: url("https://qsf.fs.quoracdn.net/-4-images.home.illo_1920.png-26-e9e6fbe02d908942.png");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 5%; }
+  body .container {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0%);
+    background: #fff;
+    width: 470px;
+    color: #333;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    box-shadow: 0 0 5px #888;
+    border-radius: 4px; }
+    body .container img {
+      height: 150px; }
+    body .container .info {
+      font-weight: 600;
+      font-size: 1.2rem; }
+    body .container .form-container .form-row {
+      margin-bottom: 20px; }
+      body .container .form-container .form-row label {
+        font-size: small;
+        width: 125px;
+        display: inline-block;
+        margin-right: 8px;
+        text-align: right; }
+      body .container .form-container .form-row input {
+        width: 175px;
+        padding: 3px 5px;
+        height: 15px;
+        box-sizing: border-box;
+        min-height: 27px;
+        background: #fff;
+        outline: 0;
+        border: 1px solid #e2e2e2;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 1px rgba(200, 200, 200, 0.3); }
+    body .container .form-container input[type="submit"] {
+      background: #3e78ad;
+      color: #fff;
+      border: 1px solid #3a66ad;
+      box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.6);
+      display: inline-block;
+      font-weight: 500;
+      outline: 0;
+      padding: 3px 7px 4px 7px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      cursor: pointer;
+      line-height: 1.4; }

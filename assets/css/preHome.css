@@ -1,9 +1,54 @@
+.pop-up {
+  width: 100%;
+  background-color: #c9c9c9;
+  text-align: center;
+  position: fixed;
+  z-index: 50;
+  height: 50px;
+  top: -200px;
+  transition: top 0.4s ease-in-out; }
+  .pop-up span {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 10px; }
+
+.green {
+  background-color: #0a960a; }
+
+.top {
+  top: 65px; }
+
 body {
   margin: 0px;
   background-image: url("https://qsf.fs.quoracdn.net/-4-images.home.illo_1920.png-26-e9e6fbe02d908942.png");
   background-attachment: fixed;
   background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+  body .pop-up {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: #c9c9c9;
+    z-index: 50;
+    height: 50px;
+    top: -200px;
+    transition: top 0.4s ease-in-out; }
+    body .pop-up span {
+      color: white;
+      font-weight: 600;
+      position: relative;
+      top: 10px; }
+  body .grey-popup {
+    background-color: #a0a0a0; }
+  body .green-popup {
+    background-color: #5fbe5f; }
+  body .white-popup {
+    background: white; }
+    body .white-popup span {
+      color: #0d802a; }
+  body .top {
+    top: 0px; }
   body #signup-noty {
     background-color: #5b6770;
     text-align: center;
@@ -48,7 +93,7 @@ body {
     body #home-container p {
       font-size: 19px;
       font-weight: 400;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       color: #949494;
       position: relative;
       top: -50px; }
@@ -77,7 +122,7 @@ body {
           background-color: #fafafa;
           display: block;
           border-radius: 3px; }
-        body #home-container #login-methods #signup-form input[type='submit'] {
+        body #home-container #login-methods #signup-form input[type="submit"] {
           background-color: #3e78ad;
           width: 70px;
           color: white;
@@ -120,7 +165,7 @@ body {
         body #home-container #login-methods #social-auth .TosDisclaimer {
           color: #949494;
           font-size: 13px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
           body #home-container #login-methods #social-auth .TosDisclaimer a {
             color: #2b6dad;
             text-decoration: none; }
@@ -149,8 +194,8 @@ body {
             body #home-container #login-methods #social-auth .methods a span {
               position: relative;
               left: 40px;
-              color: #FFFFFF;
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              color: #ffffff;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
               font-weight: 500;
               font-size: 1.2rem; }
           body #home-container #login-methods #social-auth .methods a:hover {
@@ -182,13 +227,13 @@ body {
           body #home-container #login-methods #local-auth #login-form input {
             width: 100%;
             height: 37px;
-            background-color: #EEE;
+            background-color: #eee;
             padding: 5px 10px;
             box-sizing: border-box;
             border: none;
             margin-bottom: 25px;
             outline: none;
-            font-size: 1.0rem;
+            font-size: 1rem;
             border-radius: 3px;
             box-shadow: inset 0 1px 1px #888888; }
           body #home-container #login-methods #local-auth #login-form input[type="submit"] {
@@ -199,7 +244,7 @@ body {
             right: 0;
             font-weight: 500;
             box-shadow: inset 0 1px 1px #3e78ad;
-            color: #EEE; }
+            color: #eee; }
           body #home-container #login-methods #local-auth #login-form a {
             color: #949494;
             font-size: 0.9rem;
