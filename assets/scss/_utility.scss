@@ -184,7 +184,15 @@
 .green {
   background-color: rgb(10, 150, 10);
 }
-
+.white {
+  background: white;
+  span {
+    color: rgb(10, 150, 10);
+  }
+}
+.top0 {
+  top: 0;
+}
 .top {
   top: 65px;
 }

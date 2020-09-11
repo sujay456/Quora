@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="/css/reset.css" />
   </head>
   <body>
+    <div class="pop-up">
+      <span> </span>
+    </div>
     <div class="container">
       <img src="/images/logo.png" alt="Logo" />
       <p class="info">
@@ -16,7 +21,7 @@
       <div class="form-container">
         <p>Please enter and confirm your new password below.</p>
 
-        <form action="" method="POST">
+        <form action="" method="POST" onsubmit="resetPass();">
           <div class="form-row">
             <label for="new">New Password</label>
             <input id="new" type="password" name="pass" required />
@@ -30,5 +35,34 @@
         </form>
       </div>
     </div>
+
+    <script>
+      const resetPass = () => {
+        event.preventDefault();
+        console.log("Hello wordl");
+        $.ajax({
+          type: "post",
+          url: "/settings/reset-submit?id=<%=user%>",
+          data: $(event.target).serialize(),
+          success: function (data) {
+            console.log(data);
+            // popup here
+            $(".pop-up span")[0].innerText =
+              data.message + " Redirecting in 3 seconds !!";
+            $(".pop-up").addClass("top0 white");
+            setTimeout(function () {
+              $(".pop-up").removeClass("top0 white");
+            }, 3000);
+
+            setTimeout(function () {
+              window.location.href = "/";
+            }, 5000);
+          },
+          error: function (err) {
+            console.log(err.responseText);
+          },
+        });
+      };
+    </script>
   </body>
 </html>

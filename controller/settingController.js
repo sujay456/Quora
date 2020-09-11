@@ -9,15 +9,38 @@ module.exports.resetPage = async function (req, res) {
     console.log(req.query);
     let reset = await Reset.findOne({ AccesToken: req.query.accesToken });
 
-    if (reset && reset.isValid) {
-      reset.isValid = !reset.isValid;
-      reset.save();
-      return res.render("ResetPassFormpage", { layout: false });
-    } else {
-      return res.render("unauthorised", { layout: false });
-    }
+    // if (reset && reset.isValid) {
+    reset.isValid = !reset.isValid;
+    reset.save();
+    return res.render("ResetPassFormpage", { layout: false, user: reset.user });
+    // } else {
+    // return res.render("unauthorised", { layout: false });
+    // }
   } catch (error) {
     console.log("Error in resetpage", error);
+  }
+};
+
+module.exports.submitForm = function (req, res) {
+  console.log(req.body);
+  if (req.body.pass == req.body.cpass) {
+    User.findById(req.query.id, function (err, user) {
+      if (err) {
+        console.log("Error in finding the user");
+        return;
+      }
+
+      user.password = req.body.pass;
+      user.save();
+
+      return res.status(200).json({
+        message: "Password changed Succesfully",
+      });
+    });
+  } else {
+    return res.status(403).json({
+      message: "The passwords do not Match ",
+    });
   }
 };
 
