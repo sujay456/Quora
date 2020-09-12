@@ -1,110 +1,125 @@
-<div id="test" class="initialX">
-    
-</div>
+<div id="test" class="initialX"></div>
 <div id="hamburger-icon" onclick="show()">
-    <svg width="50" height="22" viewBox="0 0 90 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M90 33H0V27H90V33Z" fill="black"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M90 62H0V56H90V62Z" fill="black"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M90 6H0V0H90V6Z" fill="black"/>
-    </svg>
-                       
+  <svg
+    width="50"
+    height="22"
+    viewBox="0 0 90 62"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M90 33H0V27H90V33Z"
+      fill="black"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M90 62H0V56H90V62Z"
+      fill="black"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M90 6H0V0H90V6Z"
+      fill="black"
+    />
+  </svg>
 </div>
 <div id="header-container" class="original-header">
-   
-    <div id="logo">
-        <a href="/">
-            <img src="/images/logo.png" alt="logo" width="90px" >
-        </a>
+  <div id="logo">
+    <a href="/">
+      <img src="/images/logo.png" alt="logo" width="90px" />
+    </a>
+  </div>
+
+  <div id="navigation">
+    <%- include('_navigation')%>
+
+    <div class="profile nav">
+      <span>
+        <img src="<%=user.avatar%>" alt="" height="40px" />
+      </span>
+
+      <div
+        class="nav-bar display animate__animated animate__backInDown animate__faster"
+      >
+        <div class="arrow"></div>
+        <!-- ------------------1------------------- -->
+        <div id="personal" onclick="profilepage();" userid="<%=user.id%>">
+          <img src="<%=user.avatar%>" alt="" height="55px" />
+          <p userid="<%=user.id%>"><%= user.name %></p>
+          <span userid="<%=user.id%>"> > </span>
+        </div>
+
+        <div class="nav-user-content">
+          <!-- -----------------------------2------------------>
+          <div id="messages" class="nav-items">
+            <i class="far fa-comment-dots"></i>
+            <span>Messages</span>
+          </div>
+          <!-- --------------------------------3-------------------- -->
+          <div id="stats" class="nav-items">
+            <i class="fas fa-hryvnia"></i>
+            <span>Stats</span>
+          </div>
+
+          <!-- --------------------------------4-------------------- -->
+          <div id="content" class="nav-items">
+            <i class="fas fa-book"></i>
+            <span>Your Content</span>
+          </div>
+        </div>
+
+        <div id="settings">
+          <div id="setting">
+            <span>Settings</span>
+          </div>
+
+          <div id="language-setting">
+            <span>Language</span>
+          </div>
+
+          <div class="logout">
+            <span><a href="/user/signout">Log out</a></span>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div id="navigation">
-        
-        <%- include('_navigation')%>
 
-        <div class="profile nav">
-            <span>
-                <img src="<%=user.avatar%>" alt="" height="40px" >
-            </span>
-            
-            <div class="nav-bar display animate__animated animate__backInDown animate__faster ">
-                <div class="arrow"></div>
-                <!-- ------------------1------------------- -->
-                <div id="personal" onclick="profilepage();">
-                    <img src="<%=user.avatar%>" alt="" height="55px" >
-                    <p><%= user.name %>  </p>
-                    <span>  >  </span>
-                </div>
+    <div class="languages nav">
+      <i class="fas fa-globe fa-lg"></i>
 
-                <div class="nav-user-content">
-                        <!-- -----------------------------2------------------>
-                    <div id="messages" class="nav-items"> 
-                        <i class="far fa-comment-dots"></i>
-                        <span>Messages</span>
-                    </div>
-                    <!-- --------------------------------3-------------------- -->
-                    <div id="stats" class="nav-items"> 
-                        <i class="fas fa-hryvnia"></i>
-                        <span>Stats</span>
-                    </div>
+      <div
+        class="lang-nav-container animate__animated animate__backInDown animate__faster display"
+      >
+        <div class="arrow"></div>
 
-                    <!-- --------------------------------4-------------------- -->
-                    <div id="content" class="nav-items"> 
-                        <i class="fas fa-book"></i>
-                        <span>Your Content</span>
-                    </div>
-                </div>
-
-                <div id="settings">
-                    <div id="setting">
-                        <span>Settings</span>
-                    </div>
-
-                    <div id="language-setting">
-                        <span>Language</span>
-                    </div>
-                    
-                    <div class="logout">
-                        <span><a href="/user/signout">Log out</a></span>
-                    </div>
-                </div>
-
-            </div>
+        <div id="title">
+          <span>Languages</span>
         </div>
 
-        <div class="languages nav" >
-            <i class="fas fa-globe fa-lg"></i>
-
-            <div class="lang-nav-container animate__animated animate__backInDown animate__faster display">
-                <div class="arrow"></div>
-                
-                <div id="title">
-                    <span>Languages</span>
-                </div>
-
-                <div id="languages">
-
-                    <!-- to do for the languages -->
-                    <% for(let l of user.languages){ %>
-                        <div id="lang-<%=l%>" class="lang-style">
-                            <span><%=l%></span>
-                        </div>
-                    <% } %>
-                </div>
-
-                <div id="lang-settings">
-                    <span> 
-                        <a href="">Add Language</a>
-                    </span>
-                </div>
-
-            </div>
+        <div id="languages">
+          <!-- to do for the languages -->
+          <% for(let l of user.languages){ %>
+          <div id="lang-<%=l%>" class="lang-style">
+            <span><%=l%></span>
+          </div>
+          <% } %>
         </div>
 
-        <!-- <div id="add-question">
+        <div id="lang-settings">
+          <span>
+            <a href="">Add Language</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="add-question">
             <a href="" id="button">Add Questions</a>
         </div> -->
-        <button type="button" onclick="displayForm();">Add Question</button>
-
-
-    </div>
+    <button type="button" onclick="displayForm();">Add Question</button>
+  </div>
 </div>

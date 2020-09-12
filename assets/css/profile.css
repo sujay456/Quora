@@ -132,6 +132,14 @@
 .green {
   background-color: #0a960a; }
 
+.white {
+  background: white; }
+  .white span {
+    color: #0a960a; }
+
+.top0 {
+  top: 0; }
+
 .top {
   top: 65px; }
 

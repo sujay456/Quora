@@ -17,17 +17,27 @@ $(".nav-items").removeClass("redNav Border");
 $(`.${navTab}`).addClass("redNav Border");
 
 $(".nav-items").click(function (event) {
-  console.log(event.target);
+  console.log(event.target, $(event.target).attr("userid"));
   console.log("hi");
 
-  console.log(`/profile${$(event.target).attr("link")}`);
-  // return ;
+  console.log(
+    `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
+      "userid"
+    )}`
+  );
+  // return;
   $.ajax({
     type: "get",
-    url: `/profile${$(event.target).attr("link")}`,
+    url: `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
+      "userid"
+    )}`,
     success: function (data) {
       console.log("Succesfull");
-      window.location.replace(`/profile${$(event.target).attr("link")}`);
+      window.location.replace(
+        `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
+          "userid"
+        )}`
+      );
     },
     error: function (err) {
       console.log(err.responseText);

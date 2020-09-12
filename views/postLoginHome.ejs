@@ -1,321 +1,300 @@
-<link rel="stylesheet" href="/css/postHome.css">
+<link rel="stylesheet" href="/css/postHome.css" />
 
 <div class="pop-up">
-    <span>
-        
-    </span>
+  <span> </span>
 </div>
-<div id="home-container" >
-    <div id="feed-container">
-        
-        <div id="feed-header">
-            <i class="fas fa-rss"></i>
-            <span>Feed</span>
+<div id="home-container">
+  <div id="feed-container">
+    <div id="feed-header">
+      <i class="fas fa-rss"></i>
+      <span>Feed</span>
+    </div>
+
+    <div id="feed-interest">
+      <%for(let i of user.interests){ %>
+      <div class="interest-container-feed">
+        <span><%=i%></span>
+      </div>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- 1st div  -->
+  <div id="main-questions-container">
+    <div
+      id="add-question-container"
+      class="background-white"
+      onclick="displayForm();"
+    >
+      <div id="user-container">
+        <img src="<%=user.avatar%>" alt="" height="30px" />
+        <span><%= user.name %></span>
+      </div>
+
+      <div id="content">
+        <span>What is Your question ?</span>
+      </div>
+    </div>
+
+    <div id="questions-answers">
+      <!-- In this div there will be questions which you can answer -->
+      <div id="questions-for-you" class="background-white container-style">
+        <div id="header-desc" class="header-description">
+          <i class="far fa-lightbulb fa-lg"></i>
+          <span>Question for You</span>
         </div>
 
-        <div id="feed-interest">
-            <%for(let i of user.interests){  %>
-                <div class="interest-container-feed">
-                    <span><%=i%></span>
+        <% for(let q of locals.questions) {%> <% if(q.answersOnQuestion.length
+        <=2 && q.user.id!=locals.user.id ) {%>
+
+        <!-- here there will be a for loop for follows  -->
+        <!-- { -->
+        <div class="not-answered background-white">
+          <div class="header">Question added</div>
+
+          <div class="Question">
+            <a href="/question/display?id=<%=q.id%>" target="_blank">
+              <h3><%=q.question%></h3>
+            </a>
+          </div>
+
+          <div class="description">
+            <% if(!q.answersOnQuestion.length){ %>
+            <span>No answers yet</span>
+            <%}else {%>
+            <span><%=q.answersOnQuestion.length%> answers</span>
+            <%}%>
+          </div>
+          <div class="buttons">
+            <!-- some button to answer or follow this question -->
+            <button onclick="showAnswerTab();" class="answer">
+              <i class="fas fa-feather-alt fa-lg blue"></i>
+              <span class="grey"> Answer </span>
+            </button>
+            <button
+              class="follow"
+              onclick="follow();"
+              link="/follow/toggle?id=<%=q.id%>"
+            >
+              <% let followed=false %> <% for(let f of follow){ %> <%
+              if(f.question==q.id){ %> <% followed=true; break; %> <%}%> <%}%>
+              <% if(!followed){ %>
+
+              <i class="fas fa-rss fa-lg grey"></i>
+              <span class="grey"> Folllow . </span>
+              <div class="number_of_follow">
+                <div class="outer-cage initial">
+                  <div class="grey"><%=q.follow.length%></div>
+                  <div class="grey"><%=q.follow.length+1%></div>
                 </div>
-            <% } %>
-        </div>
+              </div>
+              <%}else{ %>
 
-    </div>
+              <i class="fas fa-rss fa-lg blue"></i>
+              <span class="blue"> Folllow . </span>
+              <div class="number_of_follow">
+                <div class="outer-cage upanddown">
+                  <div class="grey"><%=q.follow.length-1%></div>
+                  <div class="grey"><%=q.follow.length%></div>
+                </div>
+              </div>
 
-    <!-- 1st div  -->
-    <div id="main-questions-container" >
+              <% }%>
+            </button>
 
-        <div id="add-question-container" class="background-white" onclick="displayForm();">
+            <i
+              id="more"
+              class="fas fa-ellipsis-h fa-lg"
+              onclick="showOptions();"
+            ></i>
+            <!-- Options regarding question -->
+          </div>
 
-            <div id="user-container">
-                <img src="<%=user.avatar%>" alt="" height="30px">
-                <span><%= user.name %></span>
-            </div>  
-
-            <div id="content">
-                <span>What is Your question ?</span>
+          <div class="textarea-for-answering display">
+            <div class="personal-details background-grey">
+              <img src="<%=user.avatar%>" alt="" height="40px" />
+              <div>
+                <p><%=user.name %></p>
+                <a href="">Edit Credentials</a>
+              </div>
             </div>
 
-        </div>
-        
-        
-
-        <div id="questions-answers">
-           
-
-            <!-- In this div there will be questions which you can answer -->
-            <div id="questions-for-you" class="background-white container-style">
-                
-                <div id="header-desc" class="header-description">
-                    <i class="far fa-lightbulb fa-lg"></i>
-                    <span>Question for You</span>
+            <div class="controls background-white">
+              <div class="outer-control">
+                <!-- ------------1--------------------- -->
+                <div class="_1 control-style">
+                  <i class="fas fa-link" style="color: rgb(0, 102, 255)"></i>
+                  <input
+                    type="text"
+                    placeholder="Enter URL"
+                    onfocus="this.value=''"
+                  />
+                  <button onclick="show2nav();">Add</button>
                 </div>
 
-                <% for(let q of locals.questions) {%>
-                    <% if(q.answersOnQuestion.length <=2 && q.user.id!=locals.user.id ) {%>
+                <!-- -------------2----------------- -->
+                <div class="_2 control-style">
+                  <div class="primary_controls">
+                    <div class="text-control" onclick="blue();">
+                      <i class="fas fa-bold fa-lg"></i>
+                      <input type="hidden" value="bold" />
+                    </div>
+                    <div class="text-control" onclick="blue();">
+                      <i class="fas fa-italic fa-lg"></i>
+                      <input type="hidden" value="italic" />
+                    </div>
+                  </div>
 
-                        <!-- here there will be a for loop for follows  -->
-                        <!-- { -->
-                            <div class="not-answered background-white">
-                                <div class="header">Question added</div>
-                                
-                                <div class="Question">
-                                    <a href="/question/display?id=<%=q.id%>" target="_blank"> 
-                                        <h3 ><%=q.question%></h3>
-                                    </a>
-                                </div>
-                                
-                            
-                                <div class="description">
-                                    <% if(!q.answersOnQuestion.length){ %>
-                                        <span>No answers yet</span>
-                                    <%}else {%>
-                                        <span><%=q.answersOnQuestion.length%> answers</span>
-                                    <%}%>
-                            
-                                </div>
-                                <div class="buttons">
-                                    <!-- some button to answer or follow this question -->
-                                    <button onclick="showAnswerTab();" class="answer">
-                                        <i class="fas fa-feather-alt fa-lg blue"></i> 
-                                        <span class="grey">
-                                            Answer
-                                        </span>
-                                    </button>
-                                    <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=q.id%>">
-                                        <% let followed=false %>
-                                        <% for(let f of follow){ %>
-                                            <% if(f.question==q.id){ %>
-                                                <% followed=true; break; %>
-                                            <%}%>    
-                                        <%}%>
-                                        
-                                        <% if(!followed){ %>
-                                            
-                                            <i class="fas fa-rss fa-lg grey"></i>
-                                            <span class="grey">
-                                                Folllow .
-                                            </span>
-                                            <div class="number_of_follow">
-                                                <div class="outer-cage initial">
-                                                    <div class="grey"><%=q.follow.length%></div>
-                                                    <div class="grey"><%=q.follow.length+1%></div>
-                                                </div>
-                            
-                                            </div>
-                                        <%}else{ %>
-                                            
-                                            <i class="fas fa-rss fa-lg blue"></i>
-                                            <span class="blue">
-                                                Folllow .
-                                            </span>
-                                            <div class="number_of_follow">
-                                                <div class="outer-cage upanddown">
-                                                    <div class="grey"><%=q.follow.length-1%></div>
-                                                    <div class="grey"><%=q.follow.length%></div>
-                                                </div>
-                            
-                                            </div>
-                            
-                                        <% }%>
-                            
-                                    </button>
-                            
-                                    <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
-                                    <!-- Options regarding question -->
-                                </div>
-                            
-                                <div class="textarea-for-answering display">
-                                    <div class="personal-details background-grey">
-                                        <img src="<%=user.avatar%>" alt="" height="40px">
-                                        <div>
-                                            <p><%=user.name %></p>
-                                            <a href="">Edit Credentials</a>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="controls background-white">
-                            
-                                        <div class="outer-control">
-                            
-                                            <!-- ------------1--------------------- -->
-                                            <div class="_1 control-style">
-                                                <i class="fas fa-link" style="color:rgb(0, 102, 255);"></i>
-                                                <input type="text" placeholder="Enter URL" onfocus="this.value=''">
-                                                <button onclick="show2nav();">Add</button>
-                                            </div>
-                            
-                            
-                                            <!-- -------------2----------------- -->
-                                            <div class="_2 control-style">
-                                                <div class="primary_controls"> 
-                                                    <div class="text-control" onclick="blue();">
-                                                        <i class="fas fa-bold fa-lg"></i>
-                                                        <input type="hidden" value="bold" >
-                                                    </div>
-                                                    <div class="text-control" onclick="blue();">
-                                                        <i class="fas fa-italic fa-lg"></i>
-                                                        <input type="hidden" value="italic">
-                                                    </div>
-                                                </div>
-                            
-                                                <div class="secondary_controls">
-                                                    <div class="other-control">
-                                                        <i class="fas fa-images fa-lg"></i>
-                                                        <input type="hidden" value="image">
-                                                    </div>
-                            
-                                                    <div class="other-control" onclick="show1nav();">
-                                                        <i class="fas fa-link fa-lg"></i>
-                                                        <input type="hidden" value="link">
-                                                    </div>
-                            
-                                                    
-                                                </div>
-                                            </div>
-                            
-                                        </div>
-                                        
-                                    </div>
-                            
-                                    <div class="input">
-                                        <div class="textArea" contenteditable="true">
-                                            
-                                        </div>
-                                    </div>
-                            
-                                    <div class='footer background-grey'>
-                                        <button link='/answers/create?id=<%=q.id%>' id='<%=q.id%>' class="submit-answer" onclick="submit();">Submit</button>
-                                    </div>
-                            
-                                </div>
-                                
-                                <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
-                                    
-                                    <div class="style">
-                                        <span>Answer Anonymously</span>
-                                    </div>
-                                    
-                                    <div class="style">
-                                        <span>Downvote Question</span>
-                                    </div>
-                                    
-                                    <div class="style">
-                                        <span>Report</span>
-                                    </div>
-                                    
-                            
-                                </div>
-                            </div>
-                    
-                <%} }%>
+                  <div class="secondary_controls">
+                    <div class="other-control">
+                      <i class="fas fa-images fa-lg"></i>
+                      <input type="hidden" value="image" />
+                    </div>
 
-            </div>
-            
-            <!-- Section for Question which are already answered -->
-
-            <div class="AnswersToQuestions-container  background-white">
-                
-                <%for(let q of questions) {%>
-
-                    <% if(q.answersOnQuestion.length >=1 && q.user.id!=locals.user.id) {%>
-                        <%let BestAnswer=q.answersOnQuestion[0] %>
-                        <% for(let a of q.answersOnQuestion){ %>
-                            <% if(a.answer.length >= BestAnswer.answer.length ){  BestAnswer=a;   } %>
-                        <%}%>
-                        <!-- For calculating when this answer is posted  -->
-                        <% let showTime; %>
-                        <% let currentDate=new Date();let date=new Date(BestAnswer.createdAt); %>
-                        <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
-                                  
-                        <div class="questionAnswers container-style">
-                            <div  class="header-description padding">
-                                <i class="far fa-clipboard fa-lg"></i>
-                                <span class="grey">Answer</span>
-                            </div>
-
-                            <div class="userInfo_container padding">
-                                <img src="<%=BestAnswer.user.avatar%>" alt="" height="40px">
-                                <div class="name">
-                                    <span class="ownerName"><%=BestAnswer.user.name%></span>
-                                    <small class="createdAt grey"><%=showTime%></small>
-                                </div>
-                            </div>
-
-                            <div class="question-container padding">
-                                <a href="/question/display?id=<%=q.id%>" target="_blank">
-                                    <p class="question">
-                                        <%=q.question%>
-                                    </p>
-                                </a>
-                            </div>
-
-                            <div class="answer-container padding">
-                                <p class="answer"><%=BestAnswer.answer%></p>
-                            </div>
-                            
-                            <div class="controls">
-                                <button class="button like" onclick="upvoteAnswer();" idAnswer="<%=BestAnswer.id%>">
-                                    <% let likes=false %>
-                                    <% for(let l of like){ %>
-                                        <% if(l.likedon==BestAnswer.id){ likes=true } %>
-                                    <%}%>
-                                    <% if(!likes){ %>
-                                        <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                        <div class="number_of_like">
-                                            <div class="outer-cage initial">
-                                                <div class="grey"><%=BestAnswer.like.length%></div>
-                                                <div class="grey"><%=BestAnswer.like.length+1%></div>
-                                            </div>
-                                        </div>
-                                    <%} else{%>
-                                        <i class="far fa-thumbs-up fa-lg blue first animate__animated "></i>
-                                        <div class="number_of_like">
-                                            <div class="outer-cage upanddown">
-                                                <div class="grey"><%=BestAnswer.like.length-1%></div>
-                                                <div class="grey"><%=BestAnswer.like.length%></div>
-                                            </div>
-                                        </div>
-                                    <%}%>
-
-                                    
-                                </button>
-                                
-                                <button type="submit" class="button comment" onclick="questionPage();" questionID="<%=q.id%>" >
-                                    <i  questionID="<%=q.id%>" class="far fa-comment fa-lg grey first" > </i>
-                                </button>
-                            
-
-                                <button class="button more">
-                                    <i class="fas fa-ellipsis-h fa-lg more"  ></i>
-                                </button>                                
-                            </div>
-                           
-                            
-
-                        </div>
-                        
-                    <%}%>
-
-                <%}%>
-
-
+                    <div class="other-control" onclick="show1nav();">
+                      <i class="fas fa-link fa-lg"></i>
+                      <input type="hidden" value="link" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-          
+            <div class="input">
+              <div class="textArea" contenteditable="true"></div>
+            </div>
+
+            <div class="footer background-grey">
+              <button
+                link="/answers/create?id=<%=q.id%>"
+                id="<%=q.id%>"
+                class="submit-answer"
+                onclick="submit();"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="options-for-question background-white animate__animated animate__pulse animate__faster display"
+          >
+            <div class="style">
+              <span>Answer Anonymously</span>
+            </div>
+
+            <div class="style">
+              <span>Downvote Question</span>
+            </div>
+
+            <div class="style">
+              <span>Report</span>
+            </div>
+          </div>
         </div>
 
+        <%} }%>
+      </div>
+
+      <!-- Section for Question which are already answered -->
+
+      <div class="AnswersToQuestions-container background-white">
+        <%for(let q of questions) {%> <% if(q.answersOnQuestion.length >=1 &&
+        q.user.id!=locals.user.id) {%> <%let BestAnswer=q.answersOnQuestion[0]
+        %> <% for(let a of q.answersOnQuestion){ %> <% if(a.answer.length >=
+        BestAnswer.answer.length ){ BestAnswer=a; } %> <%}%>
+        <!-- For calculating when this answer is posted  -->
+        <% let showTime; %> <% let currentDate=new Date();let date=new
+        Date(BestAnswer.createdAt); %> <%
+        if(currentDate.getFullYear()-date.getFullYear() !=0){
+        showTime=currentDate.getFullYear() -date.getFullYear() +' year ago'
+        }else if(currentDate.getMonth() -date.getMonth() !=0){
+        showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if(
+        currentDate.getDate()-date.getDate()!=0){
+        showTime=currentDate.getDate()-date.getDate()+' day ago' }else
+        if(currentDate.getHours()-date.getHours()!=0){
+        showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{
+        showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' } %>
+
+        <div class="questionAnswers container-style">
+          <div class="header-description padding">
+            <i class="far fa-clipboard fa-lg"></i>
+            <span class="grey">Answer</span>
+          </div>
+
+          <div class="userInfo_container padding">
+            <img src="<%=BestAnswer.user.avatar%>" alt="" height="40px" />
+            <div class="name">
+              <a href="/profile?id=<%=BestAnswer.user.id%>"
+                ><span class="ownerName"><%=BestAnswer.user.name%></span></a
+              >
+              <small class="createdAt grey"><%=showTime%></small>
+            </div>
+          </div>
+
+          <div class="question-container padding">
+            <a href="/question/display?id=<%=q.id%>" target="_blank">
+              <p class="question"><%=q.question%></p>
+            </a>
+          </div>
+
+          <div class="answer-container padding">
+            <p class="answer"><%=BestAnswer.answer%></p>
+          </div>
+
+          <div class="controls">
+            <button
+              class="button like"
+              onclick="upvoteAnswer();"
+              idAnswer="<%=BestAnswer.id%>"
+            >
+              <% let likes=false %> <% for(let l of like){ %> <%
+              if(l.likedon==BestAnswer.id){ likes=true } %> <%}%> <% if(!likes){
+              %>
+              <i
+                class="far fa-thumbs-up fa-lg grey first animate__animated"
+              ></i>
+              <div class="number_of_like">
+                <div class="outer-cage initial">
+                  <div class="grey"><%=BestAnswer.like.length%></div>
+                  <div class="grey"><%=BestAnswer.like.length+1%></div>
+                </div>
+              </div>
+              <%} else{%>
+              <i
+                class="far fa-thumbs-up fa-lg blue first animate__animated"
+              ></i>
+              <div class="number_of_like">
+                <div class="outer-cage upanddown">
+                  <div class="grey"><%=BestAnswer.like.length-1%></div>
+                  <div class="grey"><%=BestAnswer.like.length%></div>
+                </div>
+              </div>
+              <%}%>
+            </button>
+
+            <button
+              type="submit"
+              class="button comment"
+              onclick="questionPage();"
+              questionID="<%=q.id%>"
+            >
+              <i questionID="<%=q.id%>" class="far fa-comment fa-lg grey first">
+              </i>
+            </button>
+
+            <button class="button more">
+              <i class="fas fa-ellipsis-h fa-lg more"></i>
+            </button>
+          </div>
+        </div>
+
+        <%}%> <%}%>
+      </div>
     </div>
+  </div>
 
-    <div id="todo-container">
-
-    </div>
-
+  <div id="todo-container"></div>
 </div>
-
-
-
 
 <script src="/js/postHome.js"></script>
-

@@ -84,7 +84,7 @@ header #header-container {
         background-color: #fff;
         padding: 10px;
         box-sizing: border-box;
-        box-shadow: 0 5px 5px rgba(10, 10, 10, 0.04);
+        box-shadow: 2px 4px 5px 2px rgba(10, 10, 10, 0.04), -2px -2px 5px 2px rgba(10, 10, 10, 0.04);
         transition: transform 0.8s ease-in-out; }
         header #header-container #navigation div.profile .nav-bar .arrow {
           z-index: 100;
@@ -120,7 +120,7 @@ header #header-container {
               margin-right: 10px; }
             header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items span {
               color: #282829;
-              font-size: 1.0rem; }
+              font-size: 1rem; }
           header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items:hover {
             background-color: #e5e2e2; }
         header #header-container #navigation div.profile .nav-bar #settings {
@@ -169,7 +169,7 @@ header #header-container {
           header #header-container #navigation div.languages div.lang-nav-container #languages .lang-style {
             padding: 5px; }
             header #header-container #navigation div.languages div.lang-nav-container #languages .lang-style span {
-              font-size: 1.0rem;
+              font-size: 1rem;
               color: #282829; }
         header #header-container #navigation div.languages div.lang-nav-container #lang-settings {
           padding: 5px; }
@@ -210,7 +210,7 @@ header #header-container {
     header #header-container #navigation div {
       padding: 20px 20px; }
       header #header-container #navigation div span {
-        font-size: 1.0rem; } }
+        font-size: 1rem; } }
 
 @media screen and (max-width: 1000px) {
   header #hamburger-icon {

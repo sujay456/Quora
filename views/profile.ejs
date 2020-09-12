@@ -76,10 +76,30 @@
     <!-- nav bar -->
 
     <div class="nav-barcontainer">
-      <div class="nav-items Answer greyNav" link="">Answers</div>
-      <div class="nav-items Question greyNav" link="/Question">Questions</div>
-      <div class="nav-items Follower greyNav" link="/Follower">Followers</div>
-      <div class="nav-items Following greyNav" link="/Following">Following</div>
+      <div class="nav-items Answer greyNav" userid="<%=user.id%>" link="">
+        Answers
+      </div>
+      <div
+        class="nav-items Question greyNav"
+        userid="<%=user.id%>"
+        link="/Question"
+      >
+        Questions
+      </div>
+      <div
+        class="nav-items Follower greyNav"
+        userid="<%=user.id%>"
+        link="/Follower"
+      >
+        Followers
+      </div>
+      <div
+        class="nav-items Following greyNav"
+        userid="<%=user.id%>"
+        link="/Following"
+      >
+        Following
+      </div>
     </div>
 
     <div class="Answer-container tabs">
