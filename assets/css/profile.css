@@ -260,11 +260,36 @@
       .main-container .profile-container .user-info .profile-cred:hover {
         text-decoration: underline; }
     .main-container .profile-container .user-desc {
+      margin-top: 10px;
       padding-bottom: 5px;
       border-bottom: 2px solid #a1a1a1; }
       .main-container .profile-container .user-desc #desc:hover {
         text-decoration: underline;
         cursor: pointer; }
+      .main-container .profile-container .user-desc button {
+        border: none;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        background: transparent;
+        outline: none;
+        border-radius: 20px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease-out;
+        cursor: pointer; }
+        .main-container .profile-container .user-desc button span {
+          margin-left: 5px;
+          color: #333;
+          font-weight: 540; }
+      .main-container .profile-container .user-desc button:hover {
+        background: #ebebeb;
+        transform: translateY(-3px);
+        box-shadow: 0 3px 3px rgba(92, 92, 92, 0.5); }
+      .main-container .profile-container .user-desc button:active {
+        transform: translateY(-1px); }
+      .main-container .profile-container .user-desc .follow {
+        color: #0066ff; }
+        .main-container .profile-container .user-desc .follow span {
+          color: #333; }
     .main-container .profile-container .nav-barcontainer {
       position: relative;
       display: flex;
@@ -314,8 +339,10 @@
         .main-container .profile-container .Answer-container .answer .question-answer .answerToQuestion {
           color: #333;
           line-height: 1.8;
-          max-height: 70px;
+          max-height: 75px;
           overflow: hidden;
+          box-shadow: inset 0 -2px 5px 2px #dfdfdf;
+          border: none;
           cursor: pointer;
           position: relative; }
         .main-container .profile-container .Answer-container .answer .question-answer #read_more {
@@ -364,82 +391,140 @@
         text-align: center;
         padding-bottom: 15px;
         border-bottom: 1px solid #bebebe; }
-      .main-container .profile-container .Question-container .question .Question {
-        position: relative;
-        bottom: 15px;
-        cursor: pointer; }
-        .main-container .profile-container .Question-container .question .Question a {
-          color: black;
-          text-decoration: none; }
-      .main-container .profile-container .Question-container .question .Question:hover {
-        text-decoration: underline; }
-      .main-container .profile-container .Question-container .question .description {
-        position: relative;
-        bottom: 20px; }
-        .main-container .profile-container .Question-container .question .description span {
-          color: #939598;
-          font-weight: 700;
-          font-size: 0.9rem; }
-      .main-container .profile-container .Question-container .question div.buttons {
-        position: relative;
-        bottom: 5px; }
-        .main-container .profile-container .Question-container .question div.buttons .blue {
-          color: #195faa; }
-        .main-container .profile-container .Question-container .question div.buttons .grey {
-          color: #636466; }
-        .main-container .profile-container .Question-container .question div.buttons button {
-          background: transparent;
-          outline: "none";
-          border: none;
-          padding: 10px;
-          margin-right: 10px;
-          border-radius: 25px;
-          box-sizing: border-box;
-          outline: none; }
-          .main-container .profile-container .Question-container .question div.buttons button span {
-            font-size: 1.1rem; }
-          .main-container .profile-container .Question-container .question div.buttons button .upanddown {
-            top: -20px; }
-          .main-container .profile-container .Question-container .question div.buttons button .initial {
-            top: 0px; }
-          .main-container .profile-container .Question-container .question div.buttons button i {
-            transform: scale(1);
-            transition: transform 0.1s ease-in-out; }
-          .main-container .profile-container .Question-container .question div.buttons button .number_of_follow {
-            position: relative;
-            top: 1px;
-            width: 15px;
-            height: 17px;
-            display: inline-block;
-            overflow: hidden; }
-            .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage {
-              position: absolute;
-              transition: top 0.3s ease-in-out; }
-              .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage div {
-                font-size: 1.1rem; }
-        .main-container .profile-container .Question-container .question div.buttons button:hover {
-          background-color: #dbdbdb; }
-        .main-container .profile-container .Question-container .question div.buttons #more {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          padding: 5px;
-          border-radius: 15px; }
-        .main-container .profile-container .Question-container .question div.buttons #more:hover {
-          background-color: #dbdbdb; }
+      .main-container .profile-container .Question-container .question {
+        border-bottom: 1px solid #d6d6d6; }
+        .main-container .profile-container .Question-container .question .Question {
+          position: relative;
+          bottom: 15px;
+          cursor: pointer; }
+          .main-container .profile-container .Question-container .question .Question a {
+            color: black;
+            text-decoration: none; }
+        .main-container .profile-container .Question-container .question .Question:hover {
+          text-decoration: underline; }
+        .main-container .profile-container .Question-container .question .description {
+          position: relative;
+          bottom: 20px; }
+          .main-container .profile-container .Question-container .question .description span {
+            color: #939598;
+            font-weight: 700;
+            font-size: 0.9rem; }
+        .main-container .profile-container .Question-container .question div.buttons {
+          position: relative;
+          bottom: 5px; }
+          .main-container .profile-container .Question-container .question div.buttons .blue {
+            color: #195faa; }
+          .main-container .profile-container .Question-container .question div.buttons .grey {
+            color: #636466; }
+          .main-container .profile-container .Question-container .question div.buttons button {
+            background: transparent;
+            outline: "none";
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none; }
+            .main-container .profile-container .Question-container .question div.buttons button span {
+              font-size: 1.1rem; }
+            .main-container .profile-container .Question-container .question div.buttons button .upanddown {
+              top: -20px; }
+            .main-container .profile-container .Question-container .question div.buttons button .initial {
+              top: 0px; }
+            .main-container .profile-container .Question-container .question div.buttons button i {
+              transform: scale(1);
+              transition: transform 0.1s ease-in-out; }
+            .main-container .profile-container .Question-container .question div.buttons button .number_of_follow {
+              position: relative;
+              top: 1px;
+              width: 15px;
+              height: 17px;
+              display: inline-block;
+              overflow: hidden; }
+              .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage {
+                position: absolute;
+                transition: top 0.3s ease-in-out; }
+                .main-container .profile-container .Question-container .question div.buttons button .number_of_follow .outer-cage div {
+                  font-size: 1.1rem; }
+          .main-container .profile-container .Question-container .question div.buttons button:hover {
+            background-color: #dbdbdb; }
+          .main-container .profile-container .Question-container .question div.buttons #more {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 15px; }
+          .main-container .profile-container .Question-container .question div.buttons #more:hover {
+            background-color: #dbdbdb; }
     .main-container .profile-container .Follower-container {
       margin-top: 10px; }
       .main-container .profile-container .Follower-container header {
         text-align: center;
         padding-bottom: 15px;
         border-bottom: 1px solid #bebebe; }
+      .main-container .profile-container .Follower-container .container {
+        padding: 10px; }
+        .main-container .profile-container .Follower-container .container .follower {
+          width: 100%;
+          border-bottom: 1px solid #d1d1d1;
+          padding-bottom: 5px;
+          position: relative; }
+          .main-container .profile-container .Follower-container .container .follower img {
+            vertical-align: middle;
+            clip-path: circle(20px); }
+          .main-container .profile-container .Follower-container .container .follower .name {
+            text-decoration: none; }
+            .main-container .profile-container .Follower-container .container .follower .name h4 {
+              color: #333;
+              display: inline-block; }
+          .main-container .profile-container .Follower-container .container .follower button {
+            cursor: pointer;
+            padding: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            border-radius: 25px;
+            color: #0779c5;
+            border: none;
+            background: transparent; }
+          .main-container .profile-container .Follower-container .container .follower button:hover {
+            background: #d4d4d4; }
     .main-container .profile-container .Following-container {
       margin-top: 10px; }
       .main-container .profile-container .Following-container header {
         text-align: center;
         padding-bottom: 15px;
         border-bottom: 1px solid #bebebe; }
+      .main-container .profile-container .Following-container .container {
+        padding: 10px; }
+        .main-container .profile-container .Following-container .container .following {
+          width: 100%;
+          border-bottom: 1px solid #d1d1d1;
+          padding-bottom: 5px;
+          position: relative; }
+          .main-container .profile-container .Following-container .container .following img {
+            vertical-align: middle;
+            clip-path: circle(20px); }
+          .main-container .profile-container .Following-container .container .following .name {
+            text-decoration: none; }
+            .main-container .profile-container .Following-container .container .following .name h4 {
+              color: #333;
+              display: inline-block; }
+          .main-container .profile-container .Following-container .container .following button {
+            cursor: pointer;
+            padding: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            border-radius: 25px;
+            color: #0779c5;
+            border: none;
+            background: transparent; }
+          .main-container .profile-container .Following-container .container .following button:hover {
+            background: #d4d4d4; }
   .main-container .credentials-container {
     width: 25%;
     display: inline-block;

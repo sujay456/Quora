@@ -310,3 +310,39 @@ function submit() {
     });
   }
 }
+
+function followUser() {
+  console.log("Hi");
+
+  let parent = $(event.target).parentsUntil(".user-desc");
+  let followingId = $(event.target).attr("userid");
+
+  console.log(followingId);
+  console.log(parent);
+  if (parent.length == 0) {
+    parent = $(event.target);
+  }
+  // return;
+  $.ajax({
+    type: "get",
+    url: `/profile/follow?id=${followingId}`,
+    success: function (data) {
+      console.log(data.message);
+      $(" i", $(parent[parent.length - 1])).toggleClass(
+        "fa-user-plus fa-user-check"
+      );
+      $(" .status", $(parent[parent.length - 1]))[0].innerText = data.message;
+      $(" .number", $(parent[parent.length - 1]))[0].innerText =
+        data.following.follower.length;
+    },
+    error: function (err) {
+      console.log(err);
+    },
+  });
+}
+
+for (let b of $(".answerToQuestion")) {
+  if ($(b)[0].offsetHeight < 70) {
+    $(b).css("boxShadow", "none");
+  }
+}

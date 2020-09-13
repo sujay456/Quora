@@ -72,6 +72,20 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "/uploads/user/avatar/Default.jpg",
     },
+    // here it will store , to whom the user is following
+    following: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    // it will store all the followers
+    follower: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     timestamps: true,

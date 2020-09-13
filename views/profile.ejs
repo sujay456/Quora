@@ -27,9 +27,16 @@
         enctype="multipart/form-data"
         id="avatarForm"
       >
+        <% if(puser.id==user.id){ %>
         <input type="file" id="avatar" name="avatar" onchange="fileSubmit();" />
-
-        <img src="<%=user.avatar%>" alt="" alt="Profile-pic" id="profile-pic" />
+        <%}%>
+        <img
+          src="<%=puser.avatar%>"
+          alt=""
+          alt="Profile-pic"
+          id="profile-pic"
+        />
+        <% if(puser.id==user.id){ %>
         <svg class="edit" width="24px" height="24px" viewBox="0 0 24 24">
           <g
             stroke="none"
@@ -55,47 +62,74 @@
             ></polygon>
           </g>
         </svg>
+        <%}%>
       </form>
     </div>
 
     <div class="user-info">
       <h2 class="name">
-        <%=user.name%>
+        <%=puser.name%> <% if(puser.id==user.id){ %>
         <small class="name-edit">Edit</small>
+        <%}%>
       </h2>
+      <% if(puser.id==user.id){ %>
       <small class="profile-cred">Add Profile Credentials</small>
+      <%}%>
     </div>
 
     <div class="user-desc">
+      <% if(puser.id==user.id){ %>
       <small id="desc" class="grey" style="display: block"
         >Write a description about yourself</small
       >
-      <small class="grey">2 Followers </small>
+
+      <small class="grey"><%=puser.follower.length%> Followers </small>
+      <% }else{%>
+      <button class="follow" userid="<%=puser.id%>" onclick="followUser();">
+        <%if(followed){%>
+        <i class="fas fa-user-check" userid="<%=puser.id%>"></i>
+        <span
+          class="status"
+          userid="<%=puser.id%>"
+          style="color: rgb(0, 68, 255)"
+          >Following</span
+        >
+        <span class="number"><%=puser.follower.length%></span>
+        <%}else{%>
+        <i class="fas fa-user-plus" userid="<%=puser.id%>"></i>
+        <span userid="<%=puser.id%>" class="status">Follow</span>
+        <span class="number"><%=puser.follower.length%></span>
+        <%}%>
+      </button>
+      <button class="ask">
+        <i class="far fa-question-circle"></i> <span>Ask Question</span>
+      </button>
+      <%}%>
     </div>
 
     <!-- nav bar -->
 
     <div class="nav-barcontainer">
-      <div class="nav-items Answer greyNav" userid="<%=user.id%>" link="">
+      <div class="nav-items Answer greyNav" userid="<%=puser.id%>" link="">
         Answers
       </div>
       <div
         class="nav-items Question greyNav"
-        userid="<%=user.id%>"
+        userid="<%=puser.id%>"
         link="/Question"
       >
         Questions
       </div>
       <div
         class="nav-items Follower greyNav"
-        userid="<%=user.id%>"
+        userid="<%=puser.id%>"
         link="/Follower"
       >
         Followers
       </div>
       <div
         class="nav-items Following greyNav"
-        userid="<%=user.id%>"
+        userid="<%=puser.id%>"
         link="/Following"
       >
         Following
@@ -107,8 +141,8 @@
       <% for(let a of answers){%>
       <div class="answer" id="answer-<%=a.id%>">
         <div class="user-info">
-          <img src="<%=user.avatar%>" alt="" height="45px" />
-          <p><%=user.name%></p>
+          <img src="<%=puser.avatar%>" alt="" height="45px" />
+          <p><%=puser.name%></p>
         </div>
 
         <div class="question-answer">
@@ -120,9 +154,11 @@
             <p class="answerToQuestion"><%=a.answer%></p>
           </a>
         </div>
+        <% if(puser.id==user.id){ %>
         <button class="more" onclick="showOptionsA();">
           <i class="fas fa-ellipsis-h fa-lg"></i>
         </button>
+        <%}%>
         <div
           class="options-for-answer background-white animate__animated animate__pulse animate__faster display"
         >
@@ -191,12 +227,13 @@
 
             <% }%>
           </button>
-
+          <% if(puser.id==user.id){ %>
           <i
             id="more"
             class="fas fa-ellipsis-h fa-lg"
             onclick="showOptions();"
           ></i>
+          <%}%>
           <!-- Options regarding question to delete or edit it , will do later -->
         </div>
       </div>
@@ -204,11 +241,32 @@
     </div>
 
     <div class="Follower-container tabs">
-      <header>Follower</header>
+      <header>Followers <%=puser.follower.length%></header>
+      <!-- list of followers -->
+      <div class="container">
+        <%for(let u of puser.follower){%>
+        <div class="follower" id="follower-<%=u.id%>">
+          <img src="<%=u.avatar%>" alt="" height="40px" />
+          <a class="name" href="/profile?id=<%=u.id%>"><h4><%=u.name%></h4></a>
+          <button><i class="fas fa-comments fa-lg"></i></button>
+        </div>
+        <%}%>
+      </div>
     </div>
 
     <div class="Following-container tabs">
-      <header>Following</header>
+      <header>Following <%=puser.following.length%></header>
+
+      <!-- list of followings -->
+      <div class="container">
+        <%for(let u of puser.following){%>
+        <div class="following" id="following-<%=u.id%>">
+          <img src="<%=u.avatar%>" alt="" height="40px" />
+          <a class="name" href="/profile?id=<%=u.id%>"><h4><%=u.name%></h4></a>
+          <button><i class="fas fa-comments fa-lg"></i></button>
+        </div>
+        <%}%>
+      </div>
     </div>
   </div>
 
@@ -231,6 +289,7 @@
         <small style="color: rgb(187, 187, 187)">150 this month</small>
       </div>
     </div>
+    <% if(puser.id==user.id){ %>
 
     <div class="header">
       <h3>Spaces</h3>
@@ -239,7 +298,7 @@
       <i class="fas fa-plus-circle fa-3x" style="color: rgb(0, 110, 255)"></i>
       <div>Create A Space</div>
     </div>
-
+    <%}%>
     <div class="header">
       <h3>Knows About</h3>
     </div>
