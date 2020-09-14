@@ -52,7 +52,7 @@ $("#question-form").click(function (e) {
 });
 
 $(document).click(function (e) {
-  // console.log('document clicked');
+  console.log("document clicked");
   $("#question-form").addClass("display");
 
   $("#black").css("opacity", "0");

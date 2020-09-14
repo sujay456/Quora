@@ -1,0 +1,20 @@
+<div class="messageBox-container">
+  <div class="messageBox-header">
+    <h2>Messages</h2>
+  </div>
+
+  <div class="messageBox-listOfUser-container">
+    <% for(let user of userList){ %>
+    <div class="user" id="user-<%=user.id%>">
+      <div class="image-container">
+        <img src="<%=user.avatar%>" alt="" height="45px" />
+      </div>
+      <p class="name"><%=user.name%></p>
+    </div>
+    <%}%>
+  </div>
+
+  <div class="messageBox-footer">
+    <button>Cancel</button>
+  </div>
+</div>

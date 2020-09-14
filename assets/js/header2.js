@@ -59,6 +59,7 @@ $(document).click(function () {
   $(".lang-nav-container").addClass("display");
   $("#test").removeClass("moveX");
   $("#test").addClass("initialX");
+  $(".messageBox-container").css("visibility", "hidden");
 });
 
 function show() {
@@ -83,3 +84,10 @@ window.addEventListener("resize", function () {
     $("#test").removeClass("display");
   }
 });
+
+function message() {
+  $(".messageBox-container").css("visibility", "visible");
+  init();
+  $("#black").removeClass("display");
+  $("#black").css("opacity", "0.8");
+}

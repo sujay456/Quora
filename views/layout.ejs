@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/ae87392b1d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-    <link rel="stylesheet" href="/css/layout2.css">
-    <link rel="stylesheet" href="/css/header2.css">
-    <title>Quora</title>
-    
-    <%-style%>
-</head>
-<body class="original">
-    
-        <header>
-            <%- include('_header2') %>
-        </header>
-    
-    <main>
-        <%- body %>
-    </main>
-    <%- include('_question_form')%>
+    <script
+      src="https://kit.fontawesome.com/ae87392b1d.js"
+      crossorigin="anonymous"
+    ></script>
 
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="/css/layout2.css" />
+    <link rel="stylesheet" href="/css/header2.css" />
+    <link rel="stylesheet" href="/css/message.css" />
+    <title>Quora</title>
+
+    <%-style%>
+  </head>
+  <body class="original">
+    <header><%- include('_header2') %></header>
+
+    <main>
+      <%- body %> <%- include('_question_form')%> <%- include('_message')%>
+    </main>
+
     <!-- This is the question form which will appear if the add question is clicked -->
 
     <%- include('_footer') %>
-   
+
     <div id="black" class="display"></div>
 
     <%- script %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="/js/questionForm.js"></script>
     <script src="/js/header2.js"></script>
-    
-</body>
+    <script src="/js/message.js"></script>
+  </body>
 </html>
