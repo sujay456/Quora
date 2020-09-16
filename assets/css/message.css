@@ -1,57 +1,131 @@
-.messageBox-container {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.display {
+  display: none; }
+
+.containerstyleFormessage {
   background: #fff;
   border-radius: 5px;
-  width: 60%;
-  height: 80%;
-  z-index: 103;
-  visibility: hidden;
-  border: 1px solid #c5c5c5; }
-  .messageBox-container .messageBox-header {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease; }
+  .containerstyleFormessage .messageBox-header {
     padding: 16px;
+    background: #f3f3f3;
     box-sizing: border-box;
     color: #333;
     width: 100%;
     border-bottom: 1px solid #cccccc; }
-    .messageBox-container .messageBox-header h2 {
+    .containerstyleFormessage .messageBox-header h2 {
+      display: inline-block;
       margin: 0;
       padding: 0; }
-  .messageBox-container .messageBox-listOfUser-container {
-    overflow-y: auto;
-    height: 80%; }
-    .messageBox-container .messageBox-listOfUser-container .user {
+    .containerstyleFormessage .messageBox-header i {
+      cursor: pointer;
+      margin-right: 10px; }
+
+.main {
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: 103;
+  visibility: hidden; }
+  .main .list {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #fafafa; }
+    .main .list .messageBox-listOfUser-container {
+      overflow-y: auto;
+      height: 80%; }
+      .main .list .messageBox-listOfUser-container .user {
+        padding: 16px;
+        border-bottom: 1px solid #d1d1d1; }
+        .main .list .messageBox-listOfUser-container .user .image-container {
+          width: 60px;
+          display: inline-block;
+          text-align: center;
+          margin-right: 10px; }
+          .main .list .messageBox-listOfUser-container .user .image-container img {
+            clip-path: circle(20px);
+            vertical-align: middle; }
+        .main .list .messageBox-listOfUser-container .user p {
+          font-weight: 550;
+          display: inline-block; }
+        .main .list .messageBox-listOfUser-container .user:hover {
+          background: #e2e2e2;
+          cursor: pointer; }
+    .main .list .messageBox-footer {
+      border-top: 1px solid #d6d6d6;
       padding: 16px;
-      border-bottom: 1px solid #d1d1d1; }
-      .messageBox-container .messageBox-listOfUser-container .user .image-container {
-        width: 60px;
-        display: inline-block;
-        text-align: center;
-        margin-right: 10px; }
-        .messageBox-container .messageBox-listOfUser-container .user .image-container img {
-          clip-path: circle(20px);
-          vertical-align: middle; }
-      .messageBox-container .messageBox-listOfUser-container .user p {
-        font-weight: 550;
-        display: inline-block; }
-      .messageBox-container .messageBox-listOfUser-container .user:hover {
-        background: #e2e2e2;
+      position: relative;
+      background: #fafafa; }
+      .main .list .messageBox-footer button {
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: grey;
         cursor: pointer; }
-  .messageBox-container .messageBox-footer {
-    border-top: 1px solid #d6d6d6;
-    padding: 16px;
-    position: relative; }
-    .messageBox-container .messageBox-footer button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px;
-      border: none;
-      outline: none;
-      border-radius: 10px;
-      color: grey;
-      cursor: pointer; }
-      .messageBox-container .messageBox-footer button:hover {
-        background: #cccccc; }
+        .main .list .messageBox-footer button:hover {
+          background: #cccccc; }
+  .main .chatbox {
+    display: inline-block;
+    height: 100%; }
+    .main .chatbox .message-container {
+      height: 78%; }
+      .main .chatbox .message-container ul {
+        overflow-y: auto;
+        height: 90%;
+        width: 90%;
+        list-style: none; }
+        .main .chatbox .message-container ul li {
+          width: 100%;
+          margin-bottom: 20px; }
+          .main .chatbox .message-container ul li span {
+            padding: 8px 16px;
+            font-size: 1.1rem;
+            display: inline-block;
+            border-radius: 16px;
+            max-width: 70%; }
+        .main .chatbox .message-container ul .mine {
+          text-align: right; }
+          .main .chatbox .message-container ul .mine span {
+            background-color: #359dff;
+            color: #fff; }
+        .main .chatbox .message-container ul .other {
+          text-align: left; }
+          .main .chatbox .message-container ul .other span {
+            color: #333;
+            background-color: #e6e6e6; }
+    .main .chatbox .chatBox-footer {
+      padding: 8px;
+      border-top: 1px solid #d6d6d6;
+      background: #fafafa;
+      position: relative; }
+      .main .chatbox .chatBox-footer input {
+        outline: none;
+        border-radius: 3px;
+        width: 80%;
+        font-size: 1.1rem;
+        padding: 5px;
+        box-sizing: border-box;
+        height: 40px;
+        border: 1px solid #cfcfcf;
+        box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.5);
+        margin-right: 10px; }
+      .main .chatbox .chatBox-footer button {
+        border-radius: 3px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        outline: 0;
+        padding: 3px 7px 4px 7px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        background: #3e78ad;
+        color: #fff;
+        border: 1px solid #3a66ad;
+        box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.6); }

@@ -13,6 +13,15 @@ const passportLocal = require("./config/passport-local");
 const passportJWT = require("./config/passport-jwt");
 const passportGoogle = require("./config/passport-google");
 const passportFacebook = require("./config/passport-facebook");
+
+// setting up sockets
+const chatServer = require("http").Server(app);
+const chatSocket = require("./config/chatSocket").chatSocket(chatServer);
+
+chatServer.listen(5000);
+
+console.log("Chat server is listenning on the port :", 5000);
+
 // including mongoose in this file
 const db = require("./config/mongoose");
 const mongoStore = require("connect-mongo")(session);

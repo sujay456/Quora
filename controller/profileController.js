@@ -122,3 +122,21 @@ module.exports.following = async function (req, res) {
     return;
   }
 };
+
+module.exports.Forchat = async function (req, res) {
+  try {
+    let user = await User.findById(req.query.id);
+
+    if (user) {
+      return res.status(200).json({
+        user: user,
+      });
+    } else {
+      return res.status(500).json({
+        message: "User not found",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};

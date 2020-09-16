@@ -1,0 +1,96 @@
+class Chatengine {
+  constructor(chatbox, username, userEmail) {
+    this.chatbox = $(`.${chatbox}`);
+
+    this.username = username;
+    this.userEmail = userEmail;
+    this.currentRoom = userEmail;
+
+    // this is just a request to the observer/server to connnect
+    // and we are using the chatserver as u can see the port is 5000
+    this.socket = io.connect("http://localhost:5000");
+    if (this.userEmail) {
+      this.connectHandler();
+    }
+  }
+
+  connectHandler() {
+    let self = this;
+    this.socket.on("connect", function () {
+      console.log("Connection established using sockets...");
+
+      self.socket.emit("online", {
+        user_name: self.username,
+        user_email: self.userEmail,
+      });
+
+      self.socket.on("up", function (data) {
+        console.log("You are online", data);
+      });
+
+      self.socket.emit("join-room", {
+        user_name: self.username,
+        chatroom: self.userEmail,
+      });
+    });
+    this.socket.on("user-joined", function (data) {
+      console.log("You have joined ur room", data);
+    });
+
+    $(".user").click(() => {
+      console.log("In the chatting engine");
+      // self.socket.emit("leave", {
+      //   chatroom: self.currentRoom,
+      // });
+      let chatroom = $(event.target).attr("userEmail");
+      self.currentRoom = chatroom;
+      self.socket.emit("join-room", {
+        user_name: self.username,
+        chatroom: self.currentRoom,
+      });
+
+      openChat();
+    });
+
+    // sending message
+    $("#message-form").submit(() => {
+      event.preventDefault();
+      // console.log(event);
+      let message = event.target[0].value;
+      console.log(message);
+      event.target.reset();
+      if (message != "") {
+        self.socket.emit("send_message", {
+          message: message,
+          user_name: self.username,
+          user_email: self.userEmail,
+          chatroom: self.currentRoom,
+        });
+      }
+    });
+
+    this.socket.on("recieve-message", function (data) {
+      console.log("message recived", data);
+      if (
+        self.currentRoom != data.user_email &&
+        data.user_email != self.userEmail
+      ) {
+        console.log("Someone is messaging u in the background");
+        return;
+      }
+
+      let newMessage = $("<li>");
+      let mssgType = "other";
+      console.log(data.user_email);
+      if (data.user_email == self.userEmail) {
+        mssgType = "mine";
+      }
+      let mssgdata = "<span>" + data.message + "</span>";
+      newMessage.append(mssgdata);
+      newMessage.addClass(mssgType);
+      console.log(newMessage);
+
+      $("#chat-messages-list").append(newMessage);
+    });
+  }
+}

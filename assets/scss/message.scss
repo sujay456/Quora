@@ -1,72 +1,183 @@
-.messageBox-container {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.display {
+  display: none;
+}
+.containerstyleFormessage {
   background: #fff;
   border-radius: 5px;
-  width: 60%;
-  height: 80%;
-  z-index: 103;
-  visibility: hidden;
-  //   pointer-events: none;
-  border: 1px solid rgb(197, 197, 197);
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
   .messageBox-header {
     padding: 16px;
+    background: rgb(243, 243, 243);
+
     box-sizing: border-box;
     color: #333;
     width: 100%;
     border-bottom: 1px solid rgb(204, 204, 204);
     h2 {
+      display: inline-block;
       margin: 0;
       padding: 0;
     }
+    i {
+      cursor: pointer;
+      margin-right: 10px;
+    }
   }
-  .messageBox-listOfUser-container {
-    overflow-y: auto;
-    // border: 1px solid red;
-    height: 80%;
-    .user {
-      padding: 16px;
-      border-bottom: 1px solid rgb(209, 209, 209);
-      .image-container {
-        width: 60px;
-        display: inline-block;
-        text-align: center;
-        img {
-          clip-path: circle(20px);
-          vertical-align: middle;
+}
+.main {
+  overflow: hidden;
+  // border: 1px solid brown;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: 103;
+
+  visibility: hidden;
+  .list {
+    //   pointer-events: none;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #fafafa;
+
+    .messageBox-listOfUser-container {
+      overflow-y: auto;
+      // border: 1px solid red;
+      height: 80%;
+      .user {
+        padding: 16px;
+        border-bottom: 1px solid rgb(209, 209, 209);
+        .image-container {
+          width: 60px;
+          display: inline-block;
+          text-align: center;
+          img {
+            clip-path: circle(20px);
+            vertical-align: middle;
+          }
+          margin-right: 10px;
         }
-        margin-right: 10px;
-      }
 
-      p {
-        font-weight: 550;
-        display: inline-block;
-      }
+        p {
+          font-weight: 550;
+          display: inline-block;
+        }
 
-      &:hover {
-        background: rgb(226, 226, 226);
+        &:hover {
+          background: rgb(226, 226, 226);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .messageBox-footer {
+      border-top: 1px solid rgb(214, 214, 214);
+      // border: 1px solid black;
+      padding: 16px;
+      position: relative;
+      background: #fafafa;
+
+      button {
+        // position: absolute;
+        // display: inline-block;
+        // top: 20px;
+        // right: 20px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: grey;
         cursor: pointer;
+        &:hover {
+          background: rgb(204, 204, 204);
+        }
       }
     }
   }
-  .messageBox-footer {
-    border-top: 1px solid rgb(214, 214, 214);
-    padding: 16px;
-    position: relative;
-    button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px;
-      border: none;
-      outline: none;
-      border-radius: 10px;
-      color: grey;
-      cursor: pointer;
-      &:hover {
-        background: rgb(204, 204, 204);
+  .chatbox {
+    display: inline-block;
+    // transform: translateY(-100%);
+    height: 100%;
+    .message-container {
+      height: 78%;
+      ul {
+        overflow-y: auto;
+
+        height: 90%;
+        width: 90%;
+        list-style: none;
+        // border: 1px solid black;
+        li {
+          // border: 1px solid black;
+          width: 100%;
+          // display: inline-block;
+          margin-bottom: 20px;
+          span {
+            padding: 8px 16px;
+            font-size: 1.1rem;
+            display: inline-block;
+            border-radius: 16px;
+            max-width: 70%;
+          }
+        }
+        .mine {
+          text-align: right;
+          span {
+            background-color: #359dff;
+            color: #fff;
+          }
+        }
+        .other {
+          text-align: left;
+          span {
+            color: #333;
+
+            background-color: #e6e6e6;
+          }
+        }
+      }
+    }
+
+    .chatBox-footer {
+      padding: 8px;
+      border-top: 1px solid rgb(214, 214, 214);
+      background: #fafafa;
+      position: relative;
+
+      input {
+        outline: none;
+        border-radius: 3px;
+        width: 80%;
+        // flex: 2;
+        font-size: 1.1rem;
+        padding: 5px;
+        box-sizing: border-box;
+        height: 40px;
+        border: 1px solid rgb(207, 207, 207);
+        box-shadow: inset 1px 1px 0px rgba(0, 0, 0, 0.5);
+        margin-right: 10px;
+      }
+
+      button {
+        border-radius: 3px;
+        // height: 10px;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        outline: 0;
+        padding: 3px 7px 4px 7px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        background: #3e78ad;
+        color: #fff;
+        border: 1px solid #3a66ad;
+        box-shadow: 0 1px 1px 0 rgba(200, 200, 200, 0.6);
       }
     }
   }

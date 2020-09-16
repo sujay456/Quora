@@ -51,15 +51,8 @@ $("#question-form").click(function (e) {
   }
 });
 
-$(document).click(function (e) {
-  console.log("document clicked");
-  $("#question-form").addClass("display");
+// $(document).click(function (e) {
 
-  $("#black").css("opacity", "0");
-  $("#black").addClass("display");
-
-  e.stopPropagation();
-  $("body").addClass("original");
-});
+// });
 
 // For the question submission

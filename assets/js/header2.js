@@ -53,13 +53,21 @@ $(".lang-nav-container").click(function (e) {
   e.stopPropagation();
 });
 
-$(document).click(function () {
+$(document).click(function (e) {
   // console.log('document Clicked');
   $(".nav-bar").addClass("display");
   $(".lang-nav-container").addClass("display");
   $("#test").removeClass("moveX");
   $("#test").addClass("initialX");
-  $(".messageBox-container").css("visibility", "hidden");
+  console.log("document clicked");
+  $("#question-form").addClass("display");
+  $(".main").css("visibility", "hidden");
+
+  $("#black").css("opacity", "0");
+  $("#black").addClass("display");
+
+  e.stopPropagation();
+  $("body").addClass("original");
 });
 
 function show() {
@@ -86,7 +94,7 @@ window.addEventListener("resize", function () {
 });
 
 function message() {
-  $(".messageBox-container").css("visibility", "visible");
+  $(".main").css("visibility", "visible");
   init();
   $("#black").removeClass("display");
   $("#black").css("opacity", "0.8");

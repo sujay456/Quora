@@ -9,5 +9,6 @@ router.get("/Follower", passport.CheckAuth, ProfileController.profile);
 router.get("/Following", passport.CheckAuth, ProfileController.profile);
 router.post("/avatar", passport.CheckAuth, ProfileController.avatar);
 router.get("/follow", ProfileController.following);
+router.get("/getforchat", ProfileController.Forchat);
 
 module.exports = router;

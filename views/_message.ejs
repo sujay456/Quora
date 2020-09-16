@@ -1,20 +1,54 @@
-<div class="messageBox-container">
-  <div class="messageBox-header">
-    <h2>Messages</h2>
-  </div>
-
-  <div class="messageBox-listOfUser-container">
-    <% for(let user of userList){ %>
-    <div class="user" id="user-<%=user.id%>">
-      <div class="image-container">
-        <img src="<%=user.avatar%>" alt="" height="45px" />
-      </div>
-      <p class="name"><%=user.name%></p>
+<div class="main">
+  <div class="containerstyleFormessage list">
+    <div class="messageBox-header">
+      <h2>Messages</h2>
     </div>
-    <%}%>
+
+    <div class="messageBox-listOfUser-container">
+      <% for(let user of userList){ %>
+      <div
+        class="user"
+        id="user-<%=user.id%>"
+        userid="<%=user.id%>"
+        userEmail="<%=user.email%>"
+      >
+        <div class="image-container">
+          <img src="<%=user.avatar%>" alt="" height="45px" />
+        </div>
+
+        <p class="name" userid="<%=user.id%>" userEmail="<%=user.email%>">
+          <%=user.name%>
+        </p>
+      </div>
+      <%}%>
+    </div>
+
+    <div class="messageBox-footer">
+      <button class="cancelMessage">Cancel</button>
+    </div>
   </div>
 
-  <div class="messageBox-footer">
-    <button>Cancel</button>
+  <!-- for specific chats -->
+  <div class="containerstyleFormessage chatbox">
+    <div class="messageBox-header">
+      <i onclick="back();" class="fas fa-chevron-left fa-lg"></i>
+      <h2 class="forWhom">Messages for some-name</h2>
+    </div>
+
+    <div class="message-container">
+      <ul id="chat-messages-list"></ul>
+    </div>
+
+    <div class="chatBox-footer">
+      <form action="" method="POST" id="message-form">
+        <input
+          type="text"
+          name="message"
+          required
+          placeholder="Type Here ...."
+        />
+        <button type="submit">send</button>
+      </form>
+    </div>
   </div>
 </div>
