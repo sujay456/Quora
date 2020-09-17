@@ -42,6 +42,7 @@ class Chatengine {
       // self.socket.emit("leave", {
       //   chatroom: self.currentRoom,
       // });
+      $("#chat-messages-list li").remove();
       let chatroom = $(event.target).attr("userEmail");
       self.currentRoom = chatroom;
       self.socket.emit("join-room", {
@@ -80,10 +81,10 @@ class Chatengine {
       }
 
       let newMessage = $("<li>");
-      let mssgType = "other";
+      let mssgType = "other animate__animated animate__backInLeft";
       console.log(data.user_email);
       if (data.user_email == self.userEmail) {
-        mssgType = "mine";
+        mssgType = "mine animate__animated animate__backInUp";
       }
       let mssgdata = "<span>" + data.message + "</span>";
       newMessage.append(mssgdata);
@@ -91,6 +92,12 @@ class Chatengine {
       console.log(newMessage);
 
       $("#chat-messages-list").append(newMessage);
+      setTimeout(() => {
+        var messageBody = document.querySelector("#chat-messages-list");
+        console.log("yaha dekho", messageBody.scrollTop);
+        messageBody.scrollTop =
+          messageBody.scrollHeight - messageBody.clientHeight;
+      }, 700);
     });
   }
 }
