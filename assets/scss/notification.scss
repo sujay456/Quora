@@ -1,0 +1,36 @@
+.notifications-container {
+  width: 60%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  text-align: left;
+  transform: translate(-50%, 0%);
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  .notification-header {
+    padding-left: 40px;
+  }
+  .noty-container {
+    #notification-list {
+      list-style: none;
+
+      li {
+        width: 100%;
+        height: 70px;
+        border-top: 1px solid rgb(209, 209, 209);
+        border-bottom: 1px solid rgb(209, 209, 209);
+        background-color: #edf1f5;
+        padding-left: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        p {
+          color: #333;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

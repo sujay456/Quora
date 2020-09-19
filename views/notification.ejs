@@ -1,1 +1,34 @@
-<h1>Notification</h1>
+<link rel="stylesheet" href="/css/notification.css" />
+
+<div class="notifications-container">
+  <div class="notification-header">
+    <h2>All your notifications</h2>
+  </div>
+
+  <div class="noty-container">
+    <a
+      href="#"
+      style="
+        width: 100%;
+        text-align: end;
+        text-decoration: none;
+        color: #333;
+        font-size: 1.1rem;
+        padding-left: 40px;
+      "
+      onclick="clearNotification();"
+      >Clear Notications</a
+    >
+    <!-- here all the notification will be there  if any -->
+    <ul id="notification-list">
+      <% for(let n of noties){ %>
+      <li>
+        <p><%=n.mssg%></p>
+      </li>
+      <%}%>
+    </ul>
+  </div>
+</div>
+
+<script src="/js/chat_engine.js"></script>
+<script src="/js/notification.js"></script>

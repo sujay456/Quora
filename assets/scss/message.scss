@@ -6,6 +6,8 @@
   border-radius: 5px;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+
   transition: all 0.3s ease;
   .messageBox-header {
     padding: 16px;
@@ -28,7 +30,7 @@
 }
 .main {
   overflow: hidden;
-  border: 1px solid brown;
+  // border: 1px solid brown;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -37,6 +39,7 @@
   transform: translate(-50%, -50%);
   border-radius: 5px;
   z-index: 103;
+  box-sizing: border-box;
 
   visibility: hidden;
   .list {
@@ -45,10 +48,11 @@
     vertical-align: top;
     // border: 1px solid #fafafa;
     border: 1px solid violet;
+    box-sizing: border-box;
 
     .messageBox-listOfUser-container {
       overflow-y: auto;
-      border: 1px solid red;
+      // border: 1px solid red;
       height: 80%;
       .user {
         padding: 16px;
@@ -77,8 +81,10 @@
     }
 
     .messageBox-footer {
+      box-sizing: border-box;
+
       border-top: 1px solid rgb(214, 214, 214);
-      border: 1px solid black;
+      // border: 1px solid black;
       padding: 16px;
       position: relative;
       background: #fafafa;
@@ -103,11 +109,14 @@
   .chatbox {
     display: inline-block;
     // transform: translateY(-100%);
-    border: 1px solid black;
+    // border: 1px solid black;
     height: 100%;
+    box-sizing: border-box;
+
     .message-container {
       height: 78%;
-      border: 1px solid red;
+
+      // border: 1px solid red;
       ul {
         // overflow: hidden;
         overflow-y: auto;
@@ -159,13 +168,14 @@
       padding: 10px 10px;
       border-top: 1px solid rgb(214, 214, 214);
       background: #fafafa;
+
       position: relative;
 
       input {
         outline: none;
         border-radius: 3px;
-        width: 80%;
-        // flex: 2;
+        width: 85%;
+
         font-size: 1.1rem;
         padding: 10px;
         box-sizing: border-box;
@@ -180,7 +190,9 @@
         border-radius: 50%;
         height: 50px;
         width: 50px;
-
+        flex: 1;
+        position: absolute;
+        right: 25px;
         font-size: 1.4rem;
         font-weight: 500;
         outline: 0;
@@ -198,7 +210,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .main {
     width: 80%;
     // height: 100%;
@@ -216,23 +228,31 @@
 }
 
 @media screen and (max-width: 480px) {
+  .containerstyleFormessage {
+    .messageBox-header {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
   .main {
-    width: 90%;
+    width: 100%;
+    height: 100%;
     // overflow: visible;
     border-radius: 10px;
     .chatbox {
       .message-container {
-        height: 74%;
+        height: 80%;
       }
       .chatBox-footer {
-        // padding: 3px;
+        padding-top: 20px;
         height: 100px;
         input {
           width: 60%;
         }
         button {
           position: absolute;
-          right: 20%;
+          right: 25px;
           width: 45px;
           height: 45px;
         }
@@ -241,13 +261,13 @@
   }
 }
 
-@media screen and (max-height: 800px) {
-  .main {
-    height: 90%;
-  }
-}
-@media screen and (max-height: 600px) {
-  .main {
-    height: 95%;
-  }
-}
+// @media screen and (max-height: 800px) {
+//   .main {
+//     height: 90%;
+//   }
+// }
+// @media screen and (max-height: 600px) {
+//   .main {
+//     height: 95%;
+//   }
+// }

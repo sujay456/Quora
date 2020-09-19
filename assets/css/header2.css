@@ -66,6 +66,17 @@ header #header-container {
         font-weight: 600;
         color: #636466;
         font-size: 1.2rem; }
+    header #header-container #navigation .notification {
+      position: relative; }
+      header #header-container #navigation .notification #newnoti {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #9b221e;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        padding: 0; }
     header #header-container #navigation div.profile {
       position: relative;
       padding: 12px 5px 7px 5px; }

@@ -76,7 +76,27 @@ class Chatengine {
         self.currentRoom != data.user_email &&
         data.user_email != self.userEmail
       ) {
+        $("audio")[0].play();
         console.log("Someone is messaging u in the background");
+
+        let dot = '<div id="newnoti" ></div>';
+
+        $(".notification").append(dot);
+
+        let noty = $("<li>");
+
+        let mssg = "New  Message from " + data.user_name;
+        $.ajax({
+          type: "post",
+          url: `/notification/create?email=${data.user_email}`,
+          data: { mssg: mssg },
+          success: function (data) {
+            console.log(data);
+          },
+          error: function (err) {
+            console.log("Error", err.responseText);
+          },
+        });
         return;
       }
 
@@ -101,3 +121,6 @@ class Chatengine {
     });
   }
 }
+console.log($("audio"));
+
+console.log($("#notification-list"));
