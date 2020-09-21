@@ -57,23 +57,26 @@ $(document).click(function (e) {
   // console.log('document Clicked');
   $(".nav-bar").addClass("display");
   $(".lang-nav-container").addClass("display");
-  $("#test").removeClass("moveX");
-  $("#test").addClass("initialX");
+  $("#sidedrawer").removeClass("moveX");
+  $("#sidedrawer").addClass("initialX");
   console.log("document clicked");
   $("#question-form").addClass("display");
   $(".main").css("visibility", "hidden");
 
   $("#black").css("opacity", "0");
   $("#black").addClass("display");
-
+  $("#check").prop("checked", false);
   e.stopPropagation();
   $("body").addClass("original");
 });
 
 function show() {
-  console.log("hi");
-  $("#test").toggleClass("moveX");
-  $("#test").toggleClass("initialX");
+  console.log("hi", event.target);
+
+  $("#sidedrawer").toggleClass("moveX");
+  $("#sidedrawer").toggleClass("initialX");
+  $("#black").toggleClass("display");
+  $("#black").css("opacity", "0.8");
   event.stopPropagation();
 }
 
@@ -82,20 +85,23 @@ function profilepage() {
 
   window.location.href = `/profile?id=${$(event.target).attr("userid")}`;
 }
-// just a small bug regarding the test div
+// just a small bug regarding the sidedrawer div
 window.addEventListener("resize", function () {
   // console.log(window.innerWidth);
 
   if (window.innerWidth > 1000) {
-    $("#test").addClass("display");
+    $("#sidedrawer").addClass("display");
   } else {
-    $("#test").removeClass("display");
+    $("#sidedrawer").removeClass("display");
   }
 });
 
 function message() {
+  console.log("hello");
   $(".main").css("visibility", "visible");
   init();
   $("#black").removeClass("display");
   $("#black").css("opacity", "0.8");
+
+  event.stopPropagation();
 }

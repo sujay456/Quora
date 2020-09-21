@@ -78,8 +78,11 @@ body {
     border-radius: 0.1cm;
     width: 720px;
     position: absolute;
-    top: 10%;
-    left: 28%;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
     padding-left: 30px;
     padding-right: 30px;
     box-sizing: border-box;

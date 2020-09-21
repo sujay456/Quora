@@ -27,6 +27,19 @@
 .top {
   top: 65px; }
 
+.button-style {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .button-style:active {
+    transform: translateY(3px); }
+
+.hoverButton {
+  transition: all 0.4s ease; }
+  .hoverButton:hover {
+    transform: translateY(-3px); }
+  .hoverButton:active {
+    transform: translateY(-1px); }
+
 body {
   margin: 0px;
   background-image: url("https://qsf.fs.quoracdn.net/-4-images.home.illo_1920.png-26-e9e6fbe02d908942.png");

@@ -1,3 +1,46 @@
+.pop-up {
+  width: 100%;
+  background-color: #c9c9c9;
+  text-align: center;
+  position: fixed;
+  z-index: 50;
+  height: 50px;
+  top: -200px;
+  transition: top 0.4s ease-in-out; }
+  .pop-up span {
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 10px; }
+
+.green {
+  background-color: #0a960a; }
+
+.white {
+  background: white; }
+  .white span {
+    color: #0a960a; }
+
+.top0 {
+  top: 0; }
+
+.top {
+  top: 65px; }
+
+.button-style {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .button-style:active {
+    transform: translateY(3px); }
+
+.hoverButton {
+  transition: all 0.4s ease;
+  cursor: pointer; }
+  .hoverButton:hover {
+    transform: translateY(-3px); }
+  .hoverButton:active {
+    transform: translateY(-1px); }
+
 header .display {
   display: none; }
 
@@ -11,8 +54,57 @@ header #hamburger-icon {
   top: 20px;
   z-index: 102;
   cursor: pointer; }
+  header #hamburger-icon input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -15px;
+    left: -4px;
+    z-index: 103;
+    opacity: 0;
+    cursor: pointer; }
+  header #hamburger-icon .hamburger {
+    width: 40px;
+    left: 0;
+    top: 10px;
+    height: 40px;
+    position: absolute; }
+    header #hamburger-icon .hamburger div {
+      width: 100%;
+      height: 3px;
+      position: relative;
+      background-color: #333;
+      transition: all 0.4s ease-in; }
+      header #hamburger-icon .hamburger div::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: -10px;
+        background-color: #333;
+        transition: all 0.4s ease-in; }
+      header #hamburger-icon .hamburger div::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        top: 10px;
+        background-color: #333;
+        transition: all 0.4s ease-in; }
+  header #hamburger-icon input:checked + .hamburger > div {
+    transform: rotate(135deg); }
+  header #hamburger-icon input:checked:hover + .hamburger > div {
+    transform: rotate(222deg); }
+  header #hamburger-icon input:checked + .hamburger > div::after {
+    transform: rotate(90deg);
+    top: 0px;
+    opacity: 1; }
+  header #hamburger-icon input:checked + .hamburger > div::before {
+    transform: rotate(90deg);
+    top: 0px;
+    opacity: 1; }
 
-header #test {
+header #sidedrawer {
   width: 45%;
   min-width: 220px;
   max-width: 400px;
@@ -20,11 +112,45 @@ header #test {
   position: fixed;
   top: 0;
   background-color: white;
-  z-index: 101;
+  z-index: 102;
   border: 1px solid black;
   padding: 20px;
   box-shadow: 0 2px 4px black;
   transition: transform 0.3s ease-in-out; }
+  header #sidedrawer .profile-sidedrawer {
+    margin-top: 50px;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    cursor: pointer; }
+    header #sidedrawer .profile-sidedrawer img {
+      clip-path: circle(25px); }
+    header #sidedrawer .profile-sidedrawer .arrow {
+      position: absolute;
+      bottom: 10px;
+      right: 10px; }
+  header #sidedrawer .nav-user-content {
+    margin-top: 20px;
+    padding: 0;
+    border-bottom: 1px solid #dee0e1; }
+    header #sidedrawer .nav-user-content .nav-item {
+      padding: 10px 5px; }
+      header #sidedrawer .nav-user-content .nav-item i {
+        margin-right: 10px; }
+      header #sidedrawer .nav-user-content .nav-item span {
+        color: #282829;
+        font-size: 1rem; }
+    header #sidedrawer .nav-user-content .nav-items:hover {
+      background-color: #e5e2e2; }
+  header #sidedrawer #settings {
+    padding: 0px; }
+    header #sidedrawer #settings div {
+      padding: 5px; }
+      header #sidedrawer #settings div span {
+        font-size: 0.9rem;
+        color: #b6b6b6; }
+    header #sidedrawer #settings div.logout a {
+      color: red;
+      text-decoration: none; }
 
 header .initialX {
   transform: translateX(-100%); }
@@ -125,11 +251,11 @@ header #header-container {
         header #header-container #navigation div.profile .nav-bar .nav-user-content {
           padding: 0;
           border-bottom: 1px solid #dee0e1; }
-          header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items {
+          header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-item {
             padding: 10px 5px; }
-            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items i {
+            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-item i {
               margin-right: 10px; }
-            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items span {
+            header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-item span {
               color: #282829;
               font-size: 1rem; }
           header #header-container #navigation div.profile .nav-bar .nav-user-content .nav-items:hover {

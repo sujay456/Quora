@@ -43,10 +43,9 @@
           <i class="far fa-lightbulb fa-lg"></i>
           <span>Question for You</span>
         </div>
-
-        <% for(let q of locals.questions) {%> <% if(q.answersOnQuestion.length
-        <=2 && q.user.id!=locals.user.id ) {%>
-
+        <% let times=0 %> <% for(let q of locals.questions) {%> <%
+        if(q.answersOnQuestion.length <=2 && q.user.id!=locals.user.id &&
+        times<=1 ) {%> <% times++ %>
         <!-- here there will be a for loop for follows  -->
         <!-- { -->
         <div class="not-answered background-white">
@@ -293,8 +292,6 @@
       </div>
     </div>
   </div>
-
-  <div id="todo-container"></div>
 </div>
 
 <script src="/js/postHome.js"></script>

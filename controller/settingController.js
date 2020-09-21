@@ -9,13 +9,16 @@ module.exports.resetPage = async function (req, res) {
     console.log(req.query);
     let reset = await Reset.findOne({ AccesToken: req.query.accesToken });
 
-    // if (reset && reset.isValid) {
-    reset.isValid = !reset.isValid;
-    reset.save();
-    return res.render("ResetPassFormpage", { layout: false, user: reset.user });
-    // } else {
-    // return res.render("unauthorised", { layout: false });
-    // }
+    if (reset && reset.isValid) {
+      reset.isValid = !reset.isValid;
+      reset.save();
+      return res.render("ResetPassFormpage", {
+        layout: false,
+        user: reset.user,
+      });
+    } else {
+      return res.render("unauthorised", { layout: false });
+    }
   } catch (error) {
     console.log("Error in resetpage", error);
   }

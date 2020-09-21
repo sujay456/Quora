@@ -143,6 +143,20 @@
 .top {
   top: 65px; }
 
+.button-style {
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .button-style:active {
+    transform: translateY(3px); }
+
+.hoverButton {
+  transition: all 0.4s ease;
+  cursor: pointer; }
+  .hoverButton:hover {
+    transform: translateY(-3px); }
+  .hoverButton:active {
+    transform: translateY(-1px); }
+
 .main-container {
   width: 70%;
   height: 100%;

@@ -1,3 +1,5 @@
+@import "./utility";
+
 header {
   .display {
     display: none;
@@ -13,9 +15,74 @@ header {
     top: 20px;
     z-index: 102;
     cursor: pointer;
+    input {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -15px;
+      left: -4px;
+      z-index: 103;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .hamburger {
+      // border: 1px solid black;
+      width: 40px;
+      left: 0;
+      top: 10px;
+      height: 40px;
+      // top: -10px;
+
+      position: absolute;
+
+      div {
+        width: 100%;
+        height: 3px;
+        position: relative;
+        // top: 50%;
+        background-color: #333;
+        transition: all 0.4s ease-in;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          top: -10px;
+          background-color: #333;
+          transition: all 0.4s ease-in;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          top: 10px;
+          background-color: #333;
+          transition: all 0.4s ease-in;
+        }
+      }
+    }
+
+    input:checked + .hamburger > div {
+      transform: rotate(135deg);
+    }
+    input:checked:hover + .hamburger > div {
+      transform: rotate(222deg);
+    }
+    input:checked + .hamburger > div::after {
+      transform: rotate(90deg);
+      top: 0px;
+      opacity: 1;
+    }
+
+    input:checked + .hamburger > div::before {
+      transform: rotate(90deg);
+      top: 0px;
+      opacity: 1;
+    }
   }
 
-  #test {
+  #sidedrawer {
     // width: 75%;
 
     width: 45%;
@@ -25,13 +92,35 @@ header {
     position: fixed;
     top: 0;
     background-color: white;
-    z-index: 101;
+    z-index: 102;
     border: 1px solid black;
     padding: 20px;
     box-shadow: 0 2px 4px black;
     // left: -100%;
     transition: transform 0.3s ease-in-out;
     // right: 0;
+
+    .profile-sidedrawer {
+      margin-top: 50px;
+      border-bottom: 1px solid rgb(211, 211, 211);
+      position: relative;
+      cursor: pointer;
+      img {
+        clip-path: circle(25px);
+      }
+      .arrow {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+    .nav-user-content {
+      margin-top: 20px;
+      @include nav-style;
+    }
+    #settings {
+      @include setting;
+    }
   }
   .initialX {
     transform: translateX(-100%);
@@ -163,39 +252,10 @@ header {
             }
           }
           .nav-user-content {
-            padding: 0;
-            border-bottom: 1px solid #dee0e1;
-            .nav-items {
-              // border-bottom: 1px solid #dee0e1;
-              // cursor: pointer;
-              padding: 10px 5px;
-              i {
-                margin-right: 10px;
-              }
-              span {
-                color: #282829;
-                font-size: 1rem;
-              }
-            }
-            .nav-items:hover {
-              background-color: rgb(229, 226, 226);
-            }
+            @include nav-style;
           }
           #settings {
-            padding: 0px;
-            div {
-              padding: 5px;
-              span {
-                font-size: 0.9rem;
-                color: rgb(182, 182, 182);
-              }
-            }
-            div.logout {
-              a {
-                color: red;
-                text-decoration: none;
-              }
-            }
+            @include setting;
           }
         }
       }
