@@ -4,6 +4,7 @@ const Answer = require("../models/answer");
 const Like = require("../models/like");
 const Dislike = require("../models/dislike");
 const Comment = require("../models/comment");
+const Follow = require("../models/follow");
 // const answerMailer = require("../mailers/Answermailer");
 const queue = require("../config/kue");
 const emailWorker = require("../workers/email_worker");
@@ -77,8 +78,23 @@ module.exports.create = async function (req, res) {
   }
 };
 
-module.exports.answer = function (req, res) {
-  return res.render("answers");
+module.exports.answer = async function (req, res) {
+  try {
+    let questions = await Question.find({}).populate({
+      path: "user answersOnQuestion",
+      populate: {
+        path: "user",
+      },
+    });
+    let followsOfUser = await Follow.find({ user: req.user.id });
+
+    return res.render("answers", {
+      questions: questions,
+      follow: followsOfUser,
+    });
+  } catch (error) {
+    console.log("error in answer page ", error);
+  }
 };
 
 module.exports.delete = async function (req, res) {

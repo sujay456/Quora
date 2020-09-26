@@ -69,7 +69,7 @@ class Chatengine {
         });
       }
     });
-
+    let no = 0;
     this.socket.on("recieve-message", function (data) {
       console.log("message recived", data);
       if (
@@ -78,8 +78,8 @@ class Chatengine {
       ) {
         $("audio")[0].play();
         console.log("Someone is messaging u in the background");
-
-        let dot = '<div id="newnoti" ></div>';
+        no = no + 1;
+        let dot = `<div id="newnoti" class="animate__animated animate__pulse" >${no}</div>`;
 
         $(".notification").append(dot);
 

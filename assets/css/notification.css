@@ -11,6 +11,13 @@
   box-sizing: border-box; }
   .notifications-container .notification-header {
     padding-left: 40px; }
+  .notifications-container .noty-container a {
+    width: 100%;
+    text-align: end;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    padding-left: 40px; }
   .notifications-container .noty-container #notification-list {
     list-style: none; }
     .notifications-container .noty-container #notification-list li {
@@ -25,3 +32,15 @@
       .notifications-container .noty-container #notification-list li p {
         color: #333;
         font-size: 1.2rem; }
+
+@media screen and (max-width: 700px) {
+  .notifications-container {
+    width: 90%; }
+    .notifications-container .notification-header {
+      padding-left: 10px; }
+    .notifications-container ul {
+      padding: 10px; }
+    .notifications-container .noty-container a {
+      padding-left: 10px; }
+    .notifications-container .noty-container #notification-list li p {
+      font-size: 1rem; } }

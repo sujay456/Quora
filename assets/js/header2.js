@@ -102,6 +102,7 @@ function message() {
   init();
   $("#black").removeClass("display");
   $("#black").css("opacity", "0.8");
-
+  $("#sidedrawer").removeClass("moveX");
+  $("#sidedrawer").addClass("initialX");
   event.stopPropagation();
 }

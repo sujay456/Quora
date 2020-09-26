@@ -14,6 +14,14 @@
     padding-left: 40px;
   }
   .noty-container {
+    a {
+      width: 100%;
+      text-align: end;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.1rem;
+      padding-left: 40px;
+    }
     #notification-list {
       list-style: none;
 
@@ -29,6 +37,30 @@
         p {
           color: #333;
           font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .notifications-container {
+    width: 90%;
+    .notification-header {
+      padding-left: 10px;
+    }
+    ul {
+      padding: 10px;
+    }
+    .noty-container {
+      a {
+        padding-left: 10px;
+      }
+      #notification-list {
+        li {
+          p {
+            font-size: 1rem;
+          }
         }
       }
     }
