@@ -5,7 +5,7 @@
     </div>
 
     <div class="messageBox-listOfUser-container">
-      <% for(let user of userList){ %>
+      <% for(let user of userList){ %> <% if(user.id!=locals.user.id){ %>
       <div
         class="user"
         id="user-<%=user.id%>"
@@ -20,7 +20,7 @@
           <%=user.name%>
         </p>
       </div>
-      <%}%>
+      <%}%> <%}%>
     </div>
 
     <div class="messageBox-footer">
@@ -41,12 +41,14 @@
 
     <div class="chatBox-footer">
       <form action="" method="POST" id="message-form">
-        <input
-          type="text"
-          name="message"
-          required
-          placeholder="Type Here ...."
-        />
+        <div class="input-container">
+          <input
+            type="text"
+            name="message"
+            required
+            placeholder="Type Here ...."
+          />
+        </div>
         <button type="submit"><i class="far fa-paper-plane"></i></button>
       </form>
     </div>

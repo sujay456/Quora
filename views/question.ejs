@@ -1,532 +1,617 @@
-<link rel="stylesheet" href="/css/question.css">
+<link rel="stylesheet" href="/css/question.css" />
 <div class="pop-up">
-    <span>
-        
-    </span>
+  <span> </span>
 </div>
 
 <div id="main-container" class="background-white">
-
-
-    <div id="question-container" class="background-white">
-        <div id="question">
-            <h2><%=question.question%></h2>
-        </div>
-
-        <div class="buttons">
-            <!-- some button to answer or follow this question -->
-            <%if(!userBool){%>
-                <button onclick="showAnswerTab();" class="answer">
-                    <i class="fas fa-feather-alt fa-lg blue"></i> 
-                    <span class="grey">
-                        Answer
-                    </span>
-                </button>
-                <%}else{%>
-                    <button onclick="showAnswerTab();" disabled style="cursor: not-allowed;" class="answer">
-                        <i class="fas fa-feather-alt fa-lg blue"></i> 
-                        <span class="grey">
-                            Answer
-                        </span>
-                    </button>
-                <%}%>
-            <button class="follow" onclick="follow();" link="/follow/toggle?id=<%=question.id%>">
-                <% let followed=false %>
-                <% for(let f of follow){ %>
-                    <% if(f.question==question.id){ %>
-                        <% followed=true; break; %>
-                    <%}%>    
-                <%}%>
-                
-                <% if(!followed){ %>
-                    
-                    <i class="fas fa-rss fa-lg grey"></i>
-                    <span class="grey">
-                        Folllow .
-                    </span>
-                    <div class="number_of_follow">
-                        <div class="outer-cage initial">
-                            <div class="grey"><%=question.follow.length%></div>
-                            <div class="grey"><%=question.follow.length+1%></div>
-                        </div>
-                    </div>
-                <%}else{ %>
-                    
-                    <i class="fas fa-rss fa-lg blue"></i>
-                    <span class="blue">
-                        Folllow .
-                    </span>
-                    <div class="number_of_follow">
-                        <div class="outer-cage upanddown">
-                            <div class="grey"><%=question.follow.length-1%></div>
-                            <div class="grey"><%=question.follow.length%></div>
-                        </div>
-                    </div>
-
-                <% }%>
-
-            </button>
-
-            
-            <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
-
-        </div>
-        
-        <div class="options-for-question background-white animate__animated animate__pulse animate__faster display">
-                                
-            <div class="style">
-                <span>Answer Anonymously</span>
-            </div>
-            
-            <div class="style">
-                <span>Downvote Question</span>
-            </div>
-            
-            <div class="style">
-                <span>Report</span>
-            </div>
-            
-
-        </div>
-        
-        <div id="user-anwser" class="answer">
-            <!-- if the user has not answered it give him a option --> 
-            <% if((question.answersOnQuestion.length>0) && (userBool)){ %> 
-                <div>
-                    <div id="user_details">
-                        <img src="<%=user.avatar%>" alt="" height="40px">
-                        <span class="bold"><%=user.name%></span>
-                        
-                    </div>
-
-                    <div id="answer">
-                        <p>
-                            <%=userAnswer.answer%>
-                        </p>
-                    </div>
-                    <div class="controls" >
-                        <button class="upvote like"  onclick="upvoteAnswer();" idAnswer="<%=userAnswer.id%>">
-                            <% let likes=false %>
-                            <% for(let l of like){ %>
-                                <% if(l.likedon==userAnswer.id){ likes=true } %>
-                            <%}%>
-
-                            <% if(!likes){ %>
-                                <i class="far fa-thumbs-up fa-lg grey first animate__animated "></i>
-                                <div class="number_of_like">
-                                    <div class="outer-cage initial">
-                                        <div class="grey"><%=userAnswer.like.length%></div>
-                                        <div class="grey"><%=userAnswer.like.length+1%></div>
-                                    </div>
-                                </div>
-                            <%} else{%>
-                                <i class="far fa-thumbs-up fa-lg blue first animate__animated "></i>
-                                <div class="number_of_like">
-                                    <div class="outer-cage upanddown">
-                                        <div class="grey"><%=userAnswer.like.length-1%></div>
-                                        <div class="grey"><%=userAnswer.like.length%></div>
-                                    </div>
-                                </div>
-                            <%}%>
-                        </button>
-                        
-                        <i class="far fa-comment fa-lg grey first" onclick="toggleCommentSection();"></i>
-
-                        <span class="span">
-                            <button class="upvote dislike" onclick="downvoteAnswer();" idAnswer="<%=userAnswer.id%>">
-                                <% let dislikes=false %>
-                                <% for(let d of dislike){ %>
-                                    <% if(d.dislikedon==userAnswer.id){ dislikes=true } %>
-                                <%}%>
-        
-                                <% if(!dislikes){ %>
-                                    <i class="far fa-thumbs-down fa-lg grey second down animate__animated "></i>
-                                <%} else{%>
-                                    <i class="far fa-thumbs-down fa-lg red second down animate__animated"></i>
-                                <%}%>
-                            </button>
-                            <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsA();"></i>
-                        </span>
-                        <div class="options-for-answer background-white animate__animated animate__pulse animate__faster display">
-                                    
-                            <div class="style" onclick="deleteAnswer();" a_id="<%=userAnswer.id%>">
-                                <span  a_id="<%=userAnswer.id%>">Delete Answer</span>
-                            </div>
-                            
-                            <div class="style" onclick="EditAnswer();" answer="<%=userAnswer.answer%>">
-                                <span  answer="<%=userAnswer.answer%>">Edit Answer</span>
-                            </div>
-                
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="comment-section">
-                        <div class="comment-container-user">
-                            <img src="<%=user.avatar%>" alt="" height="45px">
-                            
-                            <input id="<%=userAnswer.id%>" type="text" placeholder="Add a comment" name="comment"  >
-                            
-                            <button onclick="commentSubmitUser()">Add Comment</button>
-                        </div>
-                        <div class="comments-container display">
-                            <% for(let c of userAnswer.comments){ %>
-                                <% let showTime; %>
-                                <% let currentDate=new Date();let date=new Date(c.createdAt); %>
-                                <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
-                                        
-                                <% if(c.user.id==user.id ){ %>
-                                
-                                    <div class="comment" id="comment-<%=c.id%>">
-                                        <img src="<%=c.user.avatar%>" alt="" height="40px">
-                                        <span class="bold"><%=c.user.name%></span>
-                                        <small><%=showTime%></small>
-                                        <p class="content" ><%=c.comment %></p>
-                                        
-                                        <div class="update-container display">
-                                            <input type="text" value="<%=c.comment%>" name="updatedComment" required>
-                                            <div class="button">
-                                                <button onclick="hideUpdateContainer();" class="cancel">Cancel</button>
-                                                <button class="update" onclick="EditComment();" c_id="<%=c.id%>" >Update</button>
-                                            </div>
-                                        </div>
-
-                                        <div class="controls">
-                                            <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
-                                                <% let likes=false %>
-                                                <% for(let l of like){ %>
-                                                    <% if(l.likedon==c.id){ likes=true } %>
-                                                <%}%>
-
-                                                <% if(!likes) {%>
-                                                    <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                                    <div class="number_of_like">
-                                                        <div class="outer-cage initial">
-                                                            <div class="grey"><%=c.like.length%></div>
-                                                            <div class="grey"><%=c.like.length+1%></div>
-                                                        </div>
-                                                    </div>
-                                                <%}else{%>
-                                                    <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
-                                                    <div class="number_of_like">
-                                                        <div class="outer-cage upanddown">
-                                                            <div class="grey"><%=c.like.length-1%></div>
-                                                            <div class="grey"><%=c.like.length%></div>
-                                                        </div>
-                                                    </div>
-                                                <%}%>
-                                            </button>
-                                            <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
-                                        </div>
-                                        <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
-                                            <div class="style" onclick="DeleteComment();" a_id="<%=userAnswer.id%>" c_id="<%=c.id%>">
-                                                <span  a_id="<%=userAnswer.id%>" c_id="<%=c.id%>">Delete Comment</span>
-                                            </div>
-                                            
-                                            <div class="style" onclick="hideUpdateContainer();">
-                                                <span>Edit Comment</span>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                <%}else{%>
-                                    <div class="comment" id="comment-<%=c.id%>">
-                                        <img src="<%=c.user.avatar%>" alt="" height="40px">
-                                        <span class="bold"><%=c.user.name%></span>
-                                        <small><%=showTime%></small>
-                                        <p><%=c.comment %></p>
-                                        <div class="controls" >
-                                            <button class="upvote like"  onclick="upvoteComment();" idComment="<%=c.id%>">
-                                                <% let likes=false %>
-                                                <% for(let l of like){ %>
-                                                    <% if(l.likedon==c.id){ likes=true } %>
-                                                <%}%>
-
-                                                <% if(!likes) {%>
-                                                    <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                                    <div class="number_of_like">
-                                                        <div class="outer-cage initial">
-                                                            <div class="grey"><%=c.like.length%></div>
-                                                            <div class="grey"><%=c.like.length+1%></div>
-                                                        </div>
-                                                    </div>
-                                                <%}else{%>
-                                                    <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
-                                                    <div class="number_of_like">
-                                                        <div class="outer-cage upanddown">
-                                                            <div class="grey"><%=c.like.length-1%></div>
-                                                            <div class="grey"><%=c.like.length%></div>
-                                                        </div>
-                                                    </div>
-                                                <%}%>
-                                            </button>
-                                            <button class="upvote dislike" onclick="downvoteComment();" idComment="<%=c.id%>">
-                                                <% let dislikes=false %>
-                                                <% for(let d of dislike){ %>
-                                                    <% if(d.dislikedon==c.id){ dislikes=true } %>
-                                                <%}%>
-
-                                                <% if(!dislikes) {%>
-                                                    <i class="far fa-thumbs-down fa-lg grey second extraleft animate__animated"></i>
-                                                <%}else{%>
-                                                    <i class="far fa-thumbs-down fa-lg red second extraleft animate__animated"></i>
-                                                <%}%>
-                                            </button>
-                                        </div>
-                                    </div>
-                                <%}%>
-                            
-                            <%}%>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="Editable-Answer">
-                    <%- include('_textarea') %>
-                </div>                
-             <%}else{%>
-
-
-                <!-- <span>Want to answer this question ok</span> -->
-                <div class="asking_to_answer_container">
-                    <img src="<%=user.avatar%>" alt="" height="50px">
-                    <!-- <% let first_name=user.name.split(' ')%> -->
-                    <h4><%=user.name%>,can you answer this question?</h4>
-                    <p class="grey">People are searching for an answer to this question</p>
-                    <button onclick="showAnswerTab();" class="answer">
-                        <i class="fas fa-feather-alt fa-lg blue"></i> 
-                        <span class="grey">
-                            Answer
-                        </span>
-                    </button>
-                </div>
-                <%- include('_textarea') %>
-
-            <%}%>
-             
-            
-            <!-- if the user has answered it then show the user his answer first -->
-        </div>
-        
-        <div class="deleted-answer-message display">
-            <span>You Deleted this Answer</span>
-        </div>
-
-        <div id="other-user-answer">
-            <!-- here if any other answer other than logged in user is there i will print those  -->
-           <%if(question.answersOnQuestion.length>=1) { %>
-            <h4><%=question.answersOnQuestion.length%> total Answers</h4>
-            <% for(let a of question.answersOnQuestion){ %>
-                <% if(a.user.id!=user.id){ %>
-                    <div class="answers_another_user answer">
-                        <div class="another_user_info">
-                            <img src="<%=a.user.avatar%>" alt="" height="45px">
-                            <span class="bold" ><%=a.user.name%></span>
-                        </div> 
-                        <div class="another_user_answer">
-                        
-                        <p class="answer"><%= a.answer%></p>
-                        </div>
-                        
-                        <div class="controls">
-                            <button class="upvote like" onclick="upvoteAnswer();" idAnswer="<%=a.id%>">
-                                <% let likes=false %>
-                                <% for(let l of like){ %>
-                                    <% if(l.likedon==a.id){ likes=true } %>
-                                <%}%>
-        
-                                <% if(!likes){ %>
-                                    <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                    <div class="number_of_like">
-                                        <div class="outer-cage initial">
-                                            <div class="grey"><%=a.like.length%></div>
-                                            <div class="grey"><%=a.like.length+1%></div>
-                                        </div>
-                                    </div>
-                                <%} else{%>
-                                    <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
-                                    <div class="number_of_like">
-                                        <div class="outer-cage upanddown">
-                                            <div class="grey"><%=a.like.length-1%></div>
-                                            <div class="grey"><%=a.like.length%></div>
-                                        </div>
-                                    </div>
-                                <%}%>
-                            </button>
-                            <i onclick="toggleCommentSectionO();" class="far fa-comment fa-lg grey first"></i>
-                            
-                            <span>
-                                <button class="upvote dislike" onclick="downvoteAnswer();" idAnswer="<%=a.id%>">
-                                    <% let dislikes=false %>
-                                    <% for(let d of dislike){ %>
-                                        <% if(d.dislikedon==a.id){ dislikes=true } %>
-                                    <%}%>
-            
-                                    <% if(!dislikes){ %>
-                                        <i class="far fa-thumbs-down fa-lg grey second down animate__animated "></i>
-                                    <%} else{%>
-                                        <i class="far fa-thumbs-down fa-lg red second down animate__animated"></i>
-                                    <%}%>
-                                </button>
-                            </span>
-                        </div>
-                        <div class="comments-section">
-                            <div class="comment-container-other">
-                                <img src="<%=user.avatar%>" alt="" height="35px">
-                                <input  type="text" placeholder="Add a comment" id="<%=a.id%>" >
-                                <button onclick="commentSubmitOther()">Add Comment</button>
-                            </div>
-
-                            <div class="comments-container display">
-                                <%for(let c of a.comments){ %>
-                                    <% let showTime; %>
-                                    <% let currentDate=new Date();let date=new Date(c.createdAt); %>
-                                    <% if(currentDate.getFullYear()-date.getFullYear() !=0){ showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else if(currentDate.getMonth() -date.getMonth() !=0){ showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if( currentDate.getDate()-date.getDate()!=0){ showTime=currentDate.getDate()-date.getDate()+' day ago' }else if(currentDate.getHours()-date.getHours()!=0){ showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{ showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }    %>
-
-                                    <% if(user.id!=c.user.id){ %>
-                                        <div class="comment" id="comment-<%=c.id%>">
-                                            <img src="<%=c.user.avatar%>" alt="" height="40px">
-                                            <span class="bold"><%=c.user.name%></span>
-                                            <small><%=showTime%></small>
-
-                                            <p ><%=c.comment %></p> 
-                                            
-                                            <div class="controls" >
-                                                <button class="upvote like" onclick="upvoteComment();" idComment="<%=c.id%>">
-                                                    <% let likes=false %>
-                                                    <% for(let l of like){ %>
-                                                        <% if(l.likedon==c.id){ likes=true } %>
-                                                    <%}%>
-        
-                                                    <% if(!likes) {%>
-                                                        <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                                        <div class="number_of_like">
-                                                            <div class="outer-cage initial">
-                                                                <div class="grey"><%=c.like.length%></div>
-                                                                <div class="grey"><%=c.like.length+1%></div>
-                                                            </div>
-                                                        </div>
-                                                    <%}else{%>
-                                                        <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
-                                                        <div class="number_of_like">
-                                                            <div class="outer-cage upanddown">
-                                                                <div class="grey"><%=c.like.length-1%></div>
-                                                                <div class="grey"><%=c.like.length%></div>
-                                                            </div>
-                                                        </div>
-                                                    <%}%>
-                                                </button>
-                                                <button class="upvote dislike" onclick="downvoteComment();" idComment="<%=c.id%>">
-                                                    <% let dislikes=false %>
-                                                    <% for(let d of dislike){ %>
-                                                        <% if(d.dislikedon==c.id){ dislikes=true } %>
-                                                    <%}%>
-        
-                                                    <% if(!dislikes) {%>
-                                                        <i class="far fa-thumbs-down fa-lg grey second extraleft animate__animated"></i>
-                                                    <%}else{%>
-                                                        <i class="far fa-thumbs-down fa-lg red second extraleft animate__animated"></i>
-                                                    <%}%>
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                    <%}else{ %>
-                                        <div class="comment" id="comment-<%=c.id%>">
-                                            <img src="<%=c.user.avatar%>" alt="" height="40px">
-                                            <span class="bold"><%=c.user.name%></span>
-                                            <small><%=showTime%></small>
-                                            <p class="content"><%=c.comment %></p>
-                                            <div class="update-container display">
-                                                <input type="text" value="<%=c.comment%>" name="updatedComment" required>
-                                                <div class="button">
-                                                    <button onclick="hideUpdateContainer();" class="cancel">Cancel</button>
-                                                    <button class="update" onclick="EditComment();" c_id="<%=c.id%>" >Update</button>
-                                                </div>
-                                            </div>
-                                            <div class="controls">
-                                                <button class="upvote" onclick="upvoteComment();" idComment="<%=c.id%>">
-                                                    <% let likes=false %>
-                                                    <% for(let l of like){ %>
-                                                        <% if(l.likedon==c.id){ likes=true } %>
-                                                    <%}%>
-        
-                                                    <% if(!likes) {%>
-                                                        <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
-                                                        <div class="number_of_like">
-                                                            <div class="outer-cage initial">
-                                                                <div class="grey"><%=c.like.length%></div>
-                                                                <div class="grey"><%=c.like.length+1%></div>
-                                                            </div>
-                                                        </div>
-                                                    <%}else{%>
-                                                        <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
-                                                        <div class="number_of_like">
-                                                            <div class="outer-cage upanddown">
-                                                                <div class="grey"><%=c.like.length-1%></div>
-                                                                <div class="grey"><%=c.like.length%></div>
-                                                            </div>
-                                                        </div>
-                                                    <%}%>
-                                                </button>
-                                                <i class="fas fa-ellipsis-h fa-lg more" onclick="showOptionsComment();" ></i>
-                                                
-                                            </div>
-                                            <!-- <i class="far fa-thumbs-down fa-lg grey second"></i> -->
-                                            <div class="options-for-comment background-white animate__animated animate__pulse animate__faster display" >
-                                                <div class="style" onclick="DeleteComment();" a_id="<%=a.id%>" c_id="<%=c.id%>">
-                                                    <span a_id="<%=a.id%>" c_id="<%=c.id%>">Delete Comment</span>
-                                                </div>
-                                                <div class="style" onclick="hideUpdateContainer()">
-                                                    <span  >Edit Comment</span>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    <%}%>
-
-                                <%}%>
-                            </div>
-                        </div>
-                    </div>
-                <%}%>
-            <%}%>
-            <% }else {%>
-            <!-- if not there will be no answers yet -->
-                <div id="no_answers_container">
-                    <i class="fas fa-pen fa-2x blue"></i> 
-                    <h3>No more Answers yet</h3>
-                </div>
-
-            <%}%>
-        </div>
-
-    </div>    
-
-    <div id="related-question-container">
-        
-            <div id="outer-div">
-
-                <div id="header">
-                    <h3>Related Question</h3>
-                </div>
-    
-                <% for(let q of questionALL){ %>
-                   <% if(q.user!=user.id){%>
-                        <div class="questions">
-                            <a href="/question/display?id=<%=q.id%>"><%=q.question%></a>
-                        </div>
-                    <%}%>
-                <%}%>
-
-            </div>
-
-
-        
+  <div id="question-container" class="background-white">
+    <div id="question">
+      <h2><%=question.question%></h2>
     </div>
 
-</div>
+    <div class="buttons">
+      <!-- some button to answer or follow this question -->
+      <%if(!userBool){%>
+      <button onclick="showAnswerTab();" class="answer">
+        <i class="fas fa-feather-alt fa-lg blue"></i>
+        <span class="grey"> Answer </span>
+      </button>
+      <%}else{%>
+      <button
+        onclick="showAnswerTab();"
+        disabled
+        style="cursor: not-allowed"
+        class="answer"
+      >
+        <i class="fas fa-feather-alt fa-lg blue"></i>
+        <span class="grey"> Answer </span>
+      </button>
+      <%}%>
+      <button
+        class="follow"
+        onclick="follow();"
+        link="/follow/toggle?id=<%=question.id%>"
+      >
+        <% let followed=false %> <% for(let f of follow){ %> <%
+        if(f.question==question.id){ %> <% followed=true; break; %> <%}%> <%}%>
+        <% if(!followed){ %>
 
+        <i class="fas fa-rss fa-lg grey"></i>
+        <span class="grey"> Folllow . </span>
+        <div class="number_of_follow">
+          <div class="outer-cage initial">
+            <div class="grey"><%=question.follow.length%></div>
+            <div class="grey"><%=question.follow.length+1%></div>
+          </div>
+        </div>
+        <%}else{ %>
+
+        <i class="fas fa-rss fa-lg blue"></i>
+        <span class="blue"> Folllow . </span>
+        <div class="number_of_follow">
+          <div class="outer-cage upanddown">
+            <div class="grey"><%=question.follow.length-1%></div>
+            <div class="grey"><%=question.follow.length%></div>
+          </div>
+        </div>
+
+        <% }%>
+      </button>
+
+      <i id="more" class="fas fa-ellipsis-h fa-lg" onclick="showOptions();"></i>
+    </div>
+
+    <div
+      class="options-for-question background-white animate__animated animate__pulse animate__faster display"
+    >
+      <div class="style">
+        <span>Answer Anonymously</span>
+      </div>
+
+      <div class="style">
+        <span>Downvote Question</span>
+      </div>
+
+      <div class="style">
+        <span>Report</span>
+      </div>
+    </div>
+
+    <div id="user-anwser" class="answer">
+      <!-- if the user has not answered it give him a option -->
+      <% if((question.answersOnQuestion.length>0) && (userBool)){ %>
+      <div>
+        <div id="user_details">
+          <img src="<%=user.avatar%>" alt="" height="40px" />
+          <a href="/profile?id=<%=user.id%>">
+            <span class="bold"><%=user.name%></span>
+          </a>
+        </div>
+
+        <div id="answer">
+          <p><%=userAnswer.answer%></p>
+        </div>
+        <div class="controls">
+          <button
+            class="upvote like"
+            onclick="upvoteAnswer();"
+            idAnswer="<%=userAnswer.id%>"
+          >
+            <% let likes=false %> <% for(let l of like){ %> <%
+            if(l.likedon==userAnswer.id){ likes=true } %> <%}%> <% if(!likes){
+            %>
+            <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
+            <div class="number_of_like">
+              <div class="outer-cage initial">
+                <div class="grey"><%=userAnswer.like.length%></div>
+                <div class="grey"><%=userAnswer.like.length+1%></div>
+              </div>
+            </div>
+            <%} else{%>
+            <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
+            <div class="number_of_like">
+              <div class="outer-cage upanddown">
+                <div class="grey"><%=userAnswer.like.length-1%></div>
+                <div class="grey"><%=userAnswer.like.length%></div>
+              </div>
+            </div>
+            <%}%>
+          </button>
+
+          <i
+            class="far fa-comment fa-lg grey first"
+            onclick="toggleCommentSection();"
+          ></i>
+
+          <span class="span">
+            <button
+              class="upvote dislike"
+              onclick="downvoteAnswer();"
+              idAnswer="<%=userAnswer.id%>"
+            >
+              <% let dislikes=false %> <% for(let d of dislike){ %> <%
+              if(d.dislikedon==userAnswer.id){ dislikes=true } %> <%}%> <%
+              if(!dislikes){ %>
+              <i
+                class="far fa-thumbs-down fa-lg grey second down animate__animated"
+              ></i>
+              <%} else{%>
+              <i
+                class="far fa-thumbs-down fa-lg red second down animate__animated"
+              ></i>
+              <%}%>
+            </button>
+            <i
+              class="fas fa-ellipsis-h fa-lg more"
+              onclick="showOptionsA();"
+            ></i>
+          </span>
+          <div
+            class="options-for-answer background-white animate__animated animate__pulse animate__faster display"
+          >
+            <div
+              class="style"
+              onclick="deleteAnswer();"
+              a_id="<%=userAnswer.id%>"
+            >
+              <span a_id="<%=userAnswer.id%>">Delete Answer</span>
+            </div>
+
+            <div
+              class="style"
+              onclick="EditAnswer();"
+              answer="<%=userAnswer.answer%>"
+            >
+              <span answer="<%=userAnswer.answer%>">Edit Answer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-section">
+          <div class="comment-container-user">
+            <img src="<%=user.avatar%>" alt="" height="45px" />
+
+            <input
+              id="<%=userAnswer.id%>"
+              type="text"
+              placeholder="Add a comment"
+              name="comment"
+            />
+
+            <button onclick="commentSubmitUser()">Add Comment</button>
+          </div>
+          <div class="comments-container display">
+            <% for(let c of userAnswer.comments){ %> <% let showTime; %> <% let
+            currentDate=new Date();let date=new Date(c.createdAt); %> <%
+            if(currentDate.getFullYear()-date.getFullYear() !=0){
+            showTime=currentDate.getFullYear() -date.getFullYear() +' year ago'
+            }else if(currentDate.getMonth() -date.getMonth() !=0){
+            showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else
+            if( currentDate.getDate()-date.getDate()!=0){
+            showTime=currentDate.getDate()-date.getDate()+' day ago' }else
+            if(currentDate.getHours()-date.getHours()!=0){
+            showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{
+            showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }
+            %> <% if(c.user.id==user.id ){ %>
+
+            <div class="comment" id="comment-<%=c.id%>">
+              <img src="<%=c.user.avatar%>" alt="" height="40px" />
+              <a href="/profile?id=<%=c.user.id%>">
+                <span class="bold"><%=c.user.name%></span>
+              </a>
+              <small><%=showTime%></small>
+              <p class="content"><%=c.comment %></p>
+
+              <div class="update-container display">
+                <input
+                  type="text"
+                  value="<%=c.comment%>"
+                  name="updatedComment"
+                  required
+                />
+                <div class="button">
+                  <button onclick="hideUpdateContainer();" class="cancel">
+                    Cancel
+                  </button>
+                  <button
+                    class="update"
+                    onclick="EditComment();"
+                    c_id="<%=c.id%>"
+                  >
+                    Update
+                  </button>
+                </div>
+              </div>
+
+              <div class="controls">
+                <button
+                  class="upvote"
+                  onclick="upvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let likes=false %> <% for(let l of like){ %> <%
+                  if(l.likedon==c.id){ likes=true } %> <%}%> <% if(!likes) {%>
+                  <i
+                    class="far fa-thumbs-up fa-lg grey first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage initial">
+                      <div class="grey"><%=c.like.length%></div>
+                      <div class="grey"><%=c.like.length+1%></div>
+                    </div>
+                  </div>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-up fa-lg blue first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage upanddown">
+                      <div class="grey"><%=c.like.length-1%></div>
+                      <div class="grey"><%=c.like.length%></div>
+                    </div>
+                  </div>
+                  <%}%>
+                </button>
+                <i
+                  class="fas fa-ellipsis-h fa-lg more"
+                  onclick="showOptionsComment();"
+                ></i>
+              </div>
+              <div
+                class="options-for-comment background-white animate__animated animate__pulse animate__faster display"
+              >
+                <div
+                  class="style"
+                  onclick="DeleteComment();"
+                  a_id="<%=userAnswer.id%>"
+                  c_id="<%=c.id%>"
+                >
+                  <span a_id="<%=userAnswer.id%>" c_id="<%=c.id%>"
+                    >Delete Comment</span
+                  >
+                </div>
+
+                <div class="style" onclick="hideUpdateContainer();">
+                  <span>Edit Comment</span>
+                </div>
+              </div>
+            </div>
+
+            <%}else{%>
+            <div class="comment" id="comment-<%=c.id%>">
+              <img src="<%=c.user.avatar%>" alt="" height="40px" />
+              <a href="/profile?id=<%=c.user.id%>">
+                <span class="bold"><%=c.user.name%></span>
+              </a>
+
+              <small><%=showTime%></small>
+              <p><%=c.comment %></p>
+              <div class="controls">
+                <button
+                  class="upvote like"
+                  onclick="upvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let likes=false %> <% for(let l of like){ %> <%
+                  if(l.likedon==c.id){ likes=true } %> <%}%> <% if(!likes) {%>
+                  <i
+                    class="far fa-thumbs-up fa-lg grey first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage initial">
+                      <div class="grey"><%=c.like.length%></div>
+                      <div class="grey"><%=c.like.length+1%></div>
+                    </div>
+                  </div>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-up fa-lg blue first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage upanddown">
+                      <div class="grey"><%=c.like.length-1%></div>
+                      <div class="grey"><%=c.like.length%></div>
+                    </div>
+                  </div>
+                  <%}%>
+                </button>
+                <button
+                  class="upvote dislike"
+                  onclick="downvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let dislikes=false %> <% for(let d of dislike){ %> <%
+                  if(d.dislikedon==c.id){ dislikes=true } %> <%}%> <%
+                  if(!dislikes) {%>
+                  <i
+                    class="far fa-thumbs-down fa-lg grey second extraleft animate__animated"
+                  ></i>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-down fa-lg red second extraleft animate__animated"
+                  ></i>
+                  <%}%>
+                </button>
+              </div>
+            </div>
+            <%}%> <%}%>
+          </div>
+        </div>
+      </div>
+      <div class="Editable-Answer"><%- include('_textarea') %></div>
+      <%}else{%>
+
+      <!-- <span>Want to answer this question ok</span> -->
+      <div class="asking_to_answer_container">
+        <img src="<%=user.avatar%>" alt="" height="50px" />
+        <!-- <% let first_name=user.name.split(' ')%> -->
+        <h4><%=user.name%>,can you answer this question?</h4>
+        <p class="grey">People are searching for an answer to this question</p>
+        <button onclick="showAnswerTab();" class="answer">
+          <i class="fas fa-feather-alt fa-lg blue"></i>
+          <span class="grey"> Answer </span>
+        </button>
+      </div>
+      <%- include('_textarea') %> <%}%>
+
+      <!-- if the user has answered it then show the user his answer first -->
+    </div>
+
+    <div class="deleted-answer-message display">
+      <span>You Deleted this Answer</span>
+    </div>
+
+    <div id="other-user-answer">
+      <!-- here if any other answer other than logged in user is there i will print those  -->
+      <%if(question.answersOnQuestion.length>=1) { %>
+      <h4><%=question.answersOnQuestion.length%> total Answers</h4>
+      <% for(let a of question.answersOnQuestion){ %> <% if(a.user.id!=user.id){
+      %>
+      <div class="answers_another_user answer">
+        <div class="another_user_info">
+          <img src="<%=a.user.avatar%>" alt="" height="45px" />
+          <a href="/profile?id=<%=a.user.id%>">
+            <span class="bold"><%=a.user.name%></span>
+          </a>
+        </div>
+        <div class="another_user_answer">
+          <p class="answer"><%= a.answer%></p>
+        </div>
+
+        <div class="controls">
+          <button
+            class="upvote like"
+            onclick="upvoteAnswer();"
+            idAnswer="<%=a.id%>"
+          >
+            <% let likes=false %> <% for(let l of like){ %> <%
+            if(l.likedon==a.id){ likes=true } %> <%}%> <% if(!likes){ %>
+            <i class="far fa-thumbs-up fa-lg grey first animate__animated"></i>
+            <div class="number_of_like">
+              <div class="outer-cage initial">
+                <div class="grey"><%=a.like.length%></div>
+                <div class="grey"><%=a.like.length+1%></div>
+              </div>
+            </div>
+            <%} else{%>
+            <i class="far fa-thumbs-up fa-lg blue first animate__animated"></i>
+            <div class="number_of_like">
+              <div class="outer-cage upanddown">
+                <div class="grey"><%=a.like.length-1%></div>
+                <div class="grey"><%=a.like.length%></div>
+              </div>
+            </div>
+            <%}%>
+          </button>
+          <i
+            onclick="toggleCommentSectionO();"
+            class="far fa-comment fa-lg grey first"
+          ></i>
+
+          <span>
+            <button
+              class="upvote dislike"
+              onclick="downvoteAnswer();"
+              idAnswer="<%=a.id%>"
+            >
+              <% let dislikes=false %> <% for(let d of dislike){ %> <%
+              if(d.dislikedon==a.id){ dislikes=true } %> <%}%> <% if(!dislikes){
+              %>
+              <i
+                class="far fa-thumbs-down fa-lg grey second down animate__animated"
+              ></i>
+              <%} else{%>
+              <i
+                class="far fa-thumbs-down fa-lg red second down animate__animated"
+              ></i>
+              <%}%>
+            </button>
+          </span>
+        </div>
+        <div class="comments-section">
+          <div class="comment-container-other">
+            <img src="<%=user.avatar%>" alt="" height="35px" />
+            <input type="text" placeholder="Add a comment" id="<%=a.id%>" />
+            <button onclick="commentSubmitOther()">Add Comment</button>
+          </div>
+
+          <div class="comments-container display">
+            <%for(let c of a.comments){ %> <% let showTime; %> <% let
+            currentDate=new Date();let date=new Date(c.createdAt); %> <%
+            if(currentDate.getFullYear()-date.getFullYear() !=0){
+            showTime=currentDate.getFullYear() -date.getFullYear() +' year ago'
+            }else if(currentDate.getMonth() -date.getMonth() !=0){
+            showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else
+            if( currentDate.getDate()-date.getDate()!=0){
+            showTime=currentDate.getDate()-date.getDate()+' day ago' }else
+            if(currentDate.getHours()-date.getHours()!=0){
+            showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{
+            showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' }
+            %> <% if(user.id!=c.user.id){ %>
+            <div class="comment" id="comment-<%=c.id%>">
+              <img src="<%=c.user.avatar%>" alt="" height="40px" />
+              <a href="/profile?id=<%=c.user.id%>">
+                <span class="bold"><%=c.user.name%></span>
+              </a>
+              <small><%=showTime%></small>
+
+              <p><%=c.comment %></p>
+
+              <div class="controls">
+                <button
+                  class="upvote like"
+                  onclick="upvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let likes=false %> <% for(let l of like){ %> <%
+                  if(l.likedon==c.id){ likes=true } %> <%}%> <% if(!likes) {%>
+                  <i
+                    class="far fa-thumbs-up fa-lg grey first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage initial">
+                      <div class="grey"><%=c.like.length%></div>
+                      <div class="grey"><%=c.like.length+1%></div>
+                    </div>
+                  </div>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-up fa-lg blue first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage upanddown">
+                      <div class="grey"><%=c.like.length-1%></div>
+                      <div class="grey"><%=c.like.length%></div>
+                    </div>
+                  </div>
+                  <%}%>
+                </button>
+                <button
+                  class="upvote dislike"
+                  onclick="downvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let dislikes=false %> <% for(let d of dislike){ %> <%
+                  if(d.dislikedon==c.id){ dislikes=true } %> <%}%> <%
+                  if(!dislikes) {%>
+                  <i
+                    class="far fa-thumbs-down fa-lg grey second extraleft animate__animated"
+                  ></i>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-down fa-lg red second extraleft animate__animated"
+                  ></i>
+                  <%}%>
+                </button>
+              </div>
+            </div>
+            <%}else{ %>
+            <div class="comment" id="comment-<%=c.id%>">
+              <img src="<%=c.user.avatar%>" alt="" height="40px" />
+              <a href="/profile?id=<%=c.user.id%>">
+                <span class="bold"><%=c.user.name%></span>
+              </a>
+              <small><%=showTime%></small>
+              <p class="content"><%=c.comment %></p>
+              <div class="update-container display">
+                <input
+                  type="text"
+                  value="<%=c.comment%>"
+                  name="updatedComment"
+                  required
+                />
+                <div class="button">
+                  <button onclick="hideUpdateContainer();" class="cancel">
+                    Cancel
+                  </button>
+                  <button
+                    class="update"
+                    onclick="EditComment();"
+                    c_id="<%=c.id%>"
+                  >
+                    Update
+                  </button>
+                </div>
+              </div>
+              <div class="controls">
+                <button
+                  class="upvote"
+                  onclick="upvoteComment();"
+                  idComment="<%=c.id%>"
+                >
+                  <% let likes=false %> <% for(let l of like){ %> <%
+                  if(l.likedon==c.id){ likes=true } %> <%}%> <% if(!likes) {%>
+                  <i
+                    class="far fa-thumbs-up fa-lg grey first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage initial">
+                      <div class="grey"><%=c.like.length%></div>
+                      <div class="grey"><%=c.like.length+1%></div>
+                    </div>
+                  </div>
+                  <%}else{%>
+                  <i
+                    class="far fa-thumbs-up fa-lg blue first animate__animated"
+                  ></i>
+                  <div class="number_of_like">
+                    <div class="outer-cage upanddown">
+                      <div class="grey"><%=c.like.length-1%></div>
+                      <div class="grey"><%=c.like.length%></div>
+                    </div>
+                  </div>
+                  <%}%>
+                </button>
+                <i
+                  class="fas fa-ellipsis-h fa-lg more"
+                  onclick="showOptionsComment();"
+                ></i>
+              </div>
+              <!-- <i class="far fa-thumbs-down fa-lg grey second"></i> -->
+              <div
+                class="options-for-comment background-white animate__animated animate__pulse animate__faster display"
+              >
+                <div
+                  class="style"
+                  onclick="DeleteComment();"
+                  a_id="<%=a.id%>"
+                  c_id="<%=c.id%>"
+                >
+                  <span a_id="<%=a.id%>" c_id="<%=c.id%>">Delete Comment</span>
+                </div>
+                <div class="style" onclick="hideUpdateContainer()">
+                  <span>Edit Comment</span>
+                </div>
+              </div>
+            </div>
+            <%}%> <%}%>
+          </div>
+        </div>
+      </div>
+      <%}%> <%}%> <% }else {%>
+      <!-- if not there will be no answers yet -->
+      <div id="no_answers_container">
+        <i class="fas fa-pen fa-2x blue"></i>
+        <h3>No more Answers yet</h3>
+      </div>
+
+      <%}%>
+    </div>
+  </div>
+
+  <div id="related-question-container">
+    <div id="outer-div">
+      <div id="header">
+        <h3>Related Question</h3>
+      </div>
+
+      <% for(let q of questionALL){ %> <% if(q.user!=user.id){%>
+      <div class="questions">
+        <a href="/question/display?id=<%=q.id%>"><%=q.question%></a>
+      </div>
+      <%}%> <%}%>
+    </div>
+  </div>
+</div>
 
 <script src="/js/question.js"></script>

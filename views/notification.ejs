@@ -9,9 +9,21 @@
     <a href="#" onclick="clearNotification();">Clear Notications</a>
     <!-- here all the notification will be there  if any -->
     <ul id="notification-list">
-      <% for(let n of noties){ %>
+      <% for(let n of noties){ %> <% let showTime; %> <% let currentDate=new
+      Date();let date=new Date(n.createdAt); %> <%
+      if(currentDate.getFullYear()-date.getFullYear() !=0){
+      showTime=currentDate.getFullYear() -date.getFullYear() +' year ago' }else
+      if(currentDate.getMonth() -date.getMonth() !=0){
+      showTime=currentDate.getMonth() -date.getMonth() +' month ago' }else if(
+      currentDate.getDate()-date.getDate()!=0){
+      showTime=currentDate.getDate()-date.getDate()+' day ago' }else
+      if(currentDate.getHours()-date.getHours()!=0){
+      showTime=currentDate.getHours()-date.getHours()+' hour ago' }else{
+      showTime=currentDate.getMinutes()-date.getMinutes()+' minutes ago' } %>
+
       <li>
         <p><%=n.mssg%></p>
+        <p class="createdAt"><%= showTime %></p>
       </li>
       <%}%>
     </ul>

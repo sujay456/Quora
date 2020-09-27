@@ -213,7 +213,9 @@ function commentDomUser(comment, showTime) {
             }">
 
                 <img src="${comment.user.avatar}" alt="" height="40px">
+                <a href="/profile?id=${comment.user._id}">
                 <span class="bold">${comment.user.name}</span>
+              </a>
                 <small>${showTime}</small>
                 <p class="content">${comment.comment}</p>
                 <div class="update-container display">

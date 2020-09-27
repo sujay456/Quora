@@ -101,12 +101,15 @@ module.exports.interest = function (req, res) {
   }
 };
 
+module.exports.test = function (req, res) {
+  return res.redirect("/user/home");
+};
 module.exports.createSession = function (req, res) {
   if (req.user.interests.length == 0) {
     return res.redirect("/user/interest");
   } else {
     console.log("it reached here");
-    return res.redirect("/user/home");
+    return res.redirect("/user/test");
   }
 };
 

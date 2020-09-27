@@ -52,7 +52,7 @@
           <div class="header">Question added</div>
 
           <div class="Question">
-            <a href="/question/display?id=<%=q.id%>" target="_blank">
+            <a href="/question/display?id=<%=q.id%>">
               <h3><%=q.question%></h3>
             </a>
           </div>
@@ -232,7 +232,7 @@
           </div>
 
           <div class="question-container padding">
-            <a href="/question/display?id=<%=q.id%>" target="_blank">
+            <a href="/question/display?id=<%=q.id%>">
               <p class="question"><%=q.question%></p>
             </a>
           </div>
@@ -282,8 +282,15 @@
               </i>
             </button>
 
-            <button class="button more">
-              <i class="fas fa-ellipsis-h fa-lg more"></i>
+            <button
+              class="button more"
+              onclick="questionPage();"
+              questionID="<%=q.id%>"
+            >
+              <i
+                questionID="<%=q.id%>"
+                class="fas fa-ellipsis-h fa-lg more"
+              ></i>
             </button>
           </div>
         </div>

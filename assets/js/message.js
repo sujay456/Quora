@@ -39,6 +39,7 @@ function openChat() {
   }).then(() => {
     $(".chatbox").css("transform", "translateY(-100%)");
     $(".list").css("opacity", "0");
+    $(".chatbox").css("opacity", "1");
 
     $(".forWhom")[0].innerText = `Message for ${user.name}`;
     console.log(user);
@@ -48,4 +49,5 @@ function openChat() {
 function back() {
   $(".chatbox").css("transform", "translateY(0)");
   $(".list").css("opacity", "1");
+  $(".chatbox").css("opacity", "0");
 }

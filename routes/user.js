@@ -10,7 +10,7 @@ router.post(
   passport.authenticate("local", { failureRedirect: "/" }),
   userController.createSession
 );
-
+router.get("/test", userController.test);
 router.get("/home", passport.CheckAuth, userController.Home);
 router.get("/interest", passport.CheckAuth, userController.interest);
 router.get("/signout", userController.signout);
