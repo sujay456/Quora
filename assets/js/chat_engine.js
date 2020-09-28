@@ -8,7 +8,7 @@ class Chatengine {
 
     // this is just a request to the observer/server to connnect
     // and we are using the chatserver as u can see the port is 5000
-    this.socket = io.connect("http://localhost:5000");
+    this.socket = io.connect("http://35.154.227.64:5000");
     if (this.userEmail) {
       this.connectHandler();
     }
