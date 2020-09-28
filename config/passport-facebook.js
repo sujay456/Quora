@@ -1,7 +1,7 @@
 // app id -341961380511252
 // app-secret-e279799025e7533c41674528db5c6dec
 // app-callback-http://localhost:8000/user/auth/facebook/callback
-
+const env = require("./environment");
 const passport = require("passport");
 const facebookStartegy = require("passport-facebook").Strategy;
 const User = require("../models/user");
@@ -11,9 +11,9 @@ const randomEmail = require("random-email");
 passport.use(
   new facebookStartegy(
     {
-      clientID: "341961380511252",
-      clientSecret: "e279799025e7533c41674528db5c6dec",
-      callbackURL: "http://localhost:8000/user/auth/facebook/callback",
+      clientID: env.facebook_clientID,
+      clientSecret: env.facebook_clientSecret,
+      callbackURL: env.facebook_callbackURL,
       profileFields: ["id", "displayName", "photos", "email"],
     },
     function (accesToke, refreshToken, profile, done) {

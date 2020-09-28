@@ -10,7 +10,7 @@ function clearNotification() {
     type: "get",
     url: "/notification/deleteAll",
     success: function (data) {
-      console.log(data);
+      // console.log(data);
     },
     error: function (err) {
       console.log(err.responseText);
@@ -18,7 +18,7 @@ function clearNotification() {
   });
   console.log(tween.duration());
   setTimeout(function () {
-    console.log("uff");
+    // console.log("uff");
     $("li").remove();
   }, (tween.duration() - 0.5) * 1000);
 }

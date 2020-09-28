@@ -38,7 +38,7 @@ class Chatengine {
     });
 
     $(".user").click(() => {
-      console.log("In the chatting engine");
+      // console.log("In the chatting engine");
       // self.socket.emit("leave", {
       //   chatroom: self.currentRoom,
       // });
@@ -58,7 +58,7 @@ class Chatengine {
       event.preventDefault();
       // console.log(event);
       let message = event.target[0].value;
-      console.log(message);
+      // console.log(message);
       event.target.reset();
       if (message != "") {
         self.socket.emit("send_message", {
@@ -71,13 +71,13 @@ class Chatengine {
     });
     let no = 0;
     this.socket.on("recieve-message", function (data) {
-      console.log("message recived", data);
+      // console.log("message recived", data);
       if (
         self.currentRoom != data.user_email &&
         data.user_email != self.userEmail
       ) {
         $("audio")[0].play();
-        console.log("Someone is messaging u in the background");
+        // console.log("Someone is messaging u in the background");
         no = no + 1;
         let dot = `<div id="newnoti" class="animate__animated animate__pulse" >${no}</div>`;
 
@@ -91,7 +91,7 @@ class Chatengine {
           url: `/notification/create?email=${data.user_email}`,
           data: { mssg: mssg },
           success: function (data) {
-            console.log(data);
+            // console.log(data);
           },
           error: function (err) {
             console.log("Error", err.responseText);
@@ -102,25 +102,25 @@ class Chatengine {
 
       let newMessage = $("<li>");
       let mssgType = "other animate__animated animate__backInLeft";
-      console.log(data.user_email);
+      // console.log(data.user_email);
       if (data.user_email == self.userEmail) {
         mssgType = "mine animate__animated animate__backInUp";
       }
       let mssgdata = "<span>" + data.message + "</span>";
       newMessage.append(mssgdata);
       newMessage.addClass(mssgType);
-      console.log(newMessage);
+      // console.log(newMessage);
 
       $("#chat-messages-list").append(newMessage);
       setTimeout(() => {
         var messageBody = document.querySelector("#chat-messages-list");
-        console.log("yaha dekho", messageBody.scrollTop);
+        // console.log("yaha dekho", messageBody.scrollTop);
         messageBody.scrollTop =
           messageBody.scrollHeight - messageBody.clientHeight;
       }, 700);
     });
   }
 }
-console.log($("audio"));
+// console.log($("audio"));
 
-console.log($("#notification-list"));
+// console.log($("#notification-list"));

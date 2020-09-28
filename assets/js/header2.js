@@ -14,7 +14,7 @@ $(`${activeOne}`).addClass("redBorder");
 $(`${activeOne} span`).addClass("redFont");
 
 $("#navigation form").click(function (e) {
-  console.log(e);
+  // console.log(e);
 
   $.ajax({
     type: "get",
@@ -30,8 +30,8 @@ $("#navigation form").click(function (e) {
 
 // For the nav bar to appear
 $(".profile").click(function (e) {
-  console.log("hello");
-  console.log(e.target);
+  // console.log("hello");
+  // console.log(e.target);
   $(" .nav-bar", this).toggleClass("display");
   $(".lang-nav-container").addClass("display");
 
@@ -59,7 +59,7 @@ $(document).click(function (e) {
   $(".lang-nav-container").addClass("display");
   $("#sidedrawer").removeClass("moveX");
   $("#sidedrawer").addClass("initialX");
-  console.log("document clicked");
+  // console.log("document clicked");
   $("#question-form").addClass("display");
   $(".main").css("visibility", "hidden");
 
@@ -71,7 +71,7 @@ $(document).click(function (e) {
 });
 
 function show() {
-  console.log("hi", event.target);
+  // console.log("hi", event.target);
 
   $("#sidedrawer").toggleClass("moveX");
   $("#sidedrawer").toggleClass("initialX");
@@ -81,7 +81,7 @@ function show() {
 }
 
 function profilepage() {
-  console.log("Hi profile clicked", event.target);
+  // console.log("Hi profile clicked", event.target);
 
   window.location.href = `/profile?id=${$(event.target).attr("userid")}`;
 }
@@ -97,7 +97,7 @@ window.addEventListener("resize", function () {
 });
 
 function message() {
-  console.log("hello");
+  // console.log("hello");
   $(".main").css("visibility", "visible");
   init();
   $("#black").removeClass("display");

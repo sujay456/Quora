@@ -1,60 +1,57 @@
-<link rel="stylesheet" href="/css/interest.css">
+<link rel="stylesheet" href='<%=assetPath("css/interest.css")%>' />
 
+<div id="interest">
+  <div id="interest-header" class="border backgroundColor">
+    <h2>What are your interests?</h2>
+  </div>
 
+  <% let
+  interest=['Technology','Movies','Health','Food','Science','Music','Books','Buisness','Psycology','History','Cooking','Sports','Design','Writing','Economics','Mathematics','Politics','Journalism'];
+  %>
+  <div id="interest-container" class="border">
+    <% for(let i of interest){ %>
 
-    
-<div id="interest" >
-
-    <div id="interest-header" class="border backgroundColor" >
-        <h2>What are your interests?</h2>
+    <div id="interest-<%=i%>" class="style-block" onclick="checkbox();">
+      <div class="checked hide">
+        <img src="/images/checked.png" alt="" width="25px" />
+      </div>
+      <span><%=i%></span>
     </div>
 
-    <% let interest=['Technology','Movies','Health','Food','Science','Music','Books','Buisness','Psycology','History','Cooking','Sports','Design','Writing','Economics','Mathematics','Politics','Journalism']; %>
-    <div id="interest-container" class="border">
-        <% for(let i of interest){ %>
+    <%}%>
+  </div>
 
-            <div id="interest-<%=i%>" class="style-block" onclick="checkbox();" >
-                <div class="checked hide">
-                    <img src="/images/checked.png" alt="" width="25px">
-                </div>
-                <span><%=i%></span>
-            </div>
-
-        <%}%>
-    </div>
-
-    <div id="continue-button" class="border backgroundColor">
-        <form action="/interest/save" method="post">
-            <button id="button" type="submit" disabled >Follow 4 more topics to continue</button>
-        </form>
-    </div>
-
+  <div id="continue-button" class="border backgroundColor">
+    <form action="/interest/save" method="post">
+      <button id="button" type="submit" disabled>
+        Follow 4 more topics to continue
+      </button>
+    </form>
+  </div>
 </div>
 
 <div id="language" class="hide">
-    <div id="language-header-container" class="border backgroundColor">
-        <h2>One last step</h2>
-    </div>
+  <div id="language-header-container" class="border backgroundColor">
+    <h2>One last step</h2>
+  </div>
 
-    <div id="languages-container" >
-        <p>What other languages you know?</p>
+  <div id="languages-container">
+    <p>What other languages you know?</p>
 
-        <% let languages=['Arabic','Danish','Dutch','English','Finnish','French','German','Gujrati','Hebrew','Hindi','Italian'] %>
-        <% for(let l of languages){ %>
-            <div class="language-block">
-                <input type="checkbox" value="<%=l%>" onclick="selectedLang();" >  
-                <span><%=l%></span>
-            </div>
-        <%}%>
+    <% let
+    languages=['Arabic','Danish','Dutch','English','Finnish','French','German','Gujrati','Hebrew','Hindi','Italian']
+    %> <% for(let l of languages){ %>
+    <div class="language-block">
+      <input type="checkbox" value="<%=l%>" onclick="selectedLang();" />
+      <span><%=l%></span>
     </div>
-    <div id="continue-button-lan">
-        <form action="/interest/save" method="post">
-            <button id="button" type="submit">Done</button>
-        </form>
-    </div>
-
+    <%}%>
+  </div>
+  <div id="continue-button-lan">
+    <form action="/interest/save" method="post">
+      <button id="button" type="submit">Done</button>
+    </form>
+  </div>
 </div>
-    
 
-
-<script src="/js/interest.js"></script>
+<script src='<%=assetPath("js/interest.js")%>'></script>

@@ -3,10 +3,11 @@ const User = require("../models/user");
 
 const JWTStrategy = require("passport-jwt").Strategy;
 const JWTExtract = require("passport-jwt").ExtractJwt;
+const env = require("./environment");
 
 const opts = {
   jwtFromRequest: JWTExtract.fromAuthHeaderAsBearerToken(),
-  secretOrKey: "quora",
+  secretOrKey: env.jwt_secret,
 };
 
 passport.use(

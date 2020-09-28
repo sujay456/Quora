@@ -8,13 +8,13 @@ function init() {
   });
 }
 
-console.log();
+// console.log();
 let container = $(".main");
 
 container.click(() => {
-  console.log("Hello", $(event.target)[0] === $(".cancelMessage")[0]);
+  // console.log("Hello", $(event.target)[0] === $(".cancelMessage")[0]);
 
-  console.log($(event.target), $(".cancelMessage"));
+  // console.log($(event.target), $(".cancelMessage"));
 
   if ($(event.target)[0] === $(".cancelMessage")[0]) {
     $(document).trigger("click");
@@ -24,13 +24,13 @@ container.click(() => {
 
 function openChat() {
   let userid = $(event.target).attr("userid");
-  console.log("user", userid);
+  // console.log("user", userid);
   let user;
   $.ajax({
     type: "get",
     url: `/profile/getforchat?id=${userid}`,
     success: function (data) {
-      console.log(data);
+      // console.log(data);
       user = data.user;
     },
     error: function (err) {
@@ -42,7 +42,7 @@ function openChat() {
     $(".chatbox").css("opacity", "1");
 
     $(".forWhom")[0].innerText = `Message for ${user.name}`;
-    console.log(user);
+    // console.log(user);
   });
 }
 

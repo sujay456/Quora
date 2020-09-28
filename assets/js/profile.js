@@ -1,13 +1,13 @@
 let navTab = window.location.pathname.split("/");
 
-console.log(navTab);
+// console.log(navTab);
 navTab = navTab[navTab.length - 1];
 
 // console.log(navTab);
 if (navTab == "profile") {
   navTab = "Answer";
 }
-console.log(navTab);
+// console.log(navTab);
 
 $(".tabs").addClass("display");
 
@@ -17,14 +17,14 @@ $(".nav-items").removeClass("redNav Border");
 $(`.${navTab}`).addClass("redNav Border");
 
 $(".nav-items").click(function (event) {
-  console.log(event.target, $(event.target).attr("userid"));
-  console.log("hi");
+  // console.log(event.target, $(event.target).attr("userid"));
+  // console.log("hi");
 
-  console.log(
-    `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
-      "userid"
-    )}`
-  );
+  // console.log(
+  //   `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
+  //     "userid"
+  //   )}`
+  // );
   // return;
   $.ajax({
     type: "get",
@@ -32,7 +32,7 @@ $(".nav-items").click(function (event) {
       "userid"
     )}`,
     success: function (data) {
-      console.log("Succesfull");
+      // console.log("Succesfull");
       window.location.replace(
         `/profile${$(event.target).attr("link")}?id=${$(event.target).attr(
           "userid"
@@ -142,9 +142,9 @@ function follow() {
 
   // console.log($(' .follow',button));
   let follow = $(" .follow", button)[0];
-  console.log(follow);
+  // console.log(follow);
   let link = $(follow).attr("link");
-  console.log(link);
+  // console.log(link);
   $(" i", $(follow)).toggleClass("blue grey");
   $(" span", $(follow)).toggleClass("blue grey");
 
@@ -212,7 +212,7 @@ function show2nav() {
 
 function blue() {
   let parentFar = $(event.target).parentsUntil(".Answer-container");
-  console.log(parentFar);
+  // console.log(parentFar);
   let input = $(" .input div", parentFar[parentFar.length - 1]);
   if ($(event.target).children().length == 0) {
     $(event.target).toggleClass("active");
@@ -246,22 +246,22 @@ function submit() {
   let editable = false;
 
   editable = $(event.target).attr("edit");
-  console.log(editable);
+  // console.log(editable);
   let parents = $(event.target).parentsUntil(".Answer-container");
-  console.log(parents);
+  // console.log(parents);
 
   let inputForm = $(" .input", $(parents[parents.length - 1]));
 
-  console.log($(" .textArea", inputForm));
+  // console.log($(" .textArea", inputForm));
   let answer = $(" .textArea", inputForm)[0];
 
-  console.log(answer.innerText);
+  // console.log(answer.innerText);
   //   return;
   if (answer.innerText == "") {
     // console.log('true',answer.innerText);
     // there should be a pop-up that the answer is empty
 
-    console.log($(".pop-up span"));
+    // console.log($(".pop-up span"));
     $(".pop-up span")[0].innerText = "Answer can not be blank";
     $(".pop-up").addClass("top");
     setTimeout(function () {
@@ -273,7 +273,7 @@ function submit() {
     // return;
     let questionId = $(event.target).attr("id");
 
-    console.log("hello ajax", questionId);
+    // console.log("hello ajax", questionId);
     // return;
 
     $.ajax({
@@ -312,13 +312,13 @@ function submit() {
 }
 
 function followUser() {
-  console.log("Hi");
+  // console.log("Hi");
 
   let parent = $(event.target).parentsUntil(".user-desc");
   let followingId = $(event.target).attr("userid");
 
-  console.log(followingId);
-  console.log(parent);
+  // console.log(followingId);
+  // console.log(parent);
   if (parent.length == 0) {
     parent = $(event.target);
   }
@@ -327,7 +327,7 @@ function followUser() {
     type: "get",
     url: `/profile/follow?id=${followingId}`,
     success: function (data) {
-      console.log(data.message);
+      // console.log(data.message);
       $(" i", $(parent[parent.length - 1])).toggleClass(
         "fa-user-plus fa-user-check"
       );

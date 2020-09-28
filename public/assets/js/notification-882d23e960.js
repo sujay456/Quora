@@ -1,0 +1,1 @@
+function clearNotification(){let o=gsap.to("li",{duration:1,opacity:0,xPercent:100,stagger:.1});$.ajax({type:"get",url:"/notification/deleteAll",success:function(o){},error:function(o){console.log(o.responseText)}}),console.log(o.duration()),setTimeout((function(){$("li").remove()}),1e3*(o.duration()-.5))}

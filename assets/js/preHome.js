@@ -85,10 +85,10 @@ var ShowSignup = function () {
                 </div>
     
                 <label for="email">Email</label>
-                <input id="email" type="email" name="email" required>
+                <input id="email" class="auth" type="email" name="email" required>
                 
                 <label for="pass">Password</label>
-                <input id="pass" type="password" name="password" required>
+                <input id="pass" class="auth" type="password" name="password" required>
 
                 
             
@@ -115,7 +115,7 @@ var ShowSignup = function () {
 var ForResetCheckEmail;
 var emailLoginCheck = function () {
   let emailInput = $('#login-form input[type="email"]');
-  console.log(emailInput);
+  // console.log(emailInput);
 
   emailInput.blur(function (e) {
     // console.log('blur');
@@ -152,7 +152,7 @@ function popup(mssg, duration, bckgrndColor) {
 
 function reset() {
   event.preventDefault();
-  console.log("Hello reset");
+  // console.log("Hello reset");
   let emailInput = $('#login-form input[type="email"]');
 
   if (!emailInput[0].value) {
