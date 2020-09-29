@@ -989,3 +989,1153 @@
 ::1 - - [28/Sep/2020:13:51:53 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
 ::1 - - [28/Sep/2020:13:51:53 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
 ::1 - - [28/Sep/2020:13:51:53 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+[0mGET / [32m200[0m 101.799 ms - 3269[0m
+[0mGET /js/preHome.js [36m304[0m 5.583 ms - -[0m
+[0mGET /images/logo.png [32m200[0m 30.020 ms - 11703[0m
+[0mGET /css/preHome.css [32m200[0m 100.996 ms - -[0m
+[0mGET /favicon.ico [33m404[0m 16.350 ms - 150[0m
+[0mPOST /user/checkemail [32m200[0m 103.651 ms - 45[0m
+[0mGET /user/test [36m302[0m 120.985 ms - 64[0m
+[0mPOST /user/create-session [36m302[0m 30.187 ms - 64[0m
+[0mGET /user/home [32m200[0m 234.576 ms - 36591[0m
+[0mGET /css/layout2.css [32m200[0m 148.639 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 173.702 ms - -[0m
+[0mGET /css/message.css [32m200[0m 170.065 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 169.994 ms - -[0m
+[0mGET /js/questionForm.js [32m200[0m 7.023 ms - 1676[0m
+[0mGET /js/postHome.js [32m200[0m 9.631 ms - 6150[0m
+[0mGET /js/header2.js [32m200[0m 8.179 ms - 2863[0m
+[0mGET /js/message.js [32m200[0m 8.179 ms - 1260[0m
+[0mGET /css/question_form.css [32m200[0m 194.184 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 34.155 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 39.392 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 38.697 ms - -[0m
+[0mGET /js/chat_engine.js [32m200[0m 44.562 ms - 3852[0m
+[0mGET /css/footer.css [32m200[0m 103.803 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 25.095 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 5.469 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 7.200 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 39.253 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 36.923 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 2.818 ms - -[0m
+::1 - - [29/Sep/2020:03:17:37 +0000] "GET /user/home HTTP/1.1" 200 3302 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:37 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:37 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:37 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "POST /user/create-session HTTP/1.1" 302 46 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "GET / HTTP/1.1" 200 3302 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:43 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:48 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /user/test HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "POST /user/create-session HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /user/home HTTP/1.1" 200 10978 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:49 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:53 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /profile?id=5f71934faf8a8d10a86aeb37 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /css/profile-4676446bba.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /js/profile-c1d9bab119.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:17:56 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f71934faf8a8d10a86aeb37" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:00 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:46 +0000] "GET /user/signout HTTP/1.1" 302 46 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:46 +0000] "GET / HTTP/1.1" 200 3302 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:46 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:46 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:46 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:18:48 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:00 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:01 +0000] "POST /user/signup HTTP/1.1" 200 26 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:08 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "POST /user/create-session HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /user/test HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /user/home HTTP/1.1" 200 11424 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:10 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:13 +0000] "GET /profile/getforchat?id=5f72a7a5bfd1de2ce4a7f594 HTTP/1.1" 200 366 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /user/home HTTP/1.1" 200 11456 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:19:59 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:02 +0000] "GET /profile/getforchat?id=5f72a7a5bfd1de2ce4a7f594 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:48 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:51 +0000] "GET /user/signout HTTP/1.1" 302 46 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:51 +0000] "GET / HTTP/1.1" 200 3409 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:51 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:51 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:20:51 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:01 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:02 +0000] "POST /user/create-session HTTP/1.1" 302 46 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:02 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:02 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:02 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:02 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:14 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "POST /user/create-session HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /user/test HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:15 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:24 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /user/auth/google/callback?code=4%2F4gFpXlX1SnNBefAM2QLwjjnbddDqIxifwiJ3ju0qJj6z0ZbibbDdEoe_7UEE2mD5gA6mIzXgD1xOh_A5vIpN18o&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent HTTP/1.1" 302 72 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /user/interest HTTP/1.1" 200 7969 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /css/layout1-7411b9041d.css HTTP/1.1" 200 14 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /css/header1-7ee71ef0e7.css HTTP/1.1" 200 1556 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /css/interest-f627f45400.css HTTP/1.1" 200 7165 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /js/interest-43c9beaa9d.js HTTP/1.1" 200 1361 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:37 +0000] "GET /images/checked-bc81758680.png HTTP/1.1" 200 11728 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:45 +0000] "POST /interest/save HTTP/1.1" 200 24 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:48 +0000] "POST /language/save HTTP/1.1" 200 24 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /user/home HTTP/1.1" 200 16763 "http://localhost:8000/user/interest" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:49 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /profile?id=5f72a841bfd1de2ce4a7f595 HTTP/1.1" 200 15607 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/profile-4676446bba.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /js/profile-c1d9bab119.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:54 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:21:57 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:24 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:25 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:25 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:25 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:25 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:28 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /notification HTTP/1.1" 200 10809 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 200 1322 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 200 307 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:56:30 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:57:49 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:02 +0000] "GET / HTTP/1.1" 200 3409 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:02 +0000] "GET /css/preHome-86be339e3d.css HTTP/1.1" 200 7794 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:02 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 200 3401 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:02 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 200 10997 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:02 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "POST /user/create-session HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /user/test HTTP/1.1" 302 64 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /user/home HTTP/1.1" 200 11975 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 200 406 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 200 8802 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 200 3667 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 200 18583 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 200 2175 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 200 1194 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 200 3062 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 200 762 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 200 1978 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 200 731 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 200 1855 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 200 7397481 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:17 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:18 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 206 71515 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:23 +0000] "GET /profile/getforchat?id=5f72a841bfd1de2ce4a7f595 HTTP/1.1" 200 523 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36 Edg/85.0.564.63"
+::1 - - [29/Sep/2020:03:58:26 +0000] "POST /notification/create?email=sujaystark@gmail.com HTTP/1.1" 201 45 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:31 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:37 +0000] "GET /notification/deleteAll HTTP/1.1" 200 35 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /notification HTTP/1.1" 200 10809 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:45 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:50 +0000] "POST /notification/create?email=sujaystark@gmail.com HTTP/1.1" 201 45 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:51 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:52 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:58:53 +0000] "GET /notification/deleteAll HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /notification HTTP/1.1" 200 10809 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:07 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:13 +0000] "POST /notification/create?email=sujaystark@gmail.com HTTP/1.1" 201 45 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:03:59:16 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:07 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /notification HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/message-e004c15030.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /js/chat_engine-15563ae39a.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:10 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/layout2-0e2a5e7959.css HTTP/1.1" 200 547 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/header2-7340a87fcc.css HTTP/1.1" 200 11980 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/message-9a9bccfd00.css HTTP/1.1" 200 5227 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/notification-2a353a2357.css HTTP/1.1" 200 1322 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/question_form-ba9119daba.css HTTP/1.1" 200 2968 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /css/footer-fab4b77b61.css HTTP/1.1" 200 1629 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 200 1859 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 200 307 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 200 762 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 200 1978 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 200 731 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 200 10997 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:00:57 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 206 71515 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:01:09 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /notification HTTP/1.1" 200 10941 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/message-87b8afc217.css HTTP/1.1" 200 3643 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/notification-c01295bf48.css HTTP/1.1" 200 1400 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::ffff:127.0.0.1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 200 406 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 200 8802 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 200 2175 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 200 1194 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 200 1859 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 200 307 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 200 762 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 200 1978 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 200 731 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 200 10997 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:49 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 206 71515 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:03:52 +0000] "GET /notification/deleteAll HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /notification HTTP/1.1" 200 10809 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/message-87b8afc217.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/notification-c01295bf48.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /js/notification-882d23e960.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:04:36 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 206 71515 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:19 +0000] "GET /notification/deleteAll HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET / HTTP/1.1" 302 32 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET /user/home HTTP/1.1" 200 16763 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET / HTTP/1.1" 302 64 "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET /user/home HTTP/1.1" 304 - "http://localhost:8000/notification" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:21 +0000] "GET /css/message-87b8afc217.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /css/postHome-0e8203ddcd.css HTTP/1.1" 200 18583 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 200 3062 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:22 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /profile?id=5f72a841bfd1de2ce4a7f595 HTTP/1.1" 200 15607 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/message-87b8afc217.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/profile-4676446bba.css HTTP/1.1" 200 18302 "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /js/profile-c1d9bab119.js HTTP/1.1" 200 5399 "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:25 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/layout2-98940efd8d.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/header2-1298e424b3.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/message-87b8afc217.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/profile-4676446bba.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/question_form-53ce1b7e72.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:05:28 +0000] "GET /css/footer-908bdd5d8f.css HTTP/1.1" 304 - "http://localhost:8000/profile?id=5f72a841bfd1de2ce4a7f595" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+[0mGET /profile?id=5f72a841bfd1de2ce4a7f595 [32m200[0m 32.614 ms - 3376[0m
+[0mGET /css/preHome.css [32m200[0m 38.514 ms - -[0m
+[0mGET /js/preHome.js [36m304[0m 3.514 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 2.076 ms - -[0m
+[0mPOST /user/checkemail [32m200[0m 63.549 ms - 45[0m
+[0mPOST /user/create-session [36m302[0m 23.398 ms - 64[0m
+[0mGET /user/test [36m302[0m 20.413 ms - 64[0m
+[0mGET /user/home [32m200[0m 103.173 ms - 36623[0m
+[0mGET /css/layout2.css [32m200[0m 29.724 ms - -[0m
+[0mGET /css/message.css [32m200[0m 31.547 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 38.840 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 40.352 ms - -[0m
+[0mGET /css/question_form.css [32m200[0m 7.903 ms - -[0m
+[0mGET /css/footer.css [32m200[0m 8.788 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 1.014 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 0.839 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 0.886 ms - -[0m
+[0mGET /js/message.js [36m304[0m 1.165 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 0.971 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 1.609 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 0.853 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 1.145 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.377 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 1.422 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.879 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 1.247 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.136 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.898 ms - -[0m
+[0mGET /profile?id=5f41da49628aed0fb446b173 [32m200[0m 110.514 ms - 44810[0m
+[0mGET /css/layout2.css [32m200[0m 13.190 ms - 547[0m
+[0mGET /css/header2.css [32m200[0m 15.212 ms - 11980[0m
+[0mGET /css/message.css [32m200[0m 14.270 ms - 5197[0m
+[0mGET /css/profile.css [32m200[0m 38.974 ms - -[0m
+[0mGET /js/profile.js [36m304[0m 4.080 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 8.553 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 4.395 ms - -[0m
+[0mGET /js/message.js [36m304[0m 3.674 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 2.366 ms - -[0m
+[0mGET /css/question_form.css [32m200[0m 26.155 ms - 2968[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 9.126 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 6.486 ms - -[0m
+[0mGET /css/footer.css [32m200[0m 28.479 ms - 1629[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 7.592 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 9.802 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 10.699 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 7.493 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.654 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 3.599 ms - -[0m
+[0mGET /user/signout [36m302[0m 12.339 ms - 46[0m
+[0mGET / [32m200[0m 17.126 ms - 3376[0m
+[0mGET /css/preHome.css [32m200[0m 3.392 ms - 11030[0m
+[0mGET /js/preHome.js [36m304[0m 1.256 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 2.263 ms - -[0m
+[0mPOST /user/checkemail [32m200[0m 27.112 ms - 45[0m
+[0mPOST /user/create-session [36m302[0m 18.703 ms - 64[0m
+[0mGET /user/test [36m302[0m 14.322 ms - 64[0m
+[0mGET /user/home [32m200[0m 95.369 ms - 34340[0m
+[0mGET /css/layout2.css [36m304[0m 8.196 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 6.232 ms - -[0m
+[0mGET /css/message.css [36m304[0m 4.415 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 6.809 ms - 24330[0m
+[0mGET /css/question_form.css [36m304[0m 1.635 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 2.126 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 1.075 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 1.166 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 0.821 ms - -[0m
+[0mGET /js/message.js [36m304[0m 0.871 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 1.621 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 1.060 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 1.280 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 8.245 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.290 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 1.368 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.604 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 2.840 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.490 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 1.035 ms - -[0m
+[0mGET /profile?id=5f41dec32bade221082f2c26 [32m200[0m 62.286 ms - 37380[0m
+[0mGET /css/layout2.css [36m304[0m 10.005 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 7.617 ms - -[0m
+[0mGET /css/message.css [36m304[0m 7.013 ms - -[0m
+[0mGET /css/profile.css [32m200[0m 6.656 ms - 24534[0m
+[0mGET /js/profile.js [36m304[0m 6.561 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 5.837 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 5.397 ms - -[0m
+[0mGET /js/message.js [36m304[0m 4.049 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 11.737 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 14.557 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 11.594 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 3.359 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 8.462 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 5.343 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 5.293 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 6.378 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 5.810 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.953 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 2.667 ms - -[0m
+[0mGET / [36m302[0m 11.794 ms - 64[0m
+[0mGET /user/home [36m304[0m 71.606 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 8.428 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 7.376 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 2.927 ms - -[0m
+[0mGET /css/message.css [36m304[0m 5.984 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 1.127 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 2.530 ms - -[0m
+[0mGET /js/message.js [36m304[0m 4.911 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 11.776 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 4.314 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 4.280 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 14.890 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 8.220 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 6.915 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 4.818 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 4.328 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 4.074 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 4.062 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 5.499 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 3.145 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 20.229 ms - -[0m
+[0mGET /css/message.css [36m304[0m 7.898 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 19.233 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 5.056 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 7.197 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 4.696 ms - -[0m
+[0mGET /user/home [36m304[0m 91.385 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 22.795 ms - -[0m
+[0mGET /css/message.css [36m304[0m 21.121 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 19.767 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 54.013 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 3.754 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 14.396 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 2.217 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 6.223 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 7.550 ms - -[0m
+[0mGET /js/message.js [36m304[0m 0.785 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 3.878 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 9.792 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 5.863 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 1.422 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 4.335 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 1.001 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 31.005 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 25.843 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 18.367 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.957 ms - -[0m
+[0mGET /user/home [36m304[0m 55.901 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 17.059 ms - -[0m
+[0mGET /css/message.css [36m304[0m 8.393 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 5.227 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 44.489 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 2.705 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 6.429 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 6.387 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 0.982 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 4.544 ms - -[0m
+[0mGET /js/message.js [36m304[0m 0.961 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 4.019 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 1.288 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 5.727 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 5.026 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.425 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 1.435 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 2.211 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 2.777 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.139 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.998 ms - -[0m
+[0mGET /user/home [36m304[0m 61.126 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 20.838 ms - -[0m
+[0mGET /css/message.css [36m304[0m 18.942 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 17.895 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 22.178 ms - 12125[0m
+[0mGET /js/postHome.js [36m304[0m 19.611 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 30.437 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 14.631 ms - -[0m
+[0mGET /js/message.js [36m304[0m 13.621 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 12.470 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 53.670 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 57.413 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 14.433 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 17.610 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 26.086 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 14.992 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 14.081 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 13.230 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.439 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 3.906 ms - -[0m
+[0mGET /user/home [36m304[0m 54.673 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 19.644 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 18.316 ms - -[0m
+[0mGET /css/message.css [36m304[0m 6.736 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 4.113 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 3.120 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 16.898 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 16.345 ms - -[0m
+[0mGET /js/message.js [36m304[0m 16.846 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 2.675 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 29.167 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 28.001 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 15.396 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 35.449 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 24.173 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 16.019 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 15.520 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 15.100 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.036 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 8.806 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 5.405 ms - -[0m
+[0mGET /user/home [36m304[0m 55.978 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 101.604 ms - -[0m
+[0mGET /css/message.css [36m304[0m 66.291 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 45.307 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 125.166 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 8.284 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 5.057 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 3.962 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 1.506 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 4.686 ms - -[0m
+[0mGET /js/message.js [36m304[0m 6.023 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 2.194 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 10.170 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 15.982 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 6.626 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 7.592 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 7.813 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 7.215 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 7.022 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 6.271 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.875 ms - -[0m
+[0mGET /user/home [36m304[0m 55.332 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 17.908 ms - -[0m
+[0mGET /css/message.css [36m304[0m 14.590 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 13.241 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 51.571 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 3.384 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 17.121 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 26.344 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 41.830 ms - -[0m
+[0mGET /js/message.js [36m304[0m 12.899 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 5.827 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 42.614 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 14.198 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 20.641 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 13.279 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 12.990 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 11.696 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 6.379 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 6.379 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 4.595 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 3.081 ms - -[0m
+[0mGET /user/home [36m304[0m 45.815 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 13.885 ms - -[0m
+[0mGET /css/message.css [36m304[0m 6.312 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 4.545 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 33.353 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 7.982 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 6.301 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 3.220 ms - -[0m
+[0mGET /js/message.js [36m304[0m 2.627 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 25.902 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 24.796 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 26.313 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 15.113 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 18.814 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 15.275 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 14.531 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 17.010 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 9.624 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.502 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 3.762 ms - -[0m
+[0mGET /user/home [36m304[0m 66.966 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 34.592 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 19.290 ms - -[0m
+[0mGET /css/message.css [36m304[0m 23.141 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 65.308 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 2.732 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 8.968 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 2.427 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 5.111 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 5.384 ms - -[0m
+[0mGET /js/message.js [36m304[0m 8.323 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 3.754 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 1.146 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 5.742 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 11.637 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.470 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 10.990 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 8.795 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 8.673 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 9.151 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 1.061 ms - -[0m
+[0mGET /user/home [36m304[0m 52.287 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 9.813 ms - -[0m
+[0mGET /css/message.css [36m304[0m 6.274 ms - -[0m
+[0mGET /css/header2.css [32m200[0m 8.967 ms - 12145[0m
+[0mGET /css/postHome.css [32m200[0m 26.037 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 5.211 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 11.526 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 7.230 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 9.824 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 1.346 ms - -[0m
+[0mGET /js/message.js [36m304[0m 4.183 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 1.185 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 5.347 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 0.995 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 5.032 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 2.254 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 2.949 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.260 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.463 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.305 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 1.041 ms - -[0m
+[0mGET /user/home [36m304[0m 54.696 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 4.636 ms - -[0m
+[0mGET /css/message.css [36m304[0m 5.259 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 10.088 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 41.320 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 16.531 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 4.839 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 5.025 ms - -[0m
+[0mGET /js/message.js [36m304[0m 4.652 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 29.451 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 24.277 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 18.551 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 15.480 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 20.408 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 16.171 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 14.237 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 16.441 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 14.068 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.254 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 5.101 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 4.224 ms - -[0m
+[0mGET /user/home [36m304[0m 53.059 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 19.473 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 20.598 ms - -[0m
+[0mGET /css/message.css [36m304[0m 19.245 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 48.229 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 3.492 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 7.847 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 7.237 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 7.625 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 0.988 ms - -[0m
+[0mGET /js/message.js [36m304[0m 8.496 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 1.040 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 4.142 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 1.034 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 4.430 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.264 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 4.442 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.257 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 3.013 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.276 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.968 ms - -[0m
+[0mGET /user/home [36m304[0m 64.522 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 20.522 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 18.405 ms - -[0m
+[0mGET /css/message.css [36m304[0m 15.259 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 50.431 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 5.377 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 15.306 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 0.858 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 7.921 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 1.634 ms - -[0m
+[0mGET /js/message.js [36m304[0m 3.000 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 0.677 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 3.453 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 0.694 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 3.501 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 0.965 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 5.360 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 0.992 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 7.575 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.014 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 0.757 ms - -[0m
+[0mGET /user/home [36m304[0m 63.743 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 9.320 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 8.356 ms - -[0m
+[0mGET /css/message.css [36m304[0m 7.185 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 40.154 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 4.319 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 4.096 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 4.954 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 2.039 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 3.975 ms - -[0m
+[0mGET /js/message.js [36m304[0m 1.043 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 3.957 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 1.050 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 3.390 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 1.434 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 4.343 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 1.087 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 5.747 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 1.133 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.887 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 2.196 ms - -[0m
+[0mGET /user/home [36m304[0m 53.486 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 1.968 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 11.774 ms - -[0m
+[0mGET /css/message.css [36m304[0m 5.149 ms - -[0m
+[0mGET /css/postHome.css [32m200[0m 4.197 ms - 24834[0m
+[0mGET /css/question_form.css [36m304[0m 2.864 ms - -[0m
+[0mGET /css/footer.css [32m200[0m 22.215 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 11.140 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 5.150 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 1.030 ms - -[0m
+[0mGET /js/message.js [36m304[0m 3.448 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 0.810 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 3.747 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 0.891 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 6.034 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.058 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 6.842 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.298 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 1.120 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 2.075 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 1.045 ms - -[0m
+[0mGET /profile?id=5f41dec32bade221082f2c26 [32m200[0m 69.119 ms - 37380[0m
+[0mGET /css/header2.css [36m304[0m 2.016 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 3.810 ms - -[0m
+[0mGET /css/message.css [36m304[0m 3.738 ms - -[0m
+[0mGET /css/profile.css [36m304[0m 2.677 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 8.217 ms - -[0m
+[0mGET /css/footer.css [32m200[0m 2.341 ms - 1630[0m
+[0mGET /js/profile.js [36m304[0m 3.567 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 9.103 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 0.997 ms - -[0m
+[0mGET /js/message.js [36m304[0m 4.286 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 0.887 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 7.938 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 12.698 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 8.220 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 1.130 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 0.982 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 2.882 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 1.542 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.372 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 1.020 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 3.059 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 20.544 ms - -[0m
+[0mGET /css/message.css [36m304[0m 9.731 ms - -[0m
+[0mGET /css/profile.css [36m304[0m 8.733 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 8.015 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 7.084 ms - -[0m
+[0mGET /profile/Question?id=5f41dec32bade221082f2c26 [32m200[0m 67.909 ms - 37380[0m
+[0mGET /profile/Question?id=5f41dec32bade221082f2c26 [36m304[0m 59.781 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 7.936 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 7.175 ms - -[0m
+[0mGET /css/message.css [36m304[0m 6.334 ms - -[0m
+[0mGET /css/profile.css [36m304[0m 5.584 ms - -[0m
+[0mGET /js/profile.js [36m304[0m 4.477 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 3.359 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 2.751 ms - -[0m
+[0mGET /js/message.js [36m304[0m 2.476 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 9.892 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 8.901 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 10.269 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 5.797 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 21.925 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 15.054 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 14.701 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 15.580 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 13.321 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 4.562 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 10.245 ms - -[0m
+[0mGET /profile/Follower?id=5f41dec32bade221082f2c26 [32m200[0m 71.447 ms - 37380[0m
+[0mGET /profile/Follower?id=5f41dec32bade221082f2c26 [36m304[0m 80.066 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 12.598 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 11.545 ms - -[0m
+[0mGET /css/message.css [36m304[0m 4.764 ms - -[0m
+[0mGET /css/profile.css [36m304[0m 3.061 ms - -[0m
+[0mGET /js/profile.js [36m304[0m 13.935 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 12.239 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 4.266 ms - -[0m
+[0mGET /js/message.js [36m304[0m 2.684 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 29.227 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 28.602 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 22.726 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 11.575 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 13.643 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 12.026 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 9.557 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 3.691 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 8.918 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 2.615 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.696 ms - -[0m
+[0mGET /profile/Following?id=5f41dec32bade221082f2c26 [32m200[0m 59.189 ms - 37380[0m
+[0mGET /profile/Following?id=5f41dec32bade221082f2c26 [36m304[0m 53.565 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 9.432 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 7.036 ms - -[0m
+[0mGET /css/message.css [36m304[0m 7.168 ms - -[0m
+[0mGET /css/profile.css [36m304[0m 5.791 ms - -[0m
+[0mGET /js/profile.js [36m304[0m 2.242 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 15.187 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 14.777 ms - -[0m
+[0mGET /js/message.js [36m304[0m 3.734 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 22.765 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 2.279 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 22.699 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 6.088 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 15.300 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 7.113 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 6.279 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 5.704 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 5.294 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 3.058 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.547 ms - -[0m
+[0mGET / [36m302[0m 15.469 ms - 64[0m
+[0mGET /user/home [36m304[0m 51.486 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 13.117 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 11.877 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 6.042 ms - -[0m
+[0mGET /css/message.css [36m304[0m 4.260 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 3.778 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 3.170 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 2.480 ms - -[0m
+[0mGET /js/message.js [36m304[0m 1.846 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 12.084 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 8.147 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 8.735 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 4.237 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 6.180 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 4.614 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 4.461 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 4.322 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 8.348 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 2.916 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 1.785 ms - -[0m
+[0mGET /question/display?id=5f41dba3628aed0fb446b175 [32m200[0m 340.965 ms - 33728[0m
+[0mGET /css/layout2.css [36m304[0m 29.648 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 27.127 ms - -[0m
+[0mGET /css/message.css [36m304[0m 14.265 ms - -[0m
+[0mGET /js/question.js [36m304[0m 1.945 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 1.736 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 1.350 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 15.088 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 5.209 ms - -[0m
+[0mGET /css/question.css [32m200[0m 69.051 ms - -[0m
+[0mGET /js/message.js [36m304[0m 11.494 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 10.642 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 9.743 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 12.777 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 11.690 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 2.145 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 0.971 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 1.606 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 1.398 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 7.479 ms - -[0m
+[0mGET /audio/Apple.mp3 [36m304[0m 4.330 ms - -[0m
+[0mGET / [36m302[0m 18.898 ms - 64[0m
+[0mGET /user/home [36m304[0m 89.408 ms - -[0m
+[0mGET /css/layout2.css [36m304[0m 7.450 ms - -[0m
+[0mGET /css/header2.css [36m304[0m 5.467 ms - -[0m
+[0mGET /css/message.css [36m304[0m 4.781 ms - -[0m
+[0mGET /css/postHome.css [36m304[0m 4.546 ms - -[0m
+[0mGET /css/question_form.css [36m304[0m 15.777 ms - -[0m
+[0mGET /js/postHome.js [36m304[0m 4.985 ms - -[0m
+[0mGET /js/questionForm.js [36m304[0m 3.666 ms - -[0m
+[0mGET /js/header2.js [36m304[0m 2.933 ms - -[0m
+[0mGET /js/message.js [36m304[0m 2.640 ms - -[0m
+[0mGET /css/footer.css [36m304[0m 17.217 ms - -[0m
+[0mGET /js/chat_engine.js [36m304[0m 10.470 ms - -[0m
+[0mGET /images/logo.png [36m304[0m 4.568 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599015470065 [36m304[0m 6.491 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598761365334 [36m304[0m 4.710 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598933571824 [36m304[0m 4.296 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598762586279 [36m304[0m 3.970 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1598843221072 [36m304[0m 7.865 ms - -[0m
+[0mGET /uploads/user/avatar/avatar-1599193863288 [36m304[0m 3.772 ms - -[0m
+[0mGET /uploads/user/avatar/Default.jpg [36m304[0m 3.164 ms - -[0m
+::1 - - [29/Sep/2020:04:32:30 +0000] "GET /user/home HTTP/1.1" 200 3409 "http://localhost:8000/question/display?id=5f41dba3628aed0fb446b175" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:30 +0000] "GET /css/preHome-9259b77184.css HTTP/1.1" 200 11030 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:30 +0000] "GET /js/preHome-02a603644a.js HTTP/1.1" 200 3401 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:30 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 200 10997 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:38 +0000] "POST /user/checkemail HTTP/1.1" 200 45 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "POST /user/create-session HTTP/1.1" 302 64 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /user/test HTTP/1.1" 302 64 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /user/home HTTP/1.1" 200 11975 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/layout2-0e2a5e7959.css HTTP/1.1" 200 547 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/header2-21a0a17848.css HTTP/1.1" 200 12145 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/message-1cba42509a.css HTTP/1.1" 200 5197 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/postHome-d7e6c2f545.css HTTP/1.1" 200 24834 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/question_form-ba9119daba.css HTTP/1.1" 200 2968 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /css/footer-43fd00f918.css HTTP/1.1" 200 1630 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /js/postHome-152678cfc2.js HTTP/1.1" 200 3062 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /js/questionForm-d8d9660fc2.js HTTP/1.1" 200 762 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /js/header2-89ee5aa8b7.js HTTP/1.1" 200 1978 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /js/message-658ca652d3.js HTTP/1.1" 200 731 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /js/chat_engine-3c6b68051b.js HTTP/1.1" 200 1859 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /uploads/user/avatar/avatar-1601300924923 HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /images/logo-a0fb38eb40.png HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:39 +0000] "GET /uploads/user/avatar/Default.jpg HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:40 +0000] "GET /audio/Apple-34c65c2d08.mp3 HTTP/1.1" 206 71515 "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/layout2-0e2a5e7959.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/header2-21a0a17848.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/message-1cba42509a.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/postHome-d7e6c2f545.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/question_form-ba9119daba.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
+::1 - - [29/Sep/2020:04:32:44 +0000] "GET /css/footer-43fd00f918.css HTTP/1.1" 304 - "http://localhost:8000/user/home" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"

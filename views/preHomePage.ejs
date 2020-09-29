@@ -68,7 +68,13 @@
           <h5 id="login">Login</h5>
 
           <form id="login-form" action="/user/create-session" method="post">
-            <input type="email" required name="email" placeholder="Email" />
+            <input
+              type="email"
+              required
+              name="email"
+              placeholder="Email"
+              autocomplete="off"
+            />
             <input
               type="password"
               name="password"

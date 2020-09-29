@@ -362,6 +362,30 @@
 // ----------------------------3-----------------------
 
 @media screen and (max-width: 1000px) {
+  #home-container #main-questions-container #add-question-container {
+    box-shadow: none;
+  }
+  #home-container
+    #main-questions-container
+    #questions-answers
+    #questions-for-you
+    div.not-answered {
+    box-shadow: none;
+  }
+  #home-container
+    #main-questions-container
+    #questions-answers
+    #questions-for-you
+    div.not-answered {
+    box-shadow: none;
+  }
+  #home-container
+    #main-questions-container
+    #questions-answers
+    .AnswersToQuestions-container
+    .questionAnswers {
+    box-shadow: none;
+  }
   #home-container {
     left: 0%;
     width: 100%;
@@ -375,6 +399,7 @@
       margin-bottom: 10px;
       padding: 10px;
       box-sizing: border-box;
+      background: #fff;
       #feed-interest {
         display: flex;
         flex-wrap: wrap;

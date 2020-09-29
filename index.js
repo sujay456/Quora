@@ -107,3 +107,5 @@ app.listen(port, function (err) {
 // IN THE JSON FILE WHERE WE INSERT A SCRIPT FOR PRODUCTION I.E PROD_START
 // WE GET A ERROR SAYING NODE_PRODUCTION NOT A COMMAND, SO TO FIX THIS USE SET NODE_ENV .... (ONLY FOR WINDOWS)
 // "prod_start": "SET NODE_ENV=production & nodemon index.js"
+// ssh -i ~/Downloads/quora-prod.pem ubuntu@35.154.227.64
+// curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash

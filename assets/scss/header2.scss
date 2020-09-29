@@ -135,9 +135,10 @@ header {
     width: 100%;
     z-index: 100; //added now
     // border: 2px solid black;
-    background-color: white;
+    background-color: #fcfcfc;
     display: flex;
-    box-shadow: 0 2px 1px grey;
+    border-bottom: 1px solid #cccccc;
+    // box-shadow: 0 2px 1px grey;
 
     #logo {
       position: relative;
@@ -399,6 +400,17 @@ header {
     #header-container {
       #logo {
         left: 35%;
+      }
+    }
+    #hamburger-icon {
+      input {
+        width: 30px;
+        height: 20px;
+        top: 0;
+      }
+      .hamburger {
+        width: 30px;
+        height: 20px;
       }
     }
   }
