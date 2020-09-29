@@ -109,3 +109,4 @@ app.listen(port, function (err) {
 // "prod_start": "SET NODE_ENV=production & nodemon index.js"
 // ssh -i ~/Downloads/quora-prod.pem ubuntu@35.154.227.64
 // curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+// git stash push --include-untracked
